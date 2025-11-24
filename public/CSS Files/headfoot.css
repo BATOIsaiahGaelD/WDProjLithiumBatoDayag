@@ -2,7 +2,25 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
 }
+a {
+    text-decoration:none;
+}
 header {
     background-color:blue;
-    
+    float:left;
+}
+img#header {
+    float:right;
+}
+li {
+    float:left;
+    clear:left;
+}
+li a {
+    display:block;
+    padding:1.5vh;
+}
+li a:hover {
+    background-color:white;
+    color:black;
 }
