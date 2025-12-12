@@ -1,0 +1,18 @@
+div.footer {
+    display:block;
+}
+div.copyright, div.frisbee, div.references {
+    float:right;
+    padding:2.9vh 5.359vw;
+    background-color:aliceblue;
+}
+div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
+    color:black;
+    background-color:white;
+}
+
+div.fb, div.email, div.ig {
+    float:right;
+    padding: 1.5vh 5.359vw;
+    background-color:aliceblue;
+}

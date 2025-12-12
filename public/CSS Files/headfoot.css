@@ -42,33 +42,24 @@ li.head a:hover {
 footer {
     background-color:aliceblue;
     display:block;
-    padding-top:2vh;
-    padding-bottom:2vh;
+    padding-top:1vh;
+    padding-bottom:1vh;
 }
 div.footer {
+    display:block;
+}
+div.copyright, div.frisbee, div.references {
     float:right;
-}
-div.copyright {
-    display:block;
+    padding:2.9vh 5.359vw;
     background-color:aliceblue;
 }
-div.ig {
-    display:block;
-    background-color:aliceblue;
+div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
+    color:black;
+    background-color:white;
 }
-div.fb {
-    display:block;
-    background-color:aliceblue;
-}
-div.frisbee {
-    display:block;
-    background-color:aliceblue;
-}
-div.email {
-    display:block;
-    background-color:aliceblue;
-}
-div.references {
-    display:block;
+
+div.fb, div.email, div.ig {
+    float:right;
+    padding: 1.5vh 5.359vw;
     background-color:aliceblue;
 }
