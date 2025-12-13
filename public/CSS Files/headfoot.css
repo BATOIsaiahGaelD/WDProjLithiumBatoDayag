@@ -32,7 +32,7 @@ li.head {
 }
 li.head  a {
     display:block;
-    padding:1.5vh 6.08vw;
+    padding:1.5vh 6.0vw;
     background-color:rgb(79, 162, 162);
 }
 li.head a:hover {
@@ -41,16 +41,13 @@ li.head a:hover {
 }
 footer {
     background-color:aliceblue;
-    display:block;
-    padding-top:1vh;
-    padding-bottom:1vh;
 }
 div.footer {
     display:block;
 }
 div.copyright, div.frisbee, div.references {
     float:right;
-    padding:2.9vh 5.359vw;
+    padding:2.9vh 5vw;
     background-color:aliceblue;
 }
 div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {

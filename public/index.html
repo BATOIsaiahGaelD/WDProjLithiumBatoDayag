@@ -9,7 +9,294 @@
             <title>Frisbee4Fun</title>
             <link rel="icon" href="" sizes="32x32" type="image/jpg">
             <style>
+                header {
+                    background-image:none;
+                    text-align:center;
+                    font-size:4vw;
+                    padding: 8vw 0vw;
+                }
+                div.body {
+                    align-content:center;
+                }
+                div.main, img.main {
+                    margin-left:auto;
+                    margin-right:auto;
+                    height:35vw;
+                    width:35vw;
+                    border-radius:50%;
+                }
+                div.intro {
+                    height:15vw;
+                    width:15vw;
+                    position:relative;
+                    left:10vw;
+                    top:5vw;
+                    border-radius:50%;
+                }
+                img#intro {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-40vw;
+                    border-radius:50%;
+                    animation-duration:2s;
+                    animation-fill-mode:forwards;
+                }
+                @keyframes animintro {
+                    0% {height:0vw; width:0vw; left:38vw; top:-5vw;}
+                    90% {height:15vw; width:15vw;}
+                    100% {height:15vw; width:15vw; left:10vw; top:5vw;}
+                }
+                div.throws {
+                    height:17vw;
+                    width:17vw;
+                    position:relative;
+                    left:31vw;
+                    top:15vw;
+                    border-radius:50%;
+                }
+                img#throws {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-50vw;
+                    border-radius:50%;
+                    animation-duration:3s;
+                    animation-fill-mode:forwards;
+                    animation-delay: 0.5s;
+                }
+                @keyframes animthrows {
+                    0% {height:0vw; width:0vw; left:18vw; top:-31vw;}
+                    85% {height:17vw; width:17vw;}
+                    100% {height:17vw; width:17vw; left:31vw; top:15vw;}
+                }
+                div.tips {
+                    height:18vw;
+                    width:18vw;
+                    position:relative;
+                    left:9vw;
+                    top:20vw;
+                    border-radius:50%;
+                }
+                img#tips {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-55vw;
+                    border-radius:50%;
+                    animation-duration:4s;
+                    animation-fill-mode:forwards;
+                    animation-delay:1s;
+                }
+                @keyframes animtips {
+                    0% {height:0vw; width:0vw; left:39vw; top:-53vw;}
+                    70% {height:18vw; width:18vw;}
+                    100% {height:18vw; width:18vw; left:9vw; top:20vw;}
+                }
+                div.ultimate {
+                    height:16vw;
+                    width:16vw;
+                    position:relative;
+                    left:32vw;
+                    top:25vw;
+                    border-radius:50%;
+                }
+                img#ultimate {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-60vw;
+                    border-radius:50%;
+                    animation-duration:5s;
+                    animation-fill-mode:forwards;
+                    animation-delay:1.5s
+                }
+                @keyframes animultimate {
+                    0% {height:0vw; width:0vw; left:16vw; top:-75vw;}
+                    50% {height:16vw; width:16vw;}
+                    100% {height:16vw; width:16vw; left:32vw; top:25vw;}
+                }
+                div.strats {
+                    height:17.5vw;
+                    width:17.5vw;
+                    position:relative;
+                    left:8vw;
+                    top:30vw;
+                    border-radius:50%;
+                }
+                img#strats {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-65vw;
+                    border-radius:50%;
+                    animation-duration:5s;
+                    animation-fill-mode:forwards;
+                    animation-delay:2s
+                }
+                @keyframes animstrats {
+                    0% {height:0vw; width:0vw; left:40vw; top:-97vw;}
+                    30% {height:17.5vw; width:17.5vw;}
+                    100% {height:17.5vw; width:17.5vw; left:8vw; top:30vw;}
+                }
+                div.minigames {
+                    height:19vw;
+                    width:19vw;
+                    position:relative;
+                    left:33vw;
+                    top:35vw;
+                    border-radius:50%;
+                }
+                img#minigames {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-70vw;
+                    border-radius:50%;
+                    animation-duration:5s;
+                    animation-fill-mode:forwards;
+                    animation-delay:2.5s;
+                }
+                @keyframes animminigames {
+                    0% {height:0vw; width:0vw; left:15vw; top:-119vw;}
+                    25% {height:19vw; width:19vw;}
+                    100% {height:19vw; width:19vw; left:33vw; top:35vw;}
+                }
+                div.reference {
+                    height:15vw;
+                    width:15vw;
+                    position:relative;
+                    left:7vw;
+                    top:40vw;
+                    border-radius:50%;
+                }
+                img#reference {
+                    height:0vw;
+                    width:0vw;
+                    position:relative;
+                    left:21vw;
+                    top:-75vw;
+                    border-radius:50%;
+                    animation-duration:5s;
+                    animation-fill-mode:forwards;
+                    animation-delay:3s;
+                }
+                @keyframes animreference {
+                    0% {height:0vw; width:0vw; left:40vw; top:-143vw;}
+                    20% {height:15vw; width:15vw;}
+                    100% {height:15vw; width:15vw; left:7vw; top:40vw;}
+                }
+                div#p1, div#p2, div#p3, div#p4, div#p5, div#p6, div#p7 {
+                    margin:0px;
+                    height:14vw;
+                    width:0vw;
+                    border-color:black;
+                    border-radius:2px;
+                    position:relative;
+                    background-color:grey;
+                    border-radius:2vw;
+                    animation-duration:1s;
+                    animation-fill-mode:forwards;
+                }
+                div#p1 {
+                    top:-107vw;
+                    left:38vw;
+                }
+                div#p2 {
+                    top:-85vw;
+                    left: 12vw;
+                }
+                div#p3 {
+                    top:-72vw;
+                    left:37vw;
+                }
+                div#p4 {
+                    top:-58vw;
+                    left:13vw;
+                }
+                div#p5 {
+                    top:-46vw;
+                    left:35vw;
+                }
+                div#p6 {
+                    top:-31vw;
+                    left:8vw;
+                }
+                div#p7 {
+                    top:-19vw;
+                    left:30vw;
+                }
+                @keyframes p1 {
+                    0% {height:14vw; width:0vw; top:-107vw; left:38vw;}
+                    100% {height:14vw; width:50vw; top:-107vw; left:40vw;}
+                }
+                @keyframes p1back {
+                    0% {height:14vw; width:50vw; top:-107vw; left:40vw;}
+                    100% {height:14vw; width:0vw; top:-107vw; left:38vw;}
+                }
+                
+                @keyframes p2 {
+                    0% {height:14vw; width:0vw; top:-85vw; left:12vw;}
+                    100% {height:14vw; width:50vw; top:-85vw; left:8vw;}
+                }
+                @keyframes p2back {
+                    0% {height:14vw; width:50vw; top:-85vw; left:8vw;}
+                    100% {height:14vw; width:0vw; top:-85vw; left:12vw;}
+                }
 
+                @keyframes p3 {
+                    0% {height:14vw; width:0vw; top:-72vw; left:37vw;}
+                    100% {height:14vw; width:50vw; top:-72vw; left:40vw;}
+                }
+                @keyframes p3back {
+                    0% {height:14vw; width:50vw; top:-72vw; left:40vw;}
+                    100% {height:14vw; width:0vw; top:-72vw; left:37vw;}
+                }
+
+                @keyframes p4 {
+                    0% {height:14vw; width:0vw; top:-58vw; left:13vw;}
+                    100% {height:14vw; width:50vw; top:-58vw; left:10vw;}
+                }
+                @keyframes p4back {
+                    0% {height:14vw; width:50vw; top:-58vw; left:10vw;}
+                    100% {height:14vw; width:0vw; top:-58vw; left:13vw;}
+                }
+
+                @keyframes p5 {
+                    0% {height:14vw; width:0vw; top:-46vw; left:35vw;}
+                    100% {height:14vw; width:50vw; top:-46vw; left:38vw;}
+                }
+                @keyframes p5back {
+                    0% {height:14vw; width:50vw; top:-46vw; left:38vw;}
+                    100% {height:14vw; width:0vw; top:-46vw; left:35vw;}
+                }
+
+                @keyframes p6 {
+                    0% {height:14vw; width:0vw; top:-31vw; right:-8vw;}
+                    100% {height:14vw; width:50vw; top:-31vw; right:-11vw;}
+                }
+                @keyframes p6back {
+                    0% {height:14vw; width:50vw; top:-31vw; right:-11vw;}
+                    100% {height:14vw; width:0vw; top:-31vw; right:-8vw;}
+                }
+
+                @keyframes p7 {
+                    0% {height:14vw; width:0vw; top:-19vw; left:30vw;}
+                    100% {height:14vw; width:50vw; top:-19vw; left:33vw;}
+                }
+                @keyframes p7back {
+                    0% {height:14vw; width:50vw; top:-19vw; left:33vw;}
+                    100% {height:14vw; width:0vw; top:-19vw; left:30vw;}
+                }
+                footer {
+                    margin-top:90vw;
+                }
             </style>
             <link rel="stylesheet" href="../public/CSS Files/index.css">
         </head>
@@ -17,9 +304,113 @@
             <header>
                 Frisbee4Fun: Your Guide to Becoming an All-Star
             </header>
-            <div>
-
+            <div class="body">
+                <div class="main" onclick="startinganim()">
+                    <img class="main" src="../public/images/frisbee.png">
+                </div>
+                <div class="intro">
+                    <a href="../public/pages/intro.html"><img id="intro" src="../public/images/frisbeeintro.png" onmouseover="p1function()" onmouseout="p1functionback()"></a>
+                </div>
+                <div class="throws">
+                    <a href="../public/pages/throws.html"><img id="throws" onmouseover="p2function()" onmouseout="p2functionback()" src="../public/images/frisbeethrows.png"></a>
+                </div>
+                <div class="tips">
+                    <a href="../public/pages/tipsntricks.html"><img id="tips" onmouseover="p3function()" onmouseout="p3functionback()" src="../public/images/frisbeetips.png"></a>
+                </div>
+                <div class="ultimate">
+                    <a href="../public/pages/ultimatefrisbee.html"><img id="ultimate" onmouseover="p4function()" onmouseout="p4functionback()" src="../public/images/frisbeeultimate.png"></a>
+                </div>
+                <div class="strats">
+                    <a href="../public/pages/stratsandforms.html"><img id="strats" onmouseover="p5function()" onmouseout="p5functionback()" src="../public/images/frisbeestrats.png"></a>
+                </div>
+                <div class="minigames">
+                    <a href="../public/pages/minigames.html"><img id="minigames" onmouseover="p6function()" onmouseout="p6functionback()" src="../public/images/frisbeeminigames.png"></a>
+                </div>
+                <div class="reference">
+                    <a href="../public/pages/references.html"><img id="reference" onmouseover="p7function()" onmouseout="p7functionback()" src="../public/images/frisbeereferences.png"></a>
+                </div>
+                <div id="p1">
+                    
+                </div>
+                <div id="p2">
+                    
+                </div>
+                <div id="p3">
+                    
+                </div>
+                <div id="p4">
+                    
+                </div>
+                <div id="p5">
+                    
+                </div>
+                <div id="p6">
+                    
+                </div>
+                <div id="p7">
+                    
+                </div>
             </div>
+            <script>
+                function startinganim(){
+                    document.getElementById("intro").style.animationName="animintro";
+                    document.getElementById("throws").style.animationName="animthrows";
+                    document.getElementById("tips").style.animationName="animtips";
+                    document.getElementById("ultimate").style.animationName="animultimate";
+                    document.getElementById("strats").style.animationName="animstrats";
+                    document.getElementById("minigames").style.animationName="animminigames";
+                    document.getElementById("reference").style.animationName="animreference";
+                }
+
+                function p1function() {
+                    document.getElementById("p1").style.animationName="p1";
+                }
+                function p1functionback(){
+                    document.getElementById("p1").style.animationName="p1back";
+                }
+
+                function p2function() {
+                    document.getElementById("p2").style.animationName="p2";
+                }
+                function p2functionback(){
+                    document.getElementById("p2").style.animationName="p2back";
+                }
+
+                function p3function() {
+                    document.getElementById("p3").style.animationName="p3";
+                }
+                function p3functionback(){
+                    document.getElementById("p3").style.animationName="p3back";
+                }
+
+                function p4function() {
+                    document.getElementById("p4").style.animationName="p4";
+                }
+                function p4functionback(){
+                    document.getElementById("p4").style.animationName="p4back";
+                }
+
+                function p5function() {
+                    document.getElementById("p5").style.animationName="p5";
+                }
+                function p5functionback(){
+                    document.getElementById("p5").style.animationName="p5back";
+                }
+
+                function p6function() {
+                    document.getElementById("p6").style.animationName="p6";
+                }
+                function p6functionback(){
+                    document.getElementById("p6").style.animationName="p6back";
+                }
+
+                function p7function() {
+                    document.getElementById("p7").style.animationName="p7";
+                }
+                function p7functionback(){
+                    document.getElementById("p7").style.animationName="p7back";
+                }
+            </script>
             <footer>
                 <div class="footer">
                     <div class="copyright">
@@ -50,24 +441,6 @@
                     </div>
                 </div>
             </footer>
-            <cite>
-                https://www.w3schools.com/htmL/html_images_imagemap.asp
-                Terry Felke-Morris(2015). Page Layout. In Terry Felke-Morris (Seventh Edition), Web Development and Design Foundations with HTML5 (267-312). England, Pearson
-
-                Jennifer Niederst Robbins (2012). Floating and Positioning. In Jennifer Niederst Robbins (4th Edition), Learning Web Design A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics (341-371). Canada, O’Reilly Media, Inc.
-
-                Noah Stokes (2011, March 08). CSS Float 101. Retrieve from https://alistapart.com/article/cssfloats-101/
-
-                Patrick Young. HTML & Cascading Style Sheets. (n.d.) Retrieve from https://emunix.emich.edu/ ~evett/E-Commerce/assign1/HTML_CSS.html
-
-                Build Horizontal Navigation Bar with Floating List Items in CS3 (n.d.). Retrieve from https:// www.tutorialspoint.com/build-horizontal-navigation-bar-with-floating-list-items-in-css
-
-                CSS3-Box Sizing (n.d.). Retrieve from https://www.tutorialspoint.com/css/css3_box_sizing.htm
-                Terry Felke-Morris(2015). Page Layout. In Terry Felke-Morris (Seventh Edition), Web Development and Design Foundations with HTML5 (267-312). England, Pearson
-                Jacob Jenkov (2019, June 03) CSS Float. Retrieve from https://www.tutorials.jenkov.com/css/ float.html#pageToc
-                Jennifer Niederst Robbins (2012). Floating and Positioning. In Jennifer Niederst Robbins (4th Edition), Learning Web Design A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics (341-371). Canada, O’Reilly Media, Inc.
-                https://www.bing.com/search?pglt=2083&q=image+sprites+in+css&cvid=9b0e22a92d6d4e2ea49102bd95be5e98&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQgzOTI4ajBqMagCALACAA&FORM=ANNTA1&PC=U531
-            </cite>
         </body>
     </html>
 </DOCTYPE>
