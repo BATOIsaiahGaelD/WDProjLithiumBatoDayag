@@ -35,47 +35,65 @@
     </header>
 
     <div id="game-selection">
-        <div class="game-box">
-            Q&A
-            <div class="hover-popup">
-                <h2>Frisbee Q&A Preview</h2>
-                <p>Test your knowledge about frisbee! Answer questions and see how well you know the sport.</p>
-            </div>
-        </div>
-        <div class="game-box">
-            Reaction Test
-            <div class="hover-popup">
-                <h2>Reaction Test Preview</h2>
-                <p>Catch the flying frisbee as quickly as possible! The faster you react, the higher your score.</p>
-            </div>
-        </div>
-        <div class="game-box">
-            Loot Box
-            <div class="hover-popup">
-                <h2>Loot Box Preview</h2>
-                <p>Spin the loot box to get frisbee items of different rarity. Watch them spin before you open!</p>
-            </div>
-        </div>
+        <div class="game-box" data-popup="qa-popup">Q&A</div>
+            <div class="game-box" data-popup="reaction-popup">Reaction Test</div>
+                <div class="game-box" data-popup="loot-popup">Loot Box</div>
+    </div>
+        <div class="hover-overlay" id="overlay"></div>
+            <div class="hover-popup" id="qa-popup">
+    <h2>Frisbee Q&A Preview</h2>
+    <p>Test your knowledge about frisbee! Answer questions and see how well you know the sport.</p>
+    </div>
+    <div class="hover-popup" id="reaction-popup">
+        <h2>Reaction Test Preview</h2>
+        <p>Catch the flying frisbee as quickly as possible! You have 0.5 seconds after the screen turns green to click the frisbee to catch it!</p>
     </div>
 
+    <div class="hover-popup" id="loot-popup">
+        <h2>Loot Box Preview</h2>
+        <p>Spin the loot box to get frisbee items of different rarity.</p>
+    </div>
+    <script>
+        const overlay = document.getElementById('overlay');
+
+        document.querySelectorAll('.game-box').forEach(box => {
+            box.onclick = () => {
+                document.getElementById(box.dataset.popup).style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        });
+
+overlay.onclick = () => {
+    document.querySelectorAll('.hover-popup').forEach(popup => popup.style.display = 'none');
+    overlay.style.display = 'none';
+};
+</script>
+
+    </script>
     <footer>
         <div class="footer">
             <div class="copyright">
                 Copyright
             </div>
             <div class="ig">
-                <a href="">Isaiah's Instagram</a> </br>
+                <a href="">Isaiah's Instagram</a><br>
                 <a href="">Russell's Instagram</a>
             </div>
             <div class="fb">
-                <a href="">Isaiah's Facebook</a></br>
+                <a href="">Isaiah's Facebook</a><br>
                 <a href="">Russell's Facebook</a>
             </div>
             <div class="frisbee">
                 <a href="">Frisbee Site</a>
             </div>
-            <div class ="email">
-                <a href="">Isaiah's email</a></br>
+            <div class="email">
+                <a href="">Isaiah's email</a><br>
                 <a href="">Russell's email</a>
             </div>
-            <div
+            <div class="references">
+                <a href="../pages/references.html">References</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
