@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff); 
+    background-image: url("..images/logo.png")
 }
 
 a {
@@ -95,6 +95,8 @@ main {
 
 
 footer {
+    position: absolute;
+    bottom: 0;  
     width: 100%;
     background: linear-gradient(135deg, #1e90ff, #4fa2a2);
     display: flex;
