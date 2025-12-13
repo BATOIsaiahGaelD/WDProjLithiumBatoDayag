@@ -10,7 +10,60 @@
             <link rel="icon" href="" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
-
+                div.body {
+                    padding-top:5vw;
+                }
+                img.page, div.frisbeee {
+                    position:relative;
+                    height:0vw;
+                    width: 0vw;
+                    border-radius:50%;
+                    left:21vw;
+                    animation-name:disc;
+                    animation-duration:5s;
+                    animation-fill-mode:forwards;
+                    margin:0px;
+                }
+                @keyframes disc {
+                    0% {height:0vw; width:0vw; left:21vw;}
+                    25% {height:15vw; width:15vw; left:21vw}
+                    50% {height:25vw; width:25vw; left:36vw;}
+                    100% {height:55vw; width:55vw; left:-15.75vw;}
+                }
+                div#paragraph1, div#paragraph2, div#paragraph3 {
+                    background-color:aqua;
+                    width:0vw;
+                    height:0vw;
+                    position:relative;
+                    animation-duration:2s;
+                    animation-fill-mode:forwards;
+                    border-radius:5px;
+                    box-shadow: 2px 2px 6px black;
+                }
+                div#paragraph1 {
+                    left: 23vw;
+                    top:-53vw;
+                }
+                div#paragraph2 {
+                    left: 28vw;
+                    top: -43vw;
+                }
+                div#paragraph3 {
+                    left: 23vw;
+                    top: -33vw;
+                }
+                @keyframes p1anim {
+                    0% {width:0vw; height:10vw; left:23vw; top:-53vw;}
+                    100% {width:70vw; height:10vw; left:23vw; top:-53vw;}
+                }
+                @keyframes p2anim {
+                    0% {width:0vw; height:10vw; left:28vw; top:-43vw;}
+                    100% {width:70vw; height:10vw; left:28vw; top:-43vw;}
+                }
+                @keyframes p3anim {
+                    0% {width:0vw; height:10vw; left:23vw; top:-33vw;}
+                    100% {width:70vw; height:10vw; left:23vw; top:-33vw;}
+                }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
@@ -26,17 +79,35 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li class="head"><a href="../public/pages/minigames.html">Minigames</a></li>
-                        <li class="head"><a href="../public/pages/stratsandforms.html">Strategies</a></li>
-                        <li class="head"><a href="../public/pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
-                        <li class="head"><a href="../public/pages/tipsntricks.html">Tips and Tricks</a></li>
-                        <li class="head"><a href="../public/pages/throws.html">Throws</a></li>
-                        <li class="head"><a href="../public/pages/intro.html">Intro</a></li>
+                        <li class="head"><a href="../pages/minigames.html">Minigames</a></li>
+                        <li class="head"><a href="../pages/stratsandforms.html">Strategies</a></li>
+                        <li class="head"><a href="../pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
+                        <li class="head"><a href="../pages/tipsntricks.html">Tips and Tricks</a></li>
+                        <li class="head"><a href="../pages/throws.html">Throws</a></li>
+                        <li class="head"><a href="../pages/intro.html">Intro</a></li>
                     </ul>
                 </div>
             </header>
-            <div>
+            <div class="body">
+                <div class="frisbeee" onclick="pop()">
+                    <img class="page" src="../images/frisbeeintro.png">
+                </div>
+                <div id="paragraph1">
+                    
+                </div>
+                <div id="paragraph2">
 
+                </div>
+                <div id="paragraph3">
+
+                </div>
+            <script>
+                function pop(){
+                    document.getElementById("paragraph1").style.animationName="p1anim";
+                    document.getElementById("paragraph2").style.animationName="p2anim";
+                    document.getElementById("paragraph3").style.animationName="p3anim";
+                }
+            </script>
             </div>
             <footer>
                 <div class="footer">
