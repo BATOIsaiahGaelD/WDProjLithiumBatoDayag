@@ -28,13 +28,38 @@ div.nav {
 li.head {
     float:right;
     list-style-type:none;
+    background-color:rgb(79, 162, 162);
 }
 li.head  a {
     display:block;
-    padding:1.5vh;
+    padding:1.5vh 6.08vw;
     background-color:rgb(79, 162, 162);
 }
-li a:hover {
+li.head a:hover {
     background-color:white;
     color:black;
+}
+footer {
+    background-color:aliceblue;
+    display:block;
+    padding-top:1vh;
+    padding-bottom:1vh;
+}
+div.footer {
+    display:block;
+}
+div.copyright, div.frisbee, div.references {
+    float:right;
+    padding:2.9vh 5.359vw;
+    background-color:aliceblue;
+}
+div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
+    color:black;
+    background-color:white;
+}
+
+div.fb, div.email, div.ig {
+    float:right;
+    padding: 1.5vh 5.359vw;
+    background-color:aliceblue;
 }
