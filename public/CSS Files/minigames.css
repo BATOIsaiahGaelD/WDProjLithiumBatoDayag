@@ -1,19 +1,61 @@
 /* 3 boxes */
 #game-selection{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px 0;
-    flex-wrap: wrap
-}
-.game-box{
-    width: 180px
-}
-/* QNA */
-
-/* Reaction Test */
-
-/* Lootbox */
-body{
-
-}
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .game-box{
+            width: 180px;
+            height: 180px;
+            background: #020202;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+        .game-box:hover{
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(56,189,248,0.6);
+            background: linear-gradient(145deg,#1e293b, #3b82f6);
+        }
+        .game-box .hover-popup{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 80vw;
+            height: 80vh;
+            max-width: 600px;
+            background: #0f172a;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            transform: translate(-50%, -50%) scale(0.95);
+            z-index: 1000;
+            padding: 20px;
+            overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .game-box:hover .hover-popup{
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .hover-popup::before{
+            content: '';
+            position: fixed;
+            top:0; left:0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+            border-radius: 0;
+        }

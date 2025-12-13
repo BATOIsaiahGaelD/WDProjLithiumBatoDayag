@@ -1,73 +1,143 @@
-<DOCTYPE! html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale-1.0">
-            <meta name="description" content="2Q Website Project">
-            <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
-            <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
-            <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
-            <link rel="stylesheet" href="../CSS Files/headfoot.css">
-            <style>
-
-            </style>
-            <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
-        </head>
-        <body>
-            <header>
-                <div class="top">
-                    <div class="topimg">
-                        <img>
-                    </div>
-                    <div class="toptitle">
-                        Frisbee4Fun: Your Guide to Becoming An All Star
-                    </div>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li class="head"><a href="../public/pages/minigames.html">Minigames</a></li>
-                        <li class="head"><a href="../public/pages/stratsandforms.html">Strategies</a></li>
-                        <li class="head"><a href="../public/pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
-                        <li class="head"><a href="../public/pages/tipsntricks.html">Tips and Tricks</a></li>
-                        <li class="head"><a href="../public/pages/throws.html">Throws</a></li>
-                        <li class="head"><a href="../public/pages/intro.html">Intro</a></li>
-                    </ul>
-                </div>
-            </header>
-            <div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2Q Website Project">
+    <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
+    <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
+    <title>Frisbee4Fun - Minigames</title>
+    <link rel="icon" href="" sizes="32x32" type="image/jpg">
+    <link rel="stylesheet" href="../CSS Files/headfoot.css">
+    <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
+    <link rel="stylesheet" href="../CSS Files/minigames.css">
+    <style>
+        #game-selection{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .game-box{
+            width: 180px;
+            height: 180px;
+            background: #020202;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+        .game-box:hover{
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(56,189,248,0.6);
+            background: linear-gradient(145deg,#1e293b, #3b82f6);
+        }
+        .game-box .hover-popup{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 80vw;
+            height: 80vh;
+            max-width: 600px;
+            background: #0f172a;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            transform: translate(-50%, -50%) scale(0.95);
+            z-index: 1000;
+            padding: 20px;
+            overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .game-box:hover .hover-popup{
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .hover-popup::before{
+            content: '';
+            position: fixed;
+            top:0; left:0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="topimg">
+                <img>
             </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
-                    </div>
+            <div class="toptitle">
+                Frisbee4Fun: Your Guide to Becoming An All Star
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="head"><a href="../public/pages/minigames.html">Minigames</a></li>
+                <li class="head"><a href="../public/pages/stratsandforms.html">Strategies</a></li>
+                <li class="head"><a href="../public/pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
+                <li class="head"><a href="../public/pages/tipsntricks.html">Tips and Tricks</a></li>
+                <li class="head"><a href="../public/pages/throws.html">Throws</a></li>
+                <li class="head"><a href="../public/pages/intro.html">Intro</a></li>
+            </ul>
+        </div>
+    </header>
 
-                    <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
-                    </div>
+    <div id="game-selection">
+        <div class="game-box">
+            Q&A
+            <div class="hover-popup">
+                <h2>Frisbee Q&A Preview</h2>
+                <p>Test your knowledge about frisbee! Answer questions and see how well you know the sport.</p>
+            </div>
+        </div>
+        <div class="game-box">
+            Reaction Test
+            <div class="hover-popup">
+                <h2>Reaction Test Preview</h2>
+                <p>Catch the flying frisbee as quickly as possible! The faster you react, the higher your score.</p>
+            </div>
+        </div>
+        <div class="game-box">
+            Loot Box
+            <div class="hover-popup">
+                <h2>Loot Box Preview</h2>
+                <p>Spin the loot box to get frisbee items of different rarity. Watch them spin before you open!</p>
+            </div>
+        </div>
+    </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
-                    </div>
-
-                    <div class="frisbee">
-                        <a href="">Frisbee Site</a>
-                    </div>
-
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
-                    </div>
-
-                    <div class = "references">
-                        <a href="../pages/references.html">References</a>
-                    </div>
-                </div>
-            </footer>
-        </body>
-    </html>
-</DOCTYPE>
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                Copyright
+            </div>
+            <div class="ig">
+                <a href="">Isaiah's Instagram</a> </br>
+                <a href="">Russell's Instagram</a>
+            </div>
+            <div class="fb">
+                <a href="">Isaiah's Facebook</a></br>
+                <a href="">Russell's Facebook</a>
+            </div>
+            <div class="frisbee">
+                <a href="">Frisbee Site</a>
+            </div>
+            <div class ="email">
+                <a href="">Isaiah's email</a></br>
+                <a href="">Russell's email</a>
+            </div>
+            <div
