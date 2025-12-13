@@ -78,10 +78,13 @@ body {
     z-index: 999;
 }
 
+/*Loot Box */
+
 #loot-popup {
     display: none;
     position: fixed;
     top: 50%;
+    color: #ffffff;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90vw;
@@ -89,7 +92,7 @@ body {
     max-height: 80vh;
     background: #0f172a;
     border-radius: 16px;
-    padding: 20px;
+    padding: 0%;
     z-index: 1000;
     flex-direction: column;
     align-items: center;
@@ -140,15 +143,18 @@ body {
     object-fit: contain;
 }
 
+/* idle infinite spin animation */
 @keyframes idleScroll {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-50%); } 
 }
 
 .loot-track.idle {
     animation: idleScroll 20s linear infinite;
 }
+/* idle infinite spin animation */
 
+/* Arrow */
 #loot-line {
     position: absolute;
     top: 0;
@@ -175,6 +181,11 @@ body {
     align-self: center;
 }
 
+#loot-spin:hover {
+    background: #2563eb; 
+    transform: scale(1.05);
+}
+
 #loot-result {
     margin-top: 10px;
     font-weight: bold;
@@ -187,3 +198,97 @@ body {
 #loot-result.epic { color: #7c3aed; }
 #loot-result.legendary { color: #f59e0b; }
 #loot-result.mythical { color: #db2777; }
+
+.inner-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+}
+
+.inner-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    z-index: 2000;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.inner-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#prob-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 2001; /* above inner overlay */
+}
+
+#prob-btn:hover {
+    background: #d97706;
+    transform: scale(1.05);
+}
+
+.inner-overlay.show {
+    display: block;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.inner-popup.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2002; 
+}
+
+.inner-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.inner-popup th, .inner-popup td {
+    border: 1px solid white;
+    padding: 6px;
+}
+
+.inner-popup th {
+    background-color: #3b82f6;
+}
+
+
