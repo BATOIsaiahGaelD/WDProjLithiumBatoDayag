@@ -1,0 +1,348 @@
+/* Three Boxes + Popup */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-selection {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.game-box {
+    width: 180px;
+    height: 180px;
+    background: #020202;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(56,189,248,0.6);
+    background: linear-gradient(145deg,#1e293b, #3b82f6);
+}
+
+.hover-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 80vh;
+    background: #0f172a;
+    border-radius: 16px;
+    padding: 20px;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.hover-overlay {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/*Loot Box */
+
+#loot-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    color: #ffffff;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 80vh;
+    background: #0f172a;
+    border-radius: 16px;
+    padding: 0%;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+#loot-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#loot-carousel {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid #334155;
+    position: relative;
+}
+
+.loot-track {
+    display: flex;
+    gap: 24px;
+    transform: translateX(0);
+    will-change: transform;
+}
+
+.loot-item {
+    min-width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: #334155;
+}
+
+.loot-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.loot-item[data-rarity="common"] {
+    background-color: #858685; 
+}
+
+.loot-item[data-rarity="uncommon"] {
+    background-color: #315204; 
+}
+
+.loot-item[data-rarity="rare"] {
+    background-color: #03befc; 
+}
+
+.loot-item[data-rarity="epic"] {
+    background-color: #682eee; 
+}
+
+.loot-item[data-rarity="legendary"] {
+    background-color: #efca0c; 
+}
+
+.loot-item[data-rarity="mythical"] {
+    background-color: #ef4444; 
+}
+
+
+/* idle infinite spin animation */
+@keyframes idleScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}
+
+.loot-track.idle {
+    animation: idleScroll 20s linear infinite;
+}
+/* idle infinite spin animation */
+
+/* Arrow */
+#loot-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 20px solid rgb(185, 255, 46);
+    z-index: 10;
+}
+/* Arrow */
+
+/* Spin Button */
+#loot-spin {
+    margin-top: 20px;
+    padding: 16px 36px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+#loot-spin:hover {
+    background: #2563eb; 
+    transform: scale(1.05);
+}
+/* Spin Button */
+
+#loot-result {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#loot-result.common { color: #858685; }
+#loot-result.uncommon { color: #315204; }
+#loot-result.rare { color: #03befc; }
+#loot-result.epic { color: #682eee; }
+#loot-result.legendary { color: #efca0c; }
+#loot-result.mythical { color: #ef4444; }
+
+.inner-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+}
+
+.inner-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    z-index: 2000;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.inner-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#prob-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 2001; /* above inner overlay */
+}
+
+#prob-btn:hover {
+    background: #d97706;
+    transform: scale(1.05);
+}
+
+.inner-overlay.show {
+    display: block;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.inner-popup.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2002; 
+}
+
+.inner-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.inner-popup th, .inner-popup td {
+    border: 1px solid white;
+    padding: 6px;
+}
+
+.inner-popup th {
+    background-color: #3b82f6;
+}
+
+.inner-popup tr.common {
+    background-color: #858685; 
+}
+
+.inner-popup tr.uncommon {
+    background-color: #315204; 
+    color: white;
+}
+
+.inner-popup tr.rare {
+    background-color: #03befc; 
+}
+
+.inner-popup tr.epic {
+    background-color: #682eee; 
+}
+
+.inner-popup tr.legendary {
+    background-color: #efca0c; 
+    color: white;
+}
+
+.inner-popup tr.mythical {
+    background-color: #ef4444; /* red */
+    color: white;
+}
+/* Loot Box */

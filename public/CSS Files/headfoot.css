@@ -1,5 +1,5 @@
-*{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
     padding:0px;
     margin:0px;
@@ -53,10 +53,131 @@ div.copyright, div.frisbee, div.references {
 div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
     color:black;
     background-color:white;
+    padding: 0;
+    margin: 0;
 }
 
-div.fb, div.email, div.ig {
-    float:right;
-    padding: 1.5vh 5.359vw;
-    background-color:aliceblue;
+body {
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff); 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+
+header {
+    width: 100%;
+    background: linear-gradient(135deg, #1e90ff, #4fa2a2); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vw;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+div.top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+div.topimg {
+    flex: 0 0 60px; 
+    height: 60px;
+}
+
+div.topimg img {
+    width: 100%;
+    height: auto;
+}
+
+div.toptitle {
+    flex: 1;
+    text-align: left;
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    padding-left: 1vw;
+}
+
+
+div.nav {
+    width: 100%;
+    background-color: rgba(30,144,255,0.9); 
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+li.head a {
+    display: block;
+    padding: 1vh 2vw;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+li.head a:hover {
+    background-color: #ffd700;
+    color: black;
+}
+
+
+html, body {
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+}
+
+main {
+    flex: 1; 
+}
+
+
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #1e90ff, #4fa2a2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vw;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+div.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.left-footer, div.right-footer {
+    display: flex;
+    gap: 1vw;
+}
+
+div.copyright, div.frisbee, div.references, div.fb, div.email, div.ig {
+    padding: 0.5vh 1vw;
+    transition: all 0.3s ease;
+}
+
+div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
+    background-color: #ffd700;
+    color: black;
+    border-radius: 6px;
+    transform: scale(1.05);
 }
