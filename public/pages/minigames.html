@@ -60,12 +60,12 @@
     <h3>Loot Box Probability Table</h3>
         <table>
             <tr><th>Rarity</th><th>Probability</th></tr>
-            <tr><td>Common</td><td>40%</td></tr>
-            <tr><td>Uncommon</td><td>25%</td></tr>
-            <tr><td>Rare</td><td>15%</td></tr>
-            <tr><td>Epic</td><td>10%</td></tr>
-            <tr><td>Legendary</td><td>7%</td></tr>
-            <tr><td>Mythical</td><td>3%</td></tr>
+            <tr class="common"><td>Common</td><td>40%</td></tr>
+            <tr class="uncommon"><td>Uncommon</td><td>25%</td></tr>
+            <tr class="rare"><td>Rare</td><td>15%</td></tr>
+            <tr class="epic"><td>Epic</td><td>10%</td></tr>
+            <tr class="legendary"><td>Legendary</td><td>7%</td></tr>
+            <tr class="mythical"><td>Mythical</td><td>3%</td></tr>
         </table>
     <button id="close-prob">Close</button>
 </div>
@@ -74,63 +74,63 @@
   <div id="loot-container">
     <div id="loot-carousel">
       <div class="loot-track">
-        <div class="loot-item" data-rarity="common"><img src="../public/images/fabric-disc.png" alt="Fabric Disc"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/vintage-boots.png" alt="Vintage Boots"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/training-jersey.png" alt="Training Jersey"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Kid-disc.png" alt="Kid Disc"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Decathlon-boots.png" alt="Decathlon Boots"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/Disc-golf.png" alt="Disc Golf"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/nivia-boots.png" alt="Nivia Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/Decathlon-disc.png" alt="Decathlon Disc"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/puma-boots.png" alt="Puma Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/minions-jersey.png" alt="Minions Jersey"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/Competition-disc.png" alt="Competition Disc"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/adidas-boots.png" alt="Adidas Boots"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/alianti-jersey.png" alt="Alianti Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/USA-disc.png" alt="USA Disc"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/nike-boots.png" alt="Nike Boots"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/ph-jersey.png" alt="PH Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/usa-jersey.png" alt="USA Jersey"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/fabric-disc.png" alt="Fabric Disc"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/vintage-boots.png" alt="Vintage Boots"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/training-jersey.png" alt="Training Jersey"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Kid-disc.png" alt="Kid Disc"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Decathlon-boots.png" alt="Decathlon Boots"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/Disc-golf.png" alt="Disc Golf"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/nivia-boots.png" alt="Nivia Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/Decathlon-disc.png" alt="Decathlon Disc"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/puma-boots.png" alt="Puma Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/minions-jersey.png" alt="Minions Jersey"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/Competition-disc.png" alt="Competition Disc"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/adidas-boots.png" alt="Adidas Boots"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/alianti-jersey.png" alt="Alianti Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/USA-disc.png" alt="USA Disc"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/nike-boots.png" alt="Nike Boots"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/ph-jersey.png" alt="PH Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/usa-jersey.png" alt="USA Jersey"></div>
 
         <!-- repeat all items once more for smooth spin -->
 
-        <div class="loot-item" data-rarity="common"><img src="../public/images/fabric-disc.png" alt="Fabric Disc"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/vintage-boots.png" alt="Vintage Boots"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/training-jersey.png" alt="Training Jersey"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Kid-disc.png" alt="Kid Disc"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Decathlon-boots.png" alt="Decathlon Boots"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/Disc-golf.png" alt="Disc Golf"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/nivia-boots.png" alt="Nivia Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/Decathlon-disc.png" alt="Decathlon Disc"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/puma-boots.png" alt="Puma Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/minions-jersey.png" alt="Minions Jersey"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/Competition-disc.png" alt="Competition Disc"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/adidas-boots.png" alt="Adidas Boots"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/alianti-jersey.png" alt="Alianti Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/USA-disc.png" alt="USA Disc"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/nike-boots.png" alt="Nike Boots"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/ph-jersey.png" alt="PH Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/usa-jersey.png" alt="USA Jersey"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/fabric-disc.png" alt="Fabric Disc"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/vintage-boots.png" alt="Vintage Boots"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/training-jersey.png" alt="Training Jersey"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Kid-disc.png" alt="Kid Disc"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Decathlon-boots.png" alt="Decathlon Boots"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/Disc-golf.png" alt="Disc Golf"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/nivia-boots.png" alt="Nivia Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/Decathlon-disc.png" alt="Decathlon Disc"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/puma-boots.png" alt="Puma Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/minions-jersey.png" alt="Minions Jersey"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/Competition-disc.png" alt="Competition Disc"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/adidas-boots.png" alt="Adidas Boots"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/alianti-jersey.png" alt="Alianti Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/USA-disc.png" alt="USA Disc"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/nike-boots.png" alt="Nike Boots"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/ph-jersey.png" alt="PH Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/usa-jersey.png" alt="USA Jersey"></div>
 
         <!-- repeat all items once more for smooth spin -->
 
-        <div class="loot-item" data-rarity="common"><img src="../public/images/fabric-disc.png" alt="Fabric Disc"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/vintage-boots.png" alt="Vintage Boots"></div>
-        <div class="loot-item" data-rarity="common"><img src="../public/images/training-jersey.png" alt="Training Jersey"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Kid-disc.png" alt="Kid Disc"></div>
-        <div class="loot-item" data-rarity="uncommon"><img src="../public/images/Decathlon-boots.png" alt="Decathlon Boots"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/Disc-golf.png" alt="Disc Golf"></div>
-        <div class="loot-item" data-rarity="rare"><img src="../public/images/nivia-boots.png" alt="Nivia Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/Decathlon-disc.png" alt="Decathlon Disc"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/puma-boots.png" alt="Puma Boots"></div>
-        <div class="loot-item" data-rarity="epic"><img src="../public/images/minions-jersey.png" alt="Minions Jersey"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/Competition-disc.png" alt="Competition Disc"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/adidas-boots.png" alt="Adidas Boots"></div>
-        <div class="loot-item" data-rarity="legendary"><img src="../public/images/alianti-jersey.png" alt="Alianti Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/USA-disc.png" alt="USA Disc"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/nike-boots.png" alt="Nike Boots"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/ph-jersey.png" alt="PH Jersey"></div>
-        <div class="loot-item" data-rarity="mythical"><img src="../public/images/usa-jersey.png" alt="USA Jersey"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/fabric-disc.png" alt="Fabric Disc"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/vintage-boots.png" alt="Vintage Boots"></div>
+        <div class="loot-item" data-rarity="common"><img src="../images/training-jersey.png" alt="Training Jersey"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Kid-disc.png" alt="Kid Disc"></div>
+        <div class="loot-item" data-rarity="uncommon"><img src="../images/Decathlon-boots.png" alt="Decathlon Boots"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/Disc-golf.png" alt="Disc Golf"></div>
+        <div class="loot-item" data-rarity="rare"><img src="../images/nivia-boots.png" alt="Nivia Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/Decathlon-disc.png" alt="Decathlon Disc"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/puma-boots.png" alt="Puma Boots"></div>
+        <div class="loot-item" data-rarity="epic"><img src="../images/minions-jersey.png" alt="Minions Jersey"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/Competition-disc.png" alt="Competition Disc"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/adidas-boots.png" alt="Adidas Boots"></div>
+        <div class="loot-item" data-rarity="legendary"><img src="../images/alianti-jersey.png" alt="Alianti Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/USA-disc.png" alt="USA Disc"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/nike-boots.png" alt="Nike Boots"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/ph-jersey.png" alt="PH Jersey"></div>
+        <div class="loot-item" data-rarity="mythical"><img src="../images/usa-jersey.png" alt="USA Jersey"></div>
       </div>
     </div>
     <div id="loot-line"></div>
@@ -161,6 +161,7 @@ let scrollX = 0;
 let idleAnim = null;
 let isSpinning = false;
 
+// idle infinite scroll animation
 function startIdleScroll() {
     function idle() {
         if (!isSpinning) {
@@ -175,7 +176,7 @@ function startIdleScroll() {
 }
 
 function startIdleScroll() {
-    track.classList.add('idle');   // animation will loop infinitely
+    track.classList.add('idle');   // css animation
 }
 
 function stopIdleScroll() {

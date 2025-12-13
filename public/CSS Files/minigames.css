@@ -138,10 +138,35 @@ body {
 }
 
 .loot-item img {
-    max-width: 130px;
-    max-height: 110px;
+    max-width: 100px;
+    max-height: 100px;
     object-fit: contain;
 }
+
+.loot-item[data-rarity="common"] {
+    background-color: #858685; 
+}
+
+.loot-item[data-rarity="uncommon"] {
+    background-color: #315204; 
+}
+
+.loot-item[data-rarity="rare"] {
+    background-color: #03befc; 
+}
+
+.loot-item[data-rarity="epic"] {
+    background-color: #682eee; 
+}
+
+.loot-item[data-rarity="legendary"] {
+    background-color: #efca0c; 
+}
+
+.loot-item[data-rarity="mythical"] {
+    background-color: #ef4444; 
+}
+
 
 /* idle infinite spin animation */
 @keyframes idleScroll {
@@ -164,10 +189,12 @@ body {
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 20px solid red;
+    border-top: 20px solid rgb(185, 255, 46);
     z-index: 10;
 }
+/* Arrow */
 
+/* Spin Button */
 #loot-spin {
     margin-top: 20px;
     padding: 16px 36px;
@@ -185,6 +212,7 @@ body {
     background: #2563eb; 
     transform: scale(1.05);
 }
+/* Spin Button */
 
 #loot-result {
     margin-top: 10px;
@@ -192,12 +220,12 @@ body {
     text-align: center;
 }
 
-#loot-result.common { color: #334155; }
-#loot-result.uncommon { color: #065f46; }
-#loot-result.rare { color: #1d4ed8; }
-#loot-result.epic { color: #7c3aed; }
-#loot-result.legendary { color: #f59e0b; }
-#loot-result.mythical { color: #db2777; }
+#loot-result.common { color: #858685; }
+#loot-result.uncommon { color: #315204; }
+#loot-result.rare { color: #03befc; }
+#loot-result.epic { color: #682eee; }
+#loot-result.legendary { color: #efca0c; }
+#loot-result.mythical { color: #ef4444; }
 
 .inner-overlay {
     display: none;
@@ -291,4 +319,30 @@ body {
     background-color: #3b82f6;
 }
 
+.inner-popup tr.common {
+    background-color: #858685; 
+}
 
+.inner-popup tr.uncommon {
+    background-color: #315204; 
+    color: white;
+}
+
+.inner-popup tr.rare {
+    background-color: #03befc; 
+}
+
+.inner-popup tr.epic {
+    background-color: #682eee; 
+}
+
+.inner-popup tr.legendary {
+    background-color: #efca0c; 
+    color: white;
+}
+
+.inner-popup tr.mythical {
+    background-color: #ef4444; /* red */
+    color: white;
+}
+/* Loot Box */
