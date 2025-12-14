@@ -1,3 +1,81 @@
+// Reaction time test
+
+const frisbee = document.getElementById("reaction-circle");
+const startBtn = document.getElementById("reaction-start");
+const reactionResult = document.getElementById("reaction-result");
+
+let state = "idle";
+let startTime = 0;
+let readyTimeout;
+let failTimeout;
+
+startBtn.onclick = () => {
+    if (state !== "idle") return;
+
+    reactionResult.textContent = "Wait...";
+    frisbee.classList.add("spinning");
+    frisbee.classList.remove("stopped");
+    state = "waiting";
+
+    const delay = Math.random() * 3000 + 1000;
+
+    readyTimeout = setTimeout(() => {
+        startTime = performance.now();
+        reactionResult.textContent = "CLICK!";
+        state = "ready";
+
+        failTimeout = setTimeout(() => {
+            frisbee.classList.remove("spinning");
+            frisbee.classList.add("stopped");
+            reactionResult.textContent = "Too slow!";
+            state = "idle";
+        }, 500);
+    }, delay);
+};
+
+frisbee.onclick = () => {
+    if (state === "waiting") {
+        clearTimeout(readyTimeout);
+        frisbee.classList.remove("spinning");
+        frisbee.classList.add("stopped");
+        reactionResult.textContent = "Too early!";
+        state = "idle";
+    }
+
+    else if (state === "ready") {
+        clearTimeout(failTimeout);
+        const time = Math.round(performance.now() - startTime);
+        frisbee.classList.remove("spinning");
+        frisbee.classList.add("stopped");
+        reactionResult.textContent = `Reaction Time: ${time} ms`;
+        state = "idle";
+    }
+};
+
+
+frisbee.onclick = () => {
+    if (state === "waiting") {
+        clearTimeout(readyTimeout);
+        frisbee.classList.remove("spinning");
+        frisbee.classList.add("stopped");
+        reactionResult.textContent = "Too early!";
+        state = "idle";
+    }
+
+    else if (state === "ready") {
+        clearTimeout(failTimeout);
+        const time = Math.round(performance.now() - startTime);
+        frisbee.classList.remove("spinning");
+        frisbee.classList.add("stopped");
+        reactionResult.textContent = `Reaction Time: ${time} ms`;
+        state = "idle";
+    }
+};
+
+
+
+
+// Loot box
 const overlay = document.getElementById('overlay');
 const spinBtn = document.getElementById("loot-spin");
 const track = document.querySelector(".loot-track");
@@ -22,7 +100,7 @@ function startIdleScroll() {
 }
 
 function startIdleScroll() {
-    track.classList.add('idle');   // css animation
+    track.classList.add('idle');   // start idle animation visually
 }
 
 function stopIdleScroll() {

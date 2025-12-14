@@ -77,6 +77,57 @@ body {
     background: rgba(0,0,0,0.5);
     z-index: 999;
 }
+/* Reaction time test */
+
+#reaction-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#reaction-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    user-select: none;
+    background: #1e293b;
+    padding: 20px;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    filter: brightness(0.8);
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+#reaction-circle.spinning {
+    animation: spin 0.5s linear infinite;
+}
+
+
+#reaction-circle.waiting {
+    filter: brightness(0.5);
+}
+
+#reaction-circle.ready {
+    filter: brightness(1.3);
+    transform: scale(1.05);
+    animation: none;
+}
+
+#reaction-result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
 
 /*Loot Box */
 
