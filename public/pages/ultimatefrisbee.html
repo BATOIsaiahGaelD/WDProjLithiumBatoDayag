@@ -10,7 +10,51 @@
             <link rel="icon" href="" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
-
+                header {
+                    z-index:100;
+                }
+                div.body {
+                    padding-top:5vw;
+                    padding-bottom:70vw;
+                }
+                div.main {
+                    height: 30vw;
+                    width:30vw;
+                    position:absolute;
+                    left: 18vw;
+                    top:14vw;
+                }
+                img#uldisc {
+                    height: 30vw;
+                    width:30vw;
+                    position:absolute;
+                    left: 18vw;
+                    top:14vw;
+                    animation-duration: 3s;
+                    animation-fill-mode:forwards;
+                    z-index:-1;
+                }
+                @keyframes move {
+                    0% {top:14vw; left:18vw;}
+                    100% {top:10vw; left:14vw;}
+                }
+                div.title {
+                    position:absolute;
+                    font-size:8vw;
+                    width:80vw;
+                    height:5vw;
+                    left:18vw;
+                    top:7vw;
+                    background-color:rgba(0,0,0,0);
+                }
+                div.begin {
+                    position:absolute;
+                    font-size:2vw;
+                    width:20vw;
+                    height:3vw;
+                    left:42vw;
+                    top:18vw;
+                }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
@@ -35,8 +79,21 @@
                     </ul>
                 </div>
             </header>
-            <div>
-
+            <div class="body">
+                <div class="main">
+                    <img id="uldisc" onclick="start()" src="../images/frisbeeultimate.png">
+                </div>
+                <div class="title">
+                    ULTIMATE FRISBEE
+                </div>
+                <div class="begin">
+                    Click Disc to Begin
+                </div>
+            <script>
+                function start(){
+                    document.getElementById("uldisc").style.animationName="move";
+                }
+            </script>
             </div>
             <footer>
                 <div class="footer">

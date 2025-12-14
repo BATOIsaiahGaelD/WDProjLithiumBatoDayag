@@ -11,27 +11,121 @@
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
                 div.body {
-                    padding-top:40vw;
-                    padding-bottom:40vw;
+                    padding-top:5vw;
+                    padding-bottom:70vw;
+                }
+                div#title {
+                    font-size:10vw;
+                    width:50vw;
+                    height:5vw;
+                    position:absolute;
+                    left: 29vw;
                 }
                 div.main, img.main {
                     border-radius:50%;
                     height:20vw;
                     width:20vw;
-                    position:relative;
+                    position:absolute;
                     left:20vw;
+                    top:20vw;
+                    z-index:100;
+                    animation-name:start;
+                    animation-duration:3s;
+                    animation-fill-mode:forwards;
                 }
-                div.circle1, div.circle2, div.circle3, div.circle4, div.circle5, div.circle6 {
-                    width:13vw;
-                    height:13vw;
-                    position:relative;
+                @keyframes start {
+                    0% {width:0vw; height:0vw; left:20vw; top:5vw;}
+                    50% {width:20vw; height:20vw; left:20vw; top:5vw;}
+                    100% {top:20vw;}
+                }
+                div#circle1, div#circle2, div#circle3, div#circle4, div#circle5, div#circle6 {
+                    width:0vw;
+                    height:0vw;
+                    position:absolute;
+                    left:43.5vw;
+                    top:43.5vw;
                     border-radius:50%;
                     background-color:grey;
                     animation:2s;
                     animation-fill-mode:forwards;
                 }
-                div.circle1 {
-                    
+                div#circle1 {
+                    animation-delay:0.2s;
+                }
+                div#circle2 {
+                    animation-delay:0.4s;
+                }
+                div#circle3 {
+                    animation-delay:0.6s;
+                }
+                div#circle4 {
+                    animation-delay:0.8s;
+                }
+                div#circle5 {
+                    animation-delay:1s;
+                }
+                div#circle6 {
+                    animation-delay:1.2s;
+                }
+                @keyframes c1 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:25vw; top:35vw;}
+                }
+                @keyframes c2 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:25vw;}
+                }
+                @keyframes c3 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:62vw; top:35vw;}
+                }
+                @keyframes c4 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:25vw; top:55vw;}
+                }
+                @keyframes c5 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:62vw;}
+                }
+                @keyframes c6 {
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
+                    100% {width:13vw; height:13vw; left:62vw; top:55vw;}
+                }
+                div#throws1, div#throws2, div#throws3, div#throws4, div#throws5, div#throws5, div#throws6 {
+                    width:0vw;
+                    height:0vw;
+                    position:absolute;
+                    background-color:grey;
+                    border-radius: 3vw;
+                    left: 25vw;
+                    top:15vw;
+                    animation-duration: 1s;
+                    animation-fill-mode:forwards;
+                    z-index:109;
+                    align-content:center;
+                    font-size:0vw;
+                }
+                img#img1 {
+                    height:0vw;
+                    width:0vw;
+                    animation-duration:1s;
+                    animation-fill-mode:forwards;
+                }
+                @keyframes open {
+                    0% {height:0vw; width:0vw; font-size:0vw;}
+                    100% {width:50vw; height: 60vw; font-size:2vw;}
+                }
+                @keyframes close {
+                    0% {width:50vw; height:60vw; font-size:2vw;}
+                    100% {height:0vw; width:0vw; font-size:0vw;}
+                }
+                @keyframes vidopen {
+                    0% {width:0vw; height:0vw;}
+                    100% {width:22vw; height:19vw;}
+                }
+                @keyframes vidclose {
+                    0% {width:22vw; height:19vw;}
+                    100% {width:0vw; height:0vw;}
                 }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
@@ -58,27 +152,99 @@
                 </div>
             </header>
             <div class="body">
+                <div id="title">
+                    THROWS
+                </div>
                 <div class="main">
-                    <img class="main" src="../images/frisbeethrows.png">
+                    <img class="main" onclick="anim()" src="../images/frisbeethrows.png">
                 </div>
-                <div class="circle1">
+                <div id="circle1" onclick="open1()">
 
                 </div>
-                <div class="circle2">
+                <div id="circle2" onclick="open2()">
 
                 </div>
-                <div class="circle3">
+                <div id="circle3" onclick="open3()">
 
                 </div>
-                <div class="circle4">
+                <div id="circle4" onclick="open4()">
 
                 </div>
-                <div class="circle5">
+                <div id="circle5" onclick="open5()">
 
                 </div>
-                <div class="circle6">
+                <div id="circle6" onclick="open6()">
 
                 </div>
+                <div id="throws1" onclick="close1()">
+                    </br>
+                    </br>
+                    <p>throws tresting</p>
+                    <img id="img1" src="../images/frisbeetips.png">
+                </div>
+                <div id="throws2" onclick="close2()">
+
+                </div>
+                <div id="throws3" onclick="close3()">
+
+                </div>
+                <div id="throws4" onclick="close4()">
+
+                </div>
+                <div id="throws5" onclick="close5()">
+
+                </div>
+                <div id="throws6" onclick="close6()">
+
+                </div>
+                <script>
+                    function anim() {
+                        document.getElementById("circle1").style.animationName="c1";
+                        document.getElementById("circle2").style.animationName="c2";
+                        document.getElementById("circle3").style.animationName="c3";
+                        document.getElementById("circle4").style.animationName="c4";
+                        document.getElementById("circle5").style.animationName="c5";
+                        document.getElementById("circle6").style.animationName="c6";
+                    }
+                    function open1() {
+                        document.getElementById("throws1").style.animationName="open";
+                        document.getElementById("img1").style.animationName="vidopen";
+                    }
+                    function open2() {
+                        document.getElementById("throws2").style.animationName="open";
+                    }
+                    function open3() {
+                        document.getElementById("throws3").style.animationName="open";
+                    }
+                    function open4() {
+                        document.getElementById("throws4").style.animationName="open";
+                    }
+                    function open5() {
+                        document.getElementById("throws5").style.animationName="open";
+                    }
+                    function open6() {
+                        document.getElementById("throws6").style.animationName="open";
+                    }
+                    function close1() {
+                        document.getElementById("throws1").style.animationName="close";
+                        document.getElementById("img1").style.animationName="vidclose";
+                    }
+                    function close2() {
+                        document.getElementById("throws2").style.animationName="close";
+                    }
+                    function close3() {
+                        document.getElementById("throws3").style.animationName="close";
+                    }
+                    function close4() {
+                        document.getElementById("throws4").style.animationName="close";
+                    }
+                    function close5() {
+                        document.getElementById("throws5").style.animationName="close";
+                    }
+                    function close6() {
+                        document.getElementById("throws6").style.animationName="close";
+                    }
+                </script>
             </div>
             <footer>
                 <div class="footer">

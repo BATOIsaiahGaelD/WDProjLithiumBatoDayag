@@ -10,7 +10,89 @@
             <link rel="icon" href="" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
-
+                div.body {
+                    padding-bottom: 70vw;
+                }
+                div#disc, img#tdisc {
+                    position:absolute;
+                    width:22vw;
+                    height:22vw;
+                    left: 20vw;
+                    top:15vw;
+                }
+                img#tdisc {
+                    animation-duration:0.3s;
+                    animation-name:spin;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+                div#defend, div#offense {
+                    position:absolute;
+                    width:30vw;
+                    height:70vw;
+                    background-color:rgba(56, 52, 52, 0.874);
+                    border-color:black;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                    align-content:center;
+                    text-align:center;
+                    font-size:1vw;
+                    color:white;
+                    font-weight:600;
+                }
+                div#defend {
+                    border-bottom-right-radius:2vw;
+                    border-top-right-radius:2vw;
+                    left:-30vw;
+                }
+                div#offense {
+                    border-bottom-left-radius:2vw;
+                    border-top-left-radius:2vw;
+                    left:102vw;
+                }
+                @keyframes spin {
+                    100% {transform: rotate(360deg)}
+                }
+                @keyframes defense {
+                    100% {left: 0vw;}
+                }
+                @keyframes offense {
+                    100% {left:72vw; width:27vw}
+                }
+                div.OFFENSE {
+                    font-size:7vw;
+                    width:30vw;
+                    height:10vw;
+                    position:absolute;
+                    left: 37vw;
+                    top:5vw;
+                }
+                div.VS {
+                    font-size:35vw;
+                    width:20vw;
+                    height:20vw;
+                    position:absolute;
+                    top:20vw;
+                    left:32vw;
+                    z-index:-1;
+                }
+                div.DEFENSE {
+                    font-size:7vw;
+                    width:30vw;
+                    height:10vw;
+                    position:absolute;
+                    left:37vw;
+                    top:68vw;
+                }
+                div.notice {
+                    font-size:1.5vw;
+                    width:15vw;
+                    height:2vw;
+                    background-color: rgba(0,0,0,0);
+                    position:absolute;
+                    top:12vw;
+                    left:45vw;
+                }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
@@ -35,8 +117,39 @@
                     </ul>
                 </div>
             </header>
-            <div>
+            <div class="body">
+                <div id="disc">
+                    <img id="tdisc" onclick="appear()" src="../images/frisbeestrats.png">
+                </div>
+                <div id="defend">
+                    <h2>THE OFFENSE</h2>
+                    <p>The Defending Team is the one receiving the thrown frisbee from the
+                        offense. Their goal is to 
+                    </p>
+                    <img>
 
+                </div>
+                <div id="offense">
+
+                </div>
+                <div class="OFFENSE">
+                    OFFENSE
+                </div>
+                <div class="vs">
+                    VS
+                </div>
+                <div class="DEFENSE">
+                    DEFENSE
+                </div>
+                <div class="notice">
+                    Click Disc to Begin
+                </div>
+            <script>
+                function appear() {
+                    document.getElementById("defend").style.animationName="defense";
+                    document.getElementById("offense").style.animationName="offense";
+                }
+            </script>
             </div>
             <footer>
                 <div class="footer">
