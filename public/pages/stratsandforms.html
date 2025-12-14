@@ -1,186 +1,61 @@
-<DOCTYPE! html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale-1.0">
-            <meta name="description" content="2Q Website Project">
-            <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
-            <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
-            <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
-            <link rel="stylesheet" href="../CSS Files/headfoot.css">
-            <style>
-                div.body {
-                    padding-bottom: 70vw;
-                }
-                div#disc, img#tdisc {
-                    position:absolute;
-                    width:22vw;
-                    height:22vw;
-                    left: 20vw;
-                    top:15vw;
-                }
-                img#tdisc {
-                    animation-duration:0.3s;
-                    animation-name:spin;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                }
-                div#defend, div#offense {
-                    position:absolute;
-                    width:30vw;
-                    height:70vw;
-                    background-color:rgba(56, 52, 52, 0.874);
-                    border-color:black;
-                    animation-duration: 2s;
-                    animation-fill-mode: forwards;
-                    align-content:center;
-                    text-align:center;
-                    font-size:1vw;
-                    color:white;
-                    font-weight:600;
-                }
-                div#defend {
-                    border-bottom-right-radius:2vw;
-                    border-top-right-radius:2vw;
-                    left:-30vw;
-                }
-                div#offense {
-                    border-bottom-left-radius:2vw;
-                    border-top-left-radius:2vw;
-                    left:102vw;
-                }
-                @keyframes spin {
-                    100% {transform: rotate(360deg)}
-                }
-                @keyframes defense {
-                    100% {left: 0vw;}
-                }
-                @keyframes offense {
-                    100% {left:72vw; width:27vw}
-                }
-                div.OFFENSE {
-                    font-size:7vw;
-                    width:30vw;
-                    height:10vw;
-                    position:absolute;
-                    left: 37vw;
-                    top:5vw;
-                }
-                div.VS {
-                    font-size:35vw;
-                    width:20vw;
-                    height:20vw;
-                    position:absolute;
-                    top:20vw;
-                    left:32vw;
-                    z-index:-1;
-                }
-                div.DEFENSE {
-                    font-size:7vw;
-                    width:30vw;
-                    height:10vw;
-                    position:absolute;
-                    left:37vw;
-                    top:68vw;
-                }
-                div.notice {
-                    font-size:1.5vw;
-                    width:15vw;
-                    height:2vw;
-                    background-color: rgba(0,0,0,0);
-                    position:absolute;
-                    top:12vw;
-                    left:45vw;
-                }
-            </style>
-            <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
-        </head>
-        <body>
-            <header>
-                <div class="top">
-                    <div class="topimg">
-                        <img>
-                    </div>
-                    <div class="toptitle">
-                        Frisbee4Fun: Your Guide to Becoming An All Star
-                    </div>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li class="head"><a href="../pages/minigames.html">Minigames</a></li>
-                        <li class="head"><a href="../pages/stratsandforms.html">Strategies</a></li>
-                        <li class="head"><a href="../pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
-                        <li class="head"><a href="../pages/tipsntricks.html">Tips and Tricks</a></li>
-                        <li class="head"><a href="../pages/throws.html">Throws</a></li>
-                        <li class="head"><a href="../pages/intro.html">Intro</a></li>
-                    </ul>
-                </div>
-            </header>
-            <div class="body">
-                <div id="disc">
-                    <img id="tdisc" onclick="appear()" src="../images/frisbeestrats.png">
-                </div>
-                <div id="defend">
-                    <h2>THE OFFENSE</h2>
-                    <p>The Defending Team is the one receiving the thrown frisbee from the
-                        offense. Their goal is to 
-                    </p>
-                    <img>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2Q Website Project">
+    <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
+    <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
+    <title>Frisbee4Fun - Minigames</title>
+    <link rel="icon" href="" sizes="32x32" type="image/jpg">
+    <link rel="stylesheet" href="../CSS Files/headfoot.css">
+    <link rel="stylesheet" href="../CSS Files/minigames.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-wrapper">
+        <div class="logo">Frisbee4Fun</div>
+        <nav class="nav-links">
+            <a href="../public/index.html">Homepage</a>
+            <a href="../public/pages/intro.html">Intro</a>
+            <a href="../public/pages/throws.html">Throws</a>
+            <a href="../public/pages/tipsntricks.html">Tips</a>
+            <a href="../public/pages/ultimatefrisbee.html">Ultimate</a>
+            <a href="../public/pages/stratsandforms.html">Strategies</a>
+            <a href="../public/pages/minigames.html">Mini Games</a>
+            <a href="../public/pages/references.html">References</a>
+        </nav>
+    </div>
+</header>
 
-                </div>
-                <div id="offense">
+            <footer class="site-footer">
+    <div class="footer">
+        <div class="copyright">© 2025 Frisbee4Fun</div>
 
-                </div>
-                <div class="OFFENSE">
-                    OFFENSE
-                </div>
-                <div class="vs">
-                    VS
-                </div>
-                <div class="DEFENSE">
-                    DEFENSE
-                </div>
-                <div class="notice">
-                    Click Disc to Begin
-                </div>
-            <script>
-                function appear() {
-                    document.getElementById("defend").style.animationName="defense";
-                    document.getElementById("offense").style.animationName="offense";
-                }
-            </script>
-            </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
-                    </div>
+        <div class="ig">
+            <a href="">Isaiah's Instagram</a><br>
+            <a href="">Russell's Instagram</a>
+        </div>
 
-                    <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
-                    </div>
+        <div class="fb">
+            <a href="">Isaiah's Facebook</a><br>
+            <a href="">Russell's Facebook</a>
+        </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
-                    </div>
+        <div class="frisbee">
+            <a href="">Frisbee Site</a>
+        </div>
 
-                    <div class="frisbee">
-                        <a href="">Frisbee Site</a>
-                    </div>
+        <div class="email">
+            <a href="">Isaiah's Email</a><br>
+            <a href="">Russell's Email</a>
+        </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
-                    </div>
-
-                    <div class = "references">
-                        <a href="../pages/references.html">References</a>
-                    </div>
-                </div>
-            </footer>
-        </body>
-    </html>
+        <div class="references">
+            <a href="../pages/references.html">References</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
 </DOCTYPE>  
