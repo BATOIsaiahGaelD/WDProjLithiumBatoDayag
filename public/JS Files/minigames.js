@@ -73,8 +73,6 @@ frisbee.onclick = () => {
 };
 
 
-
-
 // Loot box
 const overlay = document.getElementById('overlay');
 const spinBtn = document.getElementById("loot-spin");
