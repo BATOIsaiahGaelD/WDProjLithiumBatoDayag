@@ -17,39 +17,30 @@ a {
 a:hover {
     color: black;
 }
-
-footer {
-    width: 100%;
-    background: linear-gradient(135deg, #1e90ff, #4fa2a2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 2vw;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+.site-footer{
+    margin-top:auto;
+    width:100%;
+    background:aliceblue;
+    padding:20px 0;
+}
+.footer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
 }
 
-div.footer {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+.footer div{
+    padding:10px 15px;
 }
 
-div.left-footer, div.right-footer {
-    display: flex;
-    gap: 1vw;
+.footer a{
+    text-decoration:none;
+    color:#333;
 }
 
-div.copyright, div.frisbee, div.references, div.fb, div.email, div.ig {
-    padding: 0.5vh 1vw;
-    transition: all 0.3s ease;
-}
-
-div.copyright:hover, div.frisbee:hover, div.references:hover, div.fb:hover, div.email:hover, div.ig:hover {
-    background-color: #ffd700;
-    color: black;
-    border-radius: 6px;
-    transform: scale(1.05);
+.footer a:hover{
+    color:#6a2de2;
 }

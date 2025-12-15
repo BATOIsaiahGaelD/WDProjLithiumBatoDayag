@@ -30,13 +30,39 @@
                     position:absolute;
                     left: 18vw;
                     top:14vw;
-                    animation-duration: 3s;
+                    animation-duration: 2s;
                     animation-fill-mode:forwards;
-                    z-index:-1;
+                    z-index:1
                 }
                 @keyframes move {
                     0% {top:14vw; left:18vw;}
-                    100% {top:10vw; left:14vw;}
+                    100% {width:15vw; height:15vw; top:-4vw; left:-13vw;}
+                }
+                div#box1 {
+                    position:absolute;
+                    width:20vw;
+                    height:23vw;
+                    left:3vw;
+                    top:26vw;
+                    background-color:grey;
+                    border-radius:2vw;
+                }
+                div#box2 {
+                    position: absolute;
+                    width:60vw;
+                    height:13vw;
+                    background-color:grey;
+                    left:24vw;
+                    border-radius:2vw;
+                }
+                div#box3 {
+                    position:absolute;
+                    width:60vw;
+                    height:23vw;
+                    background-color:grey;
+                    left:24vw;
+                    top:26vw;
+                    border-radius:2vw;
                 }
                 div.title {
                     position:absolute;
@@ -59,24 +85,19 @@
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
         <body>
-            <header>
-                <div class="top">
-                    <div class="topimg">
-                        <img>
-                    </div>
-                    <div class="toptitle">
-                        Frisbee4Fun: Your Guide to Becoming An All Star
-                    </div>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li class="head"><a href="../pages/minigames.html">Minigames</a></li>
-                        <li class="head"><a href="../pages/stratsandforms.html">Strategies</a></li>
-                        <li class="head"><a href="../pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
-                        <li class="head"><a href="../pages/tipsntricks.html">Tips and Tricks</a></li>
-                        <li class="head"><a href="../pages/throws.html">Throws</a></li>
-                        <li class="head"><a href="../pages/intro.html">Intro</a></li>
-                    </ul>
+            <header class="site-header">
+                <div class="nav-wrapper">
+                    <div class="logo">Frisbee4Fun</div>
+                    <nav class="nav-links">
+                        <a href="../index.html">Homepage</a>
+                        <a href="../pages/intro.html">Intro</a>
+                        <a href="../pages/throws.html">Throws</a>
+                        <a href="../pages/tipsntricks.html">Tips</a>
+                        <a href="../pages/ultimatefrisbee.html">Ultimate</a>
+                        <a href="../pages/stratsandforms.html">Strategies</a>
+                        <a href="../pages/minigames.html">Mini Games</a>
+                        <a href="../pages/references.html">References</a>
+                    </nav>
                 </div>
             </header>
             <div class="body">
@@ -88,6 +109,15 @@
                 </div>
                 <div class="begin">
                     Click Disc to Begin
+                </div>
+                <div id="box1">
+
+                </div>
+                <div id="box2">
+
+                </div>
+                <div id="box3">
+
                 </div>
             <script>
                 function start(){

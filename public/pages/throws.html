@@ -12,14 +12,15 @@
             <style>
                 div.body {
                     padding-top:5vw;
-                    padding-bottom:70vw;
+                    padding-bottom:75vw;
                 }
                 div#title {
                     font-size:10vw;
                     width:50vw;
                     height:5vw;
                     position:absolute;
-                    left: 29vw;
+                    left: 31vw;
+                    top: 10vw;
                 }
                 div.main, img.main {
                     border-radius:50%;
@@ -34,11 +35,12 @@
                     animation-fill-mode:forwards;
                 }
                 @keyframes start {
-                    0% {width:0vw; height:0vw; left:20vw; top:5vw;}
+                    0% {width:0vw; height:0vw; left:25vw; top:5vw;}
                     50% {width:20vw; height:20vw; left:20vw; top:5vw;}
                     100% {top:20vw;}
                 }
                 div#circle1, div#circle2, div#circle3, div#circle4, div#circle5, div#circle6 {
+                    display:flex;
                     width:0vw;
                     height:0vw;
                     position:absolute;
@@ -48,6 +50,20 @@
                     background-color:grey;
                     animation:2s;
                     animation-fill-mode:forwards;
+                    font-size:0vw;
+                    justify-content:center;
+                    align-items:center;
+                    
+                }
+                p#small4, p#small5 {
+                    display:flex;
+                    border-radius:50%;
+                    background-color:grey;
+                    animation:2s;
+                    animation-fill-mode:forwards;
+                    font-size:0vw;
+                    justify-content:center;
+                    align-items:center;
                 }
                 div#circle1 {
                     animation-delay:0.2s;
@@ -68,37 +84,45 @@
                     animation-delay:1.2s;
                 }
                 @keyframes c1 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:25vw; top:35vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:25vw; top:35vw; font-size:2vw;}
                 }
                 @keyframes c2 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:43.5vw; top:25vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:25vw; font-size:2vw;}
                 }
                 @keyframes c3 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:62vw; top:35vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:62vw; top:35vw; font-size:2vw;}
                 }
                 @keyframes c4 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:25vw; top:55vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:25vw; top:55vw; font-size:2vw;}
+                }
+                @keyframes s4 {
+                    0% {font-size:0vw;}
+                    100% {font-size:1vw;}
                 }
                 @keyframes c5 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:43.5vw; top:62vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:62vw; font-size:2vw;}
+                }
+                @keyframes s5 {
+                    0% {font-size:0vw;}
+                    100% {font-size:1vw;}
                 }
                 @keyframes c6 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5;}
-                    100% {width:13vw; height:13vw; left:62vw; top:55vw;}
+                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:62vw; top:55vw; font-size:2vw;}
                 }
                 div#throws1, div#throws2, div#throws3, div#throws4, div#throws5, div#throws5, div#throws6 {
                     width:0vw;
                     height:0vw;
                     position:absolute;
-                    background-color:grey;
+                    background-color:rgba(123, 216, 255, 0.950);
                     border-radius: 3vw;
                     left: 25vw;
-                    top:15vw;
+                    top:20vw;
                     animation-duration: 1s;
                     animation-fill-mode:forwards;
                     z-index:109;
@@ -131,24 +155,19 @@
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
         <body>
-            <header>
-                <div class="top">
-                    <div class="topimg">
-                        <img>
-                    </div>
-                    <div class="toptitle">
-                        Frisbee4Fun: Your Guide to Becoming An All Star
-                    </div>
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li class="head"><a href="../pages/minigames.html">Minigames</a></li>
-                        <li class="head"><a href="../pages/stratsandforms.html">Strategies</a></li>
-                        <li class="head"><a href="../pages/ultimatefrisbee.html">Ultimate Frisbee</a></li>
-                        <li class="head"><a href="../pages/tipsntricks.html">Tips and Tricks</a></li>
-                        <li class="head"><a href="../pages/throws.html">Throws</a></li>
-                        <li class="head"><a href="../pages/intro.html">Intro</a></li>
-                    </ul>
+            <header class="site-header">
+                <div class="nav-wrapper">
+                    <div class="logo">Frisbee4Fun</div>
+                    <nav class="nav-links">
+                        <a href="../index.html">Homepage</a>
+                        <a href="../pages/intro.html">Intro</a>
+                        <a href="../pages/throws.html">Throws</a>
+                        <a href="../pages/tipsntricks.html">Tips</a>
+                        <a href="../pages/ultimatefrisbee.html">Ultimate</a>
+                        <a href="../pages/stratsandforms.html">Strategies</a>
+                        <a href="../pages/minigames.html">Mini Games</a>
+                        <a href="../pages/references.html">References</a>
+                    </nav>
                 </div>
             </header>
             <div class="body">
@@ -159,22 +178,22 @@
                     <img class="main" onclick="anim()" src="../images/frisbeethrows.png">
                 </div>
                 <div id="circle1" onclick="open1()">
-
+                </br></br><p>BACKHAND</p>
                 </div>
                 <div id="circle2" onclick="open2()">
-
+                </br></br> <p>FOREHAND</p>
                 </div>
                 <div id="circle3" onclick="open3()">
-
+                </br></br><p>HAMMER</p>
                 </div>
                 <div id="circle4" onclick="open4()">
-
+                </br></br><p id="small4">HIGH-RELEASE BACKHAND</p>
                 </div>
                 <div id="circle5" onclick="open5()">
-
+                </br></br><p id="small5">HIGH-RELEASE FOREHAND</p>
                 </div>
                 <div id="circle6" onclick="open6()">
-
+                </br></br><p>OTHER</p>
                 </div>
                 <div id="throws1" onclick="close1()">
                     </br>
@@ -205,6 +224,8 @@
                         document.getElementById("circle4").style.animationName="c4";
                         document.getElementById("circle5").style.animationName="c5";
                         document.getElementById("circle6").style.animationName="c6";
+                        document.getElementById("small4").style.animationName="s4";
+                        document.getElementById("small5").style.animationName="s5";
                     }
                     function open1() {
                         document.getElementById("throws1").style.animationName="open";
