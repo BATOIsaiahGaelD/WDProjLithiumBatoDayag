@@ -19,7 +19,7 @@
                     width:50vw;
                     height:5vw;
                     position:absolute;
-                    left: 31vw;
+                    left: 32vw;
                     top: 10vw;
                 }
                 div.main, img.main {
@@ -126,10 +126,13 @@
                     animation-duration: 1s;
                     animation-fill-mode:forwards;
                     z-index:109;
-                    align-content:center;
                     font-size:0vw;
+                    text-align:center;
                 }
-                img#img1 {
+                p {
+                    margin:1vw;
+                }
+                img#img1, img#img2, img#img3, img#img41, img#img42, img#img51, img#img52, img#img6 {
                     height:0vw;
                     width:0vw;
                     animation-duration:1s;
@@ -141,6 +144,14 @@
                 }
                 @keyframes close {
                     0% {width:50vw; height:60vw; font-size:2vw;}
+                    100% {height:0vw; width:0vw; font-size:0vw;}
+                }
+                @keyframes opens {
+                    0% {height:0vw; width:0vw; font-size:0vw;}
+                    100% {width:50vw; height: 60vw; font-size:1.4vw;}
+                }
+                @keyframes closes {
+                    0% {width:50vw; height:60vw; font-size:1.4vw;}
                     100% {height:0vw; width:0vw; font-size:0vw;}
                 }
                 @keyframes vidopen {
@@ -187,34 +198,54 @@
                 </br></br><p>HAMMER</p>
                 </div>
                 <div id="circle4" onclick="open4()">
-                </br></br><p id="small4">HIGH-RELEASE BACKHAND</p>
+                </br></br><p id="small4">HIGH/LOW-BACKHAND</p>
                 </div>
                 <div id="circle5" onclick="open5()">
-                </br></br><p id="small5">HIGH-RELEASE FOREHAND</p>
+                </br></br><p id="small5">HIGH/LOW FOREHAND</p>
                 </div>
                 <div id="circle6" onclick="open6()">
                 </br></br><p>OTHER</p>
                 </div>
                 <div id="throws1" onclick="close1()">
                     </br>
+                    <h2>Backhand</h2>
                     </br>
-                    <p>throws tresting</p>
+                    <p>
+                        This is the easiest/most common throw in Ultimate. It involves putting 4 fingers in the cup of the disc and the thumb on top. 
+                        For right-handed players, you stand straight, twist to the left, bend your wrist for the spin, and elbow in front so that they are in front of the disc. 
+                        Undo the steps for a smooth release in one steady motion. Keep in mind that all the spin and power comes from bending the wrist and suddenly snapping it. 
+                        You could adjust the angle of the throw to however you want but if you want to keep the disc straight, keep it at an angle of 180 degrees or straight when you release it. 
+                        You could also pull it back farther for even more power.
+                    </p>
                     <img id="img1" src="../images/frisbeetips.png">
                 </div>
                 <div id="throws2" onclick="close2()">
-
+                    <img id="img2" src="../images/frisbeetips.png">
                 </div>
                 <div id="throws3" onclick="close3()">
-
+                    <img id="img3" src="../images/frisbeetips.png">
                 </div>
                 <div id="throws4" onclick="close4()">
-
+                </br>
+                    <h3>High Release Backhand</h3>
+                    <p>To throw a high release version of the backhand, an almost straight arm must be above the shoulder. 
+                        Most of the disc's propulsion will come solely from the wrist in a snapping motion. 
+                        Should be thrown with an almost straight arm at a 45 degree angle. 
+                        Most of the discs forward motion will be from snapping your wrist for spin.</p>
+                    <img id="img41" src="../images/frisbeetips.png">
+                    <h3>Low Release Backhand</h3>
+                    <p>
+                        A low release follows the same arm motion as a regular backhand. 
+                        But it is meant to be released just a few inches from the ground, the closer the better. 
+                        One would have to take a big lunge outward and reach low.
+                    </p>
+                    <img id="img42" src="../images/frisbeetips.png">
                 </div>
                 <div id="throws5" onclick="close5()">
-
+                    <img id="img1" src="../images/frisbeetips.png">
                 </div>
                 <div id="throws6" onclick="close6()">
-
+                    <img id="img6" src="../images/frisbeetips.png">
                 </div>
                 <script>
                     function anim() {
@@ -233,18 +264,25 @@
                     }
                     function open2() {
                         document.getElementById("throws2").style.animationName="open";
+                        document.getElementById("img2").style.animationName="vidopen";
                     }
                     function open3() {
                         document.getElementById("throws3").style.animationName="open";
+                        document.getElementById("img3").style.animationName="vidopen";
                     }
                     function open4() {
-                        document.getElementById("throws4").style.animationName="open";
+                        document.getElementById("throws4").style.animationName="opens";
+                        document.getElementById("img41").style.animationName="vidopen";
+                        document.getElementById("img42").style.animationName="vidopen";
                     }
                     function open5() {
-                        document.getElementById("throws5").style.animationName="open";
+                        document.getElementById("throws5").style.animationName="opens";
+                        document.getElementById("img51").style.animationName="vidopen";
+                        document.getElementById("img52").style.animationName="vidopen";
                     }
                     function open6() {
                         document.getElementById("throws6").style.animationName="open";
+                        document.getElementById("img6").style.animationName="vidopen";
                     }
                     function close1() {
                         document.getElementById("throws1").style.animationName="close";
@@ -252,18 +290,25 @@
                     }
                     function close2() {
                         document.getElementById("throws2").style.animationName="close";
+                        document.getElementById("img2").style.animationName="vidclose";
                     }
                     function close3() {
                         document.getElementById("throws3").style.animationName="close";
+                        document.getElementById("img3").style.animationName="vidclose";
                     }
                     function close4() {
-                        document.getElementById("throws4").style.animationName="close";
+                        document.getElementById("throws4").style.animationName="closes";
+                        document.getElementById("img41").style.animationName="vidclose";
+                        document.getElementById("img42").style.animationName="vidclose";
                     }
                     function close5() {
-                        document.getElementById("throws5").style.animationName="close";
+                        document.getElementById("throws5").style.animationName="closes";
+                        document.getElementById("img51").style.animationName="vidclose";
+                        document.getElementById("img52").style.animationName="vidclose";
                     }
                     function close6() {
                         document.getElementById("throws6").style.animationName="close";
+                        document.getElementById("img6").style.animationName="vidclose";
                     }
                 </script>
             </div>
