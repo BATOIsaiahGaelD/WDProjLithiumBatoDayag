@@ -10,20 +10,20 @@ let readyTimeout;
 let failTimeout;
 
 startBtn.onclick = () => {
-    if (state !== "idle") return;
+    if (state !== "idle") return; // start of idle spinning animation
 
     reactionResult.textContent = "Wait...";
     frisbee.classList.add("spinning");
     frisbee.classList.remove("stopped");
     state = "waiting";
 
-    const delay = Math.random() * 3000 + 1000;
+    const delay = Math.random() * 3000 + 1000; // when to click
 
     readyTimeout = setTimeout(() => {
         startTime = performance.now();
         reactionResult.textContent = "CLICK!";
         state = "ready";
-
+        
         failTimeout = setTimeout(() => {
             frisbee.classList.remove("spinning");
             frisbee.classList.add("stopped");
@@ -33,7 +33,9 @@ startBtn.onclick = () => {
     }, delay);
 };
 
+
 frisbee.onclick = () => {
+    // if clicked early
     if (state === "waiting") {
         clearTimeout(readyTimeout);
         frisbee.classList.remove("spinning");
@@ -41,7 +43,7 @@ frisbee.onclick = () => {
         reactionResult.textContent = "Too early!";
         state = "idle";
     }
-
+    // if clicked on time
     else if (state === "ready") {
         clearTimeout(failTimeout);
         const time = Math.round(performance.now() - startTime);
@@ -167,6 +169,7 @@ spinBtn.addEventListener("click", () => {
     });
 });
 
+// probability table
 const probBtn = document.getElementById("prob-btn");
 const probPopup = document.getElementById("prob-popup");
 const probOverlay = document.getElementById("prob-overlay");
