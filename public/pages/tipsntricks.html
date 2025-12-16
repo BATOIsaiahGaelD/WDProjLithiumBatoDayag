@@ -7,7 +7,7 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
+            <link rel="icon" href="./images/logo.png" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
                 div.body {
@@ -22,27 +22,62 @@
                 }
                 #tip1, #tip2, #tip3, #tip4 {
                     position:absolute;
-                    width:30vw;
-                    height:20vw;
+                    width:0vw;
+                    height:0vw;
                     border-radius:2vw;
                     background-color:rgba(76, 181, 255, 0.908);
+                    animation-duration:2s;
+                    animation-fill-mode:forwards;
+                    z-index:-1;
+                    text-align:center;
+                    font-size:0vw;
                 }
                 #tip1 {
                     top:10vw;
                     left:5vw;
+                    animation-delay:0s;
                 }
                 #tip2 {
                     left:65vw;
                     top:10vw;
+                    animation-delay:1s;
                 }
                 #tip3 {
                     left:5vw;
                     top:33vw;
+                    animation-delay:1.5s;
                 }
                 #tip4 {
                     top:33vw;
                     left:65vw;
+                    animation-delay:0.5s;
                 }
+                div.cl {
+                    font-size:1.5vw;
+                    width:20vw;
+                    height:1vw;
+                    position:absolute;
+                    left:42.5vw;
+                    top:9vw;
+                }
+                /* this code is for the boxes for the tips coming out of the frisbee*/
+                @keyframes tip1 {
+                    0% {width:0vw; height:0vw; top:32vw; left:51vw; font-size:0vw;}
+                    100% {left:5vw; top:10vw; width:30vw; height:20vw; font-size:1.5vw;}
+                }
+                @keyframes tip2 {
+                    0% {width:0vw; height:0vw; top:32vw; left:51vw; font-size:0vw;}
+                    100% {width:30vw; height:20vw; left:65vw; top:10vw; font-size:1.5vw;}
+                }
+                @keyframes tip3 {
+                    0% {width:0vw; height:0vw; top:32vw; left:51vw; font-size:0vw;}
+                    100% {width:30vw; height:20vw; left:5vw; top:33vw; font-size:1.5vw;}
+                }
+                @keyframes tip4 {
+                    0% {width:0vw; height:0vw; top:32vw; left:51vw; font-size:0vw;}
+                    100% {width:30vw; height:20vw; left:65vw; top:33vw; font-size:1.5vw;}
+                }
+
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
@@ -63,46 +98,74 @@
                 </div>
             </header>
             <div class="body">
-                <img id="main" src="../images/frisbeetips.png">
+                <div class="cl">
+                    Click the Disc to See Tips
+                </div>
+                <img id="main" title="https://www.stickpng.com/img/objects/frisbees/orange-frisbee" onclick="startanim()" src="../images/frisbeetips.png" draggable="false">
                 <div id="tip1">
-
+                </br>
+                    Never give up on the disc. A Frisbee disc is catchable until it touches the ground. 
+                    A disc varies in distance, speed, and height depending on the power, spin, and angle. 
+                    If a disc seems uncatchable because it went over your head or it is far away from you, there is a good chance that it still is because it may stay afloat for much longer than expected. 
+                    To us, this is the most important tip to get you started on Ultimate.
                 </div>
                 <div id="tip2">
-
+                </br>
+                    Run to the disc. Sometimes when someone throws the disc to you, you probably will just stand there and wait for the disc to come to you. 
+                    Then, the moment you catch the disc, a defender will come and block it. 
+                    This is a common problem for most beginners. 
+                    Always get close to the thrown disc as much as possible to ensure that the defender can’t block the throw.
                 </div>
                 <div id="tip3">
+                </br></br>
+                    Take your time. When you have the disc, just know you have 10 full seconds to make a decision on who to throw it to. 
+                    Clear your mind and read the field calmly; don’t always rush to throw the disc to someone. Use these 10 seconds wisely.
 
                 </div>
                 <div id="tip4">
+                </br>
+                    Catch the disc with 2 hands as much as possible. 
+                    Make sure to always use the “pancake” catch if possible because a one-handed catch is always risky. 
+                    Dropping the disc is a normal occurrence, even in crucial situations, so using the other hand will always bring the success of a catch higher. 
+                    Only use the one-handed catch when you really need those extra inches to catch the disc.
 
                 </div>
+            <script>
+                /* this function activates once the disc is clicked, kickstarting the 
+                animations */
+                function startanim(){
+                    document.getElementById("tip1").style.animationName="tip1";
+                    document.getElementById("tip2").style.animationName="tip2";
+                    document.getElementById("tip3").style.animationName="tip3";
+                    document.getElementById("tip4").style.animationName="tip4";
+                }
+            </script>
             </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
+            <footer class="site-footer">
+                    <div class="footer">
+                        <div class="copyright">© 2025 Frisbee4Fun    
                     </div>
 
                     <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
+                        <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                        <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
                     </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                        <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
                     </div>
 
                     <div class="frisbee">
-                        <a href="">Frisbee Site</a>
+                        <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
                     </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
+                    <div class="email">
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
                     </div>
 
-                    <div class = "references">
+                    <div class="references">
                         <a href="../pages/references.html">References</a>
                     </div>
                 </div>

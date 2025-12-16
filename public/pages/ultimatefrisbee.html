@@ -7,7 +7,7 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
+            <link rel="icon" href="./images/logo.png" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
                 header {
@@ -48,6 +48,8 @@
                     border-radius:2vw;
                     animation-duration:2s;
                     animation-fill-mode:forwards;
+                    text-align:center;
+                    font-size:0vw;
                 }
                 div#box2 {
                     position: absolute;
@@ -58,6 +60,8 @@
                     border-radius:2vw;
                     animation-duration:2s;
                     animation-fill-mode:forwards;
+                    font-size:0vw;
+                    text-align:center;
                 }
                 div#box3 {
                     position:absolute;
@@ -69,16 +73,19 @@
                     border-radius:2vw;
                     animation-duration:2s;
                     animation-fill-mode:forwards;
+                    font-size:0vw;
+                    text-align:center;
                 }
+                /* these keyframes are for the movements after the disc has been clicked. */
                 @keyframes box1 {
                     0% {height:0vw;}
-                    100% {height:23vw;}
+                    100% {height:23vw; font-size:1.5vw;}
                 }
                 @keyframes box2 {
-                    100% {width:72vw;}
+                    100% {width:72vw; font-size:5vw;}
                 }
                 @keyframes box3 {
-                    100% {width:72vw; height:23vw;}
+                    100% {width:72vw; height:23vw; font-size:1.7vw;}
                 }
                 @keyframes title {
                     100% {left:-62vw;}
@@ -128,7 +135,7 @@
             </header>
             <div class="body">
                 <div class="main">
-                    <img id="uldisc" onclick="start()" src="../images/frisbeeultimate.png">
+                    <img id="uldisc" onclick="start()" title="https://www.pngaaa.com/detail/3488354" src="../images/frisbeeultimate.png">
                 </div>
                 <div id="title">
                     ULTIMATE FRISBEE
@@ -137,15 +144,30 @@
                     Click Disc to Begin
                 </div>
                 <div id="box1">
+                    Here are the official Rules for Ultimate Frisbee! There are a lot of complicated rules.
+                    Some include the proper penalties, the "countdown", the out-of-bounds rules, and much more.
+                    We recommend that you at least skim through it to get you started!:
+                </br></br>
+                    https://usaultimate.org/rules/
 
                 </div>
                 <div id="box2">
-
+                    "A sport that should be recognized more." - Isaiah, 2025
                 </div>
                 <div id="box3">
-
+                    Welcome to Ultimate Frisbee (or Ultimate)! 
+                    It is a non-contact sport played with a disc flung. 
+                    The aim of the game– Two teams of seven players compete on a playing field about the same length as a football field, but narrower. 
+                    At each end of the playing field, there is an end zone. 
+                    They score a goal if one of their players catches the disc in the opposite end zone.
+                    The player with the disc is called the thrower. The thrower may not run with the disc. 
+                    Instead, they move the disc by passing to teammates in any direction. 
+                    The defensive team gets possession of the disc if an offensive team’s throw is not caught by a player of the same team. 
+                    Then the defensive team becomes the offensive team and can try to score in the opposite end zone.
                 </div>
             <script>
+                /* once the disc is clicked, it activates this function
+                that kickstarts the animations. */
                 function start(){
                     document.getElementById("uldisc").style.animationName="move";
                     document.getElementById("title").style.animationName="title";
@@ -156,32 +178,31 @@
                 }
             </script>
             </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
+            <footer class="site-footer">
+                    <div class="footer">
+                        <div class="copyright">© 2025 Frisbee4Fun    
                     </div>
 
                     <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
+                        <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                        <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
                     </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                        <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
                     </div>
 
                     <div class="frisbee">
-                        <a href="">Frisbee Site</a>
+                        <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
                     </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
+                    <div class="email">
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
                     </div>
 
-                    <div class = "references">
+                    <div class="references">
                         <a href="../pages/references.html">References</a>
                     </div>
                 </div>

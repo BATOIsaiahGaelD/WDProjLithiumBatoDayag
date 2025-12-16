@@ -7,7 +7,7 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
+            <link rel="icon" href="./images/logo.png" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="../CSS Files/headfoot.css">
             <style>
                 div.body {
@@ -33,6 +33,7 @@
                     animation-fill-mode:forwards;
                     margin:0px;
                 }
+                /* this keyframe animation is for the starting animation. */ 
                 @keyframes disc {
                     0% {height:0vw; width:0vw; left:21vw;}
                     25% {height:15vw; width:15vw; left:21vw}
@@ -49,6 +50,8 @@
                     animation-duration:2s;
                     animation-fill-mode:forwards;
                     border-radius:5px;
+                    font-size:0vw;
+                    text-align:center;
                 }
                 div#paragraph2 {
                     background-color:rgba(68, 182, 235, 0.901);
@@ -60,6 +63,8 @@
                     animation-duration:2s;
                     animation-fill-mode:forwards;
                     border-radius:5px;
+                    font-size:0vw;
+                    text-align:center;
                 }
                 div#paragraph3 {
                     background-color:rgba(68, 182, 235, 0.901);
@@ -71,18 +76,29 @@
                     animation-duration:2s;
                     animation-fill-mode:forwards;
                     border-radius:5px;
+                    font-size:0vw;
+                    text-align:center;
                 }
+                div.c {
+                    font-size:3vw;
+                    width:30vw;
+                    height:5vw;
+                    position:absolute;
+                    left:37vw;
+                    top:8vw;
+                }
+                /* these animations are for the boxes that appear once you click.*/
                 @keyframes p1anim {
-                    0% {width:0vw; height:13vw;}
-                    100% {width:60vw; height:13vw;}
+                    0% {width:0vw; height:13vw; font-size:0vw;}
+                    100% {width:60vw; height:13vw; font-size:1.7vw;}
                 }
                 @keyframes p2anim {
-                    0% {width:0vw; height:13vw;}
-                    100% {width:60vw; height:13vw;}
+                    0% {width:0vw; height:13vw; font-size:0vw;}
+                    100% {width:60vw; height:13vw; font-size:1.7vw;}
                 }
                 @keyframes p3anim {
-                    0% {width:0vw; height:10vw;}
-                    100% {width:60vw; height:13vw;}
+                    0% {width:0vw; height:10vw; font-size:0vw;}
+                    100% {width:60vw; height:13vw; font-size:1.7vw;}
                 }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
@@ -104,17 +120,29 @@
                 </div>
             </header>
             <div class="body">
+                <div class="c">
+                    Click the Disc to Begin
+                </div>
                 <div class="frisbeee" onclick="pop()">
-                    <img class="page" src="../images/frisbeeintro.png">
+                    <img class="page" title="https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/" draggable="false" src="../images/frisbeeintro.png">
                 </div>
                 <div id="paragraph1">
-                    
+                </br>
+                    We are Russell Dayag and Isaiah Bato, Grade 9 students from PSHS Main Campus, Batch 2029, Section 9-Lithium. 
+                    Russell is 14 years old and an active member of Alianti, the school’s frisbee club, as well as AlianTeam Varsity. 
+                    Isaiah is 15 years old, an active frisbee player, and plans to try out for the frisbee varsity team next year.
                 </div>
                 <div id="paragraph2">
-
+                </br>
+                    We chose Ultimate Frisbee as our project because it is a sport that we both genuinely enjoy and are passionate about. 
+                    The game’s fast-paced movement, teamwork, and unique concept of passing a disc instead of a ball make it exciting and different from other sports. 
+                    Playing Ultimate Frisbee has helped us build friendships, stay active, and develop teamwork, communication, and sportsmanship.
                 </div>
                 <div id="paragraph3">
-
+                </br>
+                    Through this project, we aim to promote Ultimate Frisbee and help grow the PISAY Frisbee community. 
+                    We believe that frisbee is not only a competitive sport but also a fun and inclusive hobby that anyone can enjoy, especially when played with friends. 
+                    Our hope is that this project encourages more students to try Ultimate Frisbee and discover how enjoyable the sport can be.
                 </div>
             <script>
                 function pop(){
@@ -124,32 +152,31 @@
                 }
             </script>
             </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
+            <footer class="site-footer">
+                    <div class="footer">
+                        <div class="copyright">© 2025 Frisbee4Fun    
                     </div>
 
                     <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
+                        <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                        <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
                     </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                        <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
                     </div>
 
                     <div class="frisbee">
-                        <a href="">Frisbee Site</a>
+                        <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
                     </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
+                    <div class="email">
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
                     </div>
 
-                    <div class = "references">
+                    <div class="references">
                         <a href="../pages/references.html">References</a>
                     </div>
                 </div>
