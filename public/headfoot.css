@@ -16,7 +16,7 @@ body{
     display:flex;
     justify-content:center;
     padding:20px 0;
-    background-image: url('../images/header-bg.jpg'); 
+    background-image: url('../assets/header-bg.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
