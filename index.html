@@ -7,7 +7,7 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
+            <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/jpg">
             <style>
                 header {
                     background-image:none;
@@ -197,12 +197,14 @@
                     height:14vw;
                     width:0vw;
                     border-color:black;
-                    border-radius:2px;
-                    position:relative;
-                    background-color:grey;
                     border-radius:2vw;
+                    position:relative;
+                    background-color:rgba(91, 187, 255, 0.836);
                     animation-duration:1s;
                     animation-fill-mode:forwards;
+                    font-size:0vw;
+                    text-align:center;
+                    color:rgb(255, 255, 255);
                 }
                 div#p1 {
                     top:-107vw;
@@ -232,120 +234,139 @@
                     top:-19vw;
                     left:30vw;
                 }
+                /* the p keyframes are for when the rectangles expand. the pback are the ones that compress the rectangle. */
                 @keyframes p1 {
-                    0% {height:14vw; width:0vw; top:-107vw; left:38vw;}
-                    100% {height:14vw; width:50vw; top:-107vw; left:40vw;}
+                    0% {height:14vw; width:0vw; top:-107vw; left:38vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-107vw; left:40vw; font-size:1.8vw;}
                 }
                 @keyframes p1back {
-                    0% {height:14vw; width:50vw; top:-107vw; left:40vw;}
-                    100% {height:14vw; width:0vw; top:-107vw; left:38vw;}
+                    0% {height:14vw; width:50vw; top:-107vw; left:40vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-107vw; left:38vw; font-size:0vw;}
                 }
                 
                 @keyframes p2 {
-                    0% {height:14vw; width:0vw; top:-85vw; left:12vw;}
-                    100% {height:14vw; width:50vw; top:-85vw; left:8vw;}
+                    0% {height:14vw; width:0vw; top:-85vw; left:12vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-85vw; left:8vw; font-size:1.8vw;}
                 }
                 @keyframes p2back {
-                    0% {height:14vw; width:50vw; top:-85vw; left:8vw;}
-                    100% {height:14vw; width:0vw; top:-85vw; left:12vw;}
+                    0% {height:14vw; width:50vw; top:-85vw; left:8vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-85vw; left:12vw; font-size:0vw;}
                 }
 
                 @keyframes p3 {
-                    0% {height:14vw; width:0vw; top:-72vw; left:37vw;}
-                    100% {height:14vw; width:50vw; top:-72vw; left:40vw;}
-                }
+                    0% {height:14vw; width:0vw; top:-72vw; left:37vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-72vw; left:40vw; font-size:1.8vw;}
+                } 
                 @keyframes p3back {
-                    0% {height:14vw; width:50vw; top:-72vw; left:40vw;}
-                    100% {height:14vw; width:0vw; top:-72vw; left:37vw;}
+                    0% {height:14vw; width:50vw; top:-72vw; left:40vw; font-size:1.8vw;} 
+                    100% {height:14vw; width:0vw; top:-72vw; left:37vw; font-size:0vw;}
                 }
 
                 @keyframes p4 {
-                    0% {height:14vw; width:0vw; top:-58vw; left:13vw;}
-                    100% {height:14vw; width:50vw; top:-58vw; left:10vw;}
+                    0% {height:14vw; width:0vw; top:-58vw; left:13vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-58vw; left:10vw; font-size:1.8vw;}
                 }
                 @keyframes p4back {
-                    0% {height:14vw; width:50vw; top:-58vw; left:10vw;}
-                    100% {height:14vw; width:0vw; top:-58vw; left:13vw;}
+                    0% {height:14vw; width:50vw; top:-58vw; left:10vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-58vw; left:13vw; font-size:0vw;}
                 }
 
                 @keyframes p5 {
-                    0% {height:14vw; width:0vw; top:-46vw; left:35vw;}
-                    100% {height:14vw; width:50vw; top:-46vw; left:38vw;}
+                    0% {height:14vw; width:0vw; top:-46vw; left:35vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-46vw; left:38vw; font-size:1.8vw;}
                 }
                 @keyframes p5back {
-                    0% {height:14vw; width:50vw; top:-46vw; left:38vw;}
-                    100% {height:14vw; width:0vw; top:-46vw; left:35vw;}
+                    0% {height:14vw; width:50vw; top:-46vw; left:38vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-46vw; left:35vw; font-size:0vw;}
                 }
 
                 @keyframes p6 {
-                    0% {height:14vw; width:0vw; top:-31vw; right:-8vw;}
-                    100% {height:14vw; width:50vw; top:-31vw; right:-11vw;}
+                    0% {height:14vw; width:0vw; top:-31vw; right:-8vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-31vw; right:-11vw; font-size:1.8vw;}
                 }
                 @keyframes p6back {
-                    0% {height:14vw; width:50vw; top:-31vw; right:-11vw;}
-                    100% {height:14vw; width:0vw; top:-31vw; right:-8vw;}
+                    0% {height:14vw; width:50vw; top:-31vw; right:-11vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-31vw; right:-8vw; font-size:0vw;}
                 }
 
                 @keyframes p7 {
-                    0% {height:14vw; width:0vw; top:-19vw; left:30vw;}
-                    100% {height:14vw; width:50vw; top:-19vw; left:33vw;}
+                    0% {height:14vw; width:0vw; top:-19vw; left:30vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-19vw; left:33vw; font-size:1.8vw;}
                 }
                 @keyframes p7back {
-                    0% {height:14vw; width:50vw; top:-19vw; left:33vw;}
-                    100% {height:14vw; width:0vw; top:-19vw; left:30vw;}
+                    0% {height:14vw; width:50vw; top:-19vw; left:33vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-19vw; left:30vw; font-size:0vw;}
                 }
             </style>
             <link rel="stylesheet" href="../public/CSS Files/index.css">
         </head>
         <body>
             <header>
-                Frisbee4Fun: Your Guide to Becoming an All-Star
+                Frisbee4Fun: Your Guide to Becoming an All-Star </br>
+                (Click the Disc to Begin)
             </header>
             <div class="body">
                 <div class="main" onclick="startinganim()">
-                    <img class="main" src="../public/images/frisbee.png">
+                    <img class="main" src="./assets/frisbee.png" draggable="false" title="https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg"/>
                 </div>
                 <div class="intro">
-                    <a href="../public/pages/intro.html"><img id="intro" src="../public/images/frisbeeintro.png" onmouseover="p1function()" onmouseout="p1functionback()"></a>
+                    <a href="./public/intro.html"><img id="intro" src="./assets/frisbeeintro.png" onmouseover="p1function()" onmouseout="p1functionback()" title="https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/" draggable="false"></a>
                 </div>
                 <div class="throws">
-                    <a href="../public/pages/throws.html"><img id="throws" onmouseover="p2function()" onmouseout="p2functionback()" src="../public/images/frisbeethrows.png"></a>
+                    <a href="./public/throws.html"><img id="throws" onmouseover="p2function()" onmouseout="p2functionback()" src="./assets/frisbeethrows.png" title="https://pngimg.com/image/44950" draggable="false"></a>
                 </div>
                 <div class="tips">
-                    <a href="../public/pages/tipsntricks.html"><img id="tips" onmouseover="p3function()" onmouseout="p3functionback()" src="../public/images/frisbeetips.png"></a>
+                    <a href="./public/tipsntricks.html"><img id="tips" onmouseover="p3function()" onmouseout="p3functionback()" src="./assets/frisbeetips.png" title="https://www.stickpng.com/img/objects/frisbees/orange-frisbee" draggable="false"></a>
                 </div>
                 <div class="ultimate">
-                    <a href="../public/pages/ultimatefrisbee.html"><img id="ultimate" onmouseover="p4function()" onmouseout="p4functionback()" src="../public/images/frisbeeultimate.png"></a>
+                    <a href="./public/ultimatefrisbee.html"><img id="ultimate" onmouseover="p4function()" onmouseout="p4functionback()" src="./assets/frisbeeultimate.png" title="https://www.pngaaa.com/detail/3488354" draggable="false"></a>
                 </div>
                 <div class="strats">
-                    <a href="../public/pages/stratsandforms.html"><img id="strats" onmouseover="p5function()" onmouseout="p5functionback()" src="../public/images/frisbeestrats.png"></a>
+                    <a href="./public/stratsandforms.html"><img id="strats" onmouseover="p5function()" onmouseout="p5functionback()" src="./assets/frisbeestrats.png" title="https://www.hiclipart.com/free-transparent-background-png-clipart-zyzgu" draggable="false"></a>
                 </div>
                 <div class="minigames">
-                    <a href="../public/pages/minigames.html"><img id="minigames" onmouseover="p6function()" onmouseout="p6functionback()" src="../public/images/frisbeeminigames.png"></a>
+                    <a href="./public/minigames.html"><img id="minigames" onmouseover="p6function()" onmouseout="p6functionback()" src="./assets/frisbeeminigames.png" title="https://www.pikpng.com/pngvi/imTwmTT_frisbee-png-music-festival-clipart/" draggable="false"></a>
                 </div>
                 <div class="reference">
-                    <a href="../public/pages/references.html"><img id="reference" onmouseover="p7function()" onmouseout="p7functionback()" src="../public/images/frisbeereferences.png"></a>
+                    <a href="./public/references.html"><img id="reference" onmouseover="p7function()" onmouseout="p7functionback()" src="./assets/frisbeereferences.png" title="https://toppng.com/show_download/20008/frisbee" draggable="false"></a>
                 </div>
                 <div id="p1">
-                    
+                    <h2>Intro</h2>
+                </br>
+                    Click the frisbee on the left to learn about the developers and why they chose this. 
+                    Also includes general information about Ultimate frisbee to give a kick start in learning the sport!
                 </div>
                 <div id="p2">
-                    
+                    <h2>Throws</h2> </br>
+                    Throwing is how you send the frisbee from one player to another! 
+                    Click the frisbee to learn the SEVEN MOST IMPORTANT throws in Ultimate!
                 </div>
                 <div id="p3">
-                    
+                    <h2>TipsnTricks</h2> </br>
+                    Click the frisbee to the left to learn important tips and tricks to further 
+                    elevate your knowledge on the game and to make scoring points and defending easier and smoother.
                 </div>
                 <div id="p4">
-                    
+                    <h2>Ultimate Frisbee</h2></br>
+                    Ultimate frisbee is a non-contact sport involving a frisbee and 2 teams, the offense and the defense. 
+                    Click on the disc now to know more!
                 </div>
                 <div id="p5">
-                    
+                    <h2>Strategies and Formations</h2></br>
+                    The goal of frisbee is to score a point in the most efficient way possible. 
+                    Setting up strategies, formations, and plays is the way to go! 
+                    Click the frisbee to know the most common plays in Ultimate.
                 </div>
                 <div id="p6">
-                    
+                    <h2>Minigames</h2></br>
+                    To see if you have really learned, we have set up a Q&A to make sure you don’t forget the important information. 
+                    We have set up a reaction time test to practice catching a frisbee. 
+                    For the third minigame, we have set up a gacha loot box. Have fun!
                 </div>
                 <div id="p7">
-                    
+                    <h2>References</h2></br>
+                    If you really want to dive into frisbee, here are the references we used for this website.
+                    Dive deep into hundreds of links and references. Click the disc now!
                 </div>
             </div>
             <script>
@@ -408,33 +429,32 @@
                     document.getElementById("p7").style.animationName="p7back";
                 }
             </script>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
+            <footer class="site-footer">
+                    <div class="footer">
+                        <div class="copyright">© 2025 Frisbee4Fun    
                     </div>
 
                     <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
+                        <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                        <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
                     </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                        <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
                     </div>
 
                     <div class="frisbee">
-                        <a href="">Frisbee Site</a>
+                        <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
                     </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
+                    <div class="email">
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
                     </div>
 
-                    <div class = "references">
-                        <a href="../pages/references.html">References</a>
+                    <div class="references">
+                        <a href="./public/references.html">References</a>
                     </div>
                 </div>
             </footer>

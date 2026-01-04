@@ -7,8 +7,8 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="" sizes="32x32" type="image/jpg">
-            <link rel="stylesheet" href="../CSS Files/headfoot.css">
+            <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
+            <link rel="stylesheet" href="headfoot.css">
             <style>
                 div.body {
                     padding-top:5vw;
@@ -21,6 +21,14 @@
                     position:absolute;
                     left: 32vw;
                     top: 10vw;
+                }
+                div.click {
+                    font-size:2vw;
+                    width:30vw;
+                    height:3vw;
+                    position:absolute;
+                    left:38vw;
+                    top:10vw;
                 }
                 div.main, img.main {
                     border-radius:50%;
@@ -132,7 +140,7 @@
                 p {
                     margin:1vw;
                 }
-                img#img1, img#img2, img#img3, img#img41, img#img42, img#img51, img#img52, img#img6 {
+                #img1, #img2, #img3, #img41, #img42, #img51, #img52, #img61, #img62 {
                     height:0vw;
                     width:0vw;
                     animation-duration:1s;
@@ -171,13 +179,13 @@
                     <div class="logo">Frisbee4Fun</div>
                     <nav class="nav-links">
                         <a href="../index.html">Homepage</a>
-                        <a href="../pages/intro.html">Intro</a>
-                        <a href="../pages/throws.html">Throws</a>
-                        <a href="../pages/tipsntricks.html">Tips</a>
-                        <a href="../pages/ultimatefrisbee.html">Ultimate</a>
-                        <a href="../pages/stratsandforms.html">Strategies</a>
-                        <a href="../pages/minigames.html">Mini Games</a>
-                        <a href="../pages/references.html">References</a>
+                        <a href="./intro.html">Intro</a>
+                        <a href="./throws.html">Throws</a>
+                        <a href="./tipsntricks.html">Tips</a>
+                        <a href="./ultimatefrisbee.html">Ultimate</a>
+                        <a href="./stratsandforms.html">Strategies</a>
+                        <a href="./minigames.html">Mini Games</a>
+                        <a href="./references.html">References</a>
                     </nav>
                 </div>
             </header>
@@ -185,8 +193,11 @@
                 <div id="title">
                     THROWS
                 </div>
+                <div class="click">
+                    Click the blue Frisbee to Begin.
+                </div>
                 <div class="main">
-                    <img class="main" onclick="anim()" src="../images/frisbeethrows.png">
+                    <img title="https://pngimg.com/image/44950" class="main" onclick="anim()" src="../assets/frisbeethrows.png" draggable="false">
                 </div>
                 <div id="circle1" onclick="open1()">
                 </br></br><p>BACKHAND</p>
@@ -209,7 +220,6 @@
                 <div id="throws1" onclick="close1()">
                     </br>
                     <h2>Backhand</h2>
-                    </br>
                     <p>
                         This is the easiest/most common throw in Ultimate. It involves putting 4 fingers in the cup of the disc and the thumb on top. 
                         For right-handed players, you stand straight, twist to the left, bend your wrist for the spin, and elbow in front so that they are in front of the disc. 
@@ -217,13 +227,34 @@
                         You could adjust the angle of the throw to however you want but if you want to keep the disc straight, keep it at an angle of 180 degrees or straight when you release it. 
                         You could also pull it back farther for even more power.
                     </p>
-                    <img id="img1" src="../images/frisbeetips.png">
+                    <video id="img1" src="../assets/backhand.mov" type="video/mov" controls></video></br>
+                    Backhand Throw
                 </div>
                 <div id="throws2" onclick="close2()">
-                    <img id="img2" src="../images/frisbeetips.png">
+                </br>
+                    <h2>Forehand</h2>
+                    This is the most efficient throw in Ultimate because of its fast release– can be thrown in milliseconds. 
+                    Put two fingers (pointer and middle) under the disc and thumb on top. 
+                    The key element is flicking the disc to add spin and keep the disc parallel to the ground. 
+                    Do this by pulling your wrist as far back as it will go and snapping it forward while bringing your arm through the motion. 
+                    The disc should wrap around and “fling” off your two fingers. 
+                    Although this throw is harder to learn than the backhand, it is still very useful on the field.
+            </br>   <video id="img2" src="../assets/forehand.mov" controls></video></br>
+                    Forehand Throw
                 </div>
                 <div id="throws3" onclick="close3()">
-                    <img id="img3" src="../images/frisbeetips.png">
+                </br>
+                    <h2>Hammer</h2>
+                    This is another useful throw when the timing is right. 
+                    The hammer throw can be used when there are multiple defenders blocking the way for a backhand or forehand throw since you can easily throw over them. 
+                    First, hold the disc with your pointer and middle finger on the inner side of the disc, your thumb on the other side. 
+                    It is typically held the same way as a forehand. 
+                    The top of the disc should be facing your left side. 
+                    Tilt the top of the disc slightly to the left side to give it an angle. 
+                    Pull back and release the disc when it gets even with your forehead, keep your elbow bent at all times. 
+                    If done right the disc should start out tilted and slowly turn upside-down. 
+                    The disc should land completely upside down on its face, making it easier to catch for your teammate.
+                    <video id="img3" src="../assets/hammer.mov" controls></video>
                 </div>
                 <div id="throws4" onclick="close4()">
                 </br>
@@ -232,22 +263,42 @@
                         Most of the disc's propulsion will come solely from the wrist in a snapping motion. 
                         Should be thrown with an almost straight arm at a 45 degree angle. 
                         Most of the discs forward motion will be from snapping your wrist for spin.</p>
-                    <img id="img41" src="../images/frisbeetips.png">
+                    <video id="img41" src="../assets/highbackhand.mov" controls></video>
                     <h3>Low Release Backhand</h3>
                     <p>
                         A low release follows the same arm motion as a regular backhand. 
                         But it is meant to be released just a few inches from the ground, the closer the better. 
                         One would have to take a big lunge outward and reach low.
                     </p>
-                    <img id="img42" src="../images/frisbeetips.png">
+                    <video id="img42" src="../assets/lowbackhand.mov" controls></video>
                 </div>
                 <div id="throws5" onclick="close5()">
-                    <img id="img1" src="../images/frisbeetips.png">
+                    <h3>High Release Forehand</h3>
+                    To throw a high release forehand, with a straight arm at a 45 degree angle above the shoulder, flick your wrist in the same motion as a normal flick. 
+                    Keep the disc as level with the ground as possible. 
+                    Remember that most of the disc’s propulsion comes from the wrist snap and not much from the arm.</br>
+                    <video id="img51" src="../assets/highforehand.mov" controls></video>
+                    <h3>Low Release Forehand</h3>
+                    To throw a low release forehand, have the swinging motion of the forehand and release it a few inches above the ground and sink as low as possible. 
+                    When throwing, your elbow should just barely make it past your knee. 
+                    You want to release it at an upward angle so it doesn’t skid across the ground. 
+                    This will be probably the hardest throw to learn along with the hammer although highly effective across the field.
+                    <video id="img52" src="../assets/lowforehand.mov" controls></video>
                 </div>
                 <div id="throws6" onclick="close6()">
-                    <img id="img6" src="../images/frisbeetips.png">
+                    <h3>Chicken</h3>
+                    The chicken is a throw that is used to confuse players. It involves
+                    the person holding the disc with four fingers on top, and the thumb underneath.
+                    You then put your hand behind your back and throw as if you are about to raise your hand.
+                    <video id="img61" src="../assets/chicken.mov" controls></video>
+                    <h3>Scoober</h3>
+                    This throw is most similar to the hammer. However, this throw is thrown
+                    flat, and not at an angle like the hammmer. It has the same grip and movement,
+                    we just angle the disc to be flatter.</br>
+                    <video id="img62" src="../assets/scoober.mov" controls></video>
                 </div>
                 <script>
+                    /* this function is for the circles appearing once you click on the disc*/
                     function anim() {
                         document.getElementById("circle1").style.animationName="c1";
                         document.getElementById("circle2").style.animationName="c2";
@@ -258,6 +309,8 @@
                         document.getElementById("small4").style.animationName="s4";
                         document.getElementById("small5").style.animationName="s5";
                     }
+                    /* the open functions are for the rectangle, text, and video that scales.
+                    The close functions are for the rectangle, text, and video that compresses.*/
                     function open1() {
                         document.getElementById("throws1").style.animationName="open";
                         document.getElementById("img1").style.animationName="vidopen";
@@ -281,8 +334,9 @@
                         document.getElementById("img52").style.animationName="vidopen";
                     }
                     function open6() {
-                        document.getElementById("throws6").style.animationName="open";
-                        document.getElementById("img6").style.animationName="vidopen";
+                        document.getElementById("throws6").style.animationName="opens";
+                        document.getElementById("img61").style.animationName="vidopen";
+                        document.getElementById("img62").style.animationName="vidopen";
                     }
                     function close1() {
                         document.getElementById("throws1").style.animationName="close";
@@ -307,37 +361,37 @@
                         document.getElementById("img52").style.animationName="vidclose";
                     }
                     function close6() {
-                        document.getElementById("throws6").style.animationName="close";
-                        document.getElementById("img6").style.animationName="vidclose";
+                        document.getElementById("throws6").style.animationName="closes";
+                        document.getElementById("img61").style.animationName="vidclose";
+                        document.getElementById("img62").style.animationName="vidclose";
                     }
                 </script>
             </div>
-            <footer>
-                <div class="footer">
-                    <div class="copyright">
-                        Copyright
+            <footer class="site-footer">
+                    <div class="footer">
+                        <div class="copyright">© 2025 Frisbee4Fun    
                     </div>
 
                     <div class="ig">
-                        <a href="">Isaiah's Instagram</a> </br>
-                        <a href="">Russell's Instagram</a>
+                        <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                        <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
                     </div>
 
-                    <div class=" fb">
-                        <a href="">Isaiah's Facebook</a></br>
-                       <a href="">Russell's Facebook</a>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                        <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
                     </div>
 
                     <div class="frisbee">
-                        <a href="">Frisbee Site</a>
+                        <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
                     </div>
 
-                    <div class ="email">
-                        <a href="">Isaiah's email</a></br>
-                        <a href="">Russell's email</a>
+                    <div class="email">
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                        <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
                     </div>
 
-                    <div class = "references">
+                    <div class="references">
                         <a href="../pages/references.html">References</a>
                     </div>
                 </div>
