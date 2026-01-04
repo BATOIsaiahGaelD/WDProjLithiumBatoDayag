@@ -42,3 +42,9 @@ JavaScript plays an important role in web development by transforming a static H
 References: <br/>
 First Quarter Portfolio: xcreditSONALithiumBato.md
 Alligator. (2016, January 26). Markdown links/anchors. DigitalOcean. https://www.digitalocean.com/community/tutorials/markdown-links-anchors
+
+<h3> UPDATED WIREFRAME </h3>
+
+
+
+<h3> Implementation of HTML Forms </h3>

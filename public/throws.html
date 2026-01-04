@@ -52,8 +52,8 @@
                     width:0vw;
                     height:0vw;
                     position:absolute;
-                    left:43.5vw;
-                    top:43.5vw;
+                    left:46.5vw;
+                    top:46.5vw;
                     border-radius:50%;
                     background-color:grey;
                     animation:2s;
@@ -92,19 +92,19 @@
                     animation-delay:1.2s;
                 }
                 @keyframes c1 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:25vw; top:35vw; font-size:2vw;}
                 }
                 @keyframes c2 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:43.5vw; top:25vw; font-size:2vw;}
                 }
                 @keyframes c3 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:62vw; top:35vw; font-size:2vw;}
                 }
                 @keyframes c4 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:25vw; top:55vw; font-size:2vw;}
                 }
                 @keyframes s4 {
@@ -112,7 +112,7 @@
                     100% {font-size:1vw;}
                 }
                 @keyframes c5 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:43.5vw; top:62vw; font-size:2vw;}
                 }
                 @keyframes s5 {
@@ -120,7 +120,7 @@
                     100% {font-size:1vw;}
                 }
                 @keyframes c6 {
-                    0% {width: 0vw; height: 0vw; left:43.5; top:43.5; font-size:0vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
                     100% {width:13vw; height:13vw; left:62vw; top:55vw; font-size:2vw;}
                 }
                 div#throws1, div#throws2, div#throws3, div#throws4, div#throws5, div#throws5, div#throws6 {
@@ -170,6 +170,12 @@
                     0% {width:22vw; height:19vw;}
                     100% {width:0vw; height:0vw;}
                 }
+                div.close {
+                    position:absolute;
+                    left:1vw;
+                    top:1vw;
+                    font-weight:bold;
+                }
             </style>
             <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
@@ -217,7 +223,8 @@
                 <div id="circle6" onclick="open6()">
                 </br></br><p>OTHER</p>
                 </div>
-                <div id="throws1" onclick="close1()">
+                <div id="throws1">
+                    <div class="close" onclick="close1()">X</div>
                     </br>
                     <h2>Backhand</h2>
                     <p>
@@ -230,7 +237,8 @@
                     <video id="img1" src="../assets/backhand.mov" type="video/mov" controls></video></br>
                     Backhand Throw
                 </div>
-                <div id="throws2" onclick="close2()">
+                <div id="throws2">
+                    <div class="close" onclick="close2()">X</div>
                 </br>
                     <h2>Forehand</h2>
                     This is the most efficient throw in Ultimate because of its fast release– can be thrown in milliseconds. 
@@ -242,7 +250,8 @@
             </br>   <video id="img2" src="../assets/forehand.mov" controls></video></br>
                     Forehand Throw
                 </div>
-                <div id="throws3" onclick="close3()">
+                <div id="throws3">
+                    <div class="close" onclick="close3()">X</div>
                 </br>
                     <h2>Hammer</h2>
                     This is another useful throw when the timing is right. 
@@ -256,7 +265,8 @@
                     The disc should land completely upside down on its face, making it easier to catch for your teammate.
                     <video id="img3" src="../assets/hammer.mov" controls></video>
                 </div>
-                <div id="throws4" onclick="close4()">
+                <div id="throws4">
+                    <div class="close" onclick="close4()">X</div>
                 </br>
                     <h3>High Release Backhand</h3>
                     <p>To throw a high release version of the backhand, an almost straight arm must be above the shoulder. 
@@ -272,7 +282,8 @@
                     </p>
                     <video id="img42" src="../assets/lowbackhand.mov" controls></video>
                 </div>
-                <div id="throws5" onclick="close5()">
+                <div id="throws5">
+                    <div class="close" onclick="close5()">X</div>
                     <h3>High Release Forehand</h3>
                     To throw a high release forehand, with a straight arm at a 45 degree angle above the shoulder, flick your wrist in the same motion as a normal flick. 
                     Keep the disc as level with the ground as possible. 
@@ -285,7 +296,8 @@
                     This will be probably the hardest throw to learn along with the hammer although highly effective across the field.
                     <video id="img52" src="../assets/lowforehand.mov" controls></video>
                 </div>
-                <div id="throws6" onclick="close6()">
+                <div id="throws6">
+                    <div class="close" onclick="close6()">X</div>
                     <h3>Chicken</h3>
                     The chicken is a throw that is used to confuse players. It involves
                     the person holding the disc with four fingers on top, and the thumb underneath.
