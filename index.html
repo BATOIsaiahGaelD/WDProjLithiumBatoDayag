@@ -7,18 +7,17 @@
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/png">
+            <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/jpg">
             <style>
-                header {
+                #header {
+                    background-image:none;
                     text-align:center;
                     font-size:4vw;
                     padding: 8vw 0vw;
-                    z-index:3;
+                    z-index:100;
                 }
                 div.body {
-                    background-image:linear-gradient(to bottom, rgba(253, 247, 72, 0.757), rgba(0,0,0));
                     align-content:center;
-                    z-index:2;
                 }
                 div.main, img.main {
                     margin-left:auto;
@@ -299,7 +298,7 @@
                     0% {height:14vw; width:50vw; top:-19vw; left:33vw; font-size:1.8vw;}
                     100% {height:14vw; width:0vw; top:-19vw; left:30vw; font-size:0vw;}
                 }
-                div.background {
+               div.background {
                     width:1vw;
                     height:20vw;
                     position:absolute;
@@ -313,7 +312,7 @@
             <link rel="stylesheet" href="../public/CSS Files/index.css">
         </head>
         <body>
-            <header>
+            <div id="header">
                 Frisbee4Fun: Your Guide to Becoming an All-Star </br>
                 (Click the Disc to Begin)
                 <div class="background" id="b1"></div>
