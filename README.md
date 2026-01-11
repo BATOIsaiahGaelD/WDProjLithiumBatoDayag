@@ -3,7 +3,7 @@
 <h4>Your Guide to Becoming an All-Star</h4>
 <h3>Website Logo </h3>
 
-![alt](/images/Screenshot%202025-10-29%20222744.png)
+!![alt](/assets/logo.png)
 
 Overview:
 Ultimate Frisbee: Your Guide to Becoming an All-Star is a perfect starting point for anyone that is a beginner or trying to try a new sport or hobby. This guide breaks down the fundamentals, from game rules, throwing/catching techniques, to teamwork and strategies. With our clear explanations, visuals, and tips and tricks, beginners can quickly learn the basics and build skill and confidence on the field.
