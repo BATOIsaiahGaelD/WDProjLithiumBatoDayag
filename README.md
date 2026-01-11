@@ -43,8 +43,21 @@ References: <br/>
 First Quarter Portfolio: xcreditSONALithiumBato.md
 Alligator. (2016, January 26). Markdown links/anchors. DigitalOcean. https://www.digitalocean.com/community/tutorials/markdown-links-anchors
 
-<h3> UPDATED WIREFRAME </h3>
+<h1>UPDATED PROJECT PROPOSAL</h1>
+
+<h3>What is HTML forms?</h3>
+HTML forms gets the user's input and saves it in order for it to be used somewhere else. For our website, we want to have a sign-up and login page, as well as use HTML forms for one of our own minigames in the minigames page. All of the data accumulated from these pages will be for a profile page.
+
+<h3> Implementation of HTML Forms (per page)</h3>
+- First, we would like to have a sign-in and log-in page in order to have an account for our website. This account will record your data in minigames and will contain info about your user. All of this data will be displayed in the profile page, which will be a page showcasing all of your data (such as fastest recorded reaction time, name, preferences, etc). These pages will get your username, password, and jersey number.
+
+- Second, we will have the profile page. This page will contain all the data from the sign-up and login page. There is an edit profile buton below the profile which will link you to another page.
+
+- Third, we will have the edit profile page. This page will allow you to edit specific parts of your profile for more customization. It will use radio selectors and input boxes.
+
+- Fourth, we have the quiz page from the minigames page. This page will make you answer 20 questions related to the website and Frisbee overall. We will use a lot of HTML forms, especially text boxes, radio selectors, and checkboxes. Some questions may be select all correct/wrong, fill-in the blank, and multiple choice. Their max score will be 20/20.
 
 
+<h3> Description of Each Page + Wireframes <h3>
 
-<h3> Implementation of HTML Forms </h3>
+
