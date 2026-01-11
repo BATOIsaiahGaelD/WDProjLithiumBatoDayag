@@ -87,3 +87,43 @@ The quiz page will showcase 20 different questions that can either be fill-in-th
 
 ![alt](/assets/Wireframe_quiz_score.png)
 There are now two new buttons, the record score and try again button. The try again button will reset all your quiz data and send you back to the beginning with a few new questions. The record score button will showcase your score on your profile, updating it.
+
+References: </br>
+W3Schools.com. (n.d.-y). https://www.w3schools.com/html/html_forms.asp
+Arushi. (2018, January 23). Why do we use the novalidate attribute in HTML? Retrieved from tutorialspoint.com: https://www.tutorialspoint.com/Why-do-we-use-the-novalidate-attribute-in-HTML#:~:text=The%20novalidate%20attribute%20in%20HTML%20is%20used%20to%20signify%20that,continue%20%26%20submit%20the%20form%20later.
+
+MDN Contributors. (2021, February 20). </input type="button">. Retrieved from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button
+
+MDN Contributors. (2021, February 20). </input type="submit">. Retrieved from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit
+
+W3Schools. (n.d.). HTML </input type="button">. Retrieved from w3schools.com: https://www.w3schools.com/tags/att_input_type_button.asp
+
+W3Schools. (n.d.). HTML Form Attributes. Retrieved from w3schools.com: https://www.w3schools.com/html/html_forms_attributes.asp
+
+W3Schools. (n.d.). HTML Form Elements. Retrieved from w3schools.com: https://www.w3schools.com/html/html_form_elements.asp
+
+W3Schools. (n.d.). HTML Forms. Retrieved from w3schoools.com: https://www.w3schools.com/html/html_forms.asp
+
+W3Schools. (n.d.). HTML Input Types. Retrieved from w3schools.com: https://www.w3schools.com/html/html_form_input_types.asp
+
+W3Schools. (n.d.). HTML </input type="reset">. Retrieved from w3schools.com: https://www.w3schools.com/tags/att_input_type_reset.asp
+
+ManasChhabra2. (2019, April 22). HTML| action Attribute. Retrieved from geeksforgeeks.org: https://www.geeksforgeeks.org/html-action-attribute/#:~:text=The%20HTML%20%7C%20action%20Attribute%20is,in%20the%20element.&text=Attribute%20Values%3A,the%20submission%20of%20the%20form
+
+W3Schools. (n.d.). HTML <form> action Attribute. Retrieved from w3schools.com: https://www.w3schools.com/tags/att_form_action.asp
+
+W3Schools. (n.d.). HTML <fieldset.> Tag. Retrieved from w3schools.com: https://www.w3schools.com/tags/tag_fieldset.asp
+
+MDN Contributors. (2021, February 20). <fieldset.>: The Field Set element. Retrieved from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset
+
+W3Schools. (n.d.). HTML <legend> Tag. Retrieved from w3schools.com: https://www.w3schools.com/tags/tag_legend.asp
+
+W3Schools.com. (n.d.-z). https://www.w3schools.com/html/html_form_input_types.asp
+
+W3Schools. (n.d.). HTML </input type="radio">. Retrieved from w3schools.com: https://www.w3schools.com/tags/att_input_type_radio.asp
+
+W3Schools. (n.d.). HTML </input type="checkbox">. Retrieved from w3schools.com: https://www.w3schools.com/tags/att_input_type_checkbox.asp
+
+W3Schools. (n.d.). HTML </input> Tag. Retrieved from w3schools.com: https://www.w3schools.com/tags/tag_input.asp
+
+W3Schools. (n.d.). HTML </select> Tag. Retrieved from w3schools.com: https://www.w3schools.com/tags/tag_select.asp
