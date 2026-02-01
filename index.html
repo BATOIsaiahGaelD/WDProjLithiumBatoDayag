@@ -9,24 +9,32 @@
             <title>Frisbee4Fun</title>
             <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/jpg">
             <style>
-                #header {
+                div#header {
                     background-image:none;
                     text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-color:yellow;
                     font-size:4vw;
-                    padding: 8vw 0vw;
-                    z-index:100;
+                    padding: 10vw 0vw;
+                    z-index:2;
                 }
                 div.body {
-                    background-image: linear-gradient(to bottom, rgba(0,0,0), rgba(255,255,255));
+                    background-image: linear-gradient(to bottom, rgba(0,0,0), rgb(0, 0, 0));
                     align-content:center;
-                    z-index:-100;
+                    position:absolute;
+                    padding-top:29vw;
+                    width:100%;
+                    z-index:0;
                 }
                 div.main, img.main {
                     margin-left:auto;
                     margin-right:auto;
+                    position:relative;
                     height:35vw;
                     width:35vw;
                     border-radius:50%;
+                    z-index:100;
                 }
                 div.intro {
                     height:15vw;
@@ -43,13 +51,12 @@
                     left:21vw;
                     top:-40vw;
                     border-radius:50%;
-                    animation-duration:2s;
-                    animation-fill-mode:forwards;
+                    z-index:101;
                 }
                 @keyframes animintro {
                     0% {height:0vw; width:0vw; left:38vw; top:-5vw;}
                     90% {height:15vw; width:15vw;}
-                    100% {height:15vw; width:15vw; left:10vw; top:5vw;}
+                    100% {height:15vw; width:15vw; left:10vw; top:2vw;}
                 }
                 div.throws {
                     height:17vw;
@@ -66,14 +73,12 @@
                     left:21vw;
                     top:-50vw;
                     border-radius:50%;
-                    animation-duration:3s;
-                    animation-fill-mode:forwards;
-                    animation-delay: 0.5s;
+                    z-index:102;
                 }
                 @keyframes animthrows {
                     0% {height:0vw; width:0vw; left:18vw; top:-31vw;}
                     85% {height:17vw; width:17vw;}
-                    100% {height:17vw; width:17vw; left:31vw; top:15vw;}
+                    100% {height:17vw; width:17vw; left:31vw; top:-5vw;}
                 }
                 div.tips {
                     height:18vw;
@@ -90,14 +95,12 @@
                     left:21vw;
                     top:-55vw;
                     border-radius:50%;
-                    animation-duration:4s;
-                    animation-fill-mode:forwards;
-                    animation-delay:1s;
+                    z-index:103;
                 }
                 @keyframes animtips {
                     0% {height:0vw; width:0vw; left:39vw; top:-53vw;}
                     70% {height:18vw; width:18vw;}
-                    100% {height:18vw; width:18vw; left:9vw; top:20vw;}
+                    100% {height:18vw; width:18vw; left:9vw; top:-7vw;}
                 }
                 div.ultimate {
                     height:16vw;
@@ -114,14 +117,12 @@
                     left:21vw;
                     top:-60vw;
                     border-radius:50%;
-                    animation-duration:5s;
-                    animation-fill-mode:forwards;
-                    animation-delay:1.5s
+                    z-index:104;
                 }
                 @keyframes animultimate {
                     0% {height:0vw; width:0vw; left:16vw; top:-75vw;}
                     50% {height:16vw; width:16vw;}
-                    100% {height:16vw; width:16vw; left:32vw; top:25vw;}
+                    100% {height:16vw; width:16vw; left:32vw; top:-7vw;}
                 }
                 div.strats {
                     height:17.5vw;
@@ -138,14 +139,12 @@
                     left:21vw;
                     top:-65vw;
                     border-radius:50%;
-                    animation-duration:5s;
-                    animation-fill-mode:forwards;
-                    animation-delay:2s
+                    z-index:105;
                 }
                 @keyframes animstrats {
                     0% {height:0vw; width:0vw; left:40vw; top:-97vw;}
                     30% {height:17.5vw; width:17.5vw;}
-                    100% {height:17.5vw; width:17.5vw; left:8vw; top:30vw;}
+                    100% {height:17.5vw; width:17.5vw; left:8vw; top:-7vw;}
                 }
                 div.minigames {
                     height:19vw;
@@ -162,14 +161,12 @@
                     left:21vw;
                     top:-70vw;
                     border-radius:50%;
-                    animation-duration:5s;
-                    animation-fill-mode:forwards;
-                    animation-delay:2.5s;
+                    z-index:105;
                 }
                 @keyframes animminigames {
                     0% {height:0vw; width:0vw; left:15vw; top:-119vw;}
                     25% {height:19vw; width:19vw;}
-                    100% {height:19vw; width:19vw; left:33vw; top:35vw;}
+                    100% {height:19vw; width:19vw; left:33vw; top:-10vw;}
                 }
                 div.reference {
                     height:15vw;
@@ -186,14 +183,12 @@
                     left:21vw;
                     top:-75vw;
                     border-radius:50%;
-                    animation-duration:5s;
-                    animation-fill-mode:forwards;
-                    animation-delay:3s;
+                    z-index:107;
                 }
                 @keyframes animreference {
                     0% {height:0vw; width:0vw; left:40vw; top:-143vw;}
                     20% {height:15vw; width:15vw;}
-                    100% {height:15vw; width:15vw; left:7vw; top:40vw;}
+                    100% {height:15vw; width:15vw; left:7vw; top:-11vw;}
                 }
                 div#p1, div#p2, div#p3, div#p4, div#p5, div#p6, div#p7 {
                     margin:0px;
@@ -208,6 +203,7 @@
                     font-size:0vw;
                     text-align:center;
                     color:rgb(255, 255, 255);
+                    z-index:10;
                 }
                 div#p1 {
                     top:-107vw;
@@ -239,66 +235,66 @@
                 }
                 /* the p keyframes are for when the rectangles expand. the pback are the ones that compress the rectangle. */
                 @keyframes p1 {
-                    0% {height:14vw; width:0vw; top:-107vw; left:38vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-107vw; left:40vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-110vw; left:38vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-110vw; left:40vw; font-size:1.8vw;}
                 }
                 @keyframes p1back {
-                    0% {height:14vw; width:50vw; top:-107vw; left:40vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-107vw; left:38vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-110vw; left:40vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-110vw; left:38vw; font-size:0vw;}
                 }
                 
                 @keyframes p2 {
-                    0% {height:14vw; width:0vw; top:-85vw; left:12vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-85vw; left:8vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-105vw; left:12vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-105vw; left:8vw; font-size:1.8vw;}
                 }
                 @keyframes p2back {
-                    0% {height:14vw; width:50vw; top:-85vw; left:8vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-85vw; left:12vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-105vw; left:8vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-105vw; left:12vw; font-size:0vw;}
                 }
 
                 @keyframes p3 {
-                    0% {height:14vw; width:0vw; top:-72vw; left:37vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-72vw; left:40vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-99vw; left:37vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-99vw; left:40vw; font-size:1.8vw;}
                 } 
                 @keyframes p3back {
-                    0% {height:14vw; width:50vw; top:-72vw; left:40vw; font-size:1.8vw;} 
-                    100% {height:14vw; width:0vw; top:-72vw; left:37vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-99vw; left:40vw; font-size:1.8vw;} 
+                    100% {height:14vw; width:0vw; top:-99vw; left:37vw; font-size:0vw;}
                 }
 
                 @keyframes p4 {
-                    0% {height:14vw; width:0vw; top:-58vw; left:13vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-58vw; left:10vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-90vw; left:13vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-90vw; left:10vw; font-size:1.8vw;}
                 }
                 @keyframes p4back {
-                    0% {height:14vw; width:50vw; top:-58vw; left:10vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-58vw; left:13vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-90vw; left:10vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-90vw; left:13vw; font-size:0vw;}
                 }
 
                 @keyframes p5 {
-                    0% {height:14vw; width:0vw; top:-46vw; left:35vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-46vw; left:38vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-83vw; left:35vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-83vw; left:38vw; font-size:1.8vw;}
                 }
                 @keyframes p5back {
-                    0% {height:14vw; width:50vw; top:-46vw; left:38vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-46vw; left:35vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-83vw; left:38vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-83vw; left:35vw; font-size:0vw;}
                 }
 
                 @keyframes p6 {
-                    0% {height:14vw; width:0vw; top:-31vw; right:-8vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-31vw; right:-11vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-75vw; right:-8vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-75vw; right:-11vw; font-size:1.8vw;}
                 }
                 @keyframes p6back {
-                    0% {height:14vw; width:50vw; top:-31vw; right:-11vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-31vw; right:-8vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-75vw; right:-11vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-75vw; right:-8vw; font-size:0vw;}
                 }
 
                 @keyframes p7 {
-                    0% {height:14vw; width:0vw; top:-19vw; left:30vw; font-size:0vw;}
-                    100% {height:14vw; width:50vw; top:-19vw; left:33vw; font-size:1.8vw;}
+                    0% {height:14vw; width:0vw; top:-70vw; left:30vw; font-size:0vw;}
+                    100% {height:14vw; width:50vw; top:-70vw; left:33vw; font-size:1.8vw;}
                 }
                 @keyframes p7back {
-                    0% {height:14vw; width:50vw; top:-19vw; left:33vw; font-size:1.8vw;}
-                    100% {height:14vw; width:0vw; top:-19vw; left:30vw; font-size:0vw;}
+                    0% {height:14vw; width:50vw; top:-70vw; left:33vw; font-size:1.8vw;}
+                    100% {height:14vw; width:0vw; top:-70vw; left:30vw; font-size:0vw;}
                 }
                div.background {
                     width:1vw;
@@ -306,9 +302,122 @@
                     position:absolute;
                     border-radius:70%;
                     background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255,255,255,0.9), rgba(255,255,255,0.1));
-                    left:10vw;
-                    top:10vw;
-                    z-index:50;
+                    top:8vw;
+                    z-index:1;
+                }
+                div#b2 {
+                    left:3vw;
+                }
+                div#b3 {
+                    left:6vw;
+                }
+                div#b4 {
+                    left:9vw;
+                }
+                div#b5 {
+                    left:12vw;
+                }
+                div#b6 {
+                    left:15vw;
+                }
+                div#b7 {
+                    left:18vw;
+                }
+                div#b8 {
+                    left:21vw;
+                }
+                div#b9 {
+                    left:24vw;
+                }
+                div#b10 {
+                    left:27vw;
+                }
+                div#b11 {
+                    left:30vw;
+                }
+                div#b12 {
+                    left:33vw;
+                }
+                div#b13 {
+                    left:36vw;
+                }
+                div#b14 {
+                    left:39vw;
+                }
+                div#b15 {
+                    left:42vw;
+                }
+                div#b16 {
+                    left: 45vw;
+                }
+                div#b17 {
+                    left: 48vw;
+                }
+                div#b18 {
+                    left:51vw;
+                }
+                div#b19 {
+                    left:54vw;
+                }
+                div#b20 {
+                    left:57vw;
+                }
+                div#b21 {
+                    left:60vw;
+                }
+                div#b22 {
+                    left:63vw;
+                }
+                div#b23 {
+                    left:66vw;
+                }
+                div#b24 {
+                    left:69vw;
+                }
+                div#b25 {
+                    left:72vw;
+                }
+                div#b26 {
+                    left: 75vw;
+                }
+                div#b27 {
+                    left:78vw;
+                }
+                div#b28 {
+                    left:81vw;
+                }
+                div#b29 {
+                    left:84vw;
+                }
+                div#b30 {
+                    left:87vw;
+                }
+                div#b31 {
+                    left:90vw;
+                }
+                div#b32 {
+                    left: 93vw;
+                }
+                div#b33 {
+                    left:96vw;
+                }
+                div#b34 {
+                    left:99vw;
+                }
+                @keyframes bganim {
+                    100% {top:218vw}
+                }
+                @keyframes spin {
+                    100% {transform:rotate(360deg)}
+                }
+                @keyframes spin2 {
+                    100% {transform:rotate(-360deg)}
+                }
+                footer.site-footer {
+                    position:absolute;
+                    top:215vw;
+                    padding-bottom:60vw;
+                    z-index:100;
                 }
             </style>
             <link rel="stylesheet" href="../public/CSS Files/index.css">
@@ -317,10 +426,42 @@
             <div id="header">
                 Frisbee4Fun: Your Guide to Becoming an All-Star </br>
                 (Click the Disc to Begin)
-                <div class="background" id="b1"></div>
             </div>
             <div class="body">
-                <div class="main" onclick="startinganim()">
+                <div class="background" id="b1"></div>
+                <div class="background" id="b2"></div>
+                <div class="background" id="b3"></div>
+                <div class="background" id="b4"></div>
+                <div class="background" id="b5"></div>
+                <div class="background" id="b6"></div>
+                <div class="background" id="b7"></div>
+                <div class="background" id="b8"></div>
+                <div class="background" id="b9"></div>
+                <div class="background" id="b10"></div>
+                <div class="background" id="b11"></div>
+                <div class="background" id="b12"></div>
+                <div class="background" id="b13"></div>
+                <div class="background" id="b14"></div>
+                <div class="background" id="b15"></div>
+                <div class="background" id="b16"></div>
+                <div class="background" id="b17"></div>
+                <div class="background" id="b18"></div>
+                <div class="background" id="b19"></div>
+                <div class="background" id="b20"></div>
+                <div class="background" id="b21"></div>
+                <div class="background" id="b22"></div>
+                <div class="background" id="b23"></div>
+                <div class="background" id="b24"></div>
+                <div class="background" id="b25"></div>
+                <div class="background" id="b26"></div>
+                <div class="background" id="b27"></div>
+                <div class="background" id="b28"></div>
+                <div class="background" id="b29"></div>
+                <div class="background" id="b30"></div>
+                <div class="background" id="b31"></div>
+                <div class="background" id="b32"></div>
+                <div class="background" id="b33"></div>
+                <div class="main" onclick="startinganim(), backgroundanim()">
                     <img class="main" src="./assets/frisbee.png" draggable="false" title="https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg"/>
                 </div>
                 <div class="intro">
@@ -384,16 +525,52 @@
                 </div>
             </div>
             <script>
+                // this is for the starting animation where the discs fly out
                 function startinganim(){
-                    document.getElementById("intro").style.animationName="animintro";
-                    document.getElementById("throws").style.animationName="animthrows";
-                    document.getElementById("tips").style.animationName="animtips";
-                    document.getElementById("ultimate").style.animationName="animultimate";
-                    document.getElementById("strats").style.animationName="animstrats";
-                    document.getElementById("minigames").style.animationName="animminigames";
-                    document.getElementById("reference").style.animationName="animreference";
+                    document.getElementById("intro").style.animation="animintro 1s ease 0s 1 normal forwards, spin 0.5s linear 0s infinite";
+                    document.getElementById("throws").style.animation="animthrows 1.5s ease 0.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                    document.getElementById("tips").style.animation="animtips 2s ease 1s 1 normal forwards, spin2 0.5s linear 0s infinite";
+                    document.getElementById("ultimate").style.animation="animultimate 2.5s ease 1.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                    document.getElementById("strats").style.animation="animstrats 3s ease 2s 1 normal forwards, spin2 0.5s linear 0s infinite";
+                    document.getElementById("minigames").style.animation="animminigames 3.5s ease 2.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                    document.getElementById("reference").style.animation="animreference 4s ease 3s 1 normal forwards, spin 0.5s linear 0s infinite";
+
+                    document.getElementById("b1").style.animation="bganim 2s linear 1.9s infinite normal";
+                    document.getElementById("b2").style.animation="bganim 2s linear 4.1s infinite normal";
+                    document.getElementById("b3").style.animation="bganim 2s linear 1.2s infinite normal";
+                    document.getElementById("b4").style.animation="bganim 2s linear 2.3s infinite normal";
+                    document.getElementById("b5").style.animation="bganim 2s linear 1.8s infinite normal";
+                    document.getElementById("b6").style.animation="bganim 2s linear 3.9s infinite normal";
+                    document.getElementById("b7").style.animation="bganim 2s linear 2.6s infinite normal";
+                    document.getElementById("b8").style.animation="bganim 2s linear 1.7s infinite normal";
+                    document.getElementById("b9").style.animation="bganim 2s linear 1.4s infinite normal";
+                    document.getElementById("b10").style.animation="bganim 2s linear 1s infinite normal";
+                    document.getElementById("b11").style.animation="bganim 2s linear 3.8s infinite normal";
+                    document.getElementById("b12").style.animation="bganim 2s linear 3.1s infinite normal";
+                    document.getElementById("b13").style.animation="bganim 2s linear 4.3s infinite normal";
+                    document.getElementById("b14").style.animation="bganim 2s linear 1.3s infinite normal";
+                    document.getElementById("b15").style.animation="bganim 2s linear 3.3s infinite normal";
+                    document.getElementById("b16").style.animation="bganim 2s linear 4.2s infinite normal";
+                    document.getElementById("b17").style.animation="bganim 2s linear 1.6s infinite normal";
+                    document.getElementById("b18").style.animation="bganim 2s linear 2.7s infinite normal";
+                    document.getElementById("b19").style.animation="bganim 2s linear 3.4s infinite normal";
+                    document.getElementById("b20").style.animation="bganim 2s linear 2.9s infinite normal";
+                    document.getElementById("b21").style.animation="bganim 2s linear 3.0s infinite normal";
+                    document.getElementById("b22").style.animation="bganim 2s linear 2.1s infinite normal";
+                    document.getElementById("b23").style.animation="bganim 2s linear 3.2s infinite normal";
+                    document.getElementById("b24").style.animation="bganim 2s linear 2.4s infinite normal";
+                    document.getElementById("b25").style.animation="bganim 2s linear 2.8s infinite normal";
+                    document.getElementById("b26").style.animation="bganim 2s linear 3.5s infinite normal";
+                    document.getElementById("b27").style.animation="bganim 2s linear 3.6s infinite normal";
+                    document.getElementById("b28").style.animation="bganim 2s linear 3.7s infinite normal";
+                    document.getElementById("b29").style.animation="bganim 2s linear 2s infinite normal";
+                    document.getElementById("b30").style.animation="bganim 2s linear 1.5s infinite normal";
+                    document.getElementById("b31").style.animation="bganim 2s linear 4.0s infinite normal";
+                    document.getElementById("b32").style.animation="bganim 2s linear 1.1s infinite normal";
+                    document.getElementById("b33").style.animation="bganim 2s linear 2.5s infinite normal";
                 }
 
+                //this chunk of functions is for the text box that appears when you hover over a certain frisbee
                 function p1function() {
                     document.getElementById("p1").style.animationName="p1";
                 }
