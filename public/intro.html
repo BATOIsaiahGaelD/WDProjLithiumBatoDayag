@@ -13,6 +13,8 @@
                 div.body {
                     padding-top:5vw;
                     padding-bottom:5vw;
+                    background-color:rgb(223, 212, 61);
+                    overflow-x:hidden;
                 }
                 div.frisbeee {
                     position:relative;
@@ -40,8 +42,9 @@
                     50% {height:25vw; width:25vw; left:36vw;}
                     100% {height:55vw; width:55vw; left:-15.75vw;}
                 }
+
                 div#paragraph1 {
-                    background-color:rgba(68, 182, 235, 0.901);
+                    background-color:rgba(74, 74, 74, 0.901);
                     width:0vw;
                     height:17vw;
                     position:absolute;
@@ -53,19 +56,26 @@
                     border-radius:5px;
                     font-size:0vw;
                     text-align:center;
+                    border-radius:3vw;
                 }
                 div.p1 {
                     width:38vw;
                     height:13vw;
                     position:absolute;
                     text-align:center;
-                    animation-delay:1s;
+                    animation-delay:2s;
                     left:2.3vw;
                     top:2.2vw;
                     font-family:Georgia, 'Times New Roman', Times, serif;
                 }
+
+                .bgbox1 {
+                    width:4vw;
+                    height:4vw;
+                    position:absolute;
+                }
                 div#paragraph2 {
-                    background-color:rgba(68, 182, 235, 0.901);
+                    background-color:rgba(74, 74, 74, 0.901);
                     width:0vw;
                     height: 17vw;
                     position:absolute;
@@ -97,7 +107,7 @@
                     top:3vw;
                 }
                 div#paragraph3 {
-                    background-color:rgba(68, 182, 235, 0.901);
+                    background-color:rgba(74, 74, 74, 0.901);
                     width:0vw;
                     height: 17vw;
                     position:absolute;
@@ -162,33 +172,121 @@
                 <div class="frisbeee" onclick="pop()">
                     <img class="page" title="https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/" draggable="false" src="../assets/frisbeeintro.png">
                 </div>
-                <div id="paragraph1">
+                <div id="paragraph1" onclick="anim1func()">
                     </br><div class="p1">
                         We are Russell Dayag and Isaiah Bato, Grade 9 students from PSHS Main Campus, Batch 2029, Section 9-Lithium. 
                         Russell is 14 years old and an active member of Alianti, the school’s frisbee club, as well as AlianTeam Varsity. 
                         Isaiah is 15 years old, an active frisbee player, and plans to try out for the frisbee varsity team next year.
                     </div>
                 </div>
-                <div id="paragraph2">
+                <div class="bgbox1" id="bb1.1"></div>
+                <div class="bgbox1" id="bb1.2"></div>
+                <div class="bgbox1" id="bb1.3"></div>
+                <div class="bgbox1" id="bb1.4"></div>
+                <div class="bgbox1" id="bb1.5"></div>
+                <div class="bgbox1" id="bb1.6"></div>
+
+                <div id="paragraph2" onclick="anim2func()">
                     </br><div class="p2">
                         We chose Ultimate Frisbee as our project because it is a sport that we both genuinely enjoy and are passionate about. 
                         The game’s fast-paced movement, teamwork, and unique concept of passing a disc instead of a ball make it exciting and different from other sports. 
                         Playing Ultimate Frisbee has helped us build friendships, stay active, and develop teamwork, communication, and sportsmanship.
                     </div>
                 </div>
-                <div id="paragraph3">
+                <div class="bgbox2" id="bb2.1"></div>
+                <div class="bgbox2" id="bb2.2"></div>
+                <div class="bgbox2" id="bb2.3"></div>
+                <div class="bgbox2" id="bb2.4"></div>
+                <div class="bgbox2" id="bb2.5"></div>
+                <div class="bgbox2" id="bb2.6"></div>
+
+                <div id="paragraph3" onclick="anim3func()">
                     </br><div class="p3">
                         Through this project, we aim to promote Ultimate Frisbee and help grow the PISAY Frisbee community. 
                         We believe that frisbee is not only a competitive sport but also a fun and inclusive hobby that anyone can enjoy, especially when played with friends. 
                         Our hope is that this project encourages more students to try Ultimate Frisbee and discover how enjoyable the sport can be.
                     </div>
                 </div>
+                <div class="bgbox3" id="bb3.1"></div>
+                <div class="bgbox3" id="bb3.2"></div>
+                <div class="bgbox3" id="bb3.3"></div>
+                <div class="bgbox3" id="bb3.4"></div>
+                <div class="bgbox3" id="bb3.5"></div>
+                <div class="bgbox3" id="bb3.6"></div>
+
+                <div id="overcast"></div>
             <script>
+                const KEY1 = 'click1';
+                const KEY2 = 'click2';
+                const KEY3 = 'click3';
                 function pop(){
                     document.getElementById("paragraph1").style.animationName="p1anim";
                     document.getElementById("paragraph2").style.animationName="p2anim";
                     document.getElementById("paragraph3").style.animationName="p3anim";
                     document.getElementById("c").style.animationName="canim";
+                }
+
+                function saver1(value) {
+                    localStorage.setItem(KEY1, JSON.stringify(value));
+                }
+                function checkerp1() {
+                    const number1 = Number(localStorage.getItem(KEY1));
+                    return number1;
+                }
+                function anim1func() {
+                    let checker = checkerp1();
+                    if (checker === 0) {
+                        let c = 0;
+                        c++;
+                        saver1(c);
+                    }
+                    else {
+                        c--
+                        saver1(c);
+
+                    }
+                }
+
+                function saver2(value) {
+                    localStorage.setItem(KEY2, JSON.stringify(value));
+                }
+                function checkerp2() {
+                    const n = Number(localStorage.getItem(KEY2));
+                    return n;
+                }
+                function anim2func() {
+                    let checker = checkerp2();
+                    if (checker === 0) {
+                        let c = 0;
+                        c++;
+                        saver2(c);
+                    }
+                    else {
+                        c--
+                        saver2(c);
+                        
+                    }
+                }
+
+                function saver3(value) {
+                    localStorage.setItem(KEY3, JSON.stringify(value));
+                }
+                function checkerp3() {
+                    const n3 = Number(localStorage.getItem(KEY3));
+                    return n3;
+                }
+                function anim3func() {
+                    let checker = checkerp3();
+                    if (checker === 0) {
+                        let c = 0;
+                        c++;
+                        saver3(c);
+                    }
+                    else {
+                        c--
+                        saver3(c);
+                        
+                    }
                 }
             </script>
             </div>
