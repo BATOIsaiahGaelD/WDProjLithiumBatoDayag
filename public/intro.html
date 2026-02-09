@@ -12,7 +12,7 @@
             <style>
                 div.body {
                     padding-top:5vw;
-                    padding-bottom:5vw;
+                    padding-bottom:10vw;
                     background-color:rgb(223, 212, 61);
                     overflow-x:hidden;
                 }
@@ -23,6 +23,7 @@
                     border-radius:50%;
                     left:-15.75vw;
                     margin:0px;
+                    z-index:1;
                 }
                 img.page {
                     position:relative;
@@ -70,8 +71,16 @@
                 }
 
                 .bgbox1 {
-                    width:4vw;
-                    height:4vw;
+                    position:absolute;
+                }
+                #bb1.1, #bb1.3 {
+
+                }
+                .bgbox2 {
+                    position:absolute;
+                    border-radius:50%;
+                }
+                .bgbox3 {
                     position:absolute;
                 }
                 div#paragraph2 {
@@ -146,9 +155,17 @@
                 @keyframes canim {
                     100% {left:-30vw;}
                 }
+                div#overlay {
+                    width:100%;
+                    height:100%;
+                    background-color:rgba(0, 0, 0, 0);
+                    position:absolute;
+                    padding-bottom:76.2vw;
+                }
             </style>
             <link rel="stylesheet" href="./CSS Files/intro.css">
         </head>
+        <div id="overlay"></div>
         <body>
             <header class="site-header">
                 <div class="nav-wrapper">
@@ -179,12 +196,12 @@
                         Isaiah is 15 years old, an active frisbee player, and plans to try out for the frisbee varsity team next year.
                     </div>
                 </div>
-                <div class="bgbox1" id="bb1.1"></div>
-                <div class="bgbox1" id="bb1.2"></div>
-                <div class="bgbox1" id="bb1.3"></div>
-                <div class="bgbox1" id="bb1.4"></div>
-                <div class="bgbox1" id="bb1.5"></div>
-                <div class="bgbox1" id="bb1.6"></div>
+                <div class="bgbox1" id="bb1p1"></div>
+                <div class="bgbox1" id="bb1p2"></div>
+                <div class="bgbox1" id="bb1p3"></div>
+                <div class="bgbox1" id="bb1p4"></div>
+                <div class="bgbox1" id="bb1p5"></div>
+                <div class="bgbox1" id="bb1p6"></div>
 
                 <div id="paragraph2" onclick="anim2func()">
                     </br><div class="p2">
@@ -193,12 +210,12 @@
                         Playing Ultimate Frisbee has helped us build friendships, stay active, and develop teamwork, communication, and sportsmanship.
                     </div>
                 </div>
-                <div class="bgbox2" id="bb2.1"></div>
-                <div class="bgbox2" id="bb2.2"></div>
-                <div class="bgbox2" id="bb2.3"></div>
-                <div class="bgbox2" id="bb2.4"></div>
-                <div class="bgbox2" id="bb2.5"></div>
-                <div class="bgbox2" id="bb2.6"></div>
+                <div class="bgbox2" id="bb2p1"></div>
+                <div class="bgbox2" id="bb2p2"></div>
+                <div class="bgbox2" id="bb2p3"></div>
+                <div class="bgbox2" id="bb2p4"></div>
+                <div class="bgbox2" id="bb2p5"></div>
+                <div class="bgbox2" id="bb2p6"></div>
 
                 <div id="paragraph3" onclick="anim3func()">
                     </br><div class="p3">
@@ -207,12 +224,12 @@
                         Our hope is that this project encourages more students to try Ultimate Frisbee and discover how enjoyable the sport can be.
                     </div>
                 </div>
-                <div class="bgbox3" id="bb3.1"></div>
-                <div class="bgbox3" id="bb3.2"></div>
-                <div class="bgbox3" id="bb3.3"></div>
-                <div class="bgbox3" id="bb3.4"></div>
-                <div class="bgbox3" id="bb3.5"></div>
-                <div class="bgbox3" id="bb3.6"></div>
+                <div class="bgbox3" id="bb3p1"></div>
+                <div class="bgbox3" id="bb3p2"></div>
+                <div class="bgbox3" id="bb3p3"></div>
+                <div class="bgbox3" id="bb3p4"></div>
+                <div class="bgbox3" id="bb3p5"></div>
+                <div class="bgbox3" id="bb3p6"></div>
 
                 <div id="overcast"></div>
             <script>
