@@ -10,9 +10,15 @@
             <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="headfoot.css">
             <style>
-                div.body {
-                    padding-top:5vw;
-                    padding-bottom:75vw;
+                .body {
+                    position:absolute;
+                    padding-top:0vw;
+                    padding-bottom:80.5vw;
+                    width:100%;
+                    background-color:rgb(255, 255, 134); 
+                    z-index:10;
+                    overflow-x:hidden;
+                    overflow-y:hidden;
                 }
                 div#title {
                     font-size:10vw;
@@ -20,32 +26,32 @@
                     height:5vw;
                     position:absolute;
                     left: 32vw;
-                    top: 10vw;
+                    top: 2vw;
                 }
                 div.click {
                     font-size:2vw;
                     width:30vw;
                     height:3vw;
                     position:absolute;
-                    left:38vw;
-                    top:10vw;
+                    left:37vw;
+                    top:2vw;
                 }
-                div.main, img.main {
+                img.main {
                     border-radius:50%;
                     height:20vw;
                     width:20vw;
                     position:absolute;
                     left:20vw;
-                    top:20vw;
-                    z-index:100;
+                    top:15vw;
+                    z-index:6;
                     animation-name:start;
                     animation-duration:3s;
                     animation-fill-mode:forwards;
                 }
                 @keyframes start {
                     0% {width:0vw; height:0vw; left:25vw; top:5vw;}
-                    50% {width:20vw; height:20vw; left:20vw; top:5vw;}
-                    100% {top:20vw;}
+                    50% {width:20vw; height:20vw; left:41vw; top:5vw;}
+                    100% {top:17.5vw; left:40vw; top:35vw;}
                 }
                 div#circle1, div#circle2, div#circle3, div#circle4, div#circle5, div#circle6 {
                     display:flex;
@@ -53,20 +59,24 @@
                     height:0vw;
                     position:absolute;
                     left:46.5vw;
-                    top:46.5vw;
+                    top:41.5vw;
                     border-radius:50%;
-                    background-color:grey;
+                    background-image:linear-gradient(to bottom, rgb(255, 247, 88), rgb(0, 0, 0));
+                    border-style:solid;
+                    border-width:0vw;
+                    border-color:rgba(0, 0, 0, 0.458);
                     animation:2s;
                     animation-fill-mode:forwards;
                     font-size:0vw;
                     justify-content:center;
                     align-items:center;
-                    
+                    color:rgb(255, 255, 255);
+                    font-weight:bold;
+                    z-index:5;
                 }
                 p#small4, p#small5 {
                     display:flex;
                     border-radius:50%;
-                    background-color:grey;
                     animation:2s;
                     animation-fill-mode:forwards;
                     font-size:0vw;
@@ -92,48 +102,51 @@
                     animation-delay:1.2s;
                 }
                 @keyframes c1 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:25vw; top:35vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:25vw; top:30vw; font-size:2vw; border-width:0.5vw}
                 }
                 @keyframes c2 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:43.5vw; top:25vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:20vw; font-size:2vw; border-width:0.5vw}
                 }
                 @keyframes c3 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:62vw; top:35vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:62vw; top:30vw; font-size:2vw; border-width:0.5vw}
                 }
                 @keyframes c4 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:25vw; top:55vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:25vw; top:50vw; font-size:2vw; border-width:0.5vw}
                 }
                 @keyframes s4 {
                     0% {font-size:0vw;}
                     100% {font-size:1vw;}
                 }
                 @keyframes c5 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:43.5vw; top:62vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:43.5vw; top:57vw; font-size:2vw; border-width:0.5vw}
                 }
                 @keyframes s5 {
                     0% {font-size:0vw;}
                     100% {font-size:1vw;}
                 }
                 @keyframes c6 {
-                    0% {width: 0vw; height: 0vw; left:46.5vw; top:46.5vw; font-size:0vw;}
-                    100% {width:13vw; height:13vw; left:62vw; top:55vw; font-size:2vw;}
+                    0% {width: 0vw; height: 0vw; left:46.5vw; top:41.5vw; font-size:0vw;}
+                    100% {width:13vw; height:13vw; left:62vw; top:50vw; font-size:2vw; border-width:0.5vw}
                 }
                 div#throws1, div#throws2, div#throws3, div#throws4, div#throws5, div#throws5, div#throws6 {
                     width:0vw;
                     height:0vw;
                     position:absolute;
-                    background-color:rgba(123, 216, 255, 0.950);
+                    background-image:linear-gradient(to top, rgb(0,0,0), rgb(223, 205, 0));
                     border-radius: 3vw;
+                    border-style:solid;
+                    border-width:0vw;
+                    border-color:rgb(255, 255, 255);
                     left: 25vw;
                     top:20vw;
                     animation-duration: 1s;
                     animation-fill-mode:forwards;
-                    z-index:109;
+                    z-index:3;
                     font-size:0vw;
                     text-align:center;
                 }
@@ -147,20 +160,20 @@
                     animation-fill-mode:forwards;
                 }
                 @keyframes open {
-                    0% {height:0vw; width:0vw; font-size:0vw;}
-                    100% {width:50vw; height: 60vw; font-size:2vw;}
+                    0% {height:0vw; width:0vw; font-size:0vw; border-width:0vw;}
+                    100% {width:50vw; height: 55vw; font-size:2vw; border-width:0.5vw;}
                 }
                 @keyframes close {
-                    0% {width:50vw; height:60vw; font-size:2vw;}
-                    100% {height:0vw; width:0vw; font-size:0vw;}
+                    0% {width:50vw; height:55vw; font-size:2vw; border-width:0.5vw}
+                    100% {height:0vw; width:0vw; font-size:0vw; border-width:0vw;}
                 }
                 @keyframes opens {
-                    0% {height:0vw; width:0vw; font-size:0vw;}
-                    100% {width:50vw; height: 60vw; font-size:1.4vw;}
+                    0% {height:0vw; width:0vw; font-size:0vw; border-width:0vw;}
+                    100% {width:50vw; height: 60vw; font-size:1.4vw; border-width:0.5vw}
                 }
                 @keyframes closes {
-                    0% {width:50vw; height:60vw; font-size:1.4vw;}
-                    100% {height:0vw; width:0vw; font-size:0vw;}
+                    0% {width:50vw; height:60vw; font-size:1.4vw; border-width:0.5vw}
+                    100% {height:0vw; width:0vw; font-size:0vw; border-width:0vw;}
                 }
                 @keyframes vidopen {
                     0% {width:0vw; height:0vw;}
@@ -170,14 +183,420 @@
                     0% {width:22vw; height:19vw;}
                     100% {width:0vw; height:0vw;}
                 }
+
+                @keyframes fadeo {
+                    0% {opacity:100%}
+                    100% {opacity:0%}
+                }
+                @keyframes fadei {
+                    0% {opacity:0%}
+                    100% {opacity:100%}
+                }
                 div.close {
                     position:absolute;
                     left:1vw;
                     top:1vw;
                     font-weight:bold;
                 }
+                footer {
+                    position:absolute;
+                    top:90vw;
+                }
+                div#cover {
+                    position:fixed;
+                    top:0vw;
+                    width:100%;
+                    height:100%;
+                    background-color:black;
+                    opacity:0%;
+                    z-index:-1;
+                }
+                .close, #he1, #he2, #he3, #he41, #he42, #he51, #he52, #he61, #he62, #bo1, #bo2, #bo3, #bo41, #bo42, #bo51, #bo52, #bo61, #bo62 {
+                    color:white;
+                }
+                h2#he1 {
+                    position:absolute;
+                    top:22vw;
+                    left:41vw;
+                    font-size:4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%;
+                    color:white;
+                }
+                p#bo1 {
+                    position:absolute;
+                    text-align:center;
+                    left:29vw;
+                    top:26vw;
+                    width:40vw;
+                    font-size:1.5vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img1 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:48vw;
+                    left:39vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                h2#he2 {
+                    position:absolute;
+                    top:22vw;
+                    left:41vw;
+                    font-size:4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                p#bo2 {
+                    position:absolute;
+                    text-align:center;
+                    left:29vw;
+                    top:25.4vw;
+                    width:40vw;
+                    font-size:1.9vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img2 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:53vw;
+                    left:39vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                h2#he3 {
+                    position:absolute;
+                    top:22vw;
+                    left:42vw;
+                    font-size:4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                p#bo3 {
+                    position:absolute;
+                    text-align:center;
+                    left:29vw;
+                    top:25.4vw;
+                    width:40vw;
+                    font-size:1.6vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img3 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:54vw;
+                    left:39vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                h3#he41 {
+                    position:absolute;
+                    top:22vw;
+                    left:32vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                h3#he42 {
+                    position:absolute;
+                    top:48vw;
+                    left:32vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                p#bo41 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:25.4vw;
+                    width:24vw;
+                    font-size:1.6vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                p#bo42 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:52.4vw;
+                    width:24vw;
+                    font-size:2vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img41 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:27vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img42 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:55vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                h3#he51 {
+                    position:absolute;
+                    top:22vw;
+                    left:32vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                h3#he52 {
+                    position:absolute;
+                    top:48vw;
+                    left:32vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                p#bo51 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:25.4vw;
+                    width:24vw;
+                    font-size:1.6vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                p#bo52 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:52.4vw;
+                    width:24vw;
+                    font-size:1.5vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img51 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:27vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img52 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:55vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                h3#he61 {
+                    position:absolute;
+                    top:22vw;
+                    left:43vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                h3#he62 {
+                    position:absolute;
+                    top:48vw;
+                    left:43vw;
+                    font-size:3.4vw;
+                    font-weight:bold;
+                    z-index:4;
+                    opacity:0%
+                }
+                p#bo61 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:25.4vw;
+                    width:24vw;
+                    font-size:1.6vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                p#bo62 {
+                    position:absolute;
+                    text-align:center;
+                    left:25vw;
+                    top:52.4vw;
+                    width:24vw;
+                    font-size:2vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img61 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:27vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                video#img62 {
+                    position:absolute;
+                    width:22vw;
+                    transition:0.5s;
+                    height:19vw;
+                    top:55vw;
+                    left:51vw;
+                    z-index:4;
+                    opacity:0%;
+                }
+                #bgc1, #bgc2, #bgc3, #bgc4, #bgc5, #bgc6, #bgc7, #bgc8, #bgc9, #bgc10, #bgc11, #bgc12, #bgc13, #bgc14, #bgc15, #bgc16, #bgc17, #bgc18, #bgc19, #bgc20{
+                    background-color:black;
+                    width:0vw;
+                    height:0vw;
+                    position:absolute;
+                    border-radius:50%;
+                    transition:0.5s;
+                }
+                #bgc1 {
+                    top:0vw;
+                    animation: beginscale 0.8s ease 0s 1 normal forwards, anim1 100s linear -12s infinite normal, scale2 100s linear 2.7s infinite normal; 
+                }
+                #bgc2 {
+                    top:6vw;
+                    animation: beginscale 0.8s ease 0.1s 1 normal forwards, anim2 100s linear -43s infinite normal, scale1 140s linear 2.7s infinite normal; 
+                }
+                #bgc3 {
+                    top:10vw;
+                    animation: beginscale 0.8s ease 0.2s 1 normal forwards, anim1 100s linear -35s infinite normal, scale2 130s linear 2.7s infinite normal; 
+                }
+                #bgc4 {
+                    top:14vw;
+                    animation: beginscale 0.8s ease 0.3s 1 normal forwards, anim2 100s linear -124s infinite normal, scale1 190s linear 2.7s infinite normal; 
+                }
+                #bgc5 {
+                    top:18vw;
+                    animation: beginscale 0.8s ease 0.4s 1 normal forwards, anim1 100s linear -94s infinite normal, scale2 200s linear 2.7s infinite normal; 
+                }
+                #bgc6 {
+                    top:22vw;
+                    animation: beginscale 0.8s ease 0.5s 1 normal forwards, anim1 100s linear -34s infinite normal, scale1 220s linear 2.7s infinite normal; 
+                }
+                #bgc7 {
+                    top:26vw;
+                    animation: beginscale 0.8s ease 0.6s 1 normal forwards, anim2 100s linear -67s infinite normal, scale1 150s linear 2.7s infinite normal; 
+                }
+                #bgc8 {
+                    top:30vw;
+                    animation: beginscale 0.8s ease 0.7s 1 normal forwards, anim1 100s linear -22s infinite normal, scale2 340s linear 2.7s infinite normal; 
+                }
+                #bgc9 {
+                    top:34vw;
+                    animation: beginscale 0.8s ease 0.8s 1 normal forwards, anim1 100s linear -8s infinite normal, scale1 200s linear 2.7s infinite normal; 
+                }
+                #bgc10 {
+                    top:38vw;
+                    animation: beginscale 0.8s ease 0.9s 1 normal forwards, anim2 100s linear -86s infinite normal, scale2 120s linear 2.7s infinite normal; 
+                }
+                #bgc11 {
+                    top:42vw;
+                    animation: beginscale 0.8s ease 1s 1 normal forwards, anim2 100s linear -64s infinite normal, scale2 231s linear 2.7s infinite normal; 
+                }
+                #bgc12 {
+                    top:46vw;
+                    animation: beginscale 0.8s ease 1.1s 1 normal forwards, anim1 100s linear -15s infinite normal, scale1 111s linear 2.7s infinite normal; 
+                }
+                #bgc13 {
+                    top:50vw;
+                    animation: beginscale 0.8s ease 1.2s 1 normal forwards, anim2 100s linear -49s infinite normal, scale2 196s linear 2.7s infinite normal; 
+                }
+                #bgc14 {
+                    top:54vw;
+                    animation: beginscale 0.8s ease 1.3s 1 normal forwards, anim1 100s linear -111s infinite normal, scale1 170s linear 2.7s infinite normal; 
+                }
+                #bgc15 {
+                    top:58vw;
+                    animation: beginscale 0.8s ease 1.4s 1 normal forwards, anim1 100s linear -44s infinite normal, scale1 169s linear 2.7s infinite normal; 
+                }
+                #bgc16 {
+                    top:62vw;
+                    animation: beginscale 0.8s ease 1.5s 1 normal forwards, anim1 100s linear -58s infinite normal, scale1 142s linear 2.7s infinite normal; 
+                }
+                #bgc17 {
+                    top:66vw;
+                    animation: beginscale 0.8s ease 1.6s 1 normal forwards, anim2 100s linear -84s infinite normal, scale2 126s linear 2.7s infinite normal; 
+                }
+                #bgc18 {
+                    top:70vw;
+                    animation: beginscale 0.8s ease 1.7s 1 normal forwards, anim1 100s linear -95s infinite normal, scale1 178s linear 2.7s infinite normal; 
+                }
+                #bgc19 {
+                    top:74vw;
+                    animation: beginscale 0.8s ease 1.8s 1 normal forwards, anim2 100s linear -30s infinite normal, scale2 263s linear 2.7s infinite normal; 
+                }
+                #bgc20 {
+                    top:78vw;
+                    animation: beginscale 0.8s ease 1.9s 1 normal forwards, anim2 100s linear -10s infinite normal, scale2 255s linear 2.7s infinite normal; 
+                    
+                }
+                @keyframes anim1 {
+                    0% {left:-20vw}
+                    100% {left:140vw}
+                }
+                @keyframes anim2 {
+                    0% {left: 140vw;}
+                    100% {left:-20vw}
+                }
+                @keyframes scale1 {
+                    0% {transform:scale(1); width:6vw; height:6vw;}
+                    25% {transform:scale(0.8)}
+                    50% {transform:scale(2)}
+                    75% {transform:scale(0.5)}
+                    90% {transform:scale(3)}
+                    100% {transform:scale(1)}
+                }
+                @keyframes scale2 {
+                    0% {transform:scale(1); width:6vw; height:6vw;}
+                    25% {transform:scale(0.5)}
+                    50% {transform:scale(3)}
+                    75% {transform:scale(0.8)}
+                    90% {transform:scale(2)}
+                    100% {transform:scale(1)}
+                    
+                }
+                @keyframes beginscale {
+                    0% {width:0vw; height:0vw;}
+                    100% {width:6vw; height:6vw;}
+                }
+                /*<link rel="stylesheet" href="../CSS Files/stratsandforms.css">*/
+                
             </style>
-            <link rel="stylesheet" href="../CSS Files/stratsandforms.css">
         </head>
         <body>
             <header class="site-header">
@@ -202,8 +621,8 @@
                 <div class="click">
                     Click the blue Frisbee to Begin.
                 </div>
-                <div class="main">
-                    <img title="https://pngimg.com/image/44950" class="main" onclick="anim()" src="../assets/frisbeethrows.png" draggable="false">
+                <div class="main" id="maine2">
+                    <img title="https://pngimg.com/image/44950" class="main" onclick="anim()" id="maine" src="../assets/frisbeethrows.png" draggable="false">
                 </div>
                 <div id="circle1" onclick="open1()">
                 </br></br><p>BACKHAND</p>
@@ -226,34 +645,35 @@
                 <div id="throws1">
                     <div class="close" onclick="close1()">X</div>
                     </br>
-                    <h2>Backhand</h2>
-                    <p>
+                </div>
+                <video id="img1" src="../assets/backhand.mov" type="video/mov" controls></video></br>
+                <h2 id="he1">Backhand</h2>
+                    <p id="bo1">
                         This is the easiest/most common throw in Ultimate. It involves putting 4 fingers in the cup of the disc and the thumb on top. 
                         For right-handed players, you stand straight, twist to the left, bend your wrist for the spin, and elbow in front so that they are in front of the disc. 
                         Undo the steps for a smooth release in one steady motion. Keep in mind that all the spin and power comes from bending the wrist and suddenly snapping it. 
                         You could adjust the angle of the throw to however you want but if you want to keep the disc straight, keep it at an angle of 180 degrees or straight when you release it. 
                         You could also pull it back farther for even more power.
                     </p>
-                    <video id="img1" src="../assets/backhand.mov" type="video/mov" controls></video></br>
-                    Backhand Throw
-                </div>
                 <div id="throws2">
                     <div class="close" onclick="close2()">X</div>
-                </br>
-                    <h2>Forehand</h2>
+                </div>
+                <h2 id="he2">Forehand</h2>
+                <p id="bo2">
                     This is the most efficient throw in Ultimate because of its fast release– can be thrown in milliseconds. 
                     Put two fingers (pointer and middle) under the disc and thumb on top. 
                     The key element is flicking the disc to add spin and keep the disc parallel to the ground. 
                     Do this by pulling your wrist as far back as it will go and snapping it forward while bringing your arm through the motion. 
                     The disc should wrap around and “fling” off your two fingers. 
                     Although this throw is harder to learn than the backhand, it is still very useful on the field.
-            </br>   <video id="img2" src="../assets/forehand.mov" controls></video></br>
-                    Forehand Throw
-                </div>
+                </p>
+                    <video id="img2" src="../assets/forehand.mov" controls></video></br>
+
                 <div id="throws3">
                     <div class="close" onclick="close3()">X</div>
-                </br>
-                    <h2>Hammer</h2>
+                </div>
+                <h2 id="he3">Hammer</h2>
+                    <p id="bo3">
                     This is another useful throw when the timing is right. 
                     The hammer throw can be used when there are multiple defenders blocking the way for a backhand or forehand throw since you can easily throw over them. 
                     First, hold the disc with your pointer and middle finger on the inner side of the disc, your thumb on the other side. 
@@ -263,52 +683,79 @@
                     Pull back and release the disc when it gets even with your forehead, keep your elbow bent at all times. 
                     If done right the disc should start out tilted and slowly turn upside-down. 
                     The disc should land completely upside down on its face, making it easier to catch for your teammate.
+                    </p>
                     <video id="img3" src="../assets/hammer.mov" controls></video>
-                </div>
                 <div id="throws4">
                     <div class="close" onclick="close4()">X</div>
-                </br>
-                    <h3>High Release Backhand</h3>
-                    <p>To throw a high release version of the backhand, an almost straight arm must be above the shoulder. 
+                </div>
+                <h3 id="he41">High Release Backhand</h3>
+                    <p id="bo41">To throw a high release version of the backhand, an almost straight arm must be above the shoulder. 
                         Most of the disc's propulsion will come solely from the wrist in a snapping motion. 
                         Should be thrown with an almost straight arm at a 45 degree angle. 
                         Most of the discs forward motion will be from snapping your wrist for spin.</p>
                     <video id="img41" src="../assets/highbackhand.mov" controls></video>
-                    <h3>Low Release Backhand</h3>
-                    <p>
+                    <h3 id="he42">Low Release Backhand</h3>
+                    <p id="bo42">
                         A low release follows the same arm motion as a regular backhand. 
                         But it is meant to be released just a few inches from the ground, the closer the better. 
                         One would have to take a big lunge outward and reach low.
                     </p>
                     <video id="img42" src="../assets/lowbackhand.mov" controls></video>
-                </div>
                 <div id="throws5">
                     <div class="close" onclick="close5()">X</div>
-                    <h3>High Release Forehand</h3>
+                </div>
+                <h3 id="he51">High Release Forehand</h3>
+                <p id="bo51">
                     To throw a high release forehand, with a straight arm at a 45 degree angle above the shoulder, flick your wrist in the same motion as a normal flick. 
                     Keep the disc as level with the ground as possible. 
-                    Remember that most of the disc’s propulsion comes from the wrist snap and not much from the arm.</br>
+                    Remember that most of the disc’s propulsion comes from the wrist snap and not much from the arm.
+                </p>
                     <video id="img51" src="../assets/highforehand.mov" controls></video>
-                    <h3>Low Release Forehand</h3>
+                    <h3 id="he52">Low Release Forehand</h3>
+                <p id="bo52">
                     To throw a low release forehand, have the swinging motion of the forehand and release it a few inches above the ground and sink as low as possible. 
                     When throwing, your elbow should just barely make it past your knee. 
                     You want to release it at an upward angle so it doesn’t skid across the ground. 
                     This will be probably the hardest throw to learn along with the hammer although highly effective across the field.
+                </p>
                     <video id="img52" src="../assets/lowforehand.mov" controls></video>
-                </div>
                 <div id="throws6">
                     <div class="close" onclick="close6()">X</div>
-                    <h3>Chicken</h3>
+                </div>
+                <h3 id="he61">Chicken</h3>
+                <p id="bo61">
                     The chicken is a throw that is used to confuse players. It involves
                     the person holding the disc with four fingers on top, and the thumb underneath.
                     You then put your hand behind your back and throw as if you are about to raise your hand.
+                </p>
                     <video id="img61" src="../assets/chicken.mov" controls></video>
-                    <h3>Scoober</h3>
+                <h3 id="he62">Scoober</h3>
+                <p id="bo62">
                     This throw is most similar to the hammer. However, this throw is thrown
                     flat, and not at an angle like the hammmer. It has the same grip and movement,
-                    we just angle the disc to be flatter.</br>
+                    we just angle the disc to be flatter.
+                </p>
                     <video id="img62" src="../assets/scoober.mov" controls></video>
-                </div>
+                <div class="backgroundcircles" id="bgc1"></div>
+                <div class="backgroundcircles" id="bgc2"></div>
+                <div class="backgroundcircles" id="bgc3"></div>
+                <div class="backgroundcircles" id="bgc4"></div>
+                <div class="backgroundcircles" id="bgc5"></div>
+                <div class="backgroundcircles" id="bgc6"></div>
+                <div class="backgroundcircles" id="bgc7"></div>
+                <div class="backgroundcircles" id="bgc8"></div>
+                <div class="backgroundcircles" id="bgc9"></div>
+                <div class="backgroundcircles" id="bgc10"></div>
+                <div class="backgroundcircles" id="bgc11"></div>
+                <div class="backgroundcircles" id="bgc12"></div>
+                <div class="backgroundcircles" id="bgc13"></div>
+                <div class="backgroundcircles" id="bgc14"></div>
+                <div class="backgroundcircles" id="bgc15"></div>
+                <div class="backgroundcircles" id="bgc16"></div>
+                <div class="backgroundcircles" id="bgc17"></div>
+                <div class="backgroundcircles" id="bgc18"></div>
+                <div class="backgroundcircles" id="bgc19"></div>
+                <div class="backgroundcircles" id="bgc20"></div>
                 <script>
                     /* this function is for the circles appearing once you click on the disc*/
                     function anim() {
@@ -321,64 +768,209 @@
                         document.getElementById("small4").style.animationName="s4";
                         document.getElementById("small5").style.animationName="s5";
                     }
-                    /* the open functions are for the rectangle, text, and video that scales.
-                    The close functions are for the rectangle, text, and video that compresses.*/
+                    /* the open functions are for the rectangle, text, and video that scales and become fully opaque.
+                    The close functions are for the rectangle, text, and video that compresses and fade out.*/
                     function open1() {
                         document.getElementById("throws1").style.animationName="open";
-                        document.getElementById("img1").style.animationName="vidopen";
+                        document.getElementById("he1").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo1").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img1").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img1").style.zIndex="100";
                     }
                     function open2() {
                         document.getElementById("throws2").style.animationName="open";
-                        document.getElementById("img2").style.animationName="vidopen";
+                        document.getElementById("he2").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo2").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img2").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img2").style.zIndex="100";
                     }
                     function open3() {
                         document.getElementById("throws3").style.animationName="open";
-                        document.getElementById("img3").style.animationName="vidopen";
+                        document.getElementById("he3").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo3").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img3").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img3").style.zIndex="100";
                     }
                     function open4() {
                         document.getElementById("throws4").style.animationName="opens";
-                        document.getElementById("img41").style.animationName="vidopen";
-                        document.getElementById("img42").style.animationName="vidopen";
+                        document.getElementById("he41").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("he42").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo41").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("bo42").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img41").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("img42").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img41").style.zIndex="100";
+                        document.getElementById("img42").style.zIndex="100";
                     }
                     function open5() {
                         document.getElementById("throws5").style.animationName="opens";
-                        document.getElementById("img51").style.animationName="vidopen";
-                        document.getElementById("img52").style.animationName="vidopen";
+                        document.getElementById("he51").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("he52").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo51").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("bo52").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img51").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("img52").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img51").style.zIndex="100";
+                        document.getElementById("img52").style.zIndex="100";
                     }
                     function open6() {
                         document.getElementById("throws6").style.animationName="opens";
-                        document.getElementById("img61").style.animationName="vidopen";
-                        document.getElementById("img62").style.animationName="vidopen";
+                        document.getElementById("he61").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("he62").style.animation="fadei 0.5s ease 0.5s 1 normal forwards";
+                        document.getElementById("bo61").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("bo62").style.animation="fadei 0.5s ease 0.8s 1 normal forwards";
+                        document.getElementById("img61").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("img62").style.animation="fadei 0.5s ease 1.1s 1 normal forwards";
+                        document.getElementById("maine").style.zIndex="1";
+                        document.getElementById("circle1").style.zIndex="1";
+                        document.getElementById("circle2").style.zIndex="1";
+                        document.getElementById("circle3").style.zIndex="1";
+                        document.getElementById("circle4").style.zIndex="1";
+                        document.getElementById("circle5").style.zIndex="1";
+                        document.getElementById("circle6").style.zIndex="1";
+                        document.getElementById("img61").style.zIndex="100";
+                        document.getElementById("img62").style.zIndex="100";
                     }
                     function close1() {
                         document.getElementById("throws1").style.animationName="close";
-                        document.getElementById("img1").style.animationName="vidclose";
+                        document.getElementById("he1").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo1").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img1").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img1").style.zIndex="4";
+                        }, 1300)
                     }
                     function close2() {
                         document.getElementById("throws2").style.animationName="close";
-                        document.getElementById("img2").style.animationName="vidclose";
+                        document.getElementById("he2").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo2").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img2").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img2").style.zIndex="4";
+                        }, 1300)
                     }
                     function close3() {
                         document.getElementById("throws3").style.animationName="close";
-                        document.getElementById("img3").style.animationName="vidclose";
+                        document.getElementById("he3").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo3").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img3").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img3").style.zIndex="4";
+                        }, 1300)
                     }
                     function close4() {
                         document.getElementById("throws4").style.animationName="closes";
-                        document.getElementById("img41").style.animationName="vidclose";
-                        document.getElementById("img42").style.animationName="vidclose";
+                        document.getElementById("he41").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("he42").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo41").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo42").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img41").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img42").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img41").style.zIndex="4";
+                            document.getElementByid("img42").style.zIndex="4";
+                        }, 1300)
                     }
                     function close5() {
                         document.getElementById("throws5").style.animationName="closes";
-                        document.getElementById("img51").style.animationName="vidclose";
-                        document.getElementById("img52").style.animationName="vidclose";
+                        document.getElementById("he51").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("he52").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo51").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo52").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img51").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img52").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img51").style.zIndex="4";
+                            document.getElementByid("img52").style.zIndex="4";
+                        }, 1300)
                     }
                     function close6() {
                         document.getElementById("throws6").style.animationName="closes";
-                        document.getElementById("img61").style.animationName="vidclose";
-                        document.getElementById("img62").style.animationName="vidclose";
+                        document.getElementById("he61").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("he62").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo61").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("bo62").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img61").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        document.getElementById("img62").style.animation="fadeo 0.5s ease 0s 1 normal forwards";
+                        setTimeout(function(){
+                            document.getElementById("circle1").style.zIndex="7";
+                            document.getElementById("circle2").style.zIndex="7";
+                            document.getElementById("circle3").style.zIndex="7";
+                            document.getElementById("circle4").style.zIndex="7";
+                            document.getElementById("circle5").style.zIndex="7";
+                            document.getElementById("circle6").style.zIndex="7";
+                            document.getElementByid("img61").style.zIndex="4";
+                            document.getElementByid("img62").style.zIndex="4";
+                        }, 1300)
                     }
                 </script>
             </div>
+            <div id="cover"></div>
             <footer class="site-footer">
                     <div class="footer">
                         <div class="copyright">© 2025 Frisbee4Fun    

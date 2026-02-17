@@ -1,209 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2Q Website Project">
-    <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
-    <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
-    <title>Frisbee4Fun</title>
-    <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
-    <link rel="stylesheet" href="headfoot.css">
-    <link rel="stylesheet" href="./CSS Files/minigames.css">
-    <style>
-        div.body {
-            padding-bottom: 50vw;
-        }
-        div#disc, img#tdisc {
-            position:absolute;
-            width:18vw;
-            height:18vw;
-            left: 21vw;
-            top:12vw;
-        }
-        img#tdisc {
-            animation-duration:0.3s;
-            animation-name:spin;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-        div#defend, div#offense {
-            position:absolute;
-            width:30vw;
-            height:50vw;
-            background-color:rgba(56, 52, 52, 0.874);
-            border-color:black;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
-            align-content:center;
-            text-align:center;
-            font-size:1vw;
-            color:white;
-            font-weight:600;
-        }
-        div#defend {
-            border-bottom-right-radius:2vw;
-            border-top-right-radius:2vw;
-            left:-30vw;
-        }
-        div#offense {
-            border-bottom-left-radius:2vw;
-            border-top-left-radius:2vw;
-            left:102vw;
-        }
-        /* this is what makes the disc spin (animation-iteration-count is infinite)*/
-        @keyframes spin {
-            100% {transform: rotate(360deg)}
-        }
-        /* these two keyframes animate the two sides coming into the page*/
-        @keyframes defense {
-            100% {left: 0vw;}
-        }
-        @keyframes offense {
-            100% {left:72vw; width:27vw}
-        }
-        div.OFFENSE {
-            font-size:7vw;
-            width:30vw;
-            height:10vw;
-            position:absolute;
-            left: 37vw;
-            top:6vw;
-        }
-        /* the css below is what allows the offense vs defense to appear like that on the page*/
-        div.vs {
-            font-size:30vw;
-            width:20vw;
-            height:20vw;
-            position:absolute;
-            top:14vw;
-            left:35vw;
-            z-index:-1;
-        }
-        div.DEFENSE {
-            font-size:7vw;
-            width:30vw;
-            height:10vw;
-            position:absolute;
-            left:38vw;
-            top:50vw;
-        }
-        div.notice {
-            font-size:1.5vw;
-            width:15vw;
-            height:2vw;
-            background-color: rgba(0,0,0,0);
-            position:absolute;
-            top:13vw;
-            left:45vw;
-        }
-    </style>
-</head>
-<body>
-    <header class="site-header">
-                <div class="nav-wrapper">
-                    <div class="logo">Frisbee4Fun</div>
-                    <nav class="nav-links">
-                        <a href="../index.html">Homepage</a>
-                        <a href="./intro.html">Intro</a>
-                        <a href="./throws.html">Throws</a>
-                        <a href="./tipsntricks.html">Tips</a>
-                        <a href="./ultimatefrisbee.html">Ultimate</a>
-                        <a href="./stratsandforms.html">Strategies</a>
-                        <a href="./minigames.html">Mini Games</a>
-                        <a href="./references.html">References</a>
-                    </nav>
-                </div>
-    </header>
-<div class="body">
-    <div id="disc">
-        <img id="tdisc" onclick="appear()" title="https://www.hiclipart.com/free-transparent-background-png-clipart-zyzgu" src="../assets/frisbeestrats.png" draggable="false">
-    </div>
-    <div id="defend">
-        <h2>THE DEFENSE</h2>
-        <h3>Vertical stack:</h3>
-        The vertical (vert) stack is an offensive Ultimate Frisbee strategy that organizes cutters in a straight line near the center of the field to keep the throwing lane clear. 
-        Since the marker forces one side, the lane becomes the easiest place to complete passes, so players take turns cutting to avoid clogging of players. 
-        Teams pre-assign cutting order, usually starting from the back of the stack, with players making in-cuts, out-cuts, or deep cuts and clearing if they’re not open. 
-        If no pass is available, a dump resets the stall and the stack reforms, repeating until yards are gained or a score is made. 
-        To learn more about the vertical stack go to this link! </br></br> https://ultimatefrisbeehq.com/pages/vert-stack 
-    </br></br>
-        <h3>Horizontal stack:</h3>
-        The horizontal (ho) stack is an offensive Ultimate Frisbee strategy that , especially effective against a cup defense. 
-        It uses three handlers who maintain possession through dumps and swings while four cutters are split into left and right sides, cutting only on their side of the field. 
-        Cutters time their in-cuts and out-cuts, becoming open as the disc swings between handlers and the defense resets. 
-        When a cutter receives the disc, they quickly dump it back to a handler, gaining small but consistent yards. 
-        Teams often add variations to confuse defenders, such as middle cutters acting as poppers or switching roles mid-play. 
-        To learn more about the horizontal stack go to this link! </br></br>
-        https://ultimatefrisbeehq.com/pages/ho-stack?_pos=1&_psq=ho&_ss=e&_v=1.0 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2Q Website Project">
+        <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
+        <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
+        <title>Frisbee4Fun</title>
+        <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
+        <link rel="stylesheet" href="headfoot.css">
+        <link rel="stylesheet" href="./CSS Files/minigames.css">
+        <style>
+            div.body {
+                padding-bottom: 50vw;
+                position:relative;
+                overflow-x:hidden;
+                width:100%;
+                overflow-y:hidden;
+                padding-bottom:60vw;
+                background-color:rgb(255, 255, 102);
+            }
+            body {
+                position:relative;
+                overflow-x:hidden;
+            }
+            img#tdisc {
+                position:absolute;
+                width:18vw;
+                height:18vw;
+                left: -20vw;
+                z-index:2;
+                animation:disc1 1s cubic-bezier(0,0,0,1) 3s 1 normal forwards, disc2 1s cubic-bezier(0,0,0,1) 4s 1 normal forwards, 
+                disc3 1s cubic-bezier(0,0,0,1) 5s 1 normal forwards, spin 0.3s linear 0s infinite;
+            }
+            @keyframes disc1 {
+                0% {left:-20vw;}
+                100% {left:100vw}
+            }
+            @keyframes disc2 {
+                0% {top:35vw; left:100vw;}
+                100% {top:35vw; left:-20vw}
+            }
+            @keyframes disc3 {
+                0% {top:15vw; left:-20vw;}
+                100% {top:15vw; left:42vw;}
+            }
+            div#defend, div#offense {
+                position:absolute;
+                width:30vw;
+                height:50vw;
+                background-color:rgba(56, 52, 52, 0.874);
+                border-color:black;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                align-content:center;
+                text-align:center;
+                font-size:1vw;
+                color:white;
+                font-weight:600;
+            }
+            div#defend {
+                border-bottom-right-radius:2vw;
+                border-top-right-radius:2vw;
+                left:-30vw;
+            }
+            div#offense {
+                border-bottom-left-radius:2vw;
+                border-top-left-radius:2vw;
+                left:102vw;
+            }
+            /* this is what makes the disc spin (animation-iteration-count is infinite)*/
+            @keyframes spin {
+                100% {transform: rotate(360deg)}
+            }
+            /* these two keyframes animate the two sides coming into the page*/
+            @keyframes defense {
+                100% {left: 0vw;}
+            }
+            @keyframes offense {
+                100% {left:72vw; width:27vw}
+            }
+            div.OFFENSE {
+                font-size:7vw;
+                position:absolute;
+                left: -20vw;
+                top:20vw;
+                rotate:-90deg;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                animation: o1 1s cubic-bezier(0,0,0,1) 0s 1 normal forwards;
+            }
+            @keyframes o1 {
+                0% {left:-20vw;}
+                100% {left:23vw;}
+            }
+            /* the css below is what allows the offense vs defense to appear like that on the page*/
+            div.vs {
+                font-size:0vw;
+                position:absolute;
+                top:12vw;
+                left:39vw;
+                z-index:0;
+                animation: vscale 1s cubic-bezier(0,0,0.2,1) 1s 1 normal forwards;
+            }
+            @keyframes vscale {
+                0% {font-size:0vw;}
+                100% {font-size:22vw}
+            }
+            div.DEFENSE {
+                font-size:7vw;
+                position:absolute;
+                left:100vw;
+                top:20vw;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                rotate:90deg;
+                animation: d1 1s cubic-bezier(0,0,0,1) 2s 1 normal forwards;
+            }
+            @keyframes d1 {
+                0% {left:100vw;}
+                100% {left:55vw}
+            }
+            div.notice {
+                font-size:1.5vw;
+                width:15vw;
+                height:2vw;
+                background-color: rgba(0,0,0,0);
+                position:absolute;
+                top:13vw;
+                left:45vw;
+            }
+            #s1, #s2, #s3, #s4 {
+                position:absolute;
+                font-size:3.7vw;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                background-image:linear-gradient(to bottom, black, gray, white);
+                border-style:solid;
+                border-width:0.5vw;
+                border-color:rgb(121, 121, 121);
+                box-shadow: 0vw 0vw 2vw black;
+                font-weight:bold;
+                font-family:monospace;
+                width:30vw;
+                height:20vw;
+            }
+            #s1 {
+                top:3vw;
+                left:-31vw;
+                border-top-right-radius: 2vw;
+                border-bottom-right-radius: 2vw;
+                animation: of 1s cubic-bezier(0,0,0,1) 6s 1 normal forwards;
+            }
+            #s2 {
+                top:25vw;
+                left:-31vw;
+                animation: of 1s cubic-bezier(0,0,0,1) 6.2s 1 normal forwards;
+                border-top-right-radius: 2vw;
+                border-bottom-right-radius: 2vw;
+            }
+            #s3 {
+                left:102vw;
+                top:3vw; 
+                animation: df 1s cubic-bezier(0,0,0,1) 6.4s 1 normal forwards;
+                border-top-left-radius: 2vw;
+                border-bottom-left-radius: 2vw;
+            }
+            #s4 {
+                border-top-left-radius: 2vw;
+                border-bottom-left-radius: 2vw;
+                animation: df 1s cubic-bezier(0,0,0,1) 6.6s 1 normal forwards;
+                left:102vw;
+                top:25vw;
+            }
+            @keyframes of {
+                0% {left:-31vw}
+                100% {left:0vw;}
+            }
+            @keyframes df {
+                0% {left:102vw}
+                100% {left:71vw}
+            }
+            #basetext {
+                position:absolute;
+                width:38vw;
+                height:0vw;
+                left:31.5vw;
+                border-bottom-left-radius: 2vw;
+                border-bottom-right-radius: 2vw;
+                border-style:solid;
+                border-width:0vw;
+                border-color:black;
+                background-image:linear-gradient(to bottom, black, grey, yellow);
+                z-index:4;
+            }
+            @keyframes basetextopen {
+                0% {height:0vw;}
+                100% {height:45vw};
+            }
+            @keyframes basetextclose {
+                0% {height:45vw;}
+                100% {height:0vw;}
+            }
+        </style>
+    </head>
+    <body>
+        <header class="site-header" id="h">
+                    <div class="nav-wrapper">
+                        <div class="logo">Frisbee4Fun</div>
+                        <nav class="nav-links">
+                            <a href="../index.html">Homepage</a>
+                            <a href="./intro.html">Intro</a>
+                            <a href="./throws.html">Throws</a>
+                            <a href="./tipsntricks.html">Tips</a>
+                            <a href="./ultimatefrisbee.html">Ultimate</a>
+                            <a href="./stratsandforms.html">Strategies</a>
+                            <a href="./minigames.html">Mini Games</a>
+                            <a href="./references.html">References</a>
+                        </nav>
+                    </div>
+        </header>
+        <div class="body">
+            <div id="disc"></div>
+            <div id="basetext"></div>
+            <div id="coverstrat"></div>
+            <img id="tdisc" onclick="appear()" title="https://www.hiclipart.com/free-transparent-background-png-clipart-zyzgu" src="../assets/frisbeestrats.png" draggable="false">
+            <div class="strats" id="s1">VERTICAL STACK</div>
+        <div class="strats" id="s2">HORIZONTAL STACK</div>
+        <div class="strats" id="s3">MAN-TO-MAN DEFENSE</div>
+        <div class="strats" id="s4">CUP DEFENSE</div>
+        <div id="defend">
+            <h2>THE DEFENSE</h2>
+            <h3>Vertical stack:</h3>
+            The vertical (vert) stack is an offensive Ultimate Frisbee strategy that organizes cutters in a straight line near the center of the field to keep the throwing lane clear. 
+            Since the marker forces one side, the lane becomes the easiest place to complete passes, so players take turns cutting to avoid clogging of players. 
+            Teams pre-assign cutting order, usually starting from the back of the stack, with players making in-cuts, out-cuts, or deep cuts and clearing if they’re not open. 
+            If no pass is available, a dump resets the stall and the stack reforms, repeating until yards are gained or a score is made. 
+            To learn more about the vertical stack go to this link! </br></br> https://ultimatefrisbeehq.com/pages/vert-stack 
+        </br></br>
+            <h3>Horizontal stack:</h3>
+            The horizontal (ho) stack is an offensive Ultimate Frisbee strategy that , especially effective against a cup defense. 
+            It uses three handlers who maintain possession through dumps and swings while four cutters are split into left and right sides, cutting only on their side of the field. 
+            Cutters time their in-cuts and out-cuts, becoming open as the disc swings between handlers and the defense resets. 
+            When a cutter receives the disc, they quickly dump it back to a handler, gaining small but consistent yards. 
+            Teams often add variations to confuse defenders, such as middle cutters acting as poppers or switching roles mid-play. 
+            To learn more about the horizontal stack go to this link! </br></br>
+            https://ultimatefrisbeehq.com/pages/ho-stack?_pos=1&_psq=ho&_ss=e&_v=1.0 
 
-    </div>
-    <div id="offense">
-        <h3>Man-to-man defense:</h3>
-        Man-to-man defense is the most common Ultimate Frisbee defensive strategy, where each defender is assigned one specific opponent to guard for an entire point. 
-        The goal is to stay between your player and the disc, prevent them from getting open, and stall them if they catch it. 
-        Before the pull, the defensive team “calls lines” to decide who guards which opponent by numbering players from left to right. 
-        Each defender calls out a number to claim their matchup and must remember that person, even if positions shift. New lines are usually called after each point to adjust for substitutions.
-​
-        <h3>Cup defense:</h3>
-        The cup is a zone defense in Ultimate Frisbee where three defenders form a “cup” around the thrower to block throwing lanes. 
-        Instead of guarding individual players, each of the seven defenders covers a specific area, working together to limit options and pressure the thrower. 
-        The four closest defenders move as a unit, quickly reforming the cup after each pass to prevent easy swings. Wings and a deep defender protect cutters and stop long throws that escape the cup. 
-        Teams must also watch for “poppers,” cutters who crash the cup late in the stall count to reset the offense. 
-        When a turnover happens and the cup cannot quickly reset, switching to man defense is often the safest backup option. To learn more about the cup defense, go to this link! 
-    </br></br>
-        https://ultimatefrisbeehq.com/pages/cup-defense
-
-    </div>
-    <div class="OFFENSE">
-        OFFENSE
-    </div>
-    <div class="vs">
-        VS
-    </div>
-    <div class="DEFENSE">
-        DEFENSE
-    </div>
-    <div class="notice">
-        Click Disc to Begin
-    </div>
-<script>
-    /* this is to start the animation of the two sides entering*/
-    function appear() {
-        document.getElementById("defend").style.animationName="defense";
-        document.getElementById("offense").style.animationName="offense";
-    }
-</script>
-</div>
-
-<footer class="site-footer">
-    <div class="footer">
-        <div class="copyright">© 2025 Frisbee4Fun</div>
-
-        <div class="ig">
-            <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
-            <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
         </div>
+        <div id="offense">
+            <h3>Man-to-man defense:</h3>
+            Man-to-man defense is the most common Ultimate Frisbee defensive strategy, where each defender is assigned one specific opponent to guard for an entire point. 
+            The goal is to stay between your player and the disc, prevent them from getting open, and stall them if they catch it. 
+            Before the pull, the defensive team “calls lines” to decide who guards which opponent by numbering players from left to right. 
+            Each defender calls out a number to claim their matchup and must remember that person, even if positions shift. New lines are usually called after each point to adjust for substitutions.
+    ​
+            <h3>Cup defense:</h3>
+            The cup is a zone defense in Ultimate Frisbee where three defenders form a “cup” around the thrower to block throwing lanes. 
+            Instead of guarding individual players, each of the seven defenders covers a specific area, working together to limit options and pressure the thrower. 
+            The four closest defenders move as a unit, quickly reforming the cup after each pass to prevent easy swings. Wings and a deep defender protect cutters and stop long throws that escape the cup. 
+            Teams must also watch for “poppers,” cutters who crash the cup late in the stall count to reset the offense. 
+            When a turnover happens and the cup cannot quickly reset, switching to man defense is often the safest backup option. To learn more about the cup defense, go to this link! 
+        </br></br>
+            https://ultimatefrisbeehq.com/pages/cup-defense
 
-        <div class="fb">
-            <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
-            <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
         </div>
-
-        <div class="frisbee">
-            <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
+        <div class="OFFENSE">
+            OFFENSE
         </div>
-
-        <div class="email">
-            <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
-            <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
+        <div class="vs">
+            VS
         </div>
-
-        <div class="references">
-            <a href="./references.html">References</a>
+        <div class="DEFENSE">
+            DEFENSE
         </div>
+        <div class="notice">
+            Click Disc to Begin
+        </div>
+    <script>
+        /* this is to start the animation of the two sides entering*/
+        setTimeout(function() {document.getElementById("h").style.zIndex="4"}, 5000)
+        function appear() {
+            document.getElementById("defend").style.animationName="defense";
+            document.getElementById("offense").style.animationName="offense";
+        }
+    </script>
     </div>
-</footer>
-</body>
+
+    <footer class="site-footer">
+        <div class="footer">
+            <div class="copyright">© 2025 Frisbee4Fun</div>
+
+            <div class="ig">
+                <a href="https://www.instagram.com/coasiccc?igsh=cTdiZDU2bnE3YWln&utm_source=qr">Isaiah's Instagram</a><br>
+                <a href="https://www.instagram.com/lles079/">Russell's Instagram</a>
+            </div>
+
+            <div class="fb">
+                <a href="https://www.facebook.com/share/1ZucCMbHK9/?mibextid=wwXIfr">Isaiah's Facebook</a><br>
+                <a href="https://www.facebook.com/russelljdayag">Russell's Facebook</a>
+            </div>
+
+            <div class="frisbee">
+                <a href="https://ultimatefrisbeehq.com/">Frisbee Site</a>
+            </div>
+
+            <div class="email">
+                <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Isaiah's Email</a><br>
+                <a href="https://docs.google.com/document/d/1SsfDk3UgKoy4dAYPf5F92Iz7lMWeca_rImsayqhTRFg/edit?usp=sharing">Russell's Email</a>
+            </div>
+
+            <div class="references">
+                <a href="./references.html">References</a>
+            </div>
+        </div>
+    </footer>
+    </body>
 </html>
 </DOCTYPE>  

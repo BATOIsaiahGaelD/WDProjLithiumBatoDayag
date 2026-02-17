@@ -12,45 +12,45 @@
             <style>
                 div.body {
                     padding-bottom:50vw;
+                    position:absolute;
+                    background-color:rgb(255, 255, 98);
+                    width:100%;
+                    overflow-x:hidden;
+                    padding-bottom:56vw;
+                    overflow-y:hidden;
+                }
+                @media (max-width: 425px) {
+                    div.body {
+                        padding-bottom:70vw;
+                    }
+                }
+                body {
+                    position:relative;
+                    overflow-x:hidden;
                 }
                 img#main {
                     position:absolute;
                     width:20vw;
                     height:20vw;
-                    left:40.5vw;
-                    top:22vw;
+                    left:-20vw;
+                    top:5vw;
+                    z-index:10;
                 }
-                #tip1, #tip2, #tip3, #tip4 {
+                #tip1 {
                     position:absolute;
-                    width:0vw;
-                    height:0vw;
+                    width:90%;
+                    height:0%;
                     border-radius:2vw;
                     background-color:rgba(76, 181, 255, 0.908);
                     animation-duration:2s;
                     animation-fill-mode:forwards;
-                    z-index:-1;
+                    z-index:0;
                     text-align:center;
                     font-size:0vw;
                 }
                 #tip1 {
-                    top:10vw;
+                    top:14vw;
                     left:5vw;
-                    animation-delay:0s;
-                }
-                #tip2 {
-                    left:65vw;
-                    top:10vw;
-                    animation-delay:1s;
-                }
-                #tip3 {
-                    left:5vw;
-                    top:33vw;
-                    animation-delay:1.5s;
-                }
-                #tip4 {
-                    top:33vw;
-                    left:65vw;
-                    animation-delay:0.5s;
                 }
                 div.cl {
                     font-size:1.5vw;
@@ -77,7 +77,418 @@
                     0% {width:0vw; height:0vw; top:32vw; left:51vw; font-size:0vw;}
                     100% {width:30vw; height:20vw; left:65vw; top:33vw; font-size:1.5vw;}
                 }
+                #ti1 {
+                    position:absolute;
+                    top:7vw;
+                    left:130vw;
+                    width:50vw;
+                    height:8vw;
+                    transform:skewX(20deg);
+                    background-color:rgb(255, 255, 255);
+                    align-items:center;
+                    justify-content:center;
+                    display:flex;
+                    font-size:5vw;
+                    z-index:1;
+                }
+                .animation1 {
+                    animation: tipmove 1s ease 6.5s 1 normal forwards;
+                }
+                #ti2 {
+                    position:absolute;
+                    top:17vw;
+                    left:130vw;
+                    width:50vw;
+                    height:8vw;
+                    transform:skewX(-20deg);
+                    background-color:rgb(255, 255, 255);
+                    align-items:center;
+                    justify-content:center;
+                    display:flex;
+                    font-size:5vw;
+                    z-index:1;
+                }
+                .animation2 {
+                    animation: tipmove 1s ease 6.8s 1 normal forwards;
+                }
+                .animation2a {
+                    animation: tipmove 1s ease 0s 1 normal forwards;
+                }
+                #ti3 {
+                    position:absolute;
+                    top:27vw;
+                    left:130vw;
+                    width:50vw;
+                    height:8vw;
+                    transform:skewX(20deg);
+                    background-color:rgb(255, 255, 255);
+                    align-items:center;
+                    justify-content:center;
+                    display:flex;
+                    font-size:5vw;
+                    z-index:1;
+                }
+                .animation3 {
+                    animation: tipmove 1s ease 7.1s 1 normal forwards;
+                }
+                .animation3a {
+                    animation: tipmove 1s ease 0s 1 normal forwards;
+                }
+                #ti4 {
+                    position:absolute;
+                    top:37vw;
+                    left:130vw;
+                    width:50vw;
+                    height:8vw;
+                    transform:skewX(-20deg);
+                    background-color:rgb(255, 255, 255);
+                    align-items:center;
+                    justify-content:center;
+                    display:flex;
+                    font-size:4vw;
+                    z-index:1;
+                }
+                .animation4 {
+                    animation: tipmove 1s ease 7.4s 1 normal forwards;
+                }
+                .animation4a {
+                    animation: tipmove 1s ease 0s 1 normal forwards;
+                }
+                #TIPS {
+                    position:absolute;
+                    font-size:15vw;
+                    z-index:10;
+                    color:white;
+                    top:0vw;
+                    left:-30vw;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: tips 1s cubic-bezier(0,0,0,1) 2s 1 normal forwards, tipsa 1s cubic-bezier(0,0,0,1) 4.5s 1 normal forwards;
+                }
+                #n {
+                    position:absolute;
+                    font-size:40vw;
+                    z-index:9;
+                    color:white;
+                    top:0vw;
+                    left:36vw;
+                    opacity:0%;
+                    font-family: 'Arial Narrow Bold', sans-serif;
+                    animation: sizen 1s cubic-bezier(0,0,0,1) 2.5s 1 normal forwards, sizena 1s cubic-bezier(0,0,0,1) 5s 1 normal forwards;
+                }
+                #TRICKS {
+                    position:absolute;
+                    font-size:15vw;
+                    z-index:7;
+                    color:white;
+                    top:30vw;
+                    left:130vw;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: tricks 1s cubic-bezier(0,0,0,1) 3s 1 normal forwards, tricksa 1s cubic-bezier(0,0,0,1) 5.5s 1 normal forwards;
+                }
+                #covertnt {
+                    width:100%;
+                    height:100%;
+                    position:fixed;
+                    background-color:rgba(0, 0, 0, 0.696);
+                    z-index:0;
+                    top:0vw;
+                    opacity:0%;
+                    animation:fadein 0.5s linear 0s 1 normal forwards, fadeout 1s linear 5.5s normal forwards;
+                }
+                .mainanim {
+                    animation: first 1s cubic-bezier(0,0,0,1) 1s 1 normal forwards, second 2s cubic-bezier(0,0,0,1) 6.5s 1 normal forwards, spin 0.2s linear 6.5s infinite;
+                }
 
+                #ttext1 {
+                    position:absolute;
+                    font-size:2.8vw;
+                    width:80%;
+                    left:10vw;
+                    top:17vw;
+                    text-align:center;
+                    opacity:0%;
+                }
+                #ttext2 {
+                    position:absolute;
+                    font-size:2.8vw;
+                    width:80%;
+                    left:10vw;
+                    top:19.5vw;
+                    text-align:center;
+                    opacity:0%;
+                }
+                #ttext3 {
+                    position:absolute;
+                    font-size:2.8vw;
+                    width:80%;
+                    left:10vw;
+                    top:22vw;
+                    text-align:center;
+                    opacity:0%;
+                }
+                #ttext4 {
+                    position:absolute;
+                    font-size:2.8vw;
+                    width:80%;
+                    left:10vw;
+                    top:17.8vw;
+                    text-align:center;
+                    opacity:0%;
+                }
+                #exitbutton, #exitbutton2, #exitbutton3, #exitbutton4 {
+                    position:absolute;
+                    width:30%;
+                    height:10%;
+                    background-image:linear-gradient(to bottom, rgb(177, 180, 2), black);
+                    border-style:solid;
+                    border-radius:1vw;
+                    border-width:0.3vw;
+                    border-color:rgb(0, 0, 0);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:2vw;
+                    font-weight:bold;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color:antiquewhite;
+                    left:36vw;
+                    top:45vw;
+                    opacity:0%;
+                    z-index:-1;
+                }
+                @keyframes first {
+                    0% {left:-20vw}
+                    100% {left:40.5vw}
+                }
+                @keyframes second {
+                    0% {left:40.5vw; top:5vw;}
+                    100% {left:-8vw; width:50vw; height:50vw; top:1vw;}
+                }
+                @keyframes fadeout {
+                    0% {opacity:100%}
+                    100% {opacity:0%}
+                }
+                @keyframes fadein {
+                    0% {opacity:0%}
+                    100% {opacity:100%}
+                }
+                @keyframes spin {
+                    100% {transform:rotate(360deg)}
+                }
+                @keyframes tips {
+                    0% {left:-30vw;}
+                    100% {left:12vw;}
+                }
+                @keyframes tipsa {
+                    0% {left:12vw;}
+                    99% {left:100vw; color:rgb(243, 255, 75);}
+                    100% {font-size:0;}
+                }
+                @keyframes tricks {
+                    0% {left:130vw;}
+                    100% {left:48vw;}
+                }
+                @keyframes tricksa {
+                    0% {left:48vw;}
+                    100% {left:-50vw; color:rgb(243, 255, 75)}
+                }
+                @keyframes sizen {
+                    0% {opacity:0%;}
+                    100% {opacity:100%}
+                }
+                @keyframes sizena {
+                    0% {opacity:100%;}
+                    100% {opacity:0%; color:rgb(138, 142, 65);}
+                }
+                footer.site-footer {
+                    position:absolute;
+                    top:60vw;
+                }
+                @keyframes tipmove {
+                    0% {left:130vw}
+                    100% {left:45vw}
+                }
+                @keyframes tipunmove {
+                    0% {left:45vw;}
+                    100% {left:130vw;}
+                }
+                .tipback {
+                    animation:tipunmove 1s ease 0s 1 normal forwards;
+                }
+                /* for disc going back after clicking a tip*/
+                @keyframes dback {
+                    0% {left:-8vw; width:50vw; height:50vw; top:1vw;}
+                    100% {left:-50vw; width:50vw; height:50vw; top:1vw;}
+                }
+                @keyframes dnorm {
+                    0% {left:-50vw; width:50vw; height:50vw; top:1vw;}
+                    100% {left:-8vw; width:50vw; height:50vw; top:1vw;}
+                }
+                .dback {
+                    animation: dback 1s ease 0s 1 normal forwards, spin 0.2s linear 0s infinite;
+                }
+                .dnorm {
+                    animation: dnorm 1s ease 0s 1 normal forwards, spin 0.2s linear 0s infinite;
+                }
+                /* for the tips animation (the parallelogram goes to the top)*/
+                @keyframes mover1 {
+                    0% {left:45vw; top:7vw}
+                    100% {left:25vw; top:3vw;}
+                }
+                .clickanim1 {
+                    animation: mover1 1s ease 0s 1 normal forwards;
+                }
+                @keyframes mover2 {
+                    0% {left:45vw; top:17vw}
+                    100% {left:25vw; top:3vw;}
+                }
+                .clickanim2 {
+                    animation: mover2 1s ease 0s 1 normal forwards;
+                }
+                @keyframes mover3 {
+                    0% {left:45vw; top:27vw}
+                    100% {left:25vw; top:3vw;}
+                }
+                .clickanim3 {
+                    animation: mover3 1s ease 0s 1 normal forwards;
+                }
+                @keyframes mover4 {
+                    0% {left:45vw; top:37vw}
+                    100% {left:25vw; top:3vw;}
+                }
+                .clickanim4 {
+                    animation: mover4 1s ease 0s 1 normal forwards;
+                }
+
+                @keyframes unmover1 {
+                    0% {left:25vw; top:3vw;}
+                    100% {left:45vw; top:7vw}
+                }
+                .backanim1 {
+                    animation: unmover1 1s ease 0s 1 normal forwards;
+                }
+                @keyframes unmover2 {
+                    0% {left:25vw; top:3vw;}
+                    100% {left:45vw; top:17vw}
+                }
+                .backanim2 {
+                    animation: unmover2 1s ease 0s 1 normal forwards;
+                }
+                @keyframes unmover3 {
+                    0% {left:25vw; top:3vw;}
+                    100% {left:45vw; top:27vw}
+                }
+                .backanim3 {
+                    animation: unmover3 1s ease 0s 1 normal forwards;
+                }
+                @keyframes unmover4 {
+                    0% {left:25vw; top:3vw;}
+                    100% {left:45vw; top:37vw}
+                }
+                .backanim4 {
+                    animation: unmover4 1s ease 0s 1 normal forwards;
+                }
+
+                /* for the box scaling and the text fading in*/
+                @keyframes scalebox {
+                    0% {height:0%}
+                    100% {height:53%}
+                }
+                @keyframes unscalebox {
+                    0% {height:53%}
+                    100% {height:0%}
+                }
+                .boxscale {
+                    animation: scalebox 0.7s ease 1s 1 normal forwards;
+                }
+                .boxunscale {
+                    animation: scalebox 0.7s ease -2s 1 normal forwards, unscalebox 0.2s ease 0s 1 normal forwards;
+                }
+                .fadeinto {
+                    animation:fadein 1s ease 2s 1 normal forwards
+                }
+                .fadeoutof {
+                    animation: fadeout 1s ease 0s 1 normal forwards
+                }
+
+                p#guide {
+                    font-size:4vw;
+                    font-weight:bold;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    position:absolute;
+                    left:43vw;
+                    top:1vw;
+                    opacity:0%;
+                }
+                /* css for background */
+                .gradientcircle {
+                    filter:blur(4vw);
+                    width:25vw;
+                    height:25vw;
+                    position:absolute;
+                    z-index:0;
+                    border-radius:50%;
+                }
+                @keyframes circle1 {
+                    0% {width:25vw; height:25vw; top:30%; left:40%;}
+                    100% {width:35vw; height:35vw; top:50%; left:20%}
+                }
+                #bggc1 {
+                    top:30%;
+                    left:40%;
+                    background-image:linear-gradient(100deg, black, rgb(53, 53, 53), rgb(255, 255, 255));
+                    animation: circle1 15s ease 0s infinite alternate; 
+                }
+                @keyframes circle2 {
+                    0% {width:25vw; height:25vw; top:60%; left:10%;}
+                    100% {width:55vw; height:55vw; top:10%; left:-30%}
+                }
+                #bggc2 {
+                    top:60%;
+                    left:10%;
+                    background-image:linear-gradient(160deg, rgb(255, 255, 255), rgb(255, 114, 114), rgb(87, 32, 32));
+                    animation: circle2 35s ease 0s infinite alternate; 
+                }
+                @keyframes circle3 {
+                    0% {width:25vw; height:25vw; top:10%; left:70%;}
+                    100% {width:20vw; height:20vw; top:30%; left:50%}
+                }
+                #bggc3 {
+                    top:10%;
+                    left:70%;
+                    background-image:linear-gradient(-100deg, black, rgb(161, 151, 0), #d3ff5b);
+                    animation: circle3 25s ease 0s infinite alternate; 
+                }
+                @keyframes circle4 {
+                    0% {width:25vw; height:25vw; top:15%; left:2%;}
+                    100% {width:65vw; height:65vw; top:70%; left:60%}
+                }
+                #bggc4 {
+                    top:15%;
+                    left:2%;
+                    background-image:linear-gradient(-50deg, black, rgb(53, 53, 53), rgb(41, 41, 41));
+                    animation: circle4 30s ease 0s infinite alternate; 
+                }
+                @keyframes circle5 {
+                    0% {width:25vw; height:25vw; top:-10%; left:55%;}
+                    100% {width:30vw; height:30vw; top:10%; left:35%}
+                }
+                #bggc5 {
+                    top:-10%;
+                    left:55%;
+                    background-image:linear-gradient(270deg, rgb(255, 221, 221), rgb(250, 201, 41), rgb(255, 97, 97));
+                    animation: circle5 20s ease 0s infinite alternate; 
+                }
+                @keyframes circle6 {
+                    0% {width:25vw; height:25vw; top:-15%; left:-20%;}
+                    100% {width:35vw; height:35vw; top:1%; left:80%}
+                }
+                #bggc6 {
+                    top:-15%;
+                    left:-20%;
+                    background-image:linear-gradient(100deg, hsl(257, 100%, 73%), rgb(137, 157, 253), rgb(131, 131, 131));
+                    animation: circle6 55s ease 0s infinite alternate; 
+                }
             </style>
             <link rel="stylesheet" href="./CSS Files/stratsandforms.css">
         </head>
@@ -97,50 +508,365 @@
                     </nav>
                 </div>
             </header>
+            <p id="TIPS">TIPS</p>
+            <p id="n">N</p>
+            <p id="TRICKS">TRICKS</p>
             <div class="body">
-                <div class="cl">
-                    Click the Disc to See Tips
-                </div>
-                <img id="main" title="https://www.stickpng.com/img/objects/frisbees/orange-frisbee" onclick="startanim()" src="../assets/frisbeetips.png" draggable="false">
-                <div id="tip1">
-                </br>
+                <div class="gradientcircle" id="bggc1"></div>
+                <div class="gradientcircle" id="bggc2"></div>
+                <div class="gradientcircle" id="bggc3"></div>
+                <div class="gradientcircle" id="bggc4"></div>
+                <div class="gradientcircle" id="bggc5"></div>
+                <div class="gradientcircle" id="bggc6"></div>
+
+                <img id="main" class="mainanim" title="https://www.stickpng.com/img/objects/frisbees/orange-frisbee" onclick="startanim()" src="../assets/frisbeetips.png" draggable="false">
+                <div id="ti1" class="animation1" onclick="move1()">NEVER GIVE UP</div>
+                <div id="tip1"></div>
+                <div id="exitbutton" onclick="unmove1()">Back to Tips</div>
+                <div id="exitbutton2" onclick="unmove2()">Back to Tips</div>
+                <div id="exitbutton3" onclick="unmove3()">Back to Tips</div>
+                <div id="exitbutton4" onclick="unmove4()">Back to Tips</div>
+                <p id="guide">Click Tips to See Description</p>
+                <p id="ttext1">
                     Never give up on the disc. A Frisbee disc is catchable until it touches the ground. 
                     A disc varies in distance, speed, and height depending on the power, spin, and angle. 
                     If a disc seems uncatchable because it went over your head or it is far away from you, there is a good chance that it still is because it may stay afloat for much longer than expected. 
                     To us, this is the most important tip to get you started on Ultimate.
-                </div>
-                <div id="tip2">
-                </br>
+                </p>
+                <div id="ti2" class="animation2" onclick="move2()">CHASE IT</div>
+                <p id="ttext2">
                     Run to the disc. Sometimes when someone throws the disc to you, you probably will just stand there and wait for the disc to come to you. 
                     Then, the moment you catch the disc, a defender will come and block it. 
                     This is a common problem for most beginners. 
                     Always get close to the thrown disc as much as possible to ensure that the defender can’t block the throw.
-                </div>
-                <div id="tip3">
-                </br></br>
+                </p>
+                <div id="ti3" class="animation3" onclick="move3()">PATIENCE IS KEY</div>
+                <p id="ttext3">
                     Take your time. When you have the disc, just know you have 10 full seconds to make a decision on who to throw it to. 
                     Clear your mind and read the field calmly; don’t always rush to throw the disc to someone. Use these 10 seconds wisely.
-
-                </div>
-                <div id="tip4">
-                </br>
+                </p>
+                <div id="ti4" class="animation4" onclick="move4()">PROFFESIONAL'S CATCH</div>
+                <p id="ttext4">
                     Catch the disc with 2 hands as much as possible. 
                     Make sure to always use the “pancake” catch if possible because a one-handed catch is always risky. 
                     Dropping the disc is a normal occurrence, even in crucial situations, so using the other hand will always bring the success of a catch higher. 
                     Only use the one-handed catch when you really need those extra inches to catch the disc.
-
-                </div>
+                </p>
             <script>
                 /* this function activates once the disc is clicked, kickstarting the 
                 animations */
-                function startanim(){
-                    document.getElementById("tip1").style.animationName="tip1";
-                    document.getElementById("tip2").style.animationName="tip2";
-                    document.getElementById("tip3").style.animationName="tip3";
-                    document.getElementById("tip4").style.animationName="tip4";
+                setTimeout(function(){document.getElementById("covertnt").style.zIndex="-1"; document.getElementById("n").style.zIndex="-1";}, 6500);
+                document.getElementById("guide").style.opacity="100%";
+                setTimeout(function() {document.getElementById("guide").style.opacity="0%"}, 9000)
+                function move1() {
+                    let e = document.getElementById("ti1");
+                    e.classList.remove("animation1");
+                    e.classList.remove("backanim1");
+                    void e.offsetWidth;
+                    e.classList.add("clickanim1");
+
+                    document.getElementById("exitbutton").style.zIndex="1";
+                    document.getElementById("exitbutton").classList.remove("fadeoutof");
+                    void document.getElementById("exitbutton").offsetWidth;
+                    document.getElementById("exitbutton").classList.add("fadeinto");
+                    document.getElementById("ti2").classList.remove("backanim2");
+                    document.getElementById("ti2").classList.remove("animation2a");
+                    document.getElementById("ti2").classList.remove("animation2");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("tipback");
+
+                    document.getElementById("ti3").classList.remove("backanim3");
+                    document.getElementById("ti3").classList.remove("animation3a");
+                    document.getElementById("ti3").classList.remove("animation3");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("tipback");
+
+                    document.getElementById("ti4").classList.remove("animation4");
+                    document.getElementById("ti4").classList.remove("backanim4");
+                    document.getElementById("ti4").classList.remove("animation4a");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("tipback");
+                    // for disc
+                    document.getElementById("main").classList.remove("mainanim");
+                    document.getElementById("main").classList.remove("dnorm");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dback");
+
+                    document.getElementById("tip1").classList.remove("boxunscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxscale");
+                    document.getElementById("ttext1").classList.remove("fadeoutof");
+                    void document.getElementById("ttext1").offsetWidth;
+                    document.getElementById("ttext1").classList.add("fadeinto");
+                }
+                function move2() {
+                    let e = document.getElementById("ti2");
+                    e.classList.remove("animation2");
+                    e.classList.remove("backanim2");
+                    void e.offsetWidth;
+                    e.classList.add("clickanim2");
+
+                    document.getElementById("exitbutton2").style.zIndex="1";
+                    document.getElementById("exitbutton2").classList.remove("fadeoutof");
+                    void document.getElementById("exitbutton2").offsetWidth;
+                    document.getElementById("exitbutton2").classList.add("fadeinto");
+                    document.getElementById("ti1").classList.remove("backanim1");
+                    document.getElementById("ti1").classList.remove("animation2a");
+                    document.getElementById("ti1").classList.remove("animation1");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("tipback");
+
+                    document.getElementById("ti3").classList.remove("backanim3");
+                    document.getElementById("ti3").classList.remove("animation3a");
+                    document.getElementById("ti3").classList.remove("animation2");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("tipback");
+
+                    document.getElementById("ti4").classList.remove("backanim4");
+                    document.getElementById("ti4").classList.remove("animation4a");
+                    document.getElementById("ti4").classList.remove("animation2");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("tipback");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("mainanim");
+                    document.getElementById("main").classList.remove("dnorm");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dback");
+
+                    document.getElementById("tip1").classList.remove("boxunscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxscale");
+                    document.getElementById("ttext2").classList.remove("fadeoutof");
+                    void document.getElementById("ttext2").offsetWidth;
+                    document.getElementById("ttext2").classList.add("fadeinto");
+                }
+                function move3() {
+                    let e = document.getElementById("ti3");
+                    e.classList.remove("animation3");
+                    e.classList.remove("backanim3");
+                    void e.offsetWidth;
+                    e.classList.add("clickanim3");
+
+                    document.getElementById("exitbutton3").style.zIndex="1";
+                    document.getElementById("exitbutton3").classList.remove("fadeoutof");
+                    void document.getElementById("exitbutton3").offsetWidth;
+                    document.getElementById("exitbutton3").classList.add("fadeinto");
+                    document.getElementById("ti1").classList.remove("backanim1");
+                    document.getElementById("ti1").classList.remove("animation2a");
+                    document.getElementById("ti1").classList.remove("animation1");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("tipback");
+
+                    document.getElementById("ti2").classList.remove("backanim2");
+                    document.getElementById("ti2").classList.remove("animation2a");
+                    document.getElementById("ti2").classList.remove("animation2");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("tipback");
+
+                    document.getElementById("ti4").classList.remove("backanim4");
+                    document.getElementById("ti4").classList.remove("animation4a");
+                    document.getElementById("ti4").classList.remove("animation2");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("tipback");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("mainanim");
+                    document.getElementById("main").classList.remove("dnorm");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dback");
+
+                    document.getElementById("tip1").classList.remove("boxunscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxscale");
+                    document.getElementById("ttext3").classList.remove("fadeoutof");
+                    void document.getElementById("ttext3").offsetWidth;
+                    document.getElementById("ttext3").classList.add("fadeinto");
+                }
+                function move4() {
+                    let e = document.getElementById("ti4");
+                    e.classList.remove("animation4");
+                    e.classList.remove("backanim4");
+                    void e.offsetWidth;
+                    e.classList.add("clickanim4");
+
+                    document.getElementById("exitbutton4").style.zIndex="1";
+                    document.getElementById("exitbutton4").classList.remove("fadeoutof");
+                    void document.getElementById("exitbutton4").offsetWidth;
+                    document.getElementById("exitbutton4").classList.add("fadeinto");
+                    document.getElementById("ti1").classList.remove("backanim1");
+                    document.getElementById("ti1").classList.remove("animation2a");
+                    document.getElementById("ti1").classList.remove("animation2");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("tipback");
+
+                    document.getElementById("ti2").classList.remove("backanim2");
+                    document.getElementById("ti2").classList.remove("animation2a");
+                    document.getElementById("ti2").classList.remove("animation2");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("tipback");
+
+                    document.getElementById("ti3").classList.remove("backanim3");
+                    document.getElementById("ti3").classList.remove("animation3a");
+                    document.getElementById("ti3").classList.remove("animation2");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("tipback");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("mainanim");
+                    document.getElementById("main").classList.remove("dnorm");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dback");
+
+                    document.getElementById("tip1").classList.remove("boxunscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxscale");
+                    document.getElementById("ttext4").classList.remove("fadeoutof");
+                    void document.getElementById("ttext4").offsetWidth;
+                    document.getElementById("ttext4").classList.add("fadeinto");
+                }
+
+
+
+                function unmove1() {
+                    let e = document.getElementById("ti1");
+                    e.classList.remove("clickanim1");
+                    void e.offsetWidth;
+                    e.classList.add("backanim1");
+
+                    setTimeout(function() {document.getElementById("exitbutton").style.zIndex="-1";}, 3000);
+                    document.getElementById("exitbutton").classList.remove("fadeinto");
+                    void document.getElementById("exitbutton").offsetWidth;
+                    document.getElementById("exitbutton").classList.add("fadeoutof");
+                    document.getElementById("ti2").classList.remove("tipback");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("animation2a");
+
+                    document.getElementById("ti3").classList.remove("tipback");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("animation3a");
+
+                    document.getElementById("ti4").classList.remove("tipback");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("animation4a");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("dback");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dnorm");
+
+                    document.getElementById("tip1").classList.remove("boxscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxunscale");
+                    document.getElementById("ttext1").classList.remove("fadeinto");
+                    void document.getElementById("ttext1").offsetWidth;
+                    document.getElementById("ttext1").classList.add("fadeoutof");
+                }
+                function unmove2() {
+                    let e = document.getElementById("ti2");
+                    e.classList.remove("clickanim2");
+                    void e.offsetWidth;
+                    e.classList.add("backanim2");
+
+                    setTimeout(function() {document.getElementById("exitbutton2").style.zIndex="-1";}, 3000);
+                    document.getElementById("exitbutton2").classList.remove("fadeinto");
+                    void document.getElementById("exitbutton2").offsetWidth;
+                    document.getElementById("exitbutton2").classList.add("fadeoutof");
+                    document.getElementById("ti1").classList.remove("tipback");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("animation2a");
+
+                    document.getElementById("ti3").classList.remove("tipback");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("animation3a");
+
+                    document.getElementById("ti4").classList.remove("tipback");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("animation4a");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("dback");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dnorm");
+
+                    document.getElementById("tip1").classList.remove("boxscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxunscale");
+                    document.getElementById("ttext2").classList.remove("fadeinto");
+                    void document.getElementById("ttext2").offsetWidth;
+                    document.getElementById("ttext2").classList.add("fadeoutof");
+                }
+                function unmove3() {
+                    let e = document.getElementById("ti3");
+                    e.classList.remove("clickanim3");
+                    void e.offsetWidth;
+                    e.classList.add("backanim3");
+
+                    setTimeout(function() {document.getElementById("exitbutton3").style.zIndex="-1";}, 3000);
+                    document.getElementById("exitbutton3").classList.remove("fadeinto");
+                    void document.getElementById("exitbutton3").offsetWidth;
+                    document.getElementById("exitbutton3").classList.add("fadeoutof");
+                    document.getElementById("ti1").classList.remove("tipback");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("animation2a");
+
+                    document.getElementById("ti2").classList.remove("tipback");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("animation2a");
+
+                    document.getElementById("ti4").classList.remove("tipback");
+                    void document.getElementById("ti4").offsetWidth;
+                    document.getElementById("ti4").classList.add("animation4a");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("dback");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dnorm");
+
+                    document.getElementById("tip1").classList.remove("boxscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxunscale");
+                    document.getElementById("ttext3").classList.remove("fadeinto");
+                    void document.getElementById("ttext3").offsetWidth;
+                    document.getElementById("ttext3").classList.add("fadeoutof");
+                }
+                function unmove4() {
+                    let e = document.getElementById("ti4");
+                    e.classList.remove("clickanim4");
+                    void e.offsetWidth;
+                    e.classList.add("backanim4");
+
+                    setTimeout(function() {document.getElementById("exitbutton4").style.zIndex="-1";}, 3000);
+                    document.getElementById("exitbutton4").classList.remove("fadeinto");
+                    void document.getElementById("exitbutton4").offsetWidth;
+                    document.getElementById("exitbutton4").classList.add("fadeoutof");
+                    document.getElementById("ti1").classList.remove("tipback");
+                    void document.getElementById("ti1").offsetWidth;
+                    document.getElementById("ti1").classList.add("animation2a");
+
+                    document.getElementById("ti2").classList.remove("tipback");
+                    void document.getElementById("ti2").offsetWidth;
+                    document.getElementById("ti2").classList.add("animation2a");
+
+                    document.getElementById("ti3").classList.remove("tipback");
+                    void document.getElementById("ti3").offsetWidth;
+                    document.getElementById("ti3").classList.add("animation3a");
+
+                    // for disc
+                    document.getElementById("main").classList.remove("dback");
+                    void document.getElementById("main").offsetWidth;
+                    document.getElementById("main").classList.add("dnorm");
+
+                    document.getElementById("tip1").classList.remove("boxscale");
+                    void document.getElementById("tip1").offsetWidth;
+                    document.getElementById("tip1").classList.add("boxunscale");
+                    document.getElementById("ttext4").classList.remove("fadeinto");
+                    void document.getElementById("ttext4").offsetWidth;
+                    document.getElementById("ttext4").classList.add("fadeoutof");
                 }
             </script>
             </div>
+            <div id="covertnt"></div>
             <footer class="site-footer">
                     <div class="footer">
                         <div class="copyright">© 2025 Frisbee4Fun    
