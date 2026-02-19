@@ -53,7 +53,7 @@ body{
 .nav-links a{
     text-decoration:none;
     color:#444;
-    font-size:1.2vw;
+    font-size:1vw;
     padding:0.8vw 1.4vw;
     border-radius:20px;
     transition:0.3s;
@@ -63,7 +63,17 @@ body{
     background:#6a2de2;
     color:white;
 }
-
+div#button {
+    background-color:white;
+    width:10vw;
+    height:4vw;
+    font-size:1vw;
+    position:absolute;
+    display:flex;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+}
 .site-footer{
     margin-top:auto;
     width:100%;
