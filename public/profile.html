@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frisbee4Fun - Profile</title>
+    <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
+    <link rel="stylesheet" href="headfoot.css">
+    <link rel="stylesheet" href="./CSS Files/profile.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="logo">Frisbee4Fun</div>
+            <nav class="nav-links">
+                <a href="../index.html">Homepage</a>
+                <a href="./intro.html">Intro</a>
+                <a href="./throws.html">Throws</a>
+                <a href="./tipsntricks.html">Tips</a>
+                <a href="./ultimatefrisbee.html">Ultimate</a>
+                <a href="./stratsandforms.html">Strategies</a>
+                <a href="./minigames.html">Mini Games</a>
+                <a href="./references.html">References</a>
+                <a href="./profile.html">Profile</a>
+            </nav>
+        </div>
+        <div class="account-tab">
+            <a href="#" id="logoutBtn">Log Out</a>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="avatar-circle">
+                    <img src="../assets/logo.png" alt="User Avatar">
+                </div>
+                <h1 id="displayUsername">Player Name</h1>
+                <p id="displayEmail">player@example.com</p>
+                <button id="editBtn" class="action-btn edit">Edit Profile</button>
+                <button id="saveBtn" class="action-btn save" style="display: none;">Save Changes</button>
+            </div>
+
+            <div class="profile-grid">
+                <div class="card info-card">
+                    <h3>Player Stats</h3>
+                    
+                    <div class="info-row">
+                        <label>Jersey Number:</label>
+                        <span class="view-mode" id="viewJersey">--</span>
+                        <input type="number" class="edit-mode" id="editJersey" min="0" max="99">
+                    </div>
+
+                    <div class="info-row">
+                        <label>Position:</label>
+                        <span class="view-mode" id="viewPosition">--</span>
+                        <select class="edit-mode" id="editPosition">
+                            <option value="Not Set">Select Position</option>
+                            <option value="Handler">Handler</option>
+                            <option value="Cutter">Cutter</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card records-card">
+                    <h3>Minigame Records</h3>
+                    
+                    <div class="stat-box">
+                        <div class="stat-label">Best Reaction Time</div>
+                        <div class="stat-value" id="statReaction">-- ms</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-label">Best Loot Pull</div>
+                        <div class="stat-value" id="statLoot">None</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="stat-label">Best Q&A Score</div>
+                        <div class="stat-value" id="statQA">0 / 0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

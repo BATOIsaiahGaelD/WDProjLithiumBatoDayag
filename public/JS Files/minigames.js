@@ -51,6 +51,15 @@ frisbee.onclick = () => {
         frisbee.classList.add("stopped");
         reactionResult.textContent = `Reaction Time: ${time} ms`;
         state = "idle";
+
+        // updated profile stat collector
+        let user = getCurrentUser();
+        if (user) {
+            if (!user.bestReaction || time < user.bestReaction) {
+                user.bestReaction = time;
+                updateUserData(user);
+            }
+        }
     }
 };
 
@@ -168,12 +177,28 @@ spinBtn.addEventListener("click", () => {
         const imgAlt = winningItem.querySelector("img").alt;
 
         result.textContent = `You won: ${imgAlt} (${rarity})`;
+
+       
         result.className = rarity;
 
         isSpinning = false;
         spinBtn.disabled = false;
 
         track.removeEventListener("transitionend", onEnd);
+
+        //updated stat profile collector
+        let user = getCurrentUser();
+        if (user) {
+            const rarityWeights = { mythical: 6, legendary: 5, epic: 4, rare: 3, uncommon: 2, common: 1 };
+            const currentWeight = rarityWeights[rarity] || 0;
+            const bestWeight = rarityWeights[user.bestLootRarity] || 0;
+
+            if (currentWeight > bestWeight) {
+                user.bestLootRarity = rarity;
+                user.bestLootName = imgAlt;
+                updateUserData(user);
+            }
+        }
     });
 });
 
@@ -196,5 +221,6 @@ probOverlay.onclick = () => {
     probPopup.classList.remove("show");
     probOverlay.classList.remove("show");
 };
+
 
 

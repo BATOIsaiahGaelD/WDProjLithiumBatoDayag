@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frisbee4Fun - Login</title>
+    <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
+    <link rel="stylesheet" href="headfoot.css">
+    <link rel="stylesheet" href="./CSS Files/signups.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-wrapper">
+            <div class="logo">Frisbee4Fun</div>
+            <nav class="nav-links">
+                <a href="../index.html">Homepage</a>
+                <a href="./intro.html">Intro</a>
+                <a href="./throws.html">Throws</a>
+                <a href="./tipsntricks.html">Tips</a>
+                <a href="./ultimatefrisbee.html">Ultimate</a>
+                <a href="./stratsandforms.html">Strategies</a>
+                <a href="./minigames.html">Mini Games</a>
+                <a href="./references.html">References</a>
+                <a href="./profile.html">Profile</a>
+            </nav>
+        </div>
+        <div class="account-tab">
+            <a href="./signups.html">Create Account</a>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <main class="main-container">
+            <div class="signup-box">
+                <h2>Welcome Back</h2>
+                <p>Login to access your profile</p>
+                
+                <form id="loginForm">
+                    <div class="input-field">
+                        <label for="loginIdentifier">Username or Email</label>
+                        <input type="text" id="loginIdentifier" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+
+                    <button type="submit" class="signup-btn">Log In</button>
+                </form>
+                
+                <div class="footer-link">
+                    Don't have an account? <a href="./signups.html">Sign up here</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./account.js"></script>
+</body>
+</html>
