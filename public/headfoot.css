@@ -9,17 +9,23 @@ body{
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    position:absolute;
+    overflow-x:hidden;
+    width:100%;
+}
+div.body {
+    height:100dvh;
 }
 
 .site-header{
     width:100%;
     display:flex;
     justify-content:center;
-    padding:20px 0;
+    padding:2vw 0;
     background-color: black;
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 
 .nav-wrapper{
@@ -35,7 +41,7 @@ body{
 }
 
 .logo{
-    font-size:1.6vws;
+    font-size:1.8vw;
     font-weight:bold;
     color:#0051ff;
 }
@@ -73,6 +79,9 @@ div#button {
     text-decoration:none;
     justify-content:center;
     align-items:center;
+    z-index:1000;
+    top:0vw;
+    left:0vw;
 }
 .site-footer{
     margin-top:auto;

@@ -17,20 +17,12 @@
                     animation:fadein 0.1s linear 6.5s 1 normal forwards;
                 }
                 div.body {
-                    padding-bottom:70vw;
                     overflow-x:hidden;
                     position:relative;
                     width:100%;
                     top:0vw;
                     overflow-y:hidden;
                     background-color:rgb(255, 255, 110);
-                }
-                div.main {
-                    height: 30vw;
-                    width:30vw;
-                    position:absolute;
-                    left: 18vw;
-                    top:14vw;
                 }
                 img#uldisc {
                     height: 24vw;
@@ -100,8 +92,8 @@
                     animation-fill-mode:forwards;
                 }
                 footer.site-footer {
-                    position:absolute;
-                    top:90vw;
+                    position:relative;
+                    z-index:1;
                 }
 
                 /* new things */
@@ -266,8 +258,8 @@
                         <a href="./profile.html">Profile</a>
                     </nav>
                 </div>
-                <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             </header>
+            <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             <div class="body">
                 <p id="close1" onclick="aclickback()">x</p>
                 <p id="close2" onclick="rclickback()">x</p>

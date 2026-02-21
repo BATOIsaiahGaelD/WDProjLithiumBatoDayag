@@ -12,7 +12,7 @@
             <style>
                 div.body {
                     padding-bottom:50vw;
-                    position:absolute;
+                    position:relative;
                     background-color:rgb(255, 255, 98);
                     width:100%;
                     overflow-x:hidden;
@@ -301,8 +301,8 @@
                     100% {opacity:0%; color:rgb(138, 142, 65);}
                 }
                 footer.site-footer {
-                    position:absolute;
-                    top:60vw;
+                    position:relative;
+                    z-index:100;                    
                 }
                 @keyframes tipmove {
                     0% {left:130vw}
@@ -508,8 +508,8 @@
                         <a href="./profile.html">Profile</a>
                     </nav>
                 </div>
-                <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             </header>
+            <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             <p id="TIPS">TIPS</p>
             <p id="n">N</p>
             <p id="TRICKS">TRICKS</p>

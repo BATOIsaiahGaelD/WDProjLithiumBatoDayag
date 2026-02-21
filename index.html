@@ -20,12 +20,16 @@
                     z-index:2;
                 }
                 div.body {
-                    background-image: linear-gradient(to bottom, rgba(0,0,0), rgb(0, 0, 0));
+                    background-color:black;
                     align-content:center;
-                    position:absolute;
+                    position:relative;
                     padding-top:29vw;
                     width:100%;
                     z-index:0;
+                    animation:scrolling 0.2s linear 0s infinite;
+                }
+                @keyframes scrolling {
+                    100% {background-position: 0vw, -400%}
                 }
                 div.main, img.main {
                     margin-left:auto;
@@ -197,7 +201,7 @@
                     border-color:black;
                     border-radius:2vw;
                     position:relative;
-                    background-color:rgba(91, 187, 255, 0.836);
+                    background-image:linear-gradient(to bottom, rgb(202, 202, 0), black);
                     animation-duration:1s;
                     animation-fill-mode:forwards;
                     font-size:0vw;
@@ -296,6 +300,7 @@
                     0% {height:14vw; width:50vw; top:-70vw; left:33vw; font-size:1.8vw;}
                     100% {height:14vw; width:0vw; top:-70vw; left:30vw; font-size:0vw;}
                 }
+                /* these divs are for the background, where the white streaks are infinitely moving downwards*/
                div.background {
                     width:1vw;
                     height:20vw;
@@ -404,6 +409,7 @@
                 div#b34 {
                     left:99vw;
                 }
+                /*animations for spinning and for the streaks moving downward*/
                 @keyframes bganim {
                     100% {top:218vw}
                 }
@@ -415,9 +421,187 @@
                 }
                 footer.site-footer {
                     position:absolute;
-                    top:215vw;
-                    padding-bottom:60vw;
+                    top:219vw;
+                    z-index:0;
+                    padding-bottom:55.3vw;
+                }
+                
+                .animfrisbee {
+                    position:fixed;
+                    width:13vw;
+                    height:13vw;
+                    top:0vw;
+                    left:0vw;
                     z-index:100;
+                    opacity:0%;
+                }
+                #starting1 {
+                    top:2vw;
+                    left:9vw;
+                    animation:fadein 0.2s ease 1s 1 normal forwards, otherspinvariant 4s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    toppart 1s ease-in 13.7s 1 normal forwards;
+                }
+                #starting2 {
+                    top:2vw;
+                    left:32vw;
+                    animation:fadein 0.2s ease 1.2s 1 normal forwards, otherspin 6s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    toppart 1s ease-in 14s 1 normal forwards;
+                }
+                #starting3 {
+                    top:2vw;
+                    left:55vw;
+                    animation:fadein 0.2s ease 1.4s 1 normal forwards, otherspinvariant 4.5s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    toppart 1s ease-in 14.3s 1 normal forwards;
+                }
+                #starting4 {
+                    top:2vw;
+                    left:77vw;
+                    animation:fadein 0.2s ease 1.6s 1 normal forwards, otherspinvariant 6.7s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    toppart 1s ease-in 14.6s 1 normal forwards;
+                }
+                #starting5 {
+                    top:31vw;
+                    left:20vw;
+                    animation:fadein 0.2s ease 1.8s 1 normal forwards, otherspin 4.3s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    bottompart 1s ease-in 14.9s 1 normal forwards;
+                }
+                #starting6 {
+                    top:31vw;
+                    left:43vw;
+                    animation:fadein 0.2s ease 2s 1 normal forwards, otherspin 4.4s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    bottompart 1s ease-in 15.2s 1 normal forwards;
+                }
+                #starting7 {
+                    top:31vw;
+                    left:66vw;
+                    animation:fadein 0.2s ease 2.2s 1 normal forwards, otherspinvariant 5s cubic-bezier(0,0,0,1) 7s 1 normal forwards,
+                    bottompart 1s ease-in 15.5s 1 normal forwards;
+                }
+                .introtext {
+                    position:fixed;
+                    font-size:10vw;
+                    color:white;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    z-index:10;
+                }
+                #welcome {
+                    top:17vw;
+                    left:30vw;
+                    opacity:0%;
+                    animation: fadein 0.001s ease 3s 1 normal forwards, fadeout 0.0001s ease 4s 1 normal forwards;
+                }
+                #to {
+                    top:17vw;
+                    left:45vw;
+                    opacity:0%;
+                    animation: fadein 0.001s ease 4.5s 1 normal forwards, fadeout 0.0001s ease 5.5s 1 normal forwards;
+                }
+                #f1 {
+                    top:17vw;
+                    left:25vw;
+                    opacity:0%;
+                    animation: fadein 0.001s ease 6s 1 normal forwards, fadeout 1s ease 15s 1 normal forwards, color2 5s ease 7s 1 normal forwards;
+                }
+                #f2 {
+                    top:17vw;
+                    left:56vw;
+                    opacity:0%;
+                    animation: fadein 0.001s ease 6.5s 1 normal forwards, fadeout 1s ease 15s 1 normal forwards, color2 5s ease 7s 1 normal forwards;
+                }
+                #f3 {
+                    top:17vw;
+                    left:61vw;
+                    opacity:0%;
+                    animation: fadein 0.001s ease 7s 1 normal forwards, fadeout 1s ease 15s 1 normal forwards, color2 5s ease 7s 1 normal forwards;
+                }
+                @keyframes fadein {
+                    0% {opacity:0%}
+                    100% {opacity:100%}
+                }
+                @keyframes fadeout {
+                    0% {opacity:100%}
+                    100% {opacity:0%}
+                }
+                @keyframes color1 {
+                    0% {background-color:rgb(195, 195, 0)}
+                    25% {background-color:rgb(106, 255, 106)}
+                    50% {background-color:rgb(146, 0, 0)}
+                    75% {background-color:white}
+                    100% {background-color:black}
+                }
+                @keyframes color2 {
+                    0% {color:rgb(104, 104, 104)}
+                    25% {color:rgb(128, 0, 0)}
+                    50% {color:rgb(133, 255, 95)}
+                    75% {color:black}
+                    100% {color:white}
+                }
+                @keyframes otherspin {
+                    100% {transform:rotate(3600deg)}
+                }
+                @keyframes otherspinvariant {
+                    100% {transform:rotate(-3600deg)}
+                }
+                @keyframes toppart {
+                    0% {top:2vw;}
+                    30% {top:6vw;}
+                    100% {top:-20vw}
+                }
+                @keyframes bottompart {
+                    0% {top:31vw;}
+                    30% {top:34vw;}
+                    100% {top:-20vw}
+                }
+                #overlay {
+                    width:100%;
+                    position:fixed;
+                    top:0vw;
+                    height: 100%;
+                    background-color:black;
+                    z-index:3;
+                    animation:color1 5s ease 7s 1 normal forwards, fadeout 1s ease 15.4s 1 normal forwards;
+                }
+                /* these p tags below are the labels for the disc*/
+                .mobiletext {
+                    color:yellow;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    position:absolute;
+                    opacity:0%;
+                }
+                #mobile1 {
+                    top:73.5vw;
+                    left:40vw;
+                    font-size:8vw;
+                }
+                #mobile2 {
+                    top:93vw;
+                    left:30vw;
+                    font-size:8vw;
+                }
+                #mobile3 {
+                    top:113.5vw;
+                    left:40vw;
+                    font-size:8vw;
+                }
+                #mobile4 {
+                    top:135vw;
+                    left: 11vw;
+                    font-size:7vw;
+                }
+                #mobile5 {
+                    top:157vw; 
+                    left:38vw;
+                    font-size:8vw;
+                }
+                #mobile6 {
+                    top:178vw;
+                    left:20vw;
+                    font-size:8vw;
+                }
+                #mobile7 {
+                    top:198vw;
+                    left:35vw;
+                    font-size:8vw;
                 }
             </style>
             <link rel="stylesheet" href="../public/CSS Files/index.css">
@@ -427,6 +611,21 @@
                 Frisbee4Fun: Your Guide to Becoming an All-Star </br>
                 (Click the Disc to Begin)
             </div>
+
+            <div id="overlay"></div>
+            <p class="introtext" id="welcome">WELCOME</p>
+            <p class="introtext" id="to">TO</p>
+            <p class="introtext" id="f1">FRISBEE</p>
+            <p class="introtext" id="f2">4</p>
+            <p class="introtext" id="f3">FUN</p>
+            <img class="animfrisbee" id="starting1" src="./assets/frisbeeintro.png" draggable="false">
+            <img class="animfrisbee" id="starting2" src="./assets/frisbeethrows.png" draggable="false">
+            <img class="animfrisbee" id="starting3" src="./assets/frisbeetips.png" draggable="false">
+            <img class="animfrisbee" id="starting4" src="./assets/frisbeeultimate.png" draggable="false">
+            <img class="animfrisbee" id="starting5" src="./assets/frisbeestrats.png" draggable="false">
+            <img class="animfrisbee" id="starting6" src="./assets/frisbeeminigames.png" draggable="false">
+            <img class="animfrisbee" id="starting7" src="./assets/frisbeereferences.png" draggable="false">
+
             <div class="body">
                 <div class="background" id="b1"></div>
                 <div class="background" id="b2"></div>
@@ -461,6 +660,14 @@
                 <div class="background" id="b31"></div>
                 <div class="background" id="b32"></div>
                 <div class="background" id="b33"></div>
+
+                <p class="mobiletext" id="mobile1">INTRO</p>
+                <p class="mobiletext" id="mobile2">THROWS</p>
+                <p class="mobiletext" id="mobile3">TIPSNTRICKS</p>
+                <p class="mobiletext" id="mobile4">ULTIMATE FRISBEE</p>
+                <p class="mobiletext" id="mobile5">STRATEGIES</p>
+                <p class="mobiletext" id="mobile6">MINIGAMES</p>
+                <p class="mobiletext" id="mobile7">REFERENCES</p>
                 <div class="main" onclick="startinganim(), backgroundanim()">
                     <img class="main" src="./assets/frisbee.png" draggable="false" title="https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg"/>
                 </div>
@@ -525,7 +732,8 @@
                 </div>
             </div>
             <script>
-                // this is for the starting animation where the discs fly out
+                setTimeout(function() {document.getElementById("overlay").style.zIndex="-1"}, 15600)
+                // this is for the starting animation where the discs fly out and the streaks fall down
                 function startinganim(){
                     document.getElementById("intro").style.animation="animintro 1s ease 0s 1 normal forwards, spin 0.5s linear 0s infinite";
                     document.getElementById("throws").style.animation="animthrows 1.5s ease 0.5s 1 normal forwards, spin 0.5s linear 0s infinite";
@@ -534,6 +742,14 @@
                     document.getElementById("strats").style.animation="animstrats 3s ease 2s 1 normal forwards, spin2 0.5s linear 0s infinite";
                     document.getElementById("minigames").style.animation="animminigames 3.5s ease 2.5s 1 normal forwards, spin 0.5s linear 0s infinite";
                     document.getElementById("reference").style.animation="animreference 4s ease 3s 1 normal forwards, spin 0.5s linear 0s infinite";
+
+                    document.getElementById("mobile1").style.animation="fadein 1s ease 1s 1 normal forwards";
+                    document.getElementById("mobile2").style.animation="fadein 1s ease 2s 1 normal forwards";
+                    document.getElementById("mobile3").style.animation="fadein 1s ease 3s 1 normal forwards";
+                    document.getElementById("mobile4").style.animation="fadein 1s ease 4s 1 normal forwards";
+                    document.getElementById("mobile5").style.animation="fadein 1s ease 5s 1 normal forwards";
+                    document.getElementById("mobile6").style.animation="fadein 1s ease 6s 1 normal forwards";
+                    document.getElementById("mobile7").style.animation="fadein 1s ease 7s 1 normal forwards";
 
                     document.getElementById("b1").style.animation="bganim 2s linear 1.9s infinite normal";
                     document.getElementById("b2").style.animation="bganim 2s linear 4.1s infinite normal";
