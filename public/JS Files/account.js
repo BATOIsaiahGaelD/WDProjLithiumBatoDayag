@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    
     const signupForm = document.getElementById('signupForm');
     
     if (signupForm) {

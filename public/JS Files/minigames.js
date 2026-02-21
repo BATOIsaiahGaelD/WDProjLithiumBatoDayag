@@ -1,3 +1,24 @@
+function getCurrentUser() {
+    return JSON.parse(localStorage.getItem('currentUser'));
+}
+
+function updateUserData(updatedUser) {
+    localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+    let users = JSON.parse(localStorage.getItem('frisbeeUsers')) || [];
+    const index = users.findIndex(u => u.username === updatedUser.username);
+    if (index !== -1) {
+        users[index] = updatedUser;
+        localStorage.setItem('frisbeeUsers', JSON.stringify(users));
+    }
+}
+(function() {
+    const user = localStorage.getItem('currentUser');
+    if (!user) {
+        alert("This area is for members only! Please log in to play.");
+        window.location.href = "./login.html";
+    }
+})();
+
 // Reaction time test
 
 const frisbee = document.getElementById("reaction-circle");
@@ -221,6 +242,4 @@ probOverlay.onclick = () => {
     probPopup.classList.remove("show");
     probOverlay.classList.remove("show");
 };
-
-
 
