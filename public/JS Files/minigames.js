@@ -85,26 +85,6 @@ frisbee.onclick = () => {
 };
 
 
-frisbee.onclick = () => {
-    if (state === "waiting") {
-        clearTimeout(readyTimeout);
-        frisbee.classList.remove("spinning");
-        frisbee.classList.add("stopped");
-        reactionResult.textContent = "Too early!";
-        state = "idle";
-    }
-
-    else if (state === "ready") {
-        clearTimeout(failTimeout);
-        const time = Math.round(performance.now() - startTime);
-        frisbee.classList.remove("spinning");
-        frisbee.classList.add("stopped");
-        reactionResult.textContent = `Reaction Time: ${time} ms`;
-        state = "idle";
-    }
-};
-
-
 // Loot box
 const overlay = document.getElementById('overlay');
 const spinBtn = document.getElementById("loot-spin");
@@ -204,10 +184,6 @@ spinBtn.addEventListener("click", () => {
 
         isSpinning = false;
         spinBtn.disabled = false;
-
-        track.removeEventListener("transitionend", onEnd);
-
-        //updated stat profile collector
         let user = getCurrentUser();
         if (user) {
             const rarityWeights = { mythical: 6, legendary: 5, epic: 4, rare: 3, uncommon: 2, common: 1 };
@@ -218,7 +194,9 @@ spinBtn.addEventListener("click", () => {
                 user.bestLootRarity = rarity;
                 user.bestLootName = imgAlt;
                 updateUserData(user);
-            }
+            }   
+        track.removeEventListener("transitionend", onEnd);
+        
         }
     });
 });
