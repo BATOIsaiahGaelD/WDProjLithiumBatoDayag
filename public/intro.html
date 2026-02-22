@@ -10,6 +10,10 @@
             <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/jpg">
             <link rel="stylesheet" href="headfoot.css">
             <style>
+                header {
+                    position:relative;
+                    z-index:100;
+                }
                 div.body {
                     position:relative;
                     width:100%;
@@ -18,6 +22,7 @@
                     padding-bottom:15vw;
                     overflow-x:hidden;
                     overflow-y:hidden;
+                    animation: backgroundcolor 10s linear 0s infinite normal forwards
                 }
                 div.frisbeee {
                     position:relative;
@@ -49,34 +54,9 @@
                     50% {height:25vw; width:25vw; left:36vw;}
                     100% {height:55vw; width:55vw; left:-15.75vw;}
                 }
-
-                div#paragraph1 {
-                    background-color:rgb(74, 74, 74);
-                    width:0vw;
-                    height:17vw;
-                    position:absolute;
-                    left:24vw;
-                    top:10vw;
-                    border-radius:5px;
-                    font-size:0vw;
-                    text-align:center;
-                    border-radius:3vw;
-                    z-index:105;
-                }
-                div.p1 {
-                    width:38vw;
-                    height:13vw;
-                    position:absolute;
-                    text-align:center;
-                    animation-delay:2s;
-                    left:2.3vw;
-                    top:2.2vw;
-                    font-family:Georgia, 'Times New Roman', Times, serif;
-                }
-
                 .bgbox1 {
                     position:absolute;
-                    z-index:102;
+                    z-index:-1;
                 }
                 #bb1p1, #bb1p3, #bb1p7 {
                     width:0vw;
@@ -160,7 +140,7 @@
 
                 .bgbox2 {
                     position:absolute;
-                    z-index:102;
+                    z-index:-1;
                 }
                 #bb2p1, #bb2p3, #bb2p7 {
                     width:0vw;
@@ -247,7 +227,7 @@
 
                 .bgbox3 {
                     position:absolute;
-                    z-index:101;
+                    z-index:-1;
                 }
                 #bb3p1, #bb3p3, #bb3p7 {
                     width:0vw;
@@ -350,8 +330,32 @@
                 .bgbox3 {
                     position:absolute;
                 }
+                div#paragraph1 {
+                    background-image:linear-gradient(to bottom, rgb(190, 190, 0), black);
+                    width:0vw;
+                    height:17vw;
+                    position:absolute;
+                    left:24vw;
+                    top:10vw;
+                    border-radius:5px;
+                    font-size:0vw;
+                    text-align:center;
+                    border-radius:3vw;
+                    color:white;
+                    z-index:-1;
+                }
+                div#p1 {
+                    width:38vw;
+                    height:13vw;
+                    position:absolute;
+                    text-align:center;
+                    animation-delay:2s;
+                    left:2.3vw;
+                    top:2.2vw;
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                }
                 div#paragraph2 {
-                    background-color:rgb(74, 74, 74);
+                    background-image:linear-gradient(to bottom, rgb(190, 190, 0), black);
                     width:0vw;
                     height: 17vw;
                     position:absolute;
@@ -363,10 +367,11 @@
                     border-radius:5px;
                     font-size:0vw;
                     text-align:center;
-                    z-index:105;
+                    color:white;
+                    z-index:-1;
                     border-radius:3vw;
                 }
-                div.p2 {
+                div#p2 {
                     width:60vw;
                     height:16vw;
                     position:absolute;
@@ -375,17 +380,17 @@
                     left:0.2vw;
                     top:3vw;
                 }
-                div.p3 {
-                    width:60vw;
+                div#p3 {
+                    width:58vw;
                     height:16vw;
                     position:absolute;
                     text-align:center;
                     animation-delay:120s;
-                    left:0.2vw;
-                    top:3vw;
+                    left:0.8vw;
+                    top:2.5vw;
                 }
                 div#paragraph3 {
-                    background-color:rgb(74, 74, 74);
+                    background-image:linear-gradient(to bottom, rgb(190, 190, 0), black);
                     width:0vw;
                     height: 17vw;
                     position:absolute;
@@ -394,10 +399,11 @@
                     animation-duration:2s;
                     animation-fill-mode:forwards;
                     animation-delay:1.5s;
+                    color:white;
                     border-radius:5px;
                     font-size:0vw;
                     text-align:center;
-                    z-index:105;
+                    z-index:-1;
                     border-radius:3vw;
                 }
                 div#c {
@@ -454,6 +460,7 @@
                     position:absolute;
                     background-color:black;
                     z-index:0;
+                    filter:blur(0.5vw);
                 }
                 #s1 {
                     width:8vw;
@@ -461,12 +468,14 @@
                     top:13vw;
                     left:18vw;
                     animation:afkanim 120s linear -20s infinite normal, rotatec 40s linear 0s infinite normal;
+                    background-image:linear-gradient(to bottom, black, white)
                 }
                 #s2 {
                     width:16vw;
                     height:16vw;
                     top:19vw;
                     left:80vw;
+                    background-image:linear-gradient(30deg, rgb(248, 176, 176), black);
                     animation: afkanimalt 120s linear -60s infinite normal, rotatecc 30s linear 0s infinite normal;
                 }
                 #s3 {
@@ -475,6 +484,7 @@
                     top:28vw;
                     left:52vw;
                     animation: afkanim 120s linear -70s infinite normal, rotatec 30s linear 0s infinite normal;
+                    background-image:linear-gradient(546deg, rgb(166, 255, 103), black);
                 }
                 #s4 {
                     width:13vw;
@@ -482,6 +492,7 @@
                     top:27vw;
                     left:20vw;
                     animation: afkanimalt 120s linear -100s infinite normal, rotatecc 50s linear 0s infinite normal;
+                    background-image:linear-gradient(-41deg, rgb(45, 105, 133), black);
                 }
                 #s5 {
                     width:19vw;
@@ -489,6 +500,7 @@
                     top:46vw;
                     left:30vw;
                     animation: afkanim 120s linear -110s infinite normal, rotatecc 80s linear 0s infinite normal;
+                    background-image:linear-gradient(-451deg, rgb(181, 0, 66), black);
                 }
                 #s6 {
                     width: 7vw;
@@ -496,6 +508,7 @@
                     left:14vw;
                     top:67vw;
                     animation: afkanim 120s linear -34s infinite normal, rotatec 35s linear 0s infinite normal;
+                    background-image:linear-gradient(223deg, rgb(192, 255, 57), black);
                 }
                 #s7 {
                     width: 13vw;
@@ -503,6 +516,7 @@
                     left:60vw;
                     top:10vw;
                     animation: afkanimalt 120s linear -10s infinite normal, rotatec 30s linear 0s infinite normal;
+                    background-image:linear-gradient(-54deg, rgb(3, 0, 152), black);
                 }
                 #s8 {
                     width: 11vw;
@@ -510,6 +524,7 @@
                     top: -1vw;
                     left:36vw;
                     animation: afkanim 120s linear -45s infinite normal, rotatecc 30s linear 0s infinite normal;
+                    background-image:linear-gradient(42deg, rgb(126, 126, 126), black);
                 }
                 #s9 {
                     width: 7vw;
@@ -517,6 +532,7 @@
                     top:29vw;
                     left:38vw;
                     animation: afkanimalt 120s linear -67s infinite normal, rotatecc 70s linear 0s infinite normal;
+                    background-image:linear-gradient(450deg, rgb(0, 215, 140), black);
                 }
                 #s10 {
                     width: 10vw;
@@ -524,6 +540,7 @@
                     top:40vw;
                     left:85vw;
                     animation: afkanimalt 120s linear -80s infinite normal, rotatec 60s linear 0s infinite normal;
+                    background-image:linear-gradient(-76deg, rgb(158, 0, 0), black);
                 }
                 #s11 {
                     width: 15vw;
@@ -531,6 +548,7 @@
                     left:75vw;
                     top:50vw;
                     animation: afkanim 120s linear -90s infinite normal, rotatecc 30s linear 0s infinite normal;
+                    background-image:linear-gradient(3deg, rgb(88, 127, 255), black);
                 }
                 #s12 {
                     width: 13vw;
@@ -538,6 +556,7 @@
                     left: 55vw;
                     top:50vw;
                     animation: afkanim 120s linear -170s infinite normal, rotatecc 45s linear 0s infinite normal;
+                    background-image:linear-gradient(30deg, rgb(248, 176, 176), black);
                 }
                 #s13 {
                     width: 11vw;
@@ -545,6 +564,7 @@
                     left:86vw;
                     top:60vw;
                     animation: afkanimalt 120s linear -60s infinite normal, rotatec 55s linear 0s infinite normal;
+                    background-image:linear-gradient(1deg, rgb(190, 184, 0), black);
                 }
                 #s14 {
                     width: 10vw;
@@ -552,6 +572,7 @@
                     top:68vw;
                     left:75vw;
                     animation: afkanimalt 120s linear -79s infinite normal, rotatecc 30s linear 0s infinite normal;
+                    background-image:linear-gradient(30deg, rgb(113, 7, 90), black);
                 }
                 #s15 {
                     width: 9vw;
@@ -559,10 +580,17 @@
                     top:66vw;
                     left:53vw;
                     animation: afkanim 120s linear 0s infinite normal, rotatecc 31s linear 0s infinite normal;
+                    background-image:linear-gradient(30deg, rgb(248, 176, 176), black);
                 }
-                header {
+                footer {
                     position:relative;
-                    z-index:1000;
+                }
+                @keyframes backgroundcolor {
+                    0% {background-color:rgb(223, 212, 61)}
+                    25% {background-color:rgb(255, 255, 37)}
+                    50% {background-color:rgb(192, 192, 1)}
+                    75% {background-color:rgb(255, 255, 76)}
+                    100% {background-color:rgb(223, 212, 61)}
                 }
             </style>
             <link rel="stylesheet" href="./CSS Files/intro.css">
@@ -594,7 +622,7 @@
                     <img class="page" title="https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/" draggable="false" src="../assets/frisbeeintro.png">
                 </div>
                 <div id="paragraph1" onclick="anim1func()">
-                    </br><div class="p1">
+                    </br><div id="p1">
                         We are Russell Dayag and Isaiah Bato, Grade 9 students from PSHS Main Campus, Batch 2029, Section 9-Lithium. 
                         Russell is 14 years old and an active member of Alianti, the school’s frisbee club, as well as AlianTeam Varsity. 
                         Isaiah is 15 years old, an active frisbee player, and plans to try out for the frisbee varsity team next year.
@@ -610,7 +638,7 @@
                 <div class="bgbox1" id="bb1p8"></div>
 
                 <div id="paragraph2" onclick="anim2func()">
-                    </br><div class="p2">
+                    </br><div id="p2">
                         We chose Ultimate Frisbee as our project because it is a sport that we both genuinely enjoy and are passionate about. 
                         The game’s fast-paced movement, teamwork, and unique concept of passing a disc instead of a ball make it exciting and different from other sports. 
                         Playing Ultimate Frisbee has helped us build friendships, stay active, and develop teamwork, communication, and sportsmanship.
@@ -626,7 +654,7 @@
                 <div class="bgbox2" id="bb2p8"></div>
 
                 <div id="paragraph3" onclick="anim3func()">
-                    </br><div class="p3">
+                    </br><div id="p3">
                         Through this project, we aim to promote Ultimate Frisbee and help grow the PISAY Frisbee community. 
                         We believe that frisbee is not only a competitive sport but also a fun and inclusive hobby that anyone can enjoy, especially when played with friends. 
                         Our hope is that this project encourages more students to try Ultimate Frisbee and discover how enjoyable the sport can be.
@@ -668,6 +696,36 @@
                     document.getElementById("c").style.animationName="canim";
                     document.getElementById("disc").style.zIndex="2";
                     document.getElementById("overlay").style.zIndex="3";
+                    document.getElementById("p1").style.zIndex="5";
+                    document.getElementById("p2").style.zIndex="5";
+                    document.getElementById("p3").style.zIndex="5";
+                    document.getElementById("paragraph1").style.zIndex="5";
+                    document.getElementById("paragraph2").style.zIndex="5";
+                    document.getElementById("paragraph3").style.zIndex="5";
+                    document.getElementById("bb1p1").style.zIndex="4";
+                    document.getElementById("bb1p2").style.zIndex="4";
+                    document.getElementById("bb1p3").style.zIndex="4";
+                    document.getElementById("bb1p4").style.zIndex="4";
+                    document.getElementById("bb1p5").style.zIndex="4";
+                    document.getElementById("bb1p6").style.zIndex="4";
+                    document.getElementById("bb1p7").style.zIndex="4";
+                    document.getElementById("bb1p8").style.zIndex="4";
+                    document.getElementById("bb2p1").style.zIndex="4";
+                    document.getElementById("bb2p2").style.zIndex="4";
+                    document.getElementById("bb2p3").style.zIndex="4";
+                    document.getElementById("bb2p4").style.zIndex="4";
+                    document.getElementById("bb2p5").style.zIndex="4";
+                    document.getElementById("bb2p6").style.zIndex="4";
+                    document.getElementById("bb2p7").style.zIndex="4";
+                    document.getElementById("bb2p8").style.zIndex="4";
+                    document.getElementById("bb3p1").style.zIndex="4";
+                    document.getElementById("bb3p2").style.zIndex="4";
+                    document.getElementById("bb3p3").style.zIndex="4";
+                    document.getElementById("bb3p4").style.zIndex="4";
+                    document.getElementById("bb3p5").style.zIndex="4";
+                    document.getElementById("bb3p6").style.zIndex="4";
+                    document.getElementById("bb3p7").style.zIndex="4";
+                    document.getElementById("bb3p8").style.zIndex="4";
                 }
 
                 function saver1(value) {
@@ -694,6 +752,26 @@
                         document.getElementById("bb1p6").style.animation="bboxanim6 1s ease 0s 1 normal forwards";
                         document.getElementById("bb1p7").style.animation="bboxanim7 1s ease 0s 1 normal forwards";
                         document.getElementById("bb1p8").style.animation="bboxanim8 1s ease 0s 1 normal forwards";
+                        document.getElementById("p2").style.zIndex="2";
+                        document.getElementById("p1").style.zIndex="2";
+                        document.getElementById("paragraph2").style.zIndex="1";
+                        document.getElementById("paragraph3").style.zIndex="1";
+                        document.getElementById("bb3p1").style.zIndex="0";
+                        document.getElementById("bb3p2").style.zIndex="0";
+                        document.getElementById("bb3p3").style.zIndex="0";
+                        document.getElementById("bb3p4").style.zIndex="0";
+                        document.getElementById("bb3p5").style.zIndex="0";
+                        document.getElementById("bb3p6").style.zIndex="0";
+                        document.getElementById("bb3p7").style.zIndex="0";
+                        document.getElementById("bb3p8").style.zIndex="0";
+                        document.getElementById("bb2p1").style.zIndex="0";
+                        document.getElementById("bb2p2").style.zIndex="0";
+                        document.getElementById("bb2p3").style.zIndex="0";
+                        document.getElementById("bb2p4").style.zIndex="0";
+                        document.getElementById("bb2p5").style.zIndex="0";
+                        document.getElementById("bb2p6").style.zIndex="0";
+                        document.getElementById("bb2p7").style.zIndex="0";
+                        document.getElementById("bb2p8").style.zIndex="0";
                     }
                     else {
                         let v = 0;
@@ -708,6 +786,28 @@
                         document.getElementById("bb1p6").style.animation="bboxanim6back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb1p7").style.animation="bboxanim7back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb1p8").style.animation="bboxanim8back 1s ease 0s 1 normal forwards";
+                        setTimeout(function() {
+                            document.getElementById("p2").style.zIndex="6";
+                            document.getElementById("p3").style.zIndex="6";
+                            document.getElementById("paragraph2").style.zIndex="5";
+                            document.getElementById("paragraph3").style.zIndex="5";
+                            document.getElementById("bb3p1").style.zIndex="4";
+                            document.getElementById("bb3p2").style.zIndex="4";
+                            document.getElementById("bb3p3").style.zIndex="4";
+                            document.getElementById("bb3p4").style.zIndex="4";
+                            document.getElementById("bb3p5").style.zIndex="4";
+                            document.getElementById("bb3p6").style.zIndex="4";
+                            document.getElementById("bb3p7").style.zIndex="4";
+                            document.getElementById("bb3p8").style.zIndex="4";
+                            document.getElementById("bb2p1").style.zIndex="4";
+                            document.getElementById("bb2p2").style.zIndex="4";
+                            document.getElementById("bb2p3").style.zIndex="4";
+                            document.getElementById("bb2p4").style.zIndex="4";
+                            document.getElementById("bb2p5").style.zIndex="4";
+                            document.getElementById("bb2p6").style.zIndex="4";
+                            document.getElementById("bb2p7").style.zIndex="4";
+                            document.getElementById("bb2p8").style.zIndex="4";
+                        }, 1000)
                     }
                 }
 
@@ -736,6 +836,26 @@
                         document.getElementById("bb2p6").style.animation="bbox2anim6 1s ease 0s 1 normal forwards";
                         document.getElementById("bb2p7").style.animation="bbox2anim7 1s ease 0s 1 normal forwards";
                         document.getElementById("bb2p8").style.animation="bbox2anim8 1s ease 0s 1 normal forwards";
+                        document.getElementById("p1").style.zIndex="2";
+                        document.getElementById("p3").style.zIndex="2";
+                        document.getElementById("paragraph1").style.zIndex="1";
+                        document.getElementById("paragraph3").style.zIndex="1";
+                        document.getElementById("bb3p1").style.zIndex="0";
+                        document.getElementById("bb3p2").style.zIndex="0";
+                        document.getElementById("bb3p3").style.zIndex="0";
+                        document.getElementById("bb3p4").style.zIndex="0";
+                        document.getElementById("bb3p5").style.zIndex="0";
+                        document.getElementById("bb3p6").style.zIndex="0";
+                        document.getElementById("bb3p7").style.zIndex="0";
+                        document.getElementById("bb3p8").style.zIndex="0";
+                        document.getElementById("bb1p1").style.zIndex="0";
+                        document.getElementById("bb1p2").style.zIndex="0";
+                        document.getElementById("bb1p3").style.zIndex="0";
+                        document.getElementById("bb1p4").style.zIndex="0";
+                        document.getElementById("bb1p5").style.zIndex="0";
+                        document.getElementById("bb1p6").style.zIndex="0";
+                        document.getElementById("bb1p7").style.zIndex="0";
+                        document.getElementById("bb1p8").style.zIndex="0";
                     }
                     else {
                         let v = 0;
@@ -750,6 +870,28 @@
                         document.getElementById("bb2p6").style.animation="bbox2anim6back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb2p7").style.animation="bbox2anim7back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb2p8").style.animation="bbox2anim8back 1s ease 0s 1 normal forwards";
+                        setTimeout(function() {
+                            document.getElementById("p1").style.zIndex="6";
+                            document.getElementById("p3").style.zIndex="6";
+                            document.getElementById("paragraph1").style.zIndex="5";
+                            document.getElementById("paragraph3").style.zIndex="5";
+                            document.getElementById("bb3p1").style.zIndex="0";
+                            document.getElementById("bb3p2").style.zIndex="4";
+                            document.getElementById("bb3p3").style.zIndex="4";
+                            document.getElementById("bb3p4").style.zIndex="4";
+                            document.getElementById("bb3p5").style.zIndex="4";
+                            document.getElementById("bb3p6").style.zIndex="4";
+                            document.getElementById("bb3p7").style.zIndex="4";
+                            document.getElementById("bb3p8").style.zIndex="4";
+                            document.getElementById("bb1p1").style.zIndex="4";
+                            document.getElementById("bb1p2").style.zIndex="4";
+                            document.getElementById("bb1p3").style.zIndex="4";
+                            document.getElementById("bb1p4").style.zIndex="4";
+                            document.getElementById("bb1p5").style.zIndex="4";
+                            document.getElementById("bb1p6").style.zIndex="4";
+                            document.getElementById("bb1p7").style.zIndex="4";
+                            document.getElementById("bb1p8").style.zIndex="4";
+                        }, 1000)
                     }
                 }
 
@@ -777,6 +919,26 @@
                         document.getElementById("bb3p6").style.animation="bbox3anim6 1s ease 0s 1 normal forwards";
                         document.getElementById("bb3p7").style.animation="bbox3anim7 1s ease 0s 1 normal forwards";
                         document.getElementById("bb3p8").style.animation="bbox3anim8 1s ease 0s 1 normal forwards";
+                        document.getElementById("p2").style.zIndex="2";
+                        document.getElementById("p1").style.zIndex="2";
+                        document.getElementById("paragraph2").style.zIndex="1";
+                        document.getElementById("paragraph1").style.zIndex="1";
+                        document.getElementById("bb1p1").style.zIndex="0";
+                        document.getElementById("bb1p2").style.zIndex="0";
+                        document.getElementById("bb1p3").style.zIndex="0";
+                        document.getElementById("bb1p4").style.zIndex="0";
+                        document.getElementById("bb1p5").style.zIndex="0";
+                        document.getElementById("bb1p6").style.zIndex="0";
+                        document.getElementById("bb1p7").style.zIndex="0";
+                        document.getElementById("bb1p8").style.zIndex="0";
+                        document.getElementById("bb2p1").style.zIndex="0";
+                        document.getElementById("bb2p2").style.zIndex="0";
+                        document.getElementById("bb2p3").style.zIndex="0";
+                        document.getElementById("bb2p4").style.zIndex="0";
+                        document.getElementById("bb2p5").style.zIndex="0";
+                        document.getElementById("bb2p6").style.zIndex="0";
+                        document.getElementById("bb2p7").style.zIndex="0";
+                        document.getElementById("bb2p8").style.zIndex="0";
                     }
                     else {
                         let v = 0;
@@ -791,6 +953,28 @@
                         document.getElementById("bb3p6").style.animation="bbox3anim6back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb3p7").style.animation="bbox3anim7back 1s ease 0s 1 normal forwards";
                         document.getElementById("bb3p8").style.animation="bbox3anim8back 1s ease 0s 1 normal forwards";
+                        setTimeout(function() {
+                            document.getElementById("p2").style.zIndex="6";
+                            document.getElementById("p1").style.zIndex="6";
+                            document.getElementById("paragraph2").style.zIndex="5";
+                            document.getElementById("paragraph1").style.zIndex="5";
+                            document.getElementById("bb1p1").style.zIndex="4";
+                            document.getElementById("bb1p2").style.zIndex="4";
+                            document.getElementById("bb1p3").style.zIndex="4";
+                            document.getElementById("bb1p4").style.zIndex="4";
+                            document.getElementById("bb1p5").style.zIndex="4";
+                            document.getElementById("bb1p6").style.zIndex="4";
+                            document.getElementById("bb1p7").style.zIndex="4";
+                            document.getElementById("bb1p8").style.zIndex="4";
+                            document.getElementById("bb2p1").style.zIndex="4";
+                            document.getElementById("bb2p2").style.zIndex="4";
+                            document.getElementById("bb2p3").style.zIndex="4";
+                            document.getElementById("bb2p4").style.zIndex="4";
+                            document.getElementById("bb2p5").style.zIndex="4";
+                            document.getElementById("bb2p6").style.zIndex="4";
+                            document.getElementById("bb2p7").style.zIndex="4";
+                            document.getElementById("bb2p8").style.zIndex="4";
+                        }, 1000)
                     }
                 }
             </script>

@@ -21,6 +21,7 @@
                     position:relative;
                     width:100%;
                     top:0vw;
+                    height:50vw;
                     overflow-y:hidden;
                     background-color:rgb(255, 255, 110);
                 }
@@ -232,12 +233,112 @@
                 }
                 #close1, #close2 {
                     font-size:2vw;
-                    color:white;
+                    color:black;
                     z-index:0;
                     font-weight:bold;
                     position:absolute;
                     top:11vw;
                     left:7vw;
+                }
+                #box1 {
+                    font-size:2vw;
+                    position:absolute;
+                    width:85%;
+                    color:black;
+                    text-align:center;
+                    top: 15vw;
+                    left:7vw;
+                    z-index:-1;
+                    opacity:0%;
+                }
+                #box3 {
+                    font-size:1.8vw;
+                    position:absolute;
+                    width:85%;
+                    color:black;
+                    text-align:center;
+                    top:14vw;
+                    left:7vw;
+                    z-index:-1;
+                    opacity:0%;
+                }
+                #link1 {
+                    font-size:3vw;
+                    text-decoration: none;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    color:black;
+                    position:absolute;
+                    z-index:-1;
+                    top:25vw;
+                    left:30vw;
+                    opacity:0%;
+                }
+                /* taken from this website: https://www.sliderrevolution.com/resources/css-animated-background/ */
+                @keyframes cube {
+                from {
+                    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+                    opacity: 1;
+                }
+                to {
+                    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+                    opacity: 0;
+                }
+                }
+                .bg {
+                    border: solid 1vw white;
+                    position:absolute;
+                    transform-origin: top left;
+                    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+                    background-color:black;
+                    z-index:0;
+                }
+
+                #bog1 {
+                    animation:cube 12s ease 3s infinite normal forwards;
+                }
+                #bog2 {
+                    top:20vw;
+                    left:5vw;
+                    animation:cube 12s ease 30s infinite normal forwards;
+                }
+                #bog3 {
+                    top:5vw;
+                    left:40vw;
+                    animation:cube 12s ease 24s infinite normal forwards;
+                }
+                #bog4 {
+                    top:1vw;
+                    left:67vw;
+                    animation:cube 12s ease 27s infinite normal forwards;
+                }
+                #bog5 {
+                    top:30vw;
+                    left:30vw;
+                    animation:cube 12s ease 6s infinite normal forwards;
+                }
+                #bog6 {
+                    top:25vw;
+                    left:55vw;
+                    animation:cube 12s ease 21s infinite normal forwards;
+                }
+                #bog7 {
+                    top:29vw;
+                    left:80vw;
+                    animation:cube 12s ease 12s infinite normal forwards;
+                }
+                #bog8 {
+                    left:15vw;
+                    top:2vw;
+                    animation:cube 12s ease 18s infinite normal forwards;
+                }
+                #bog9 {
+                    top:27vw;
+                    animation:cube 12s ease 9s infinite normal forwards;
+                }
+                #bog10 {
+                    top:13vw;
+                    left:22vw;
+                    animation:cube 12s ease 15s infinite normal forwards;
                 }
             </style>
             <link rel="stylesheet" href="./CSS Files/stratsandforms.css">
@@ -261,6 +362,16 @@
             </header>
             <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             <div class="body">
+                <div class="bg" id="bog1"></div>
+                <div class="bg" id="bog2"></div>
+                <div class="bg" id="bog3"></div>
+                <div class="bg" id="bog4"></div>
+                <div class="bg" id="bog5"></div>
+                <div class="bg" id="bog6"></div>
+                <div class="bg" id="bog7"></div>
+                <div class="bg" id="bog8"></div>
+                <div class="bg" id="bog9"></div>
+                <div class="bg" id="bog10"></div>
                 <p id="close1" onclick="aclickback()">x</p>
                 <p id="close2" onclick="rclickback()">x</p>
                 <div id="above"></div>
@@ -274,15 +385,12 @@
                 <div id="maintext"></div>
                 <div class="boxes" onclick="aclick()" id="about">ABOUT FRISBEE</div>
                 <div class="boxes" onclick="rclick()" id="rules">RULES</div>
-                <div id="box1">
+                <p id="box1">
                     Here are the official Rules for Ultimate Frisbee! There are a lot of complicated rules.
                     Some include the proper penalties, the "countdown", the out-of-bounds rules, and much more.
-                    We recommend that you at least skim through it to get you started!:
-                    https://usaultimate.org/rules/
-                </div>
-                <div id="box2">
-                    "A sport that should be recognized more." - Isaiah, 2025
-                </div>
+                    We recommend that you at least skim through it to get you started!
+                </p>
+                <a href="https://usaultimate.org/rules/"><p id="link1">https://usaultimate.org/rules/</p></a>
                 <p id="box3">
                     Welcome to Ultimate Frisbee (or Ultimate)! 
                     It is a non-contact sport played with a disc flung. 
@@ -301,16 +409,20 @@
                 function aclick() {
                     document.getElementById("maintext").style.zIndex="3";
                     document.getElementById("close1").style.zIndex="4";
+                    document.getElementById("box3").style.zIndex="4";
                     document.getElementById("maintext").style.animation="fadein 1s ease 0s 1 normal forwards";
                     document.getElementById("close1").style.animation="fadein 1s ease 0s 1 normal forwards";
                     document.getElementById("box3").style.animation="fadein 1s ease 1s 1 normal forwards";
                 }
                 function rclick() {
+                    document.getElementById("box1").style.animation="fadein 1s ease 1s 1 normal forwards";
+                    document.getElementById("link1").style.zIndex="4";
+                    document.getElementById("link1").style.animation="fadein 1s ease 1s 1 normal forwards";
+                    document.getElementById("box1").style.zIndex="4";
                     document.getElementById("maintext").style.zIndex="3";
                     document.getElementById("close2").style.zIndex="4";
                     document.getElementById("maintext").style.animation="fadein 1s ease 0s 1 normal forwards";
                     document.getElementById("close2").style.animation="fadein 1s ease 0s 1 normal forwards";
-                    document.getElementById("box3").style.animation="fadein 1s ease 1s 1 normal forwards";
                 }
                 function aclickback() {
                     document.getElementById("maintext").style.animation="fadeout 1s ease 0s 1 normal forwards";
@@ -319,15 +431,19 @@
                     setTimeout(function() {
                         document.getElementById("maintext").style.zIndex="0";
                         document.getElementById("close1").style.zIndex="0";
+                        document.getElementById("box3").style.zIndex="-1";
                     }, 1100);
                 }
                 function rclickback() {
                     document.getElementById("maintext").style.animation="fadeout 1s ease 0s 1 normal forwards";
                     document.getElementById("close2").style.animation="fadeout 1s ease 0s 1 normal forwards";
-                    document.getElementById("box3").style.animation="fadeout 1s ease 0s 1 normal forwards";
+                    document.getElementById("box1").style.animation="fadeout 1s ease 0s 1 normal forwards";
+                    document.getElementById("link1").style.animation="fadeout 1s ease 0s 1 normal forwards";
                     setTimeout(function() {
                         document.getElementById("maintext").style.zIndex="0";
                         document.getElementById("close2").style.zIndex="0";
+                        document.getElementById("box1").style.zIndex="-1";
+                        document.getElementById("link1").style.zIndex="-1";
                     }, 1100)
                 }
             </script>

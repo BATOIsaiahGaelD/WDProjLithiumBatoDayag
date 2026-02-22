@@ -10,8 +10,629 @@
             <link rel="icon" href="../assets/logo.png" sizes="32x32" type="image/png">
             <link rel="stylesheet" href="headfoot.css">
             <style>
+                body {
+                    overflow-x:hidden;
+                }
                 div#body {
                     background-color:rgb(255, 255, 95);
+                    position:relative;
+                    width:100%;
+                    height:216vw;
+                    overflow-x:hidden;
+                    overflow-y:hidden;
+                }
+                .reflayer {
+                    position:absolute;
+                    background-color:red;
+                    height:15vw;
+                    width:521vw;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size:1.2vw;
+                }
+                @keyframes scrollleft {
+                    0% {left:0vw}
+                    100% {left:-421vw}
+                }
+                @keyframes scrollright {
+                    0% {left:-421vw;}
+                    100% {left:0vw;}
+                }
+                #bg1 {
+                    display:flex;
+                    align-items:center;
+                    animation: scrollleft 30s linear 5s infinite;
+                    top:1vw;
+                }
+                .reflayer1 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #rlbg1 {
+                    left:106vw;
+                }
+                #rlbg2 {
+                    left:137vw;
+                }
+                #rlbg3 {
+                    left:168vw;
+                }
+                #rlbg4 {
+                    left:199vw;
+                }
+                #rlbg5 {
+                    left:230vw;
+                }
+                #rlbg6 {
+                    left:261vw;
+                }
+                #rlbg7 {
+                    left:292vw;
+                }
+                #rlbg8 {
+                    left:323vw;
+                    font-size:1.1vw;
+                }
+                #rlbg9 {
+                    left:354vw;
+                }
+                #rlbg10 {
+                    left:385vw;
+                }
+                #bg2 {
+                    position:absolute;
+                    top:17vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollright 30s linear 5.6s infinite;
+                }
+                .reflayer2 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg2r1 {
+                    left:106vw;
+                }
+                #bg2r2 {
+                    left:137vw;
+                }
+                #bg2r3 {
+                    left:168vw;
+                }
+                #bg2r4 {
+                    left:199vw;
+                }
+                #bg2r5 {
+                    left:230vw;
+                }
+                #bg2r6 {
+                    left:261vw;
+                }
+                #bg2r7 {
+                    left:292vw;
+                }
+                #bg2r8 {
+                    left:323vw;
+                }
+                #bg2r9 {
+                    left:354vw;
+                }
+                #bg2r10 {
+                    left:385vw;
+                }
+
+                #bg3 {
+                    position:absolute;
+                    top:33vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollleft 30s linear 6.2s infinite;
+                }
+                .reflayer3 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg3r1 {
+                    left:106vw;
+                }
+                #bg3r2 {
+                    left:137vw;
+                }
+                #bg3r3 {
+                    left:168vw;
+                    font-size:1.1vw;
+                }
+                #bg3r4 {
+                    left:199vw;
+                }
+                #bg3r5 {
+                    left:230vw;
+                    font-size:1vw;
+                }
+                #bg3r6 {
+                    left:261vw;
+                }
+                #bg3r7 {
+                    left:292vw;
+                }
+                #bg3r8 {
+                    left:323vw;
+                }
+                #bg3r9 {
+                    left:354vw;
+                }
+                #bg3r10 {
+                    left:385vw;
+                    font-size:1vw;
+                }
+
+                #bg4 {
+                    position:absolute;
+                    top:49vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollright 30s linear 6.8s infinite;
+                }
+                .reflayer4 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg4r1 {
+                    left:106vw;
+                }
+                #bg4r2 {
+                    left:137vw;
+                }
+                #bg4r3 {
+                    left:168vw;
+                    font-size:0.9vw;
+                }
+                #bg4r4 {
+                    left:199vw;
+                    font-size:0.9vw;
+                }
+                #bg4r5 {
+                    left:230vw;
+                }
+                #bg4r6 {
+                    left:261vw;
+                }
+                #bg4r7 {
+                    left:292vw;
+                }
+                #bg4r8 {
+                    left:323vw;
+                }
+                #bg4r9 {
+                    left:354vw;
+                }
+                #bg4r10 {
+                    left:385vw;
+                }
+
+                #bg5 {
+                    position:absolute;
+                    top:65vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollleft 30s linear 7.4s infinite;
+                }
+                .reflayer5 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg5r1 {
+                    left:106vw;
+                }
+                #bg5r2 {
+                    left:137vw;
+                }
+                #bg5r3 {
+                    left:168vw;
+                }
+                #bg5r4 {
+                    left:199vw;
+                }
+                #bg5r5 {
+                    left:230vw;
+                }
+                #bg5r6 {
+                    left:261vw;
+                }
+                #bg5r7 {
+                    left:292vw;
+                }
+                #bg5r8 {
+                    left:323vw;
+                }
+                #bg5r9 {
+                    left:354vw;
+                }
+                #bg5r10 {
+                    left:385vw;
+                }
+
+                #bg6 {
+                    position:absolute;
+                    top:81vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollright 30s linear 8s infinite;
+                }
+                .reflayer6 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg6r1 {
+                    left:106vw;
+                    font-size:1.1vw;
+                }
+                #bg6r2 {
+                    left:137vw;
+                }
+                #bg6r3 {
+                    left:168vw;
+                    font-size:0.95vw;
+                }
+                #bg6r4 {
+                    left:199vw;
+                }
+                #bg6r5 {
+                    left:230vw;
+                }
+                #bg6r6 {
+                    left:261vw;
+                }
+                #bg6r7 {
+                    left:292vw;
+                }
+                #bg6r8 {
+                    left:323vw;
+                    font-size:0.9vw;
+                }
+                #bg6r9 {
+                    left:354vw;
+                }
+                #bg6r10 {
+                    left:385vw;
+                }
+
+                #bg7 {
+                    position:absolute;
+                    top:97vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollleft 30s linear 8.6s infinite;
+                }
+                .reflayer7 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg7r1 {
+                    left:106vw;
+                }
+                #bg7r2 {
+                    left:137vw;
+                    font-size:1.1vw;
+                }
+                #bg7r3 {
+                    left:168vw;
+                }
+                #bg7r4 {
+                    left:199vw;
+                }
+                #bg7r5 {
+                    left:230vw;
+                }
+                #bg7r6 {
+                    left:261vw;
+                    font-size:0.85vw;
+                }
+                #bg7r7 {
+                    left:292vw;
+                    font-size:0.85vw;
+                }
+                #bg7r8 {
+                    left:323vw;
+                }
+                #bg7r9 {
+                    left:354vw;
+                }
+                #bg7r10 {
+                    left:385vw;
+                }
+
+                #bg8 {
+                    position:absolute;
+                    top:113vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollright 30s linear 9.4s infinite;
+                }
+                .reflayer8 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg8r1 {
+                    left:106vw;
+                    font-size:1vw;
+                }
+                #bg8r2 {
+                    left:137vw;
+                }
+                #bg8r3 {
+                    left:168vw;
+                }
+                #bg8r4 {
+                    left:199vw;
+                }
+                #bg8r5 {
+                    left:230vw;
+                }
+                #bg8r6 {
+                    left:261vw;
+                }
+                #bg8r7 {
+                    left:292vw;
+                }
+                #bg8r8 {
+                    left:323vw;
+                }
+                #bg8r9 {
+                    left:354vw;
+                }
+                #bg8r10 {
+                    left:385vw;
+                    font-size:0.8vw;
+                }
+
+                #bg9 {
+                    position:absolute;
+                    top:129vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollleft 30s linear 10s infinite;
+                }
+                .reflayer9 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg9r1 {
+                    left:106vw;
+                }
+                #bg9r2 {
+                    left:137vw;
+                    font-size:0.8vw;
+                }
+                #bg9r3 {
+                    left:168vw;
+                    font-size:0.9vw;
+                }
+                #bg9r4 {
+                    left:199vw;
+                }
+                #bg9r5 {
+                    left:230vw;
+                }
+                #bg9r6 {
+                    left:261vw;
+                }
+                #bg9r7 {
+                    left:292vw;
+                }
+                #bg9r8 {
+                    left:323vw;
+                }
+                #bg9r9 {
+                    left:354vw;
+                }
+                #bg9r10 {
+                    left:385vw;
+                }
+
+                #bg10 {
+                    position:absolute;
+                    top:145vw;
+                    display:flex;
+                    align-items:center;
+                    animation: scrollright 30s linear 10.6s infinite;
+                }
+                .reflayer10 {
+                    position:absolute;
+                    width:30vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:14vw;
+                    background-color:white;
+                    z-index:1;
+                    text-align:center;
+                }
+                #bg10r1 {
+                    left:106vw;
+                    font-size:1vw;
+                }
+                #bg10r2 {
+                    left:137vw;
+                    font-size:1vw;
+                }
+                #bg10r3 {
+                    left:168vw;
+                    font-size:1vw;
+                }
+                #bg10r4 {
+                    left:199vw;
+                    font-size:1vw;
+                }
+                #bg10r5 {
+                    left:230vw;
+                    font-size:1vw;
+                }
+                #bg10r6 {
+                    left:261vw;
+                    font-size:1vw;
+                }
+                #bg10r7 {
+                    left:292vw;
+                }
+                #bg10r8 {
+                    left:323vw;
+                    font-size:1vw;
+                }
+                #bg10r9 {
+                    left:354vw;
+                }
+                #bg10r10 {
+                    left:385vw;
+                }
+                @keyframes anim1 {
+                    0% {top:-20vw;}
+                    100% {top:3vw;}
+                }
+                @keyframes anim2 {
+                    0% {top:3vw;}
+                    100% {top:-20vw}
+                }
+                @keyframes spinning {
+                    100% {transform:rotate(360deg)}
+                }
+                @keyframes danim1 {
+                    0% {top:-30vw;}
+                    100% {top:10vw;}
+                }
+                @keyframes danim2 {
+                    0% {top:10vw;}
+                    100% {top:170vw}
+                }
+                @keyframes fadeout {
+                    0% {opacity:100%}
+                    100% {opacity:0%}
+                }
+                #reftitle {
+                    position:fixed;
+                    font-size:13vw;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    color:white;
+                    z-index:2;
+                    top:-20vw;
+                    left:18vw;
+                    animation: anim1 1s ease 1s 1 normal forwards, anim2 1s ease 3s 1 normal forwards;
+                }
+                #discref {
+                    position:absolute;
+                    width:30vw;
+                    height:30vw;
+                    top:-30vw;
+                    left:35vw;
+                    z-index:2;
+                    animation:danim1 1s ease 2s 1 normal forwards, danim2 6s ease-in 4.5s 1 normal forwards, spinning 0.3s linear 0s infinite;
+                }
+                #overlay {
+                    z-index:1;
+                    position:fixed;
+                    width:100%;
+                    height:100%;
+                    top:0vw;
+                    background-color:rgba(0, 0, 0, 0.796);
+                    animation:fadeout 1s ease 4s 1 normal forwards;
+                }
+                #extra {
+                    width:90%;
+                    height:18vw;
+                    border-radius:2vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color:black;
+                    color:white;
+                    position:absolute;
+                    top:194vw;
+                    left:5vw;
+                    z-index:2;
+                    font-size:1.2vw;
+                }
+                #disclaimer {
+                    position:fixed;
+                    top:-10vw;
+                    left:1vw;
+                    font-size:4.6vw;
+                    color:red;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    z-index:10000;
+                    animation:move1 1s ease 5s 1 normal forwards, move2 1s ease 12s 1 normal forwards;
+                }
+                @keyframes move1 {
+                    0% {top:-10vw}
+                    100% {top:0vw}
+                }
+                @keyframes move2 {
+                    0% {top:0vw}
+                    100% {top:-10vw}
+                }
+                footer {
+                    position:relative;
                 }
             </style>
             <link rel="stylesheet" href="./CSS Files/stratsandforms.css">
@@ -34,63 +655,147 @@
                 </div>
             </header>
             <a href="/public/signups.html"><div id="button">Sign Up</div></a>
+            <p id="reftitle">REFERENCES</p>
+            <img src="../assets/frisbeereferences.png" id="discref">
+            <p id="disclaimer">DISCLAIMER AT THE BOTTOM OF THE PAGE. PLEASE READ</p>
+            <div id=overlay></div>
             <div id="body">
-                <div id="bg1">
-                    <div>W3Schools.com. (n.d.-p). https://www.w3schools.com/css/css_align.asp</div>
-                    <div>W3Schools.com. (n.d.-o). https://www.w3schools.com/css/css3_animations.asp</div>
-                    <div>W3Schools.com. (n.d.-n). https://www.w3schools.com/tags/ev_onmouseover.asp</div>
-                    <div>W3Schools.com. (n.d.-m). https://www.w3schools.com/jsref/event_onclick.asp </div>
-                    <div>Garcia, J. (2016, August 29). Remove/Hide div from DOM after animation completes using CSS? Stack Overflow. https://stackoverflow.com/questions/39198083/remove-hide-div-from-dom-after-animation-completes-using-css </div>
-                    <div>CSSnippets. (2024, November 28). Master CSS Animation Property in 11 minutes [Full Tutorial] 🚀 [Video]. YouTube. https://www.youtube.com/watch?v=Bhj4miRkSOc </div>
-                    <div>W3Schools.com. (n.d.-l). https://www.w3schools.com/cssref/func_scale.php </div>
-                    <div>W3Schools.com. (n.d.-j). https://www.w3schools.com/tags/ref_eventattributes.asp</div> 
-                    <div>W3Schools.com. (n.d.-q). https://www.w3schools.com/css/css_align.asp </div>
-                    <div>CSSnippets. (2024a, November 14). Learn all CSS transition property for smooth animation [Video]. YouTube. https://www.youtube.com/watch?v=xdap5e3-DwM </div>
-                    </div>
-
-                <div id="bg2">
-                    <div>Web Dev Simplified. (2019, April 20). Build a popup with JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=MBaw_6cPmAw 
-                    <div>Coding2GO. (2023, June 10). How to create a popup in html (dialogs and modals) [Video]. YouTube. https://www.youtube.com/watch?v=t_GuuhNNcNQ 
-                    <div>Snippets Code. (2024, June 2). Animate on Scroll with just 3 LINES of CSS (No libraries needed) [Video]. YouTube. https://www.youtube.com/watch?v=0TnO1GzKWPc 
-                    <div>Codingflag. (2022, July 1). Create Responsive Popup with Blurred Overlay using HTML, CSS & JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=Z4XXA89mTy8 
-                    <div>Codingflag. (2020, July 13). How to Create Animated Popup / Modal / Dialog Box using HTML, CSS & JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=LqBmbgD_2Ig 
-                    <div>GreatStack. (2022, March 9). How to make a popup using HTML, CSS and JavaScript | Create a modal box in HTML website [Video]. YouTube. https://www.youtube.com/watch?v=AF6vGYIyV8M 
-                    <div>Florin Pop. (2022, November 2). Build a Popup with JavaScript | 1-Minute Tutorial [Video]. YouTube. https://www.youtube.com/watch?v=r_PL0K2fGkY 
-                    <div>Hyperplexed. (2022, December 5). Award winning animation with only 20 lines of CSS? [Video]. YouTube. https://www.youtube.com/watch?v=PkADl0HubMY 
-                    <div>GeeksforGeeks. (2025a, July 11). How to Vertically Center Text with CSS? GeeksforGeeks. https://www.geeksforgeeks.org/css/how-to-vertically-center-text-with-css/ 
-                    <div>Circle Crop Image Tool | Free online round photo cropper. (n.d.). https://circlecropimage.com/#google_vignette 
+                <div class="reflayer" id="bg1">
+                    <div class="reflayer1" id="rlbg1">W3Schools.com. (n.d.-p). https://www.w3schools.com/css/css_align.asp</div>
+                    <div class="reflayer1" id="rlbg2">W3Schools.com. (n.d.-o). https://www.w3schools.com/css/css3_animations.asp</div>
+                    <div class="reflayer1" id="rlbg3">W3Schools.com. (n.d.-n). https://www.w3schools.com/tags/ev_onmouseover.asp</div>
+                    <div class="reflayer1" id="rlbg4">W3Schools.com. (n.d.-m). https://www.w3schools.com/jsref/event_onclick.asp </div>
+                    <div class="reflayer1" id="rlbg5">Garcia, J. (2016, August 29). Remove/Hide div from DOM after animation completes using CSS? Stack Overflow. https://stackoverflow.com/questions/39198083/remove-hide-div-from-dom-after-animation-completes-using-css </div>
+                    <div class="reflayer1" id="rlbg6">CSSnippets. (2024, November 28). Master CSS Animation Property in 11 minutes [Full Tutorial] 🚀 [Video]. YouTube. https://www.youtube.com/watch?v=Bhj4miRkSOc </div>
+                    <div class="reflayer1" id="rlbg7">W3Schools.com. (n.d.-l). https://www.w3schools.com/cssref/func_scale.php </div>
+                    <div class="reflayer1" id="rlbg8">W3Schools.com. (n.d.-j). https://www.w3schools.com/tags/ref_eventattributes.asp</div> 
+                    <div class="reflayer1" id="rlbg9">W3Schools.com. (n.d.-q). https://www.w3schools.com/css/css_align.asp </div>
+                    <div class="reflayer1" id="rlbg10">CSSnippets. (2024a, November 14). Learn all CSS transition property for smooth animation [Video]. YouTube. https://www.youtube.com/watch?v=xdap5e3-DwM </div>
                 </div>
 
-                <div id="bg3">
-                <div>W3Schools.com. (n.d.-w). https://www.w3schools.com/html/html5_video.asp 
-                <div>Ultimate Flying Discs Discraft 175 gram Ultra Star Sport Disc Sports, ultimate frisbee transparent background PNG clipart | HiClipart. (n.d.). https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg 
-                <div>Orange Frisbee transparent PNG - StickPNG. (n.d.). https://www.stickpng.com/img/objects/frisbees/orange-frisbee 
-                <div>Frisbee PNG image with transparent background. (n.d.). pngimg.com. https://pngimg.com/image/44950 
-                <div>Frisbee PNG Clipart - Plate transparent PNG - 585x612 - Free download on NicePNG. (n.d.). NicePNG.com. https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/ 
-                <div>Frisbee transparent background PNG clipart | HiClipart. (n.d.). https://www.hiclipart.com/free-transparent-background-png-clipart-zyzgu 
-                <div>Frisbee PNG - Music Festival Clipart (#4205201) - PikPng. (n.d.). PikPng.com. https://www.pikpng.com/pngvi/imTwmTT_frisbee-png-music-festival-clipart/ 
-                <div>Frisbee Png Black And White Free - Disc Ace,Frisbee Png - free transparent png images - pngaaa.com. (n.d.). https://www.pngaaa.com/detail/3488354 
-                <div>TopPNG. (n.d.). Free download | HD PNG red j star logo frisbee png |. https://toppng.com/show_download/20008/frisbee  
-                <div>Ultimate | WFDF. (2001, June 28). https://wfdf.sport/disciplines/ultimate/#:~:text=Ultimate%20is%20a%20non%2Dcontact,there%20is%20an%20end%20zone. 
+                <div class="reflayer" id="bg2">
+                    <div class="reflayer2" id="bg2r1">Web Dev Simplified. (2019, April 20). Build a popup with JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=MBaw_6cPmAw </div>
+                    <div class="reflayer2" id="bg2r2">Coding2GO. (2023, June 10). How to create a popup in html (dialogs and modals) [Video]. YouTube. https://www.youtube.com/watch?v=t_GuuhNNcNQ </div>
+                    <div class="reflayer2" id="bg2r3">Snippets Code. (2024, June 2). Animate on Scroll with just 3 LINES of CSS (No libraries needed) [Video]. YouTube. https://www.youtube.com/watch?v=0TnO1GzKWPc </div>
+                    <div class="reflayer2" id="bg2r4">Codingflag. (2022, July 1). Create Responsive Popup with Blurred Overlay using HTML, CSS & JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=Z4XXA89mTy8 </div>
+                    <div class="reflayer2" id="bg2r5">Codingflag. (2020, July 13). How to Create Animated Popup / Modal / Dialog Box using HTML, CSS & JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=LqBmbgD_2Ig </div>
+                    <div class="reflayer2" id="bg2r6">GreatStack. (2022, March 9). How to make a popup using HTML, CSS and JavaScript | Create a modal box in HTML website [Video]. YouTube. https://www.youtube.com/watch?v=AF6vGYIyV8M </div>
+                    <div class="reflayer2" id="bg2r7">Florin Pop. (2022, November 2). Build a Popup with JavaScript | 1-Minute Tutorial [Video]. YouTube. https://www.youtube.com/watch?v=r_PL0K2fGkY </div>
+                    <div class="reflayer2" id="bg2r8">Hyperplexed. (2022, December 5). Award winning animation with only 20 lines of CSS? [Video]. YouTube. https://www.youtube.com/watch?v=PkADl0HubMY </div>
+                    <div class="reflayer2" id="bg2r9">GeeksforGeeks. (2025a, July 11). How to Vertically Center Text with CSS? GeeksforGeeks. https://www.geeksforgeeks.org/css/how-to-vertically-center-text-with-css/ </div>
+                    <div class="reflayer2" id="bg2r10">Circle Crop Image Tool | Free online round photo cropper. (n.d.). https://circlecropimage.com/#google_vignette </div>
                 </div>
 
-                <div id="bg4">
-                <div>Ultimate, U. (2025, November 18). Rules of Ultimate | USA Ultimate. USA Ultimate. https://usaultimate.org/rules/ 
-                <div>W3Schools.com. (n.d.-r). https://www.w3schools.com/cssref/pr_background-image.php 
-                <div>W3Schools.com. (n.d.-s). https://www.w3schools.com/cssref/css3_pr_background-size.php 
-                <div>W3Schools.com. (n.d.-t). https://www.w3schools.com/cssref/css3_pr_background.php 
-                <div>Ultimate Frisbee HQ. (n.d.). Ultimate Frisbee HQ. https://ultimatefrisbeehq.com/ 
-                <div>VirtualAddiction. (2020, July 20). CSS Animation 34 - multiple animations [Video]. YouTube. https://www.youtube.com/watch?v=Sa2y8yUjUuA 
-                <div>W3Schools.com. (n.d.-v). https://www.w3schools.com/html/html_youtube.asp 
-                <div>Kanivu, D. (2013, November 7). YouTube URL in video tag. Stack Overflow. https://stackoverflow.com/questions/19836015/youtube-url-in-video-tag 
-                <div>W3Schools.com. (n.d.-u). https://www.w3schools.com/cssref/pr_border.php 
-                <div>Bato, I. (2025). index.html (from 2Q Portfolio). Philippine Science High School.
+                <div class="reflayer" id="bg3">
+                    <div class="reflayer3" id="bg3r1">W3Schools.com. (n.d.-w). https://www.w3schools.com/html/html5_video.asp </div>
+                    <div class="reflayer3" id="bg3r2">Ultimate Flying Discs Discraft 175 gram Ultra Star Sport Disc Sports, ultimate frisbee transparent background PNG clipart | HiClipart. (n.d.). https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg</div>
+                    <div class="reflayer3" id="bg3r3">Orange Frisbee transparent PNG - StickPNG. (n.d.). https://www.stickpng.com/img/objects/frisbees/orange-frisbee </div>
+                    <div class="reflayer3" id="bg3r4">Frisbee PNG image with transparent background. (n.d.). pngimg.com. https://pngimg.com/image/44950 </div>
+                    <div class="reflayer3" id="bg3r5">Frisbee PNG Clipart - Plate transparent PNG - 585x612 - Free download on NicePNG. (n.d.). NicePNG.com. https://www.nicepng.com/ourpic/u2t4u2i1q8r5o0i1_frisbee-png-clipart-plate/ </div>
+                    <div class="reflayer3" id="bg3r6">Frisbee transparent background PNG clipart | HiClipart. (n.d.). https://www.hiclipart.com/free-transparent-background-png-clipart-zyzgu </div>
+                    <div class="reflayer3" id="bg3r7">Frisbee PNG - Music Festival Clipart (#4205201) - PikPng. (n.d.). PikPng.com. https://www.pikpng.com/pngvi/imTwmTT_frisbee-png-music-festival-clipart/ </div>
+                    <div class="reflayer3" id="bg3r8">Frisbee Png Black And White Free - Disc Ace,Frisbee Png - free transparent png images - pngaaa.com. (n.d.). https://www.pngaaa.com/detail/3488354 </div>
+                    <div class="reflayer3" id="bg3r9">TopPNG. (n.d.). Free download | HD PNG red j star logo frisbee png |. https://toppng.com/show_download/20008/frisbee  </div>
+                    <div class="reflayer3" id="bg3r10">Ultimate | WFDF. (2001, June 28). https://wfdf.sport/disciplines/ultimate/#:~:text=Ultimate%20i</br>s%20a%20non%2Dcontact,there%20is%20an%20end%20zone. </div>
                 </div>
 
-                <div id="bg5">
-                    Bato, I. (2025). Q12GLithiumBato.html. Philippine Science High School.
-                    Bato, I. (2025). 2Q1GLithiumBato.html. Philippine Science High School.
+                <div class="reflayer" id="bg4">
+                    <div class="reflayer4" id="bg4r1">Ultimate, U. (2025, November 18). Rules of Ultimate | USA Ultimate. USA Ultimate. https://usaultimate.org/rules/ </div>
+                    <div class="reflayer4" id="bg4r2">W3Schools.com. (n.d.-r). https://www.w3schools.com/cssref/pr_background-image.php </div>
+                    <div class="reflayer4" id="bg4r3">W3Schools.com. (n.d.-s). https://www.w3schools.com/cssref/css3_pr_background-size.php </div>
+                    <div class="reflayer4" id="bg4r4">W3Schools.com. (n.d.-t). https://www.w3schools.com/cssref/css3_pr_background.php </div>
+                    <div class="reflayer4" id="bg4r5">Ultimate Frisbee HQ. (n.d.). Ultimate Frisbee HQ. https://ultimatefrisbeehq.com/ </div>
+                    <div class="reflayer4" id="bg4r6">VirtualAddiction. (2020, July 20). CSS Animation 34 - multiple animations [Video]. YouTube. https://www.youtube.com/watch?v=Sa2y8yUjUuA </div>
+                    <div class="reflayer4" id="bg4r7">W3Schools.com. (n.d.-v). https://www.w3schools.com/html/html_youtube.asp </div>
+                    <div class="reflayer4" id="bg4r8">Kanivu, D. (2013, November 7). YouTube URL in video tag. Stack Overflow. https://stackoverflow.com/questions/19836015/youtube-url-in-video-tag</div>
+                    <div class="reflayer4" id="bg4r9">W3Schools.com. (n.d.-u). https://www.w3schools.com/cssref/pr_border.php </div>
+                    <div class="reflayer4" id="bg4r10">Bato, I. (2025). index.html (from 2Q Portfolio). Philippine Science High School.</div>
                 </div>
+
+                <div class="reflayer" id="bg5">
+                    <div class="reflayer5" id="bg5r1">Bato, I. (2025). Q12GLithiumBato.html. Philippine Science High School.</div>
+                    <div class="reflayer5" id="bg5r2">Bato, I. (2025). 2Q1GLithiumBato.html. Philippine Science High School.</div>
+                    <div class="reflayer5" id="bg5r3">W3Schools.com. (n.d.-ah). https://www.w3schools.com/cssref/pr_pos_z-index.php</div>
+                    <div class="reflayer5" id="bg5r4">W3Schools.com. (n.d.-ai). https://www.w3schools.com/html/html_forms.asp</div>
+                    <div class="reflayer5" id="bg5r5">W3Schools.com. (n.d.-aj). https://www.w3schools.com/html/html_form_elements.asp</div>
+                    <div class="reflayer5" id="bg5r6">W3Schools.com. (n.d.-ak). https://www.w3schools.com/howto/howto_css_shapes.asp</div>
+                    <div class="reflayer5" id="bg5r7">animation-composition - CSS | MDN. (2025, November 7). https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-composition</div>
+                    <div class="reflayer5" id="bg5r8">Berger, M. (2016, July 15). Disable then Re-Enable onClick(). Stack Overflow. https://stackoverflow.com/questions/38400301/disable-then-re-enable-onclick</div>
+                    <div class="reflayer5" id="bg5r9">W3Schools.com. (n.d.-al). https://www.w3schools.com/css/css_overflow.asp</div>
+                    <div class="reflayer5" id="bg5r10">Sandu, B. (2025, March 10). The Best-Looking CSS animated background Examples. Slider Revolution. https://www.sliderrevolution.com/resources/css-animated-background/</div>
+                </div>
+                <div class="reflayer" id="bg6">
+                    <div class="reflayer6" id="bg6r1">W3Schools.com. (n.d.-am). https://www.w3schools.com/js/js_htmldom_animate.asp</div>
+                    <div class="reflayer6" id="bg6r2">Google. (February 21, 2026). after a div is done animating, how to animate it again after onclick [Generative AI Chat from Search]. Google Search. https://share.google/aimode/ogVMgIeLymaaTo4Uf </div>
+                    <div class="reflayer6" id="bg6r3">Cyclone. (2015, January 17). Vertically align text within a div. Stack Overflow. https://stackoverflow.com/questions/9249359/vertically-align-text-within-a-div </div>
+                    <div class="reflayer6" id="bg6r4">Zelid. (n.d.). How to use particular CSS styles based on screen size / device. Stack Overflow. https://stackoverflow.com/questions/21075983/how-to-use-particular-css-styles-based-on-screen-size-device</div>
+                    <div class="reflayer6" id="bg6r5">Arakelyan, A. (2024, August 1). PX to VW | CSS Unit Converter. CSS Unit Converter. https://cssunitconverter.vercel.app/px-to-vw </div>
+                    <div class="reflayer6" id="bg6r6">W3Schools.com. (n.d.-an). https://www.w3schools.com/cssref/func_cubic-bezier.php </div>
+                    <div class="reflayer6" id="bg6r7">How to create advanced animations with CSS — Smashing magazine. (2022, October 29). Smashing Magazine. https://www.smashingmagazine.com/2022/10/advanced-animations-css/ </div>
+                    <div class="reflayer6" id="bg6r8">W3Schools.com. (n.d.-ao). https://www.w3schools.com/css/css3_2dtransforms_skew.asp </div>
+                    <div class="reflayer6" id="bg6r9">Microsoft. (n.d.). Visual Studio code keyboard shortcuts. https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf</div>
+                    <div class="reflayer6" id="bg6r10">W3Schools.com. (n.d.-ap). https://www.w3schools.com/css/css_border_width.asp </div>
+                </div>
+                <div class="reflayer" id="bg7">
+                    <div class="reflayer7" id="bg7r1">Winforms. (2010, July 15). Making a div that covers the entire page. Stack Overflow. https://stackoverflow.com/questions/3250790/making-a-div-that-covers-the-entire-page </div>
+                    <div class="reflayer7" id="bg7r2">Ubuy Philippines. (n.d.). ARISE Soft Frisbee Set, Fabric Flying Disc Toy for Philippines | Ubuy. https://www.ubuy.com.ph/product/3W77WDBDG-arise-soft-frisbee-set-fabric-flying-disc-toy-for-kids-and-dogs-light-weight-safe-foldable-easy-carry-for-home-playground-indoor-outdoor?srsltid=AfmBOopPh02TA7d82s-CYCdbwxZiUhvjY545Eh9WYMZMoNhRq7xVumDu&ref=hm-google-redirect</div>
+                    <div class="reflayer7" id="bg7r3">Amazon.in. (n.d.). https://www.amazon.in/Thin-Air-Brands-Anywhere-Disc/dp/B098KJX3FX </div>
+                    <div class="reflayer7" id="bg7r4">Scott. (2025, October 27). Disc-golf-Discs-vs-Frisbees-Whats-the-difference. Disc Golf Report. https://discgolfreport.com/disc-golf-discs-vs-frisbees-whats-the-difference/</div>
+                    <div class="reflayer7" id="bg7r5">Ultimate Disc Original 175g - white. (n.d.). DECATHLON. https://www.decathlon.ph/p/ultimate-disc-original-175g-white-tribord-8590276.html </div>
+                    <div class="reflayer7" id="bg7r6">Hyperflite Z-Disc Competition Standard (9.25"). (n.d.). The Wright Life. https://www.wrightlife.com/disc-dog/discs/hyperflite-z-disc-competition-standard-9-25/?srsltid=AfmBOopHe4o67bgo4J10JmO3OuvIuj5OT_tuWXRbZRdRNrc3y1wB7wgT</div>
+                    <div class="reflayer7" id="bg7r7">USNT Disc. (n.d.). Spin Ultimate. https://www.spinultimate.com/products/usnt-disc?srsltid=AfmBOorZWjD3u4gORjBB5GU_6maa0ac8sTN22b7a1YeuqAdKWZswBlPO </div>
+                    <div class="reflayer7" id="bg7r8">Agility 100 FG Adult Dry Pitches Football Boots - Black. (n.d.). DECATHLON. https://www.decathlon.ph/p/agility-100-fg-adult-dry-pitches-football-boots-black-kipsta-8397881.html </div>
+                    <div class="reflayer7" id="bg7r9">Matveev, A. (n.d.). Vintage leather hanged brown football shoes soccer isolated on white. Dreamstime. https://www.dreamstime.com/vintage-leather-hanged-brown-football-shoes-soccer-isolated-white-image196354587</div>
+                    <div class="reflayer7" id="bg7r10">NIVIA Unisex Airstrike Football shoes. (n.d.). Myntra. https://www.myntra.com/sports-shoes/nivia/nivia-unisex-airstrike-football-shoes/20028656/buy</div>
+                </div>
+                <div class="reflayer" id="bg8">
+                    <div class="reflayer8" id="bg8r1">Future.1 FG Football Boot Yellow Green | FootBallbootNG. (2025, April 1). FootBallbootNG. https://footballboot.com.ng/product/future-1-fg-football-boot-yellow-green/?srsltid=AfmBOoph-dLpVyBNVC2NmLK5y3Ms8bXoBU0q0UdpD4nbxhS1QFI8RNBU</div>
+                    <div class="reflayer8" id="bg8r2">Football Boots adidas F50 Pro FG White-Solar Red-Lucid Blue. (n.d.). Football Boots Adidas F50 Pro FG White-Solar Red-Lucid Blue. https://www.futbolemotion.com/en/buy/football-boot/adidas/f50-pro-fg-ftwr-whitesolar-redlucid-blue</div>
+                    <div class="reflayer8" id="bg8r3">Nike Phantom 6 Elite Low FG. (n.d.). PRO DIRECT. https://www.prodirectsport.com/soccer/p/nike-phantom-6-elite-low-firm-ground-racer-blue-white-dark-obsidian-adult-boots-1034706/</div>
+                    <div class="reflayer8" id="bg8r4">BOOTCAMP Football Shop. (n.d.). adidas Spain 26 Tiro Training Jersey. https://bootcamp.com.ph/products/adidas-spain-26-tiro-training-jersey</div>
+                    <div class="reflayer8" id="bg8r5">Instagram. (n.d.). https://www.instagram.com/p/CwjT9wiPTVf/</div>
+                    <div class="reflayer8" id="bg8r6">USNT short sleeve jersey (Red). (n.d.). Spin Ultimate. https://www.spinultimate.com/collections/us-national-team/products/usnt-short-sleeve-jersey-red</div>
+                    <div class="reflayer8" id="bg8r7">W3Schools.com. (n.d.-ae). https://www.w3schools.com/cssref/css_units.php</div>
+                    <div class="reflayer8" id="bg8r8">Frontend FYI – by Jeroen. (2024, July 12). The modern way to push that footer down — JUST 3 lines of CSS [Video]. YouTube. https://www.youtube.com/watch?v=AVPR_WuDw8o</div>
+                    <div class="reflayer8" id="bg8r9">Team1504. (2011, September). Keeping element at bottom of page always. Sitepoint Community. Retrieved February 21, 2026, from https://www.sitepoint.com/community/t/keeping-element-at-bottom-of-page-always/91566</div>
+                    <div class="reflayer8" id="bg8r10">Molinero, L. (n.d.). Texture of grass. green background. FreePik. https://www.freepik.com/free-photo/texture-grass-green-background_1198477.htm#fromView=keyword&page=3&position=4&uuid=be8178c0-3d6c-472a-af10-9c84646ce5a1&query=Grass+textures+infinite</div>
+                </div>
+                <div class="reflayer" id="bg9">
+                    <div class="reflayer9" id="bg9r1">Gru. (2022, September 14). How to embed a video background on a website (fast, loop, autoplay). Stack Overflow. https://stackoverflow.com/questions/73679219/how-to-embed-a-video-background-on-a-website-fast-loop-autoplay</div>
+                    <div class="reflayer9" id="bg9r2">W3Schools.com. (n.d.-af). https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp</div>
+                    <div class="reflayer9" id="bg9r3">W3Schools.com. (n.d.-ag). https://www.w3schools.com/jsref/met_document_getelementbyid.asp</div>
+                    <div class="reflayer9" id="bg9r4">Coding2GO. (2025, January 4). 5 CSS Tips & Tricks for better Responsive Web Design [Video]. YouTube. https://www.youtube.com/watch?v=2IV08sP9m3U</div>
+                    <div class="reflayer9" id="bg9r5">Daweb Schools • Technology Tutorials & Courses. (2024, February 22). Make Animated Backgrounds Easily with CSS Only [Video]. YouTube. https://www.youtube.com/watch?v=g-bQe-gZwJ4</div>
+                    <div class="reflayer9" id="bg9r6">CSSnippets. (2025, December 22). New CSS corner-shape + Animation Explained in 7 Minutes [Video]. YouTube. https://www.youtube.com/watch?v=FPB2KVe_jP0</div>
+                    <div class="reflayer9" id="bg9r7">W3Schools.com. (n.d.-aq). https://www.w3schools.com/cssref/func_scale.php</div>
+                    <div class="reflayer9" id="bg9r8">developedbyed. (2022, October 5). Top 10 CSS One liners that will blow your mind [Video]. YouTube. https://www.youtube.com/watch?v=Xc6G3oV24yE</div>
+                    <div class="reflayer9" id="bg9r9">Brunk, A. (2025, February 7). 40 CSS background effects to enhance your website. prismic. https://prismic.io/blog/css-background-effects </div>
+                    <div class="reflayer9" id="bg9r10">Google. (February 21, 2026). how to add an animation to a div in javascript after it already has an animation property in css [Generative AI Chat from Search]. Google Search. https://share.google/aimode/Klopx8KG3PL5uzAjC</div>
+                </div>
+                <div class="reflayer" id="bg10">
+                    <div class="reflayer10" id="bg10r1">W3Schools.com. (n.d.-ar). https://www.w3schools.com/html/html_forms_attributes.asp</div>
+                    <div class="reflayer10" id="bg10r2">W3Schools.com. (n.d.-as). https://www.w3schools.com/html/html_form_elements.asp</div>
+                    <div class="reflayer10" id="bg10r3">W3Schools.com. (n.d.-au). https://www.w3schools.com/html/html_form_input_types.asp</div>
+                    <div class="reflayer10" id="bg10r4">W3Schools.com. (n.d.-av). https://www.w3schools.com/html/html_form_attributes.asp</div>
+                    <div class="reflayer10" id="bg10r5">W3Schools.com. (n.d.-aw). https://www.w3schools.com/html/html_form_attributes_form.asp</div>
+                    <div class="reflayer10" id="bg10r6">W3Schools.com. (n.d.-ax). https://www.w3schools.com/jsref/prop_win_localstorage.asp</div>
+                    <div class="reflayer10" id="bg10r7">W3Schools.com. (n.d.-az). https://www.w3schools.com/js/js_htmldom.asp</div>
+                    <div class="reflayer10" id="bg10r8">W3Schools.com. (n.d.-ba). https://www.w3schools.com/js/js_htmldom_methods.asp</div>
+                    <div class="reflayer10" id="bg10r9">earning. (2011, May 13). How to delay execution in between the following in my javascript. Stack Overflow. https://stackoverflow.com/questions/5990725/how-to-delay-execution-in-between-the-following-in-my-javascript</div>
+                    <div class="reflayer10" id="bg10r10">ChatGPT - Add background image. (n.d.). ChatGPT.  https://chatgpt.com/share/6999da31-e5bc-8005-8e04-26a47e7ff5ad </div>
+                </div>
+                <div id="extra">
+                    <h2>ADDITIONAL REFERENCES + DISCLAIMER</h2>
+                    McAdoo, T., Denneny, S., Lee, C. (September 9, 2025). Citing generative AI in APA Style: Part 1—Reference formats. APAStyle. https://apastyle.apa.org/blog/cite-generative-ai-references
+
+                </br> Please note that chatgpt was used to help decode and figure out parts of the code. Prompts such as "what does cubic-bezier() or transition do", "Can you help debug my code?", "Can you check for errors in my code", "What does this mean", "What does  this do" 
+                "What html/js/css features can be used to build __" and "what is wrong with this code?" was used.</br>
+                Unfortunately, we are unable to cite these chats due to their deletion. We tried our best citing as much as we could, so apologies ma'am if we forget anything. Thank you for reading.
+                P.S. Here is a link to a google document with all of our references: https://docs.google.com/document/d/1W9BEcC8jF60IeO958krT5Yi4FNd1Enb7ANcGQL3FMH0/edit?usp=sharing
+                </div>
+                <script>
+                    setTimeout(function() {document.getElementById("overlay").style.zIndex="-1"}, 5000);
+                </script>
             </div>
             <footer class="site-footer">
                     <div class="footer">

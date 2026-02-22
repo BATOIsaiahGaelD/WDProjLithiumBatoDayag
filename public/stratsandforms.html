@@ -310,7 +310,7 @@
                 position:absolute;
                 font-size:1.8vw;
                 text-align:center;
-                top:6vw;
+                top:5vw;
                 left:32.8vw;
                 width:35vw;
                 opacity:0%;
@@ -356,6 +356,30 @@
                 left:1.5vw;
                 z-index:-1;
             }
+            #linke1, #linke2, #linke3 {
+                text-decoration:none;
+                position:absolute;
+                font-size:1.8vw;
+                color:white;
+                z-index:5;
+                width:38vw;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                text-align:center;
+                opacity:0%;
+                z-index:-1;
+            }
+            #linke1 {
+                top:41vw;
+                left:31.7vw;
+            }
+            #linke2 {
+                top:40.7vw;
+                left:31.7vw;
+            }
+            #linke3 {
+                top:41vw;
+                left:31.7vw;
+            }
         </style>
     </head>
     <body>
@@ -398,7 +422,7 @@
                 If no pass is available, a dump resets the stall and the stack reforms, repeating until yards are gained or a score is made. 
                 To learn more about the vertical stack go to this link!
             </p> 
-            <p></p>https://ultimatefrisbeehq.com/pages/vert-stack
+            <a id="linke1" href="https://ultimatefrisbeehq.com/pages/vert-stack">https://ultimatefrisbeehq.com/pages/vert-stack</a>
         </br></br>
             <h3 id="hortitle">Horizontal stack:</h3>
             <p id="hortext">
@@ -409,7 +433,7 @@
                 Teams often add variations to confuse defenders, such as middle cutters acting as poppers or switching roles mid-play. 
                 To learn more about the horizontal stack go to this link!
             </p>
-            https://ultimatefrisbeehq.com/pages/ho-stack?_pos=1&_psq=ho&_ss=e&_v=1.0 
+            <a id="linke2" href="https://ultimatefrisbeehq.com/pages/ho-stack?_pos=1&_psq=ho&_ss=e&_v=1.0">https://ultimatefrisbeehq.com/pages/ho-stack?_pos=1&_psq=ho&_ss=e&_v=1.0</a>
             <h2 id="atthead">DEFENSE</h2>
             <h3 id="mtmtitle">Man-to-man defense:</h3>
             <p id="mtmtext">
@@ -426,7 +450,7 @@
                 Teams must also watch for “poppers,” cutters who crash the cup late in the stall count to reset the offense. 
                 When a turnover happens and the cup cannot quickly reset, switching to man defense is often the safest backup option. To learn more about the cup defense, go to this link! 
             </p>
-            https://ultimatefrisbeehq.com/pages/cup-defense
+            <a id="linke3" href="https://ultimatefrisbeehq.com/pages/cup-defense">https://ultimatefrisbeehq.com/pages/cup-defense</a>
         <div class="OFFENSE">
             OFFENSE
         </div>
@@ -452,17 +476,21 @@
             textopen();
             document.getElementById("defhead").style.animation="fadein 0.8s ease 0.5s 1 normal forwards";
             document.getElementById("defhead").style.zIndex="4";
+            document.getElementById("linke1").style.zIndex="4";
             document.getElementById("verttitle").style.animation="fadein 0.8s ease 0.8s 1 normal forwards";
             document.getElementById("verttext").style.animation="fadein 0.8s ease 1.1s 1 normal forwards";
+            document.getElementById("linke1").style.animation="fadein 0.8s ease 1.6s 1 normal forwards";
             document.getElementById("close1").style.zIndex="4";
             document.getElementById("close1").style.animation="fadein 1s ease 0s normal forwards";
         }
         function hor() {
             textopen();
             document.getElementById("defhead").style.zIndex="4";
+            document.getElementById("linke2").style.zIndex="4";
             document.getElementById("defhead").style.animation="fadein 0.8s ease 0.5s 1 normal forwards";
             document.getElementById("hortitle").style.animation="fadein 0.8s ease 0.8s 1 normal forwards";
             document.getElementById("hortext").style.animation="fadein 0.8s ease 1.1s 1 normal forwards";
+            document.getElementById("linke2").style.animation="fadein 0.8s ease 1.1s 1 normal forwards";
             document.getElementById("close2").style.zIndex="4";
             document.getElementById("close2").style.animation="fadein 1s ease 0s normal forwards";
         }
@@ -477,10 +505,12 @@
         }
         function cup() {
             document.getElementById("atthead").style.zIndex="4";
+            document.getElementById("linke3").style.zIndex="4";
             textopen();
             document.getElementById("atthead").style.animation="fadein 0.8s ease 0.5s 1 normal forwards";
             document.getElementById("cuptitle").style.animation="fadein 0.8s ease 0.8s 1 normal forwards";
             document.getElementById("cuptext").style.animation="fadein 0.8s ease 1.1s 1 normal forwards";
+            document.getElementById("linke3").style.animation="fadein 0.8s ease 1.1s 1 normal forwards";
             document.getElementById("close4").style.zIndex="4";
             document.getElementById("close4").style.animation="fadein 1s ease 0s normal forwards";
         }
@@ -495,9 +525,11 @@
             document.getElementById("defhead").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("verttitle").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("verttext").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
+            document.getElementById("linke1").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             setTimeout(function() {
                 document.getElementById("close1").style.zIndex="-1";
                 document.getElementById("defhead").style.zIndex="-1";
+                document.getElementById("linke1").style.zIndex="-1";
             }, 1100);
             document.getElementById("close1").style.animation="fadeout 1s ease 0s normal forwards";
         }
@@ -506,9 +538,11 @@
             document.getElementById("defhead").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("hortitle").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("hortext").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
+            document.getElementById("linke2").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             setTimeout(function() {
                 document.getElementById("defhead").style.zIndex="-1";
                 document.getElementById("close2").style.zIndex="-1";
+                document.getElementById("linke2").style.zIndex="-1";
             }, 1100);
             document.getElementById("close2").style.animation="fadeout 1s ease 0s normal forwards";
         }
@@ -528,9 +562,11 @@
             document.getElementById("atthead").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("cuptitle").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             document.getElementById("cuptext").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
+            document.getElementById("linke3").style.animation="fadeout 0.8s ease 0s 1 normal forwards";
             setTimeout(function() {
                 document.getElementById("atthead").style.zIndex="-1";
                 document.getElementById("close4").style.zIndex="-1";
+                document.getElementById("linke3").style.zIndex="-1";
             }, 1100);
             document.getElementById("close4").style.animation="fadeout 1s ease 0s normal forwards";
         }
