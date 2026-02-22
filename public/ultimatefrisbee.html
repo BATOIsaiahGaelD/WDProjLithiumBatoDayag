@@ -23,7 +23,14 @@
                     top:0vw;
                     height:50vw;
                     overflow-y:hidden;
-                    background-color:rgb(255, 255, 110);
+                    background-image:linear-gradient(130deg, black, yellow, rgb(255, 255, 176), rgb(157, 157, 0));
+                    background-size:400% 400%;
+                    animation: gradientbg 20s ease infinite alternate;
+                }
+                @keyframes gradientbg {
+                    0% {background-position: 0% 50%;}
+                    50% {background-position: 100% 50%;}
+                    100% {background-position:0% 50%}
                 }
                 img#uldisc {
                     height: 24vw;
@@ -341,7 +348,7 @@
                     animation:cube 12s ease 15s infinite normal forwards;
                 }
             </style>
-            <link rel="stylesheet" href="./CSS Files/stratsandforms.css">
+            <link rel="stylesheet" href="./CSS Files/ultimatefrisbee.css">
         </head>
         <body>
             <header class="site-header">
@@ -360,7 +367,7 @@
                     </nav>
                 </div>
             </header>
-            <a href="/public/signups.html"><div id="button">Sign Up</div></a>
+            <a href="/public/signups.html"><div class="sign" id="button">Sign Up</div></a>
             <div class="body">
                 <div class="bg" id="bog1"></div>
                 <div class="bg" id="bog2"></div>
@@ -403,6 +410,15 @@
                     Then the defensive team becomes the offensive team and can try to score in the opposite end zone.
                 </p>
             <script>
+                //these lines of code are to determine if you are signed in or not. If you are, 
+                // it removes the signup button.
+                const user = JSON.parse(localStorage.getItem('currentUser'));
+                if (user) {
+                    document.getElementById("button").classList.remove("sign")
+                    document.getElementById("button").style.width="0%";
+                    document.getElementById("button").style.height="0%";
+                    document.getElementById("button").innerHTML="";
+                }
                 /* once the disc is clicked, it activates this function
                 that kickstarts the animations. */
                 setTimeout(function() {document.getElementById("above").style.zIndex="-1";}, 7500)

@@ -611,7 +611,8 @@
                 Frisbee4Fun: Your Guide to Becoming an All-Star </br>
                 (Click the Disc to Begin)
             </div>
-
+            <a href="/public/profile.html"><div id="buttonp">Profile</div></a>
+            <a href="/public/signups.html"><div class="sign" id="button">Sign Up</div></a>
             <div id="overlay"></div>
             <p class="introtext" id="welcome">WELCOME</p>
             <p class="introtext" id="to">TO</p>
@@ -732,6 +733,16 @@
                 </div>
             </div>
             <script>
+                //these lines of code are to determine if you are signed in or not. If you are, 
+                // it removes the signup button.
+                const user = JSON.parse(localStorage.getItem('currentUser'));
+                if (user) {
+                    document.getElementById("button").classList.remove("sign")
+                    document.getElementById("button").style.width="0%";
+                    document.getElementById("button").style.height="0%";
+                    document.getElementById("button").innerHTML="";
+                }
+                // delays the change of z-index of the overlay. this is to ensure smooth transitions
                 setTimeout(function() {document.getElementById("overlay").style.zIndex="-1"}, 15600)
                 // this is for the starting animation where the discs fly out and the streaks fall down
                 function startinganim(){

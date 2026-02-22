@@ -23,11 +23,12 @@
                 }
                 .reflayer {
                     position:absolute;
-                    background-color:red;
+                    background-color:rgb(0, 0, 0);
                     height:15vw;
                     width:521vw;
                     font-family: 'Times New Roman', Times, serif;
                     font-size:1.2vw;
+                    box-shadow:0vw 0vw 1vw black;
                 }
                 @keyframes scrollleft {
                     0% {left:0vw}
@@ -50,7 +51,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -99,7 +103,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -148,7 +155,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -200,7 +210,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -251,7 +264,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -300,7 +316,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -326,6 +345,7 @@
                 }
                 #bg6r7 {
                     left:292vw;
+                    font-size:0.9vw;
                 }
                 #bg6r8 {
                     left:323vw;
@@ -352,7 +372,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -404,7 +427,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -455,7 +481,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -506,7 +535,10 @@
                     justify-content: center;
                     align-items: center;
                     height:14vw;
-                    background-color:white;
+                    background-image: linear-gradient(to bottom, rgb(127, 127, 127), black);
+                    color:white;
+                    box-shadow:0vw 0vw 0.5vw white;
+                    border-radius:1vw;
                     z-index:1;
                     text-align:center;
                 }
@@ -560,11 +592,11 @@
                 }
                 @keyframes danim1 {
                     0% {top:-30vw;}
-                    100% {top:10vw;}
+                    100% {top:2vw;}
                 }
                 @keyframes danim2 {
                     0% {top:10vw;}
-                    100% {top:170vw}
+                    100% {top:163vw}
                 }
                 @keyframes fadeout {
                     0% {opacity:100%}
@@ -654,13 +686,12 @@
                     </nav>
                 </div>
             </header>
-            <a href="/public/signups.html"><div id="button">Sign Up</div></a>
             <p id="reftitle">REFERENCES</p>
-            <img src="../assets/frisbeereferences.png" id="discref">
             <p id="disclaimer">DISCLAIMER AT THE BOTTOM OF THE PAGE. PLEASE READ</p>
             <div id=overlay></div>
-            <a href="./signups.html"><div id="button">Sign Up</div></a>
+            <a href="./signups.html"><div class="sign" id="button">Sign Up</div></a>
             <div id="body">
+                <img src="../assets/frisbeereferences.png" id="discref">
                 <div class="reflayer" id="bg1">
                     <div class="reflayer1" id="rlbg1">W3Schools.com. (n.d.-p). https://www.w3schools.com/css/css_align.asp</div>
                     <div class="reflayer1" id="rlbg2">W3Schools.com. (n.d.-o). https://www.w3schools.com/css/css3_animations.asp</div>
@@ -795,6 +826,17 @@
                 P.S. Here is a link to a google document with all of our references: https://docs.google.com/document/d/1W9BEcC8jF60IeO958krT5Yi4FNd1Enb7ANcGQL3FMH0/edit?usp=sharing
                 </div>
                 <script>
+                    //these lines of code are to determine if you are signed in or not. If you are, 
+                    // it removes the signup button.
+                    const user = JSON.parse(localStorage.getItem('currentUser'));
+                    if (user) {
+                        document.getElementById("button").classList.remove("sign")
+                        document.getElementById("button").style.width="0%";
+                        document.getElementById("button").style.height="0%";
+                        document.getElementById("button").innerHTML="";
+                    }
+                    // delays the movement of the overlay to a negative z-index.
+                    // we make the z-index negative so that the overlay does not block the links
                     setTimeout(function() {document.getElementById("overlay").style.zIndex="-1"}, 5000);
                 </script>
             </div>
