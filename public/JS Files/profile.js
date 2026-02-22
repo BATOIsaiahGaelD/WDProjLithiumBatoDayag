@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveBtn = document.getElementById('saveBtn');
     const viewModes = document.querySelectorAll('.view-mode');
     const editModes = document.querySelectorAll('.edit-mode');
-
+    
     if (editBtn && saveBtn) {
         editBtn.onclick = () => {
             editBtn.style.display = 'none';
