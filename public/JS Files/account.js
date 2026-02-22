@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    
     const signupForm = document.getElementById('signupForm');
     
     if (signupForm) {
@@ -61,12 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('currentUser', JSON.stringify(validUser));
                 
                 alert(`Welcome back, ${validUser.username}! Your jersey number is ${validUser.jersey}.`);
-                window.location.href = './index.html'; 
+                window.location.href = './profile.html'; 
             } else {
                 alert('Invalid credentials. Please try again.');
             }
         });
     }
 
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            
+            localStorage.removeItem('currentUser');
+            
+            alert('You have logged out.');
+            
+            window.location.href = './index.html'; 
+        })
+    };
     
 });
