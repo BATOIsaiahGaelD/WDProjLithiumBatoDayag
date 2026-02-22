@@ -27,6 +27,7 @@
                     background-size:400% 400%;
                     animation: gradientbg 20s ease infinite alternate;
                 }
+                /* animation for the background moving gradient */
                 @keyframes gradientbg {
                     0% {background-position: 0% 50%;}
                     50% {background-position: 100% 50%;}
@@ -42,6 +43,7 @@
                     scale:2;
                     animation:move1 3s cubic-bezier(0,0,0,1) 3s 1 normal forwards, move2 2s cubic-bezier(0,0,0,1) 7s 1 normal forwards, spin 3s cubic-bezier(0,0,0,1) 3s 1 normal forwards;
                 }
+                /* animations for the starting animation when you open the page */
                 @keyframes move1 {
                     0% {top:-37vw;}
                     100% {top:10vw}
@@ -104,7 +106,7 @@
                     z-index:1;
                 }
 
-                /* new things */
+                /* css for animations and functional parts */
                 div#above {
                     width:100%;
                     height:100%;
@@ -281,6 +283,7 @@
                     opacity:0%;
                 }
                 /* taken from this website: https://www.sliderrevolution.com/resources/css-animated-background/ */
+                /* this is css for the backgrounds */
                 @keyframes cube {
                 from {
                     transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -440,6 +443,7 @@
                     document.getElementById("maintext").style.animation="fadein 1s ease 0s 1 normal forwards";
                     document.getElementById("close2").style.animation="fadein 1s ease 0s 1 normal forwards";
                 }
+                // function when the x button is clicked
                 function aclickback() {
                     document.getElementById("maintext").style.animation="fadeout 1s ease 0s 1 normal forwards";
                     document.getElementById("close1").style.animation="fadeout 1s ease 0s 1 normal forwards";

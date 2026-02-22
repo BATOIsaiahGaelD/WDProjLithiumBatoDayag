@@ -41,7 +41,11 @@
                     width:90%;
                     height:0%;
                     border-radius:2vw;
-                    background-color:rgba(76, 181, 255, 0.908);
+                    background-image:linear-gradient(to bottom, rgb(190, 190, 0), black);
+                    border-style:solid;
+                    border-width:0vw;
+                    border-color:white;
+                    box-shadow: 0vw 0vw 1vw black;
                     animation-duration:2s;
                     animation-fill-mode:forwards;
                     z-index:0;
@@ -84,7 +88,12 @@
                     width:50vw;
                     height:8vw;
                     transform:skewX(20deg);
-                    background-color:rgb(255, 255, 255);
+                    background-image:linear-gradient(to right, rgb(175, 175, 0), black);
+                    border-style:solid;
+                    border-width:0.5vw;
+                    border-color:white;
+                    color:white;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     align-items:center;
                     justify-content:center;
                     display:flex;
@@ -101,7 +110,12 @@
                     width:50vw;
                     height:8vw;
                     transform:skewX(-20deg);
-                    background-color:rgb(255, 255, 255);
+                    background-image:linear-gradient(to right, rgb(175, 175, 0), black);
+                    border-style:solid;
+                    border-width:0.5vw;
+                    border-color:white;
+                    color:white;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     align-items:center;
                     justify-content:center;
                     display:flex;
@@ -121,7 +135,12 @@
                     width:50vw;
                     height:8vw;
                     transform:skewX(20deg);
-                    background-color:rgb(255, 255, 255);
+                    background-image:linear-gradient(to right, rgb(175, 175, 0), black);
+                    border-style:solid;
+                    border-width:0.5vw;
+                    border-color:white;
+                    color:white;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     align-items:center;
                     justify-content:center;
                     display:flex;
@@ -141,7 +160,12 @@
                     width:50vw;
                     height:8vw;
                     transform:skewX(-20deg);
-                    background-color:rgb(255, 255, 255);
+                    background-image:linear-gradient(to right, rgb(175, 175, 0), black);
+                    border-style:solid;
+                    border-width:0.5vw;
+                    border-color:white;
+                    color:white;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     align-items:center;
                     justify-content:center;
                     display:flex;
@@ -207,6 +231,7 @@
                     top:17vw;
                     text-align:center;
                     opacity:0%;
+                    color:white;
                 }
                 #ttext2 {
                     position:absolute;
@@ -216,6 +241,7 @@
                     top:19.5vw;
                     text-align:center;
                     opacity:0%;
+                    color:white;
                 }
                 #ttext3 {
                     position:absolute;
@@ -225,6 +251,7 @@
                     top:22vw;
                     text-align:center;
                     opacity:0%;
+                    color:white;
                 }
                 #ttext4 {
                     position:absolute;
@@ -234,7 +261,9 @@
                     top:17.8vw;
                     text-align:center;
                     opacity:0%;
+                    color:white;
                 }
+                /* css for the back to tips buttons */
                 #exitbutton, #exitbutton2, #exitbutton3, #exitbutton4 {
                     position:absolute;
                     width:30%;
@@ -391,12 +420,12 @@
 
                 /* for the box scaling and the text fading in*/
                 @keyframes scalebox {
-                    0% {height:0%}
-                    100% {height:53%}
+                    0% {height:0%; border-width:0vw;}
+                    100% {height:53%; border-width:0.8vw;}
                 }
                 @keyframes unscalebox {
-                    0% {height:53%}
-                    100% {height:0%}
+                    0% {height:53%; border-width:0.8vw;}
+                    100% {height:0%; border-width:0vw;}
                 }
                 .boxscale {
                     animation: scalebox 0.7s ease 1s 1 normal forwards;
