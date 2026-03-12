@@ -1,15 +1,15 @@
 function getCurrentUser() {
     return JSON.parse(localStorage.getItem('currentUser'));
 }
-//these lines of code are to determine if you are signed in or not. If you are, 
-                // it removes the signup button.
-                const user = JSON.parse(localStorage.getItem('currentUser'));
-                if (user) {
-                    document.getElementById("button").classList.remove("sign")
-                    document.getElementById("button").style.width="0%";
-                    document.getElementById("button").style.height="0%";
-                    document.getElementById("button").innerHTML="";
-                }
+// these lines of code are to determine if you are signed in or not. If you are, it removes the signup button.
+const user = JSON.parse(localStorage.getItem('currentUser'));
+if (user) {
+    document.getElementById("button").classList.remove("sign")
+    document.getElementById("button").style.width="0%";
+    document.getElementById("button").style.height="0%";
+    document.getElementById("button").innerHTML="";
+}
+
 function updateUserData(updatedUser) {
     localStorage.setItem('currentUser', JSON.stringify(updatedUser));
     let users = JSON.parse(localStorage.getItem('frisbeeUsers')) || [];
@@ -18,8 +18,8 @@ function updateUserData(updatedUser) {
         users[index] = updatedUser;
         localStorage.setItem('frisbeeUsers', JSON.stringify(users));
     }
-}
-(function() {
+}(  
+    function() {
     const user = localStorage.getItem('currentUser');
     if (!user) {
         alert("This area is for members only! Please log in to play.");
@@ -28,7 +28,6 @@ function updateUserData(updatedUser) {
 })();
 
 // Reaction time test
-
 const frisbee = document.getElementById("reaction-circle");
 const startBtn = document.getElementById("reaction-start");
 const reactionResult = document.getElementById("reaction-result");
@@ -158,7 +157,7 @@ spinBtn.addEventListener("click", () => {
     stopIdleScroll();
 
     const items = Array.from(document.querySelectorAll(".loot-item"));
-    const itemWidth = items[0].offsetWidth + 24;
+    const itemWidth = items[0].offsetWidth + 21.67; 
 
     const chosenRarity = rollRarity();
 
