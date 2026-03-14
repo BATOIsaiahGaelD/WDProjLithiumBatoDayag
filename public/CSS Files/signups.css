@@ -20,10 +20,10 @@ body, html {
 }
 
 .signup-box {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #ffea00;
+    padding: 4vw;
+    border-radius: 1vw;
+    box-shadow: 0 1vw 2.5vw rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -33,7 +33,7 @@ body, html {
 }
 
 .signup-box p {
-    color: #777;
+    color: #8e8e8e;
     margin-bottom: 30px;
     font-size: 14px;
 }
@@ -54,9 +54,10 @@ body, html {
 .input-field input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 0.2vw solid #000000;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
 }
 
 .signup-btn {
