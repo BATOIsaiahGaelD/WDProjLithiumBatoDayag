@@ -132,17 +132,7 @@ W3Schools. (n.d.). HTML </select> Tag. Retrieved from w3schools.com: https://www
 </br>
 <h1>FINAL MODIFICATION PROPOSAL</h1>
 <h2> APPLICATION OF CRUD </h2>
-Creating in localStorage </br>
-- For this part of CRUD and our website, we plan to have a sign up page to allow for the creation of accounts. It will require you to enter a password, username, jersey number, and email. This will be created as an object, and pushed into an array. </br>
-<h3>WIREFRAMES FOR CREATING </h3>
 
-<br/>
-Reading in localStorage <br/>
-- For this part of CRUD and our website, we will be reading the info and displaying it onto the profile page.
-</br>
-<h3> WIREFRAMES FOR READING </h3>
-
-<br/>
 Updating of LocalStorage</br>
 - For this part of our project, we plan to have an "update profile" part of our website, such as the one we mentioned in earlier parts of this project proposal. This time however, we will update specific parts of the profile all at once, which include the new "description" of the profile, and all the different specific details in the profile. </br>
 - Another part of the profile that we are going to be updating is the "statistics" part of the profile, which displays your best minigame stats, which include the best reaction time, best quiz score, and best slot game pull. Every time a new best is reached in these games, it will automatically update the profile.
