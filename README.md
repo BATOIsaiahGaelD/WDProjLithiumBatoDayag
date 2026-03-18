@@ -2,19 +2,24 @@
 <h1>FINAL MODIFICATION PROPOSAL</h1>
 <h2> APPLICATION OF CRUD </h2>
 
-Updating of LocalStorage</br>
+<h3>Updating of LocalStorage</h3></br>
 - For this part of our project, we plan to have an "update profile" part of our website, such as the one we mentioned in earlier parts of this project proposal. This time however, we will update specific parts of the profile all at once, which include the new "description" of the profile, and all the different specific details in the profile. </br>
 - Another part of the profile that we are going to be updating is the "statistics" part of the profile, which displays your best minigame stats, which include the best reaction time, best quiz score, and best slot game pull. Every time a new best is reached in these games, it will automatically update the profile.
 </br>
 - Lastly, we plan to also have an option to update the password of the profile, which requires you to either input your current password so you can change it, or do a short minigame which will allow you to change your password after you accomplish it. Once submitted, it will update your password to be the new one.
-
+</br>
+</br>
 <h3> WIREFRAMES FOR UPDATING </h3>
+
+![alt](/assets/15.png)
+In the top part of the wireframe, you can see the parts of the profile you can edit,
+which includes the player stats and the profile picture. In the bottom part of this wireframe, you can now see the prompt that pops up when you want to input a new profile picture. When you click save changes, it will update everything in the localStorage.
+
+![alt](/assets/14.png)
+In this page, you will be allowed to change your password. You must also input your username first before you can do this. You must also input the same password as the one you put in the new password in order to update it. Once the update password is clicked, it will update the password of the account.
 </br>
-[alt](/assets/15.png)
 </br>
-</br>
-</br>
-Deleting for LocalStorage </br>
+<h3>Deleting for LocalStorage</h3> </br>
 - For this portion of the project, it will pair up with the updating portion of our website. All the updated info on the profile as well as updating the passwords will also delete any of the previous data in localStorage. </br>
 - We will also have a new delete profile button at the bottom of the profile page, which will delete all the data regarding the profile. There will be a warning to ensure confirmation of deleting the profile.
 
@@ -22,7 +27,8 @@ Deleting for LocalStorage </br>
 
 <h3> WIREFRAMES FOR DELETING </h3>
 
-
+![alt](/assets/15.png)
+In this wireframe, you can see the normal profile page with the update password and log out buttons. There is also now a new button at the bottom, a delete account button. This will allow the user to delete their account. However, before this, they will be prompted to confirm the deletion, and they have the option to not delete it or to delete it.
 <h3> Title: Frisbee4Life </h3>
 <h4>Your Guide to Becoming an All-Star</h4>
 <h3>Website Logo </h3>
