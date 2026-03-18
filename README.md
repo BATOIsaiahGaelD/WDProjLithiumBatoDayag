@@ -1,9 +1,33 @@
 # WDProjLithiumBatoDayag
+<h1>FINAL MODIFICATION PROPOSAL</h1>
+<h2> APPLICATION OF CRUD </h2>
+
+Updating of LocalStorage</br>
+- For this part of our project, we plan to have an "update profile" part of our website, such as the one we mentioned in earlier parts of this project proposal. This time however, we will update specific parts of the profile all at once, which include the new "description" of the profile, and all the different specific details in the profile. </br>
+- Another part of the profile that we are going to be updating is the "statistics" part of the profile, which displays your best minigame stats, which include the best reaction time, best quiz score, and best slot game pull. Every time a new best is reached in these games, it will automatically update the profile.
+</br>
+- Lastly, we plan to also have an option to update the password of the profile, which requires you to either input your current password so you can change it, or do a short minigame which will allow you to change your password after you accomplish it. Once submitted, it will update your password to be the new one.
+
+<h3> WIREFRAMES FOR UPDATING </h3>
+</br>
+[alt](/assets/15.png)
+</br>
+</br>
+</br>
+Deleting for LocalStorage </br>
+- For this portion of the project, it will pair up with the updating portion of our website. All the updated info on the profile as well as updating the passwords will also delete any of the previous data in localStorage. </br>
+- We will also have a new delete profile button at the bottom of the profile page, which will delete all the data regarding the profile. There will be a warning to ensure confirmation of deleting the profile.
+
+</br>
+
+<h3> WIREFRAMES FOR DELETING </h3>
+
+
 <h3> Title: Frisbee4Life </h3>
 <h4>Your Guide to Becoming an All-Star</h4>
 <h3>Website Logo </h3>
 
-!![alt](/assets/logo.png)
+![alt](/assets/logo.png)
 
 Overview:
 Ultimate Frisbee: Your Guide to Becoming an All-Star is a perfect starting point for anyone that is a beginner or trying to try a new sport or hobby. This guide breaks down the fundamentals, from game rules, throwing/catching techniques, to teamwork and strategies. With our clear explanations, visuals, and tips and tricks, beginners can quickly learn the basics and build skill and confidence on the field.
@@ -130,24 +154,3 @@ W3Schools. (n.d.). HTML </select> Tag. Retrieved from w3schools.com: https://www
 
 </br>
 </br>
-<h1>FINAL MODIFICATION PROPOSAL</h1>
-<h2> APPLICATION OF CRUD </h2>
-
-Updating of LocalStorage</br>
-- For this part of our project, we plan to have an "update profile" part of our website, such as the one we mentioned in earlier parts of this project proposal. This time however, we will update specific parts of the profile all at once, which include the new "description" of the profile, and all the different specific details in the profile. </br>
-- Another part of the profile that we are going to be updating is the "statistics" part of the profile, which displays your best minigame stats, which include the best reaction time, best quiz score, and best slot game pull. Every time a new best is reached in these games, it will automatically update the profile.
-</br>
-- Lastly, we plan to also have an option to update the password of the profile, which requires you to either input your current password so you can change it, or do a short minigame which will allow you to change your password after you accomplish it. Once submitted, it will update your password to be the new one.
-
-<h3> WIREFRAMES FOR UPDATING </h3>
-</br>
-</br>
-</br>
-</br>
-Deleting for LocalStorage </br>
-- For this portion of the project, it will pair up with the updating portion of our website. All the updated info on the profile as well as updating the passwords will also delete any of the previous data in localStorage. </br>
-- We will also have a new delete profile button at the bottom of the profile page, which will delete all the data regarding the profile. There will be a warning to ensure confirmation of deleting the profile.
-
-</br>
-
-<h3> WIREFRAMES FOR DELETING </h3>
