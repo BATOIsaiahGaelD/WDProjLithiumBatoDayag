@@ -11,12 +11,13 @@
 </br>
 <h3> WIREFRAMES FOR UPDATING </h3>
 
-![alt](/assets/15.png)
+![alt](/assets/16.png)
 In the top part of the wireframe, you can see the parts of the profile you can edit,
 which includes the player stats and the profile picture. In the bottom part of this wireframe, you can now see the prompt that pops up when you want to input a new profile picture. When you click save changes, it will update everything in the localStorage.
 
-![alt](/assets/14.png)
-In this page, you will be allowed to change your password. You must also input your username first before you can do this. You must also input the same password as the one you put in the new password in order to update it. Once the update password is clicked, it will update the password of the account.
+![alt](/assets/17.png)
+With this popup  you will be allowed to change your password. This popup will appear after pressing the update password button seen at the corner of the screen. When the button is clicked, there will be an animation showcasing the popup and the update password button transitioning into the back button that when clicked will reverse the animations and bring you back to the original profile page. Note that you cannot click anything that is grayed out. To change your password, You must input first your username/email. Then, you input your new password. You must also input the same password in the confirm password box as the one you put in the new password in order to update it. Once the update password is clicked, it will update the password of the account if the password is the same, or if the username/email matches this account's username/email. Otherwise, a prompt will pop up showing that the password failed to update.
+
 </br>
 </br>
 <h3>Deleting for LocalStorage</h3> </br>
