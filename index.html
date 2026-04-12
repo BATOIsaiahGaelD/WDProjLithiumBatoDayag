@@ -9,15 +9,100 @@
             <title>Frisbee4Fun</title>
             <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/jpg">
             <style>
+                @keyframes headerfade {
+                    0% {opacity:100%;}
+                    20% {opacity:0%;} 
+                    80% {opacity:0%;}
+                    100% {opacity:100%}
+                }
+                div#header6 {
+                    background-image:none;
+                    text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-color:black;
+                    background-size:cover;
+                    font-size:4vw;
+                    padding: 10vw 0vw;
+                    z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+                div#header5 {
+                    background-image:none;
+                    text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-image:url(/assets/FrisbeePics/CASTANEDA\ \(13\).png);
+                    background-size:cover;
+                    background-position:0px -400px;
+                    font-size:4vw;
+                    padding: 10vw 0vw;
+                    z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: headerfade 20s linear 0s infinite;
+                }
+                div#header4 {
+                    background-image:none;
+                    text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-image:url(/assets/FrisbeePics/stefano-zocca-nFWoTPgUPTA-unsplash.jpg);
+                    background-size:cover;
+                    background-position: 0px -120px;
+                    font-size:4vw;
+                    padding: 10vw 0vw;
+                    z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: headerfade 20s linear 4s infinite;
+                }
+                div#header3 {
+                    background-image:none;
+                    text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-image:url(/assets/FrisbeePics/CASTANEDA\ \(3\).png);
+                    background-size:cover;
+                    background-position: 0px -300px;
+                    font-size:4vw;
+                    padding: 10vw 0vw;
+                    z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: headerfade 20s linear 8s infinite;
+                }
+                div#header2 {
+                    background-image:none;
+                    text-align:center;
+                    position:absolute;
+                    width:100%;
+                    background-image:url(/assets/FrisbeePics/john-kofi-ZTFdqy6h4ME-unsplash.jpg);
+                    background-size:cover;
+                    background-position:0px -10px;
+                    font-size:4vw;
+                    padding: 10vw 0vw;
+                    z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: headerfade 20s linear 12s infinite;
+                }
                 div#header {
                     background-image:none;
                     text-align:center;
                     position:absolute;
                     width:100%;
-                    background-color:yellow;
+                    background-image:url(/assets/FrisbeePics/john-kofi-om3Cy5DvET0-unsplash.jpg);
+                    background-size:cover;
                     font-size:4vw;
                     padding: 10vw 0vw;
                     z-index:2;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    animation: headerfade 20s linear 16s infinite;
+                }
+                div#gradient {
+                    position:absolute;
+                    width:100%;
+                    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0,0,0,0.5), rgb(0,0,0));
+                    z-index:3;
+                    height:13vw;
+                    top:12vw;
                 }
                 div.body {
                     background-color:black;
@@ -307,7 +392,7 @@
                     position:absolute;
                     border-radius:70%;
                     background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255,255,255,0.9), rgba(255,255,255,0.1));
-                    top:8vw;
+                    top:4vw;
                     z-index:1;
                 }
                 div#b2 {
@@ -603,14 +688,152 @@
                     left:35vw;
                     font-size:8vw;
                 }
+                .pictures {
+                    position:absolute;
+                    z-index:1;
+                    height:30vw;
+                    width:48vw;
+                }
+                .row1 {
+                    top:80vw;
+                }
+                #row1p1 {
+                    left:102vw;
+                    animation: scrollleft 40s linear 0s infinite;
+                }
+                #row1p2 {
+                    left:152vw;
+                    animation: scrollleft 40s linear 0s infinite;
+                }
+                #row1p3 {
+                    left:102vw;
+                    animation: scrollleft 40s linear 20s infinite;
+                }
+                #row1p4 {
+                    left:152vw;
+                    animation: scrollleft 40s linear 20s infinite;
+                }
+                .row2 {
+                    top:125vw
+                }
+                #row2p1 {
+                    left:-52vw;
+                    animation: scrollright 40s linear 0s infinite;
+                }
+                #row2p2 {
+                    left:-102vw;
+                    animation: scrollright 40s linear 0s infinite;
+                }
+                #row2p3 {
+                    left:-52vw;
+                    animation: scrollright 40s linear 20s infinite;
+                }
+                #row2p4 {
+                    left:-102vw;
+                    animation: scrollright 40s linear 20s infinite;
+                }
+                .row3 {
+                    top:170vw;
+                }
+                #row3p1 {
+                    left:102vw;
+                    animation: scrollleft 40s linear 0s infinite;
+                }
+                #row3p2 {
+                    left:152vw;
+                    animation: scrollleft 40s linear 0s infinite;
+                }
+                #row3p3 {
+                    left:102vw;
+                    animation: scrollleft 40s linear 20s infinite;
+                }
+                #row3p4 {
+                    left:152vw;
+                    animation: scrollleft 40s linear 20s infinite;
+                }
+                @keyframes scrollleft {
+                    0%{transform:translateX(0vw);}
+                    100% {transform:translateX(-200vw);}
+                }
+                @keyframes scrollright {
+                    0%{transform:translateX(0vw);}
+                    100% {transform:translateX(200vw);}
+                }
+
+                #clickrow1, #clickrow2, #clickrow3, #clickrow4, #clickrow5, #clickrow6, #clickrow7, #clickrow8 {
+                    position:absolute;
+                    width:150vw;
+                    font-size:10vw;
+                    color:white;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    z-index:1;
+                }
+                #clickrow1 {
+                    top:67vw;
+                    left:102vw;
+                    animation:scrollleft 40s linear 0s infinite;
+                }
+                #clickrow2 {
+                    top:67vw;
+                    left:102vw;
+                    animation:scrollleft 40s linear 20s infinite;
+                }
+                #clickrow3 {
+                    top:111vw;
+                    left:-102vw;
+                    animation:scrollright 40s linear 0s infinite;
+                }
+                #clickrow4 {
+                    top:111vw;
+                    left:-102vw;
+                    animation:scrollright 40s linear 20s infinite;
+                }
+                #clickrow5 {
+                    top:156vw;
+                    left:102vw;
+                    animation:scrollleft 40s linear 0s infinite;
+                }
+                #clickrow6 {
+                    top:156vw;
+                    left:102vw;
+                    animation:scrollleft 40s linear 20s infinite;
+                }
+                #clickrow7 {
+                    top:202vw;
+                    left:-102vw;
+                    animation:scrollright 40s linear 0s infinite;
+                }
+                #clickrow8 {
+                    top:202vw;
+                    left:-102vw;
+                    animation:scrollright 40s linear 20s infinite;
+                }
+                body {
+                    overflow-x:hidden;
+                }
             </style>
             <link rel="stylesheet" href="./public/headfoot.css">
         </head>
         <body>
-            <div id="header">
-                Frisbee4Fun: Your Guide to Becoming an All-Star </br>
-                (Click the Disc to Begin)
+            <div id="header6">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
             </div>
+            <div id="header5">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
+            </div>
+            <div id="header4">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
+            </div>
+            <div id="header3">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
+            </div>
+            <div id="header2">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
+            </div>
+            <div id="header">
+                Frisbee4Fun: Your Guide to Becoming an All-Star
+            </div>
+            <div id="gradient"></div>
             <a href="./public/profile.html"><div id="buttonp">Profile</div></a>
             <a href="./public/signups.html"><div class="sign" id="button">Sign Up</div></a>
             <div id="overlay"></div>
@@ -627,6 +850,33 @@
             <img class="animfrisbee" id="starting6" src="./assets/frisbeeminigames.png" draggable="false">
             <img class="animfrisbee" id="starting7" src="./assets/frisbeereferences.png" draggable="false">
 
+            <div id="clickrow1">CLICK CLICK CLICK CLICK</div>
+            <div id="clickrow2">CLICK CLICK CLICK CLICK</div>
+
+            <div id="clickrow3">FRISBEE FRISBEE FRISBEE</div>
+            <div id="clickrow4">FRISBEE FRISBEE FRISBEE</div>
+
+            <div id="clickrow5">TO TO TO TO TO TO TO TO</div>
+            <div id="clickrow6">TO TO TO TO TO TO TO TO</div>
+
+            <div id="clickrow7">BEGIN BEGIN BEGIN BEGIN</div>
+            <div id="clickrow8">BEGIN BEGIN BEGIN BEGIN</div>
+
+
+            <img class="row1 pictures" id="row1p1" src="/assets/FrisbeePics/istockphoto-157198701-1024x1024.jpg" draggable="false">
+            <img class="row1 pictures" id="row1p2" src="/assets/FrisbeePics/layout.jpg" draggable="false">
+            <img class="row1 pictures" id="row1p3" src="/assets/FrisbeePics/CASTANEDA (15).png" draggable="false">
+            <img class="row1 pictures" id="row1p4" src="/assets/FrisbeePics/DSC01281.jpg" draggable="false">
+
+            <img class="row2 pictures" id="row2p1" src="/assets/FrisbeePics/istockphoto-157198701-1024x1024.jpg" draggable="false">
+            <img class="row2 pictures" id="row2p2" src="/assets/FrisbeePics/layout.jpg" draggable="false">
+            <img class="row2 pictures" id="row2p3" src="/assets/FrisbeePics/CASTANEDA (15).png" draggable="false">
+            <img class="row2 pictures" id="row2p4" src="/assets/FrisbeePics/DSC01281.jpg" draggable="false">
+
+            <img class="row3 pictures" id="row3p1" src="/assets/FrisbeePics/istockphoto-157198701-1024x1024.jpg" draggable="false">
+            <img class="row3 pictures" id="row3p2" src="/assets/FrisbeePics/layout.jpg" draggable="false">
+            <img class="row3 pictures" id="row3p3" src="/assets/FrisbeePics/CASTANEDA (15).png" draggable="false">
+            <img class="row3 pictures" id="row3p4" src="/assets/FrisbeePics/DSC01281.jpg" draggable="false">
             <div class="body">
                 <div class="background" id="b1"></div>
                 <div class="background" id="b2"></div>
@@ -802,6 +1052,19 @@
                     document.getElementById("b31").style.animation="bganim 2s linear 4.0s infinite normal";
                     document.getElementById("b32").style.animation="bganim 2s linear 1.1s infinite normal";
                     document.getElementById("b33").style.animation="bganim 2s linear 2.5s infinite normal";
+
+                    document.getElementById("row1p1").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row1p2").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row1p3").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row1p4").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row2p1").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row2p2").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row2p3").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row2p4").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row3p1").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row3p2").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row3p3").style.animation="fadeout 2s linear 0s"
+                    document.getElementById("row3p4").style.animation="fadeout 2s linear 0s"
                 }
 
                 //this chunk of functions is for the text box that appears when you hover over a certain frisbee
