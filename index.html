@@ -795,7 +795,7 @@
                 }
                 #clickrow6 {
                     top:156vw;
-                    left:102vw;
+                    left:100vw;
                     animation:scrollleft 40s linear 20s infinite;
                 }
                 #clickrow7 {
@@ -807,6 +807,28 @@
                     top:202vw;
                     left:-102vw;
                     animation:scrollright 40s linear 20s infinite;
+                }
+                .fadeoutclass {
+                    opacity:0;
+                    transition:2s;
+                }
+                #skipbutton {
+                    position:fixed;
+                    top:45vw;
+                    left:2vw;
+                    width:12vw;
+                    height:3vw;
+                    font-size:1vw;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    background-image:linear-gradient(to right, rgb(189, 192, 0), black);
+                    border-style:solid;
+                    border-width:0.1vw;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-color:white;
+                    z-index:10;
+                    border-radius:0.25vw;
                 }
                 body {
                     overflow-x:hidden;
@@ -834,6 +856,9 @@
                 Frisbee4Fun: Your Guide to Becoming an All-Star
             </div>
             <div id="gradient"></div>
+
+            <div id="skipbutton">SKIP CUTSCENE</div>
+
             <a href="./public/profile.html"><div id="buttonp">Profile</div></a>
             <a href="./public/signups.html"><div class="sign" id="button">Sign Up</div></a>
             <div id="overlay"></div>
@@ -1000,71 +1025,101 @@
                     document.getElementById("f1").style.zIndex="-1";
                     document.getElementById("f2").style.zIndex="-1";
                     document.getElementById("f3").style.zIndex="-1";
-                }, 10600)
+                    document.getElementById("skipbutton").style.zIndex="-1";
+                }, 10700)
                 // this is for the starting animation where the discs fly out and the streaks fall down
                 function startinganim(){
-                    document.getElementById("intro").style.animation="animintro 1s ease 0s 1 normal forwards, spin 0.5s linear 0s infinite";
-                    document.getElementById("throws").style.animation="animthrows 1.5s ease 0.5s 1 normal forwards, spin 0.5s linear 0s infinite";
-                    document.getElementById("tips").style.animation="animtips 2s ease 1s 1 normal forwards, spin2 0.5s linear 0s infinite";
-                    document.getElementById("ultimate").style.animation="animultimate 2.5s ease 1.5s 1 normal forwards, spin 0.5s linear 0s infinite";
-                    document.getElementById("strats").style.animation="animstrats 3s ease 2s 1 normal forwards, spin2 0.5s linear 0s infinite";
-                    document.getElementById("minigames").style.animation="animminigames 3.5s ease 2.5s 1 normal forwards, spin 0.5s linear 0s infinite";
-                    document.getElementById("reference").style.animation="animreference 4s ease 3s 1 normal forwards, spin 0.5s linear 0s infinite";
+                    document.getElementById("row1p1").classList.add("fadeoutclass");
+                    document.getElementById("row1p2").classList.add("fadeoutclass");
+                    document.getElementById("row1p3").classList.add("fadeoutclass");
+                    document.getElementById("row1p4").classList.add("fadeoutclass");
+                    document.getElementById("row2p1").classList.add("fadeoutclass");
+                    document.getElementById("row2p2").classList.add("fadeoutclass");
+                    document.getElementById("row2p3").classList.add("fadeoutclass");
+                    document.getElementById("row2p4").classList.add("fadeoutclass");
+                    document.getElementById("row3p1").classList.add("fadeoutclass");
+                    document.getElementById("row3p2").classList.add("fadeoutclass");
+                    document.getElementById("row3p3").classList.add("fadeoutclass");
+                    document.getElementById("row3p4").classList.add("fadeoutclass");
+                    document.getElementById("clickrow1").classList.add("fadeoutclass");
+                    document.getElementById("clickrow2").classList.add("fadeoutclass");
+                    document.getElementById("clickrow3").classList.add("fadeoutclass");
+                    document.getElementById("clickrow4").classList.add("fadeoutclass");
+                    document.getElementById("clickrow5").classList.add("fadeoutclass");
+                    document.getElementById("clickrow6").classList.add("fadeoutclass");
+                    document.getElementById("clickrow7").classList.add("fadeoutclass");
+                    document.getElementById("clickrow8").classList.add("fadeoutclass");
+                    setTimeout(function() {
+                        document.getElementById("intro").style.animation="animintro 1s ease 0s 1 normal forwards, spin 0.5s linear 0s infinite";
+                        document.getElementById("throws").style.animation="animthrows 1.5s ease 0.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                        document.getElementById("tips").style.animation="animtips 2s ease 1s 1 normal forwards, spin2 0.5s linear 0s infinite";
+                        document.getElementById("ultimate").style.animation="animultimate 2.5s ease 1.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                        document.getElementById("strats").style.animation="animstrats 3s ease 2s 1 normal forwards, spin2 0.5s linear 0s infinite";
+                        document.getElementById("minigames").style.animation="animminigames 3.5s ease 2.5s 1 normal forwards, spin 0.5s linear 0s infinite";
+                        document.getElementById("reference").style.animation="animreference 4s ease 3s 1 normal forwards, spin 0.5s linear 0s infinite";
 
-                    document.getElementById("mobile1").style.animation="fadein 1s ease 1s 1 normal forwards";
-                    document.getElementById("mobile2").style.animation="fadein 1s ease 2s 1 normal forwards";
-                    document.getElementById("mobile3").style.animation="fadein 1s ease 3s 1 normal forwards";
-                    document.getElementById("mobile4").style.animation="fadein 1s ease 4s 1 normal forwards";
-                    document.getElementById("mobile5").style.animation="fadein 1s ease 5s 1 normal forwards";
-                    document.getElementById("mobile6").style.animation="fadein 1s ease 6s 1 normal forwards";
-                    document.getElementById("mobile7").style.animation="fadein 1s ease 7s 1 normal forwards";
+                        document.getElementById("mobile1").style.animation="fadein 1s ease 1s 1 normal forwards";
+                        document.getElementById("mobile2").style.animation="fadein 1s ease 2s 1 normal forwards";
+                        document.getElementById("mobile3").style.animation="fadein 1s ease 3s 1 normal forwards";
+                        document.getElementById("mobile4").style.animation="fadein 1s ease 4s 1 normal forwards";
+                        document.getElementById("mobile5").style.animation="fadein 1s ease 5s 1 normal forwards";
+                        document.getElementById("mobile6").style.animation="fadein 1s ease 6s 1 normal forwards";
+                        document.getElementById("mobile7").style.animation="fadein 1s ease 7s 1 normal forwards";
 
-                    document.getElementById("b1").style.animation="bganim 2s linear 1.9s infinite normal";
-                    document.getElementById("b2").style.animation="bganim 2s linear 4.1s infinite normal";
-                    document.getElementById("b3").style.animation="bganim 2s linear 1.2s infinite normal";
-                    document.getElementById("b4").style.animation="bganim 2s linear 2.3s infinite normal";
-                    document.getElementById("b5").style.animation="bganim 2s linear 1.8s infinite normal";
-                    document.getElementById("b6").style.animation="bganim 2s linear 3.9s infinite normal";
-                    document.getElementById("b7").style.animation="bganim 2s linear 2.6s infinite normal";
-                    document.getElementById("b8").style.animation="bganim 2s linear 1.7s infinite normal";
-                    document.getElementById("b9").style.animation="bganim 2s linear 1.4s infinite normal";
-                    document.getElementById("b10").style.animation="bganim 2s linear 1s infinite normal";
-                    document.getElementById("b11").style.animation="bganim 2s linear 3.8s infinite normal";
-                    document.getElementById("b12").style.animation="bganim 2s linear 3.1s infinite normal";
-                    document.getElementById("b13").style.animation="bganim 2s linear 4.3s infinite normal";
-                    document.getElementById("b14").style.animation="bganim 2s linear 1.3s infinite normal";
-                    document.getElementById("b15").style.animation="bganim 2s linear 3.3s infinite normal";
-                    document.getElementById("b16").style.animation="bganim 2s linear 4.2s infinite normal";
-                    document.getElementById("b17").style.animation="bganim 2s linear 1.6s infinite normal";
-                    document.getElementById("b18").style.animation="bganim 2s linear 2.7s infinite normal";
-                    document.getElementById("b19").style.animation="bganim 2s linear 3.4s infinite normal";
-                    document.getElementById("b20").style.animation="bganim 2s linear 2.9s infinite normal";
-                    document.getElementById("b21").style.animation="bganim 2s linear 3.0s infinite normal";
-                    document.getElementById("b22").style.animation="bganim 2s linear 2.1s infinite normal";
-                    document.getElementById("b23").style.animation="bganim 2s linear 3.2s infinite normal";
-                    document.getElementById("b24").style.animation="bganim 2s linear 2.4s infinite normal";
-                    document.getElementById("b25").style.animation="bganim 2s linear 2.8s infinite normal";
-                    document.getElementById("b26").style.animation="bganim 2s linear 3.5s infinite normal";
-                    document.getElementById("b27").style.animation="bganim 2s linear 3.6s infinite normal";
-                    document.getElementById("b28").style.animation="bganim 2s linear 3.7s infinite normal";
-                    document.getElementById("b29").style.animation="bganim 2s linear 2s infinite normal";
-                    document.getElementById("b30").style.animation="bganim 2s linear 1.5s infinite normal";
-                    document.getElementById("b31").style.animation="bganim 2s linear 4.0s infinite normal";
-                    document.getElementById("b32").style.animation="bganim 2s linear 1.1s infinite normal";
-                    document.getElementById("b33").style.animation="bganim 2s linear 2.5s infinite normal";
-
-                    document.getElementById("row1p1").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row1p2").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row1p3").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row1p4").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row2p1").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row2p2").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row2p3").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row2p4").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row3p1").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row3p2").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row3p3").style.animation="fadeout 2s linear 0s"
-                    document.getElementById("row3p4").style.animation="fadeout 2s linear 0s"
+                        document.getElementById("b1").style.animation="bganim 2s linear 1.9s infinite normal";
+                        document.getElementById("b2").style.animation="bganim 2s linear 4.1s infinite normal";
+                        document.getElementById("b3").style.animation="bganim 2s linear 1.2s infinite normal";
+                        document.getElementById("b4").style.animation="bganim 2s linear 2.3s infinite normal";
+                        document.getElementById("b5").style.animation="bganim 2s linear 1.8s infinite normal";
+                        document.getElementById("b6").style.animation="bganim 2s linear 3.9s infinite normal";
+                        document.getElementById("b7").style.animation="bganim 2s linear 2.6s infinite normal";
+                        document.getElementById("b8").style.animation="bganim 2s linear 1.7s infinite normal";
+                        document.getElementById("b9").style.animation="bganim 2s linear 1.4s infinite normal";
+                        document.getElementById("b10").style.animation="bganim 2s linear 1s infinite normal";
+                        document.getElementById("b11").style.animation="bganim 2s linear 3.8s infinite normal";
+                        document.getElementById("b12").style.animation="bganim 2s linear 3.1s infinite normal";
+                        document.getElementById("b13").style.animation="bganim 2s linear 4.3s infinite normal";
+                        document.getElementById("b14").style.animation="bganim 2s linear 1.3s infinite normal";
+                        document.getElementById("b15").style.animation="bganim 2s linear 3.3s infinite normal";
+                        document.getElementById("b16").style.animation="bganim 2s linear 4.2s infinite normal";
+                        document.getElementById("b17").style.animation="bganim 2s linear 1.6s infinite normal";
+                        document.getElementById("b18").style.animation="bganim 2s linear 2.7s infinite normal";
+                        document.getElementById("b19").style.animation="bganim 2s linear 3.4s infinite normal";
+                        document.getElementById("b20").style.animation="bganim 2s linear 2.9s infinite normal";
+                        document.getElementById("b21").style.animation="bganim 2s linear 3.0s infinite normal";
+                        document.getElementById("b22").style.animation="bganim 2s linear 2.1s infinite normal";
+                        document.getElementById("b23").style.animation="bganim 2s linear 3.2s infinite normal";
+                        document.getElementById("b24").style.animation="bganim 2s linear 2.4s infinite normal";
+                        document.getElementById("b25").style.animation="bganim 2s linear 2.8s infinite normal";
+                        document.getElementById("b26").style.animation="bganim 2s linear 3.5s infinite normal";
+                        document.getElementById("b27").style.animation="bganim 2s linear 3.6s infinite normal";
+                        document.getElementById("b28").style.animation="bganim 2s linear 3.7s infinite normal";
+                        document.getElementById("b29").style.animation="bganim 2s linear 2s infinite normal";
+                        document.getElementById("b30").style.animation="bganim 2s linear 1.5s infinite normal";
+                        document.getElementById("b31").style.animation="bganim 2s linear 4.0s infinite normal";
+                        document.getElementById("b32").style.animation="bganim 2s linear 1.1s infinite normal";
+                        document.getElementById("b33").style.animation="bganim 2s linear 2.5s infinite normal";
+                        document.getElementById("row1p1").style.zIndex="-1";
+                        document.getElementById("row1p2").style.zIndex="-1";
+                        document.getElementById("row1p3").style.zIndex="-1";
+                        document.getElementById("row1p4").style.zIndex="-1";
+                        document.getElementById("row2p1").style.zIndex="-1";
+                        document.getElementById("row2p2").style.zIndex="-1";
+                        document.getElementById("row2p3").style.zIndex="-1";
+                        document.getElementById("row2p4").style.zIndex="-1";
+                        document.getElementById("row3p1").style.zIndex="-1";
+                        document.getElementById("row3p2").style.zIndex="-1";
+                        document.getElementById("row3p3").style.zIndex="-1";
+                        document.getElementById("row3p4").style.zIndex="-1";
+                        document.getElementById("clickrow1").style.zIndex="-1";
+                        document.getElementById("clickrow2").style.zIndex="-1";
+                        document.getElementById("clickrow3").style.zIndex="-1";
+                        document.getElementById("clickrow4").style.zIndex="-1";
+                        document.getElementById("clickrow5").style.zIndex="-1";
+                        document.getElementById("clickrow6").style.zIndex="-1";
+                        document.getElementById("clickrow7").style.zIndex="-1";
+                        document.getElementById("clickrow8").style.zIndex="-1";
+                    }, 2000)
                 }
 
                 //this chunk of functions is for the text box that appears when you hover over a certain frisbee
@@ -1115,6 +1170,10 @@
                 }
                 function p7functionback(){
                     document.getElementById("p7").style.animationName="p7back";
+                }
+
+                function skipintro() {
+
                 }
             </script>
             <footer class="site-footer">
