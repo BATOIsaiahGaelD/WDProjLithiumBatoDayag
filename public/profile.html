@@ -32,7 +32,38 @@
             box-shadow:0vw 0vw 1vw white;
             transition:0.5s;
         }
-        #logoutBtn:hover {
+        #changepassword {
+            background-image:linear-gradient(to bottom, rgb(159, 159, 0), black);
+            width:10vw;
+            height:10vw;
+            font-size:1vw;
+            position:absolute;
+            border-radius:50%;
+            border-style:solid;
+            border-width:0.3vw;
+            border-color:white;
+            color:white;
+            display:flex;
+            text-decoration:none;
+            justify-content:center;
+            align-items:center;
+            z-index:1000;
+            font-size:1vw;
+            box-shadow:0vw 0vw 1vw white;
+            transition:0.5s;
+        }
+        .normal {
+            left:88.5vw;
+            top:-2vw;
+            transition:2s;
+        }
+        .clicked {
+            left:44.8vw;
+            top:3vw;
+            transition:5s;
+            scale:1.5;
+        }
+        #logoutBtn:hover, #changepassword:hover {
             scale:1.2;
         }
         /* css for animated background */
@@ -67,6 +98,9 @@
         </div>
         <div class="account-tab">
             <a href="#" id="logoutBtn">Log Out</a>
+        </div>
+        <div id="changepassword" class="normal" onclick="animationclicked()">
+            Update Password
         </div>
     </header>
 

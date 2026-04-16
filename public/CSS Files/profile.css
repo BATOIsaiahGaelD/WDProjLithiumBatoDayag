@@ -19,7 +19,7 @@ body, html {
 
 
 .profile-header {
-    background: rgb(242, 255, 0);
+    background: #fed95c;
     padding: 3vw;
     border-radius: 12px;
     text-align: center;
@@ -89,7 +89,7 @@ body, html {
 }
 
 .card {
-    background: rgb(255, 247, 0);
+    background: #fed95c;
     padding: 3vw;
     border-radius: 1.4vw;
     box-shadow: 0 1vw 2vw rgba(0,0,0,0.05);

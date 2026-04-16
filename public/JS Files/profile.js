@@ -164,3 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
+function animationclicked() {
+    document.getElementById("changepassword").classList.add("clicked");
+    document.getElementById("changepassword").classList.remove("normal");
+}
+function animationunclicked() {
+    document.getElementById("changepassword").classList.add("normal");
+    document.getElementById("changepassword").classList.remove("clicked");
+}
