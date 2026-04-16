@@ -3,11 +3,11 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale-1.0">
+            <link rel="icon" href="../WDProjLithiumBatoDayag/assets/logo.png" sizes="32x32" type="image/jpg">
             <meta name="description" content="2Q Website Project">
             <meta name="keywords" content="2Q-Project, Website, Projects, Web Development">
             <meta name="authors" content="Isaiah Gael D. Bato, Russell Jayden M. Dayag">
             <title>Frisbee4Fun</title>
-            <link rel="icon" href="./assets/logo.png" sizes="32x32" type="image/jpg">
             <style>
                 @keyframes headerfade {
                     0% {opacity:100%;}
@@ -645,6 +645,7 @@
                     background-color:black;
                     z-index:3;
                     animation:color1 3s ease 5s 1 normal forwards, fadeout 1s ease 10.4s 1 normal forwards;
+                    overflow-x:hidden;
                 }
                 /* these p tags below are the labels for the disc*/
                 .mobiletext {
@@ -814,11 +815,11 @@
                 }
                 #skipbutton {
                     position:fixed;
-                    top:45vw;
-                    left:2vw;
-                    width:12vw;
-                    height:3vw;
-                    font-size:1vw;
+                    top:90%;
+                    left:1%;
+                    width:16%;
+                    height:8%;
+                    font-size:1.2vw;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     background-image:linear-gradient(to right, rgb(189, 192, 0), black);
                     border-style:solid;
@@ -830,8 +831,11 @@
                     z-index:10;
                     border-radius:0.25vw;
                 }
-                body {
+                html {
                     overflow-x:hidden;
+                }
+                body {
+                    overflow:hidden;
                 }
             </style>
             <link rel="stylesheet" href="./public/headfoot.css">
@@ -857,7 +861,7 @@
             </div>
             <div id="gradient"></div>
 
-            <div id="skipbutton">SKIP CUTSCENE</div>
+            <div id="skipbutton" onclick="skipintro()">SKIP CUTSCENE</div>
 
             <a href="./public/profile.html"><div id="buttonp">Profile</div></a>
             <a href="./public/signups.html"><div class="sign" id="button">Sign Up</div></a>
@@ -893,8 +897,8 @@
             <img class="row1 pictures" id="row1p3" src="/assets/FrisbeePics/CASTANEDA (15).png" draggable="false">
             <img class="row1 pictures" id="row1p4" src="/assets/FrisbeePics/DSC01281.jpg" draggable="false">
 
-            <img class="row2 pictures" id="row2p1" src="/assets/FrisbeePics/istockphoto-157198701-1024x1024.jpg" draggable="false">
-            <img class="row2 pictures" id="row2p2" src="/assets/FrisbeePics/layout.jpg" draggable="false">
+            <img class="row2 pictures" id="row2p1" src="/assets/FrisbeePics/CASTANEDA (1).png" draggable="false" title="Photographed by Carly Castaneda">
+            <img class="row2 pictures" id="row2p2" src="/assets/FrisbeePics/john-kofi-om3Cy5DvET0-unsplash.jpg" draggable="false" title="Photographed by John Kofi">
             <img class="row2 pictures" id="row2p3" src="/assets/FrisbeePics/CASTANEDA (15).png" draggable="false">
             <img class="row2 pictures" id="row2p4" src="/assets/FrisbeePics/DSC01281.jpg" draggable="false">
 
@@ -944,7 +948,7 @@
                 <p class="mobiletext" id="mobile5">STRATEGIES</p>
                 <p class="mobiletext" id="mobile6">MINIGAMES</p>
                 <p class="mobiletext" id="mobile7">REFERENCES</p>
-                <div class="main" onclick="startinganim(), backgroundanim()">
+                <div class="main" onclick="startinganim()">
                     <img class="main" src="./assets/frisbee.png" draggable="false" title="https://www.hiclipart.com/free-transparent-background-png-clipart-ffptg"/>
                 </div>
                 <div class="intro">
@@ -1173,7 +1177,19 @@
                 }
 
                 function skipintro() {
-
+                    document.getElementById("starting1").style.zIndex="-1";
+                    document.getElementById("starting2").style.zIndex="-1";
+                    document.getElementById("starting3").style.zIndex="-1";
+                    document.getElementById("starting4").style.zIndex="-1";
+                    document.getElementById("starting5").style.zIndex="-1";
+                    document.getElementById("starting6").style.zIndex="-1";
+                    document.getElementById("starting7").style.zIndex="-1";
+                    document.getElementById("welcome").style.zIndex="-1";
+                    document.getElementById("to").style.zIndex="-1";
+                    document.getElementById("f1").style.zIndex="-1";
+                    document.getElementById("f2").style.zIndex="-1";
+                    document.getElementById("f3").style.zIndex="-1";
+                    document.getElementById("overlay").style.zIndex="-1";
                 }
             </script>
             <footer class="site-footer">
