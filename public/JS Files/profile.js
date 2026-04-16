@@ -167,8 +167,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function animationclicked() {
     document.getElementById("changepassword").classList.add("clicked");
     document.getElementById("changepassword").classList.remove("normal");
+    document.getElementById("pfpoverlay").style.transitionDuration="2s";
+    document.getElementById("pfpoverlay").style.opacity="0.5";
+    setTimeout(function() {
+        document.getElementById("divchp").style.opacity="1";
+        document.getElementById("divchp").style.transitionDuration="2s";
+    }, 200)
+    document.getElementById("divchp").style.zIndex="4";
+    document.getElementById("pfpoverlay").style.zIndex="3";
 }
 function animationunclicked() {
     document.getElementById("changepassword").classList.add("normal");
     document.getElementById("changepassword").classList.remove("clicked");
+    setTimeout(function() {
+        document.getElementById("divchp").style.opacity="0";
+        document.getElementById("divchp").style.transitionDuration="2s";
+    }, 200)
+    setTimeout(function() {
+        document.getElementById("pfpoverlay").style.zIndex="-1";
+        document.getElementById("divchp").style.zIndex="-1";
+    }, 2000)
+    document.getElementById("pfpoverlay").style.transitionDuration="2s";
+    document.getElementById("pfpoverlay").style.opacity="0";
 }
