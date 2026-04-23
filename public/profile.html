@@ -91,11 +91,12 @@
             50% {background-position: 100% 50%;}
             100% {background-position:0% 50%}
         }
+        /*css for update password*/
         #divchp {
             position:absolute;
             opacity:0;
             z-index:-1;
-            left:29vw;
+            left:29.5vw;
         }
         .main-container {
             width: 100%;
@@ -159,6 +160,16 @@
         .signup-btn:hover {
             background-color: #34495e;
         }
+        #notice {
+            font-size:4vw;
+            top: 43vw;
+            left:28vw;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:white;
+            position:absolute;
+            opacity:0;
+            z-index:-1;
+        }
 
     </style>
 <body>
@@ -186,6 +197,7 @@
         </div>
     </header>
     <div id="pfpoverlay" onclick="animationunclicked()"></div>
+    <div id="notice">Click darkened area to exit.</div>
     <div class="page-wrapper">
         <div class="profile-container">
             <div class="profile-header">
@@ -251,22 +263,22 @@
                 <h2>Change Password</h2>
                 <p>Make your account safer!</p>
                 
-                <form id="signupForm">
+                <form id="updatepassword">
                     <div class="input-field">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" required>
+                        <label for="user">Username</label>
+                        <input type="text" id="user" required>
                     </div>
 
                     <div class="input-field">
                         <label for="newpass">New Password</label>
-                        <input type="password" id="email" required>
+                        <input type="password" id="newpass" required>
                     </div>
 
                     <div class="input-field">
                         <label for="confirmpass">Confirm Password</label>
-                        <input type="password" id="jersey" required>
+                        <input type="password" id="confirmpass" required>
                     </div>
-                    <button type="submit" class="signup-btn">Change Password</button>
+                    <button type="submit" class="signup-btn" id="updatePassBtn">Change Password</button>
                 </form>
             </div>
         </main>

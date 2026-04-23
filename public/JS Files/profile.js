@@ -163,15 +163,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = "login.html";
             }
         };
+
+    const updatepass = document.getElementById('updatepassword');
+    const i = JSON.parse(localStorage.getItem('frisbeeUsers'));
+    console.log(i);
+        if (updatepass) {
+            updatepass.onsubmit = (e) => {
+                e.preventDefault();
+                const existinguser = document.getElementById('user').value;
+                const newpassword = document.getElementById('newpass').value;
+                const samepass = document.getElementById('confirmpass').value;
+                console.log(existinguser);
+                const i = JSON.parse(localStorage.getItem('frisbeeUsers'));
+                for (let key in i) {
+                    if (i[key].username === existinguser) {
+                        console.log("match!");
+                        if (newpassword === samepass) {
+                            i[key].password = newpassword;
+                            localStorage.setItem('frisbeeUsers', JSON.stringify(i))
+                            alert("Password successfully updated.");
+                            break;
+                        }
+                        else {
+                            alert("Passwords do not match.");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 function animationclicked() {
     document.getElementById("changepassword").classList.add("clicked");
     document.getElementById("changepassword").classList.remove("normal");
     document.getElementById("pfpoverlay").style.transitionDuration="2s";
     document.getElementById("pfpoverlay").style.opacity="0.5";
+    document.getElementById("notice").style.zIndex="100";
     setTimeout(function() {
         document.getElementById("divchp").style.opacity="1";
         document.getElementById("divchp").style.transitionDuration="2s";
+        document.getElementById("notice").style.opacity="1";
+        document.getElementById("notice").style.transitionDuration="2s";
     }, 200)
     document.getElementById("divchp").style.zIndex="4";
     document.getElementById("pfpoverlay").style.zIndex="3";
@@ -182,10 +214,13 @@ function animationunclicked() {
     setTimeout(function() {
         document.getElementById("divchp").style.opacity="0";
         document.getElementById("divchp").style.transitionDuration="2s";
+        document.getElementById("notice").style.opacity="0";
+        document.getElementById("notice").style.transitionDuration="2s";
     }, 200)
     setTimeout(function() {
         document.getElementById("pfpoverlay").style.zIndex="-1";
         document.getElementById("divchp").style.zIndex="-1";
+        document.getElementById("notice").style.zIndex="-1";
     }, 2000)
     document.getElementById("pfpoverlay").style.transitionDuration="2s";
     document.getElementById("pfpoverlay").style.opacity="0";
