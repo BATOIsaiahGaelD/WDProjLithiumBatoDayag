@@ -228,3 +228,98 @@ probOverlay.onclick = () => {
     probOverlay.classList.remove("show");
 };
 
+const questions = [
+    { q: "How many players are on the field per team in a standard Ultimate game?", a: ["5", "7", "11"], correct: 1 },
+    { q: "What is the most common throw?", a: ["Backhand", "Forehand/Flick", "Hammer"], correct: 0 },
+    { q: "A goal is scored when you catch the disc in the...", a: ["Endzone", "Midfield", "Sideline"], correct: 0 },
+    { q: "How long does a player have to throw the disc (Stall count)?", a: ["5 seconds", "10 seconds", "15 seconds"], correct: 1 },
+    { q: "Is Ultimate Frisbee a contact sport?", a: ["Yes", "No", "Only on defense"], correct: 1 },
+    { q: "What is it called when a defender guards the person with the disc?", a: ["Blocking", "Stalling", "Marking"], correct: 2 },
+    { q: "Which throw uses a 'pincer' grip with the index and middle finger?", a: ["Backhand", "Forehand", "Scoober"], correct: 1 },
+    { q: "Can you run while holding the frisbee?", a: ["Yes", "No", "Only 3 steps"], correct: 1 },
+    { q: "What happens if the disc hits the ground?", a: ["Redo the throw", "Turnover", "Penalty"], correct: 1 },
+    { q: "Who is responsible for officiating the game?", a: ["The Players", "A Referee", "The Coach"], correct: 0 },
+    { q: "What is the name of a high overhead throw where the disc flies upside down?", a: ["Hail Mary", "Tomahawk", "Hammer", "Backhand"], correct: 2 },
+    { q: "What is it called when a thrower moves their pivot foot before throwing?", a: ["Traveling", "Double Dribble", "Foot Fault"], correct: 0 },
+    { q: "A 'Pull' in Ultimate Frisbee is equivalent to a...?", a: ["Jump ball", "Kickoff", "Home run"], correct: 1 },
+    { q: "What is the name of the offensive strategy where players line up in a single file down the middle?", a: ["Horizontal Stack", "Vertical Stack", "Zone Defense"], correct: 1 },
+    { q: "If the defense catches the disc, it is called an interception. What happens next?", a: ["Game pause", "The defense immediately becomes offense", "The point ends"], correct: 1 },
+    { q: "What is a 'Sky' in Frisbee terms?", a: ["A very high throw", "Catching the disc at a higher point than your opponent", "The frisbee landing on a roof"], correct: 1 },
+    { q: "How many timeouts does each team usually get per half?", a: ["One", "Two", "Unlimited"], correct: 1 },
+    { q: "What is 'Spirit of the Game'?", a: ["A type of drink", "The sportsmanship and self-refereeing philosophy", "A halftime cheer"], correct: 1 },
+    { q: "What is a 'Layout'?", a: ["The field dimensions", "Diving to catch or block the disc", "Planning the next play"], correct: 1 },
+    { q: "A 'Huck' is defined as:", a: ["A short dump pass", "A long downfield throw", "Dropping the disc accidentally"], correct: 1 }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const qaIntro = document.getElementById("qa-intro");
+const qaGame = document.getElementById("qa-game");
+const startQaBtn = document.getElementById("start-qa-btn");
+const questionContainer = document.getElementById("qa-questions");
+const scoreDisplay = document.getElementById("qa-score");
+
+
+startQaBtn.onclick = () => {
+    qaIntro.style.display = "none";
+    qaGame.style.display = "block";
+    currentQuestionIndex = 0;
+    score = 0;
+    scoreDisplay.textContent = score;
+    showQuestion();
+};
+
+function showQuestion() {
+    questionContainer.innerHTML = "";
+    const data = questions[currentQuestionIndex];
+
+    const qText = document.createElement("p");
+    qText.textContent = `${currentQuestionIndex + 1}. ${data.q}`;
+    questionContainer.appendChild(qText);
+
+    data.a.forEach((ans, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = ans;
+        btn.className = "qa-option-btn";
+        btn.onclick = () => checkAnswer(index);
+        questionContainer.appendChild(btn);
+    });
+}
+
+function checkAnswer(index) {
+    if (index === questions[currentQuestionIndex].correct) {
+        score++;
+        scoreDisplay.textContent = score;
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        finishQuiz();
+    }
+}
+
+function finishQuiz() {
+    questionContainer.innerHTML = `<h3>Quiz Complete!</h3><p>Final Score: ${score} / ${questions.length}</p>`;
+    
+    let user = getCurrentUser();
+    if (user) {
+        if (!user.bestQaScore || score > user.bestQaScore) {
+            user.bestQaScore = score;
+            updateUserData(user);
+        }
+    }
+
+    const restartBtn = document.createElement("button");
+    restartBtn.textContent = "Try Again";
+    restartBtn.onclick = () => {
+        currentQuestionIndex = 0;
+        score = 0;
+        scoreDisplay.textContent = score;
+        showQuestion();
+    };
+    questionContainer.appendChild(restartBtn);
+}

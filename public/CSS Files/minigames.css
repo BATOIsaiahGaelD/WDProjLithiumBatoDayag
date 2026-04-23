@@ -137,6 +137,9 @@ a {
 #qa-game {
     width: 100%;
     max-width: 600px;
+    display: none; /* Hidden until Start is clicked */
+    text-align: center;
+    width: 100%;
 }
 
 #qa-question {
